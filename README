@@ -1,1 +1,32 @@
-This is our README
+Unity Setup
+===========
+Unity Version: 4.5.2f1
+Download link: http://unity3d.com/unity/download/
+
+Unity File Hierarchy:
+Assets
+--- Images [These are for Raw images only, not prefabs/animations]
+------- Tiles
+------- Sprites
+----------- AntUnits
+----------- Food
+--- Prefabs [These should be the prefab versions of the Images folder, with same set of subfolders plus a few extras]
+------- Tiles
+------- Sprites
+----------- AntUnits
+----------- Food
+-------- Managers [These will be for 'invisible' objects that manage groups of other prefabs]
+--- Scripts [All scripts will be in C#, and subfolders can be created as necessary]
+--- Scenes [The actual .unity project scenes that will hold the finalized map designs]
+
+
+
+Git Setup
+=========
+Git Version: 1.9.4
+Download link: http://git-scm.com/downloads
+
+Branches: 
+Master [This is for Release Code ONLY]
+Develop [Branched from Master.  This is for QA-ready code, and is the first branch/location where developers will combine their code bases]
+yourName [Branched from Develop.  This is your personal branch, you can do whatever you want with it, but it is recommended that you use this in order to split in to multiple branches for ease of developing multiple features. Example branches are yourNameFeatureOne and yourNameFeatureTwo, where they both branch from yourName.]
