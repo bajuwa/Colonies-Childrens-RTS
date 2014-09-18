@@ -1,12 +1,12 @@
 Creating Maps
 =============
 For Non-Developers:
-1. Download the latest version of the IAT410 project here: [TODO]
+1. Download the latest release of the IAT410 project here: https://github.com/bajuwa/IAT410/archive/master.zip
 2. Open up the scene Game.unity in your Unity program
-3. The scene already contains some tiles that are attached to a "MapManager" in a rough map grid pattern, you can replace these tiles when making your own map but make sure they are children of the "MapManager" and that you keep to the same pattern (rough estimates are fine, the code will clean it up for you)
-4. In order to add tiles to the scene, look in the Assets->Prefabs->Tiles folder and drag any of the available tile prefabs to the "MapManager".  Other than coordinates, do not change anything about the tile!
-5. Once you have all your tiles on the MapManager (or at any point in the process), you can test whether the map 'snaps' properly by pressing Play.
-6. When your map is done, click "File->Save Scene As..." and give your scene/map a new name (aka not "Game.unity")
+3. Start by giving your map scene a new name using "File->Save Scene As..."
+4. The scene already contains some tiles that are attached to a "MapManager" in a rough map grid pattern, you should replace these tiles when making your own map but make sure they are children of the "MapManager" and that you keep to the same pattern (rough estimates are fine, the code will clean it up for you)
+5. In order to add tiles to the scene, look in the Assets->Prefabs->Tiles folder and drag any of the available tile prefabs to the "MapManager".  Other than coordinates, do not change anything about the tile!
+6. Once you have all your tiles on the MapManager (or at any point in the process), you can test whether the map 'snaps' properly by pressing Play.
 7. To get your map back to developers, send us both of your scene files ("YourMap.unity" and "YourMap.unity.meta") and we will include it in the code repo
 
 For Developers:
