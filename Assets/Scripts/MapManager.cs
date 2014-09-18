@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TileManager : MonoBehaviour {
+public class MapManager : MonoBehaviour {
+	
+	private Vector3 rightClickCoord;
+	private Vector3 oldTileCoord;
 
 		// Use this for initialization
 		void Start (){
@@ -11,8 +14,8 @@ public class TileManager : MonoBehaviour {
 			
 			// In order to calculate the valid positions, we need to take in to account each tiles height/width
 			// (use the first tile as a test, assume all are the same)
-		float tileHeight = tiles[0].renderer.bounds.size.y * 0.75f;
-		float tileWidth = tiles[0].renderer.bounds.size.x;
+			float tileHeight = tiles[0].renderer.bounds.size.y * 0.75f;
+			float tileWidth = tiles[0].renderer.bounds.size.x;
 			
 			foreach (Tile tile in tiles) {
 				// Grab a temporary copy of the current position
@@ -34,7 +37,21 @@ public class TileManager : MonoBehaviour {
 	
 		// Update is called once per frame
 		void Update () {
-	
+			// Update map location when holding and dragging right mouse button
+			// Note: 1 stands for 'right mouse button'
+			// First keep track of where the player first clicked down
+			if (Input.GetMouseButtonDown(1)) {
+				rightClickCoord = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+				oldTileCoord = gameObject.transform.position;
+			}
+			// Then update the map position by how far the player moved their mouse while holding down
+			if (Input.GetMouseButton(1)) {
+				Vector3 tempTilePosition = gameObject.transform.position;
+				Vector3 tempMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+				tempTilePosition.x = oldTileCoord.x - (rightClickCoord.x - tempMousePosition.x);
+				tempTilePosition.y = oldTileCoord.y - (rightClickCoord.y - tempMousePosition.y);
+				gameObject.transform.position = tempTilePosition;
+			}
 		}
 
 		private float diffBetween (float a, float b) {

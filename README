@@ -1,12 +1,21 @@
 Creating Maps
 =============
+For Non-Developers:
 1. Download the latest version of the IAT410 project here: [TODO]
 2. Open up the scene Game.unity in your Unity program
-3. The scene already contains some tiles in a rough map grid pattern, you can replace these tiles when making your own map but make sure you keep to the same pattern (rough estimates are fine, the code will clean it up for you)
-4. In order to add tiles to the scene, look in the Assets->Prefabs->Tiles folder and drag any of the available tiles to your scene.  Other than coordinates, do not change anything about the tile!
-5. Once you have all your tiles on the map (or at any point in the process), you can test whether the map 'snaps' properly by pressing Play.
+3. The scene already contains some tiles that are attached to a "MapManager" in a rough map grid pattern, you can replace these tiles when making your own map but make sure they are children of the "MapManager" and that you keep to the same pattern (rough estimates are fine, the code will clean it up for you)
+4. In order to add tiles to the scene, look in the Assets->Prefabs->Tiles folder and drag any of the available tile prefabs to the "MapManager".  Other than coordinates, do not change anything about the tile!
+5. Once you have all your tiles on the MapManager (or at any point in the process), you can test whether the map 'snaps' properly by pressing Play.
 6. When your map is done, click "File->Save Scene As..." and give your scene/map a new name (aka not "Game.unity")
 7. To get your map back to developers, send us both of your scene files ("YourMap.unity" and "YourMap.unity.meta") and we will include it in the code repo
+
+For Developers:
+When importing a new Map Scene (or creating your own), ensure the following conditions are met:
+1. There is an invisible sprite called "MapManager" with the "MapManager" script attached to it
+2. ALL of the tiles are attached to the "MapManager" sprite as child objects
+3. There is an orthographic Camera object named "Main Camera" and it is tagged as "MainCamera"
+4. There is an invisible sprite called "CameraManager" with the "CameraManager" script attached to it
+
 
 Unity Setup
 ===========
