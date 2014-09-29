@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: ObstacleTile
-  m_TagString: Untagged
+  m_Name: FruitTree
+  m_TagString: MapObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78de88e25ab50e6429f9e7532d5cec92, type: 3}
+  m_Script: {fileID: 11500000, guid: 2a050c76ace2cf248a750987789f9884, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21200000
@@ -60,7 +60,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e53e96fc8206d724ab13fdb39c9c2fa1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 16be113ec24d21d428d6f364aa54fced, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

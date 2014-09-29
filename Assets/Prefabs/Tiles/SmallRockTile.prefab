@@ -11,8 +11,8 @@ GameObject:
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: RockTile
-  m_TagString: Untagged
+  m_Name: SmallRockTile
+  m_TagString: MapObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,6 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de88e25ab50e6429f9e7532d5cec92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  terrainValue: 8
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -60,7 +61,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c2bc5b3c9db8b044bb3eef45b18f9d70, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aab62ada1fa59554c9a1b086afa582d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

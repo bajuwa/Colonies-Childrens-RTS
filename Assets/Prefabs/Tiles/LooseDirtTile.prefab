@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: GrassTile
+  m_Name: LooseDirtTile
   m_TagString: MapObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de88e25ab50e6429f9e7532d5cec92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  terrainValue: 4
+  terrainValue: 2
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -61,7 +61,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e7e1b48ad07e104f9e9b657bb557ba6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
