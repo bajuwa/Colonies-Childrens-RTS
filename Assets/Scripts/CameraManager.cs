@@ -2,8 +2,8 @@
 using System.Collections;
 
 public class CameraManager : MonoBehaviour {
-	private float minOrthoSize = 5f;
-	private float maxOrthoSize = 15.0f;
+	public float minOrthoSize = 5f;
+	public float maxOrthoSize = 15.0f;
 	
 	private Camera mainCam;
 	
