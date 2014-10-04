@@ -2,9 +2,6 @@
 using System.Collections;
 
 public class MapManager : MonoBehaviour {
-	
-	private Vector3 rightClickCoord;
-	private Vector3 oldTileCoord;
 
 		// Use this for initialization
 		void Start (){
@@ -25,21 +22,7 @@ public class MapManager : MonoBehaviour {
 	
 		// Update is called once per frame
 		void Update () {
-			// Update map location when holding and dragging right mouse button
-			// Note: 1 stands for 'right mouse button'
-			// First keep track of where the player first clicked down
-			if (Input.GetMouseButtonDown(1)) {
-				rightClickCoord = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-				oldTileCoord = gameObject.transform.position;
-			}
-			// Then update the map position by how far the player moved their mouse while holding down
-			if (Input.GetMouseButton(1)) {
-				Vector3 tempTilePosition = gameObject.transform.position;
-				Vector3 tempMousePosition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
-				tempTilePosition.x = oldTileCoord.x - (rightClickCoord.x - tempMousePosition.x);
-				tempTilePosition.y = oldTileCoord.y - (rightClickCoord.y - tempMousePosition.y);
-				gameObject.transform.position = tempTilePosition;
-			}
+		
 		}
 		
 		private void snapToNearestLocation(GameObject obj, float xInterval, float yInterval) {
@@ -51,9 +34,9 @@ public class MapManager : MonoBehaviour {
 			float xIncrement = xInterval;
 			int rowNumber = (int)Mathf.Abs(tempPos.y/yInterval) % 2;
 			if (rowNumber % 2 == 1) {
-				tempPos.x = closestDistance (tempPos.x, minIncrement(tempPos.x, xIncrement)+xIncrement/2f, maxIncrement(tempPos.x, xIncrement)+xIncrement/2f);
+				tempPos.x = closestDistance(tempPos.x, minIncrement(tempPos.x, xIncrement)+xIncrement/2f, maxIncrement(tempPos.x, xIncrement)+xIncrement/2f);
 			} else {
-				tempPos.x = closestDistance (tempPos.x, minIncrement(tempPos.x, xIncrement), maxIncrement(tempPos.x, xIncrement));
+				tempPos.x = closestDistance(tempPos.x, minIncrement(tempPos.x, xIncrement), maxIncrement(tempPos.x, xIncrement));
 			}
 			// Set the tile's position to our modified vector
 			obj.transform.position = tempPos;
