@@ -7,6 +7,7 @@ public class CameraManager : MonoBehaviour {
 	
 	private Camera mainCam;
 	private GameObject mapManager;
+	private GameObject mapImage;
 	
 	private Vector3 rightClickCoord;
 	private Vector3 oldTileCoord;
@@ -18,7 +19,8 @@ public class CameraManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () { 
 		mainCam = Camera.main;
-		mapManager = GameObject.Find("MapManager");
+		mapManager = GameObject.FindGameObjectWithTag("MapManager");
+		mapImage = GameObject.FindGameObjectWithTag("MapBackground");
 	}
 	
 	// Update is called once per frame
@@ -55,7 +57,6 @@ public class CameraManager : MonoBehaviour {
 		camMaxY = mainCam.transform.position.y + mainCam.orthographicSize;
 		
 		// Ensure the player does not pan the camera past the limits of the maps edges
-		GameObject mapImage = GameObject.FindGameObjectWithTag("Map");
 		if (camMinX < mapImage.renderer.bounds.min.x) {
 			tempMapPosition.x -= mapImage.renderer.bounds.min.x - camMinX;
 		}
