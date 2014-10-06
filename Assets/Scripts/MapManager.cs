@@ -50,11 +50,11 @@ public class MapManager : MonoBehaviour {
 		
 		}
 		
-		// Returns an array of coordinates that represent all valid adjacent tiles to the given coordinate
+		// Returns an array of tile objects that represent all valid adjacent tiles to the given coordinate
 		// The given coordinate will be 'snapped' to the closest valid tile position before calculating adjacent tiles
-		public Vector2[] getAdjacentTilePositions(Vector2 originTilePos) {
+		public Tile[] getAdjacentTiles(Tile originalTile) {
 			// Enforce that the position we were given is a valid one
-			Vector2 originTilePosition = getNearestLocation(originTilePos);
+			Vector2 originTilePosition = getNearestLocation(originalTile.gameObject.transform.localPosition);
 			//Debug.Log("Getting adjacent tiles to: " + originTilePosition.ToString());
 			
 			// Get the tile object that is at the valid position 
@@ -74,16 +74,23 @@ public class MapManager : MonoBehaviour {
 			);
 			
 			// Since the physics will pick up our current tile as well, we need to remove it from 'adjacent tiles' positions
-			Vector2[] adjacentTilePositions = new Vector2[adjacentTileColliders.Length - 1];
+			Tile[] adjacentTilePositions = new Tile[adjacentTileColliders.Length - 1];
 			int i = 0;
 			foreach (Collider2D collider in adjacentTileColliders) {
 				// Since a tile will never share the exact same x value as any of its neighbours, we don't need to compare the full vector
 				if (collider.gameObject.transform.localPosition.x != originTilePosition.x) {
-					adjacentTilePositions[i++] = (Vector2) collider.gameObject.transform.localPosition;
+					adjacentTilePositions[i++] = (Tile) collider.gameObject.GetComponent(typeof(Tile));
 				}
 			}
 			//Debug.Log("Returning positions for " + adjacentTilePositions.Length.ToString() + " adjacent tiles");
 			return adjacentTilePositions;
+		}
+		
+		public Tile getTileAtPosition(Vector2 position) {
+			return (Tile) Physics2D.OverlapPoint(
+				tileSpriteParentTransform.TransformPoint(position), 
+				tileMask
+			).gameObject.GetComponent(typeof(Tile));
 		}
 		
 		private Vector2 getNearestLocation(Vector2 position) {

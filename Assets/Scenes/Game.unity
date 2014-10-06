@@ -15419,9 +15419,6 @@ MonoBehaviour:
   attack: 10
   defense: 10
   speed: 2
-  mapManager: {fileID: 0}
-  targetCoords: {x: 0, y: 0}
-  tempFont: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!212 &983342480
 SpriteRenderer:
   m_ObjectHideFlags: 0
