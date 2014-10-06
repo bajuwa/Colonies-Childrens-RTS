@@ -108,7 +108,7 @@ PlayerSettings:
     - m_Icon: {fileID: 0}
       m_Size: 128
   m_BuildTargetBatching: []
-  webPlayerTemplate: APPLICATION:Black Background
+  webPlayerTemplate: APPLICATION:No Context Menu
   m_TemplateCustomTags: {}
   XboxTitleId: 
   XboxImageXexPath: 

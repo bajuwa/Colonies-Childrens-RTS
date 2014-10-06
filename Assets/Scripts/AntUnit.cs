@@ -38,6 +38,7 @@ public class AntUnit : MonoBehaviour {
 			if (targetPath.Count > 0) {
 				currentTile = targetTile;
 				targetTile = (Tile) targetPath.Dequeue();
+				// TODO: test out with 'max terrain value' instead of 'summed terrain value'
 				float secondsToTraverse = ((float) (currentTile.terrainValue + targetTile.terrainValue + 1)) / speed;
 				calculatedVelocity = Vector2.Distance(currentTile.gameObject.transform.position,
 													  targetTile.gameObject.transform.position) / secondsToTraverse;
