@@ -15419,6 +15419,7 @@ MonoBehaviour:
   attack: 10
   defense: 10
   speed: 2
+  calculatedVelocity: 0
 --- !u!212 &983342480
 SpriteRenderer:
   m_ObjectHideFlags: 0

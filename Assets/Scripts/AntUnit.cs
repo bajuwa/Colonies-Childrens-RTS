@@ -5,9 +5,10 @@ public class AntUnit : MonoBehaviour {
 	// Unit Stats (TODO: privatize once done dev testing)
 	public float currentHp = 10f;
 	public float maxHp = 10f;
-	public float attack = 10f;
-	public float defense = 10f;
-	public float speed = 0.2f;
+	public float attack = 1f;
+	public float defense = 2f;
+	public float speed = 5f;
+	public float calculatedVelocity;
 
 	/* Movement variables: All coords must be in local position to handle map panning! */
 	private MapManager mapManager;
@@ -15,6 +16,7 @@ public class AntUnit : MonoBehaviour {
 	private Queue targetPath;
 	// Target Coords represents the current short term target from targetPath when moving (should be an adjacent tile coord)
 	private Tile targetTile;
+	private Tile currentTile;
 	
 	// Use this for initialization
 	void Start() {
@@ -29,12 +31,16 @@ public class AntUnit : MonoBehaviour {
 			gameObject.transform.localPosition = Vector2.MoveTowards(
 				gameObject.transform.localPosition, 
 				targetTile.transform.localPosition, 
-				Time.deltaTime * speed
+				Time.deltaTime * calculatedVelocity
 			);
 		} else {
 			// If we have reached our target, pick our next target from the given path
 			if (targetPath.Count > 0) {
+				currentTile = targetTile;
 				targetTile = (Tile) targetPath.Dequeue();
+				float secondsToTraverse = ((float) (currentTile.terrainValue + targetTile.terrainValue + 1)) / speed;
+				calculatedVelocity = Vector2.Distance(currentTile.gameObject.transform.position,
+													  targetTile.gameObject.transform.position) / secondsToTraverse;
 				
 				// TODO: Temp: provide a continuous random path
 				Tile[] availableCoords = mapManager.getAdjacentTiles(targetTile);
@@ -52,12 +58,13 @@ public class AntUnit : MonoBehaviour {
 	// Takes note of our current positioning for future pathfinding 
 	// Note: should only be called during initial setup after the map 'snaps' the unit to the appropriate position
 	public void recordPosition() {
-		targetTile = null;
-		targetPath = new Queue();
 		if (mapManager == null) setMapManager();
-		targetPath.Enqueue(mapManager.getAdjacentTiles(
-			mapManager.getTileAtPosition((Vector2)gameObject.transform.localPosition)
-		)[0]);
+		currentTile = mapManager.getTileAtPosition((Vector2)gameObject.transform.localPosition);
+		targetTile = currentTile;
+		targetPath = new Queue();
+		
+		// TODO: temp in order to trigger initial movement
+		targetPath.Enqueue(mapManager.getAdjacentTiles(currentTile)[0]);
 	}
 	
 	private void setMapManager() {
