@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class AntUnit : MonoBehaviour {
+public class AntUnit : Selectable {
 	// Unit Stats (TODO: privatize once done dev testing)
 	public float currentHp = 10f;
 	public float maxHp = 10f;
@@ -25,35 +25,34 @@ public class AntUnit : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update() {
-		if (targetTile != null &&
-			(Vector2) gameObject.transform.localPosition != (Vector2) targetTile.transform.localPosition) {
-			// If we haven't already reached our next target, continue moving towards that coord
-			gameObject.transform.localPosition = Vector2.MoveTowards(
-				gameObject.transform.localPosition, 
-				targetTile.transform.localPosition, 
-				Time.deltaTime * calculatedVelocity
-			);
-		} else {
-			// If we have reached our target, pick our next target from the given path
-			if (targetPath.Count > 0) {
-				currentTile = targetTile;
-				targetTile = (Tile) targetPath.Dequeue();
-				// TODO: test out with 'max terrain value' instead of 'summed terrain value'
-				float secondsToTraverse = ((float) (currentTile.terrainValue + targetTile.terrainValue + 1)) / speed;
-				calculatedVelocity = Vector2.Distance(currentTile.gameObject.transform.position,
-													  targetTile.gameObject.transform.position) / secondsToTraverse;
-				
-				// TODO: Temp: provide a continuous random path
-				Tile[] availableCoords = mapManager.getAdjacentTiles(targetTile);
-				if (availableCoords.Length > 0) {
-					targetPath.Enqueue(availableCoords[Random.Range(0, availableCoords.Length)]);
-				}
-			}
-		}
+		findPath();
 	}
 	
-	public void setPath(Queue path) {
-		targetPath = new Queue(path);
+	public override void select(int id) {
+		Debug.Log("Selecting an Ant Unit");
+		base.select(id);
+		
+		foreach (Tile tile in targetPath) {
+			tile.select(GetInstanceID());
+		}
+		if (currentTile != null) currentTile.select(GetInstanceID());
+		if (targetTile != null) targetTile.select(GetInstanceID());
+	}
+	
+	public override void deselect(int id) {
+		Debug.Log("Deselecting an Ant Unit");
+		base.deselect(id);
+		
+		foreach (Tile tile in targetPath) {
+			tile.deselect(GetInstanceID());
+		}
+		if (currentTile != null) currentTile.deselect(GetInstanceID());
+		if (targetTile != null) targetTile.deselect(GetInstanceID());
+	}
+	
+	public void moveTo(Tile tile) {
+		//TODO: A*
+		addToPath(tile);	
 	}
 	
 	// Takes note of our current positioning for future pathfinding 
@@ -65,7 +64,48 @@ public class AntUnit : MonoBehaviour {
 		targetPath = new Queue();
 		
 		// TODO: temp in order to trigger initial movement
-		targetPath.Enqueue(mapManager.getAdjacentTiles(currentTile)[0]);
+		//addToPath(mapManager.getAdjacentTiles(currentTile)[0]);
+	}
+	
+	private Tile popFromPath() {
+		Tile tile = (Tile) targetPath.Dequeue();
+		tile.select(GetInstanceID());
+		return tile;
+	}
+	
+	private void addToPath(Tile tile) {
+		tile.select(GetInstanceID());
+		targetPath.Enqueue(tile);
+	}
+	
+	private void findPath() {
+		if (targetTile != null &&
+			(Vector2) gameObject.transform.localPosition != (Vector2) targetTile.transform.localPosition) {
+			// If we haven't already reached our next target, continue moving towards that coord
+			gameObject.transform.localPosition = Vector2.MoveTowards(
+				gameObject.transform.localPosition, 
+				targetTile.transform.localPosition, 
+				Time.deltaTime * calculatedVelocity
+			);
+		} else {
+			// If we have reached our target, pick our next target from the given path
+			if (targetPath.Count > 0) {
+				// Deselect our previous tile and switch the target tile we reached
+				currentTile.GetComponent<Selectable>().deselect(GetInstanceID());
+				currentTile = targetTile;
+				targetTile = popFromPath();
+				// TODO: test out with 'max terrain value' instead of 'summed terrain value'
+				float secondsToTraverse = ((float) (currentTile.terrainValue + targetTile.terrainValue + 1)) / speed;
+				calculatedVelocity = Vector2.Distance(currentTile.gameObject.transform.position,
+													  targetTile.gameObject.transform.position) / secondsToTraverse;
+				
+				// TODO: Temp: provide a continuous random path
+				// Tile[] availableCoords = mapManager.getAdjacentTiles(targetTile);
+				// if (availableCoords.Length > 0) {
+					// addToPath(availableCoords[Random.Range(0, availableCoords.Length)]);
+				// }
+			}
+		}
 	}
 	
 	private void setMapManager() {

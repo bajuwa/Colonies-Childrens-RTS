@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/**
+ * Is in charge of handling the map as a whole entity
+ */
 public class MapManager : MonoBehaviour {
 		
 		private float tileHeight = 0f;
@@ -9,12 +12,12 @@ public class MapManager : MonoBehaviour {
 		private int tileMask = 0;
 		private Transform tileSpriteParentTransform;
 
-		// Use this for initialization
+		// During startup, make sure all map objects are "snapped" to the closest valid position
 		void Start (){
 			tileMask =  1 << LayerMask.NameToLayer("Tile");
 			tileSpriteParentTransform = transform.Find("Tiles");
 		
-			// Get all the tiles on the screen and "snap" them to the closest valid position
+			// Get all the tiles on the screen
 			List<GameObject> objects = new List<GameObject>();
 			string[] mapObjectTags = {"Tile", "AntUnit"};
 			foreach (string tag in mapObjectTags) {
@@ -86,9 +89,9 @@ public class MapManager : MonoBehaviour {
 			return adjacentTilePositions;
 		}
 		
-		public Tile getTileAtPosition(Vector2 position) {
+		public Tile getTileAtPosition(Vector2 position, bool isLocalPosition = true) {
 			return (Tile) Physics2D.OverlapPoint(
-				tileSpriteParentTransform.TransformPoint(position), 
+				isLocalPosition ? (Vector2) tileSpriteParentTransform.TransformPoint(position) : position, 
 				tileMask
 			).gameObject.GetComponent(typeof(Tile));
 		}
