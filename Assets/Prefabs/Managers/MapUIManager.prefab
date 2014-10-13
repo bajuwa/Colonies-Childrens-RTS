@@ -42,6 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultCursor: {fileID: 2800000, guid: a12b9cc64f2575a43bb63614e7625a0c, type: 3}
   moveToCursor: {fileID: 2800000, guid: 57ef3a54a1db5294b982ed935426a8b0, type: 3}
+  gatherCursor: {fileID: 2800000, guid: f4300cdf8d87cba4c99b7ca76254bb14, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

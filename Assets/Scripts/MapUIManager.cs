@@ -62,6 +62,10 @@ public class MapUIManager : MonoBehaviour {
 			setCursor(selectedObject);
 		}
 	}
+	
+	public void setDefaultCursor() {
+		Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
+	}
 
 	public Selectable getCurrentlySelectedObject() {
 		return selectedObject;
@@ -73,7 +77,7 @@ public class MapUIManager : MonoBehaviour {
 		// Since multiple selectables might be stacked on top of each other, only return the 'top most' element
 		for (int i=0; i<overlappedSelectables.Length; i++) {
 			// Make sure our overlapped collider actually belongs to a selectable gameobject
-			if (overlappedSelectables[i].gameObject.GetComponent<Selectable>() == null) continue;
+			if (overlappedSelectables[i].gameObject.GetComponent<Selectable>() == null || !overlappedSelectables[i].gameObject.GetComponent<Selectable>().enabled) continue;
 			// and also that it's position is closer to the camera than the previous selectable (if any)
 			if (topMostSelectable == null || 
 				topMostSelectable.transform.position.z > overlappedSelectables[i].gameObject.transform.position.z) {
@@ -113,6 +117,6 @@ public class MapUIManager : MonoBehaviour {
 		}
 			
 		// Lastly, if no cursor has been set, use the default
-		Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
+		setDefaultCursor();
 	}
 }
