@@ -8,11 +8,13 @@ public class MapUIManager : MonoBehaviour {
 
 	private Selectable selectedObject;
 	private MapManager mapManager;
+	private Player player;
 	private Transform tileSpriteParentTransform;
 
 	// Use this for initialization
 	void Start () {
 		setMapManager();
+		player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>();
 		tileSpriteParentTransform = transform.Find("Tiles");
 		Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
 	}
@@ -35,11 +37,11 @@ public class MapUIManager : MonoBehaviour {
 			}
 		}
 		
-		// If the user right-clicks when an Ant Unit is selected, move that unit along a path to the right clicked tile
+		// If the user right-clicks when a Friendly Ant Unit is selected, move that unit along a path to the right clicked tile
 		if (Input.GetMouseButtonDown(1) && selectedObject != null) {
 			// Get the Ant Unit script (if any)
 			AntUnit antUnitScript = selectedObject.GetComponent<AntUnit>();
-			if (antUnitScript != null) {
+			if (antUnitScript != null && antUnitScript.ownedBy == player.id) {
 				// Set the unit on a path to their target
 				StartCoroutine(antUnitScript.moveTo(mapManager.getTileAtPosition(Camera.main.ScreenToWorldPoint((Vector2) Input.mousePosition), false)));
 			}
@@ -52,8 +54,8 @@ public class MapUIManager : MonoBehaviour {
 	}
 	
 	private void setCursor(Selectable selectedObject) {
-		// We only need to set custom cursors if an ant unit is currently selected
-		if (selectedObject != null && selectedObject.GetComponent<AntUnit>() != null) {
+		// We only need to set custom cursors if a friendly ant unit is currently selected
+		if (selectedObject != null && selectedObject.GetComponent<AntUnit>() != null && selectedObject.GetComponent<AntUnit>().ownedBy == player.id) {
 			Selectable hoveredObject = getSelectableAtPosition((Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition), false);
 			if (hoveredObject != null) {
 				// If a Tile is the topMostSelectable then we should display a 'move' type cursor

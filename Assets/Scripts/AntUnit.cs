@@ -4,9 +4,12 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class AntUnit : Selectable {
-	private const float PATHFINDING_TIMEOUT_SECONDS = 20f;
+	protected const float PATHFINDING_TIMEOUT_SECONDS = 20f;
 	
-	// Unit Stats (TODO: privatize once done dev testing)
+	// Sets ownership of the unit to determine allied vs enemy units
+	public int ownedBy = 1;
+	
+	// Unit Stats (TODO: protect once done dev testing)
 	public float currentHp = 10f;
 	public float maxHp = 10f;
 	public float attack = 1f;
@@ -14,17 +17,17 @@ public class AntUnit : Selectable {
 	public float speed = 5f;
 	public float calculatedVelocity;
 	
-	private MapManager mapManager;
+	protected MapManager mapManager;
 
 	/* Movement variables: All coords must be in local position to handle map panning! */
 	// Target Path carries the full list of tiles in order of planned traversal
-	private Path targetPath;
+	protected Path targetPath;
 	// Target Coords represents the current short term target from targetPath when moving (should be an adjacent tile coord)
-	private Tile targetTile;
-	private Tile currentTile;
+	protected Tile targetTile;
+	protected Tile currentTile;
 	
 	// Use this for initialization
-	void Start() {
+	protected virtual void Start() {
 		setMapManager();
 		targetPath = getNewPath();
 	}
@@ -109,17 +112,17 @@ public class AntUnit : Selectable {
 	}
 	
 	// Every frame, units should continue working towards their current target tile (if any)
-	void Update() {
+	protected virtual void Update() {
 		findPath();
 	}
 	
-	private void setMapManager() {
+	protected void setMapManager() {
 		GameObject[] managers = GameObject.FindGameObjectsWithTag("MapManager");
 		if (managers.Length == 1) mapManager = (MapManager) managers[0].GetComponent(typeof(MapManager));
 		else Debug.Log("WARN: Found incorrect number of GameObjects with MapManager Tag.  Expected 1, found " + managers.Length);
 	}
 	
-	private void findPath() {
+	protected void findPath() {
 		if (targetTile != null &&
 			(Vector2) gameObject.transform.localPosition != (Vector2) targetTile.transform.localPosition) {
 			// If we haven't already reached our next target, continue moving towards that coord
@@ -143,7 +146,7 @@ public class AntUnit : Selectable {
 		}
 	}
 	
-	private void setPath(Path path) {
+	protected void setPath(Path path) {
 		targetPath.setNewTileQueue(path.getTilePath());
 		if (isSelected()) targetPath.selectPath();
 	}
@@ -152,7 +155,7 @@ public class AntUnit : Selectable {
 	 * A basic priority queue of Path objects
 	 */
 	protected class PriorityQueue {
-		private List<Path> priorityQueue = new List<Path>();
+		protected List<Path> priorityQueue = new List<Path>();
 		
 		public void add(Path newPath) {
 			int insertIndex = 0;
