@@ -3,6 +3,9 @@ using System.Collections;
 
 public class MapUIManager : MonoBehaviour {
 
+	public Texture2D defaultCursor;
+	public Texture2D moveToCursor;
+
 	private Selectable selectedObject;
 	private MapManager mapManager;
 	private Transform tileSpriteParentTransform;
@@ -11,6 +14,7 @@ public class MapUIManager : MonoBehaviour {
 	void Start () {
 		setMapManager();
 		tileSpriteParentTransform = transform.Find("Tiles");
+		Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
 	}
 	
 	// Update is called once per frame
@@ -40,6 +44,28 @@ public class MapUIManager : MonoBehaviour {
 				StartCoroutine(antUnitScript.moveTo(mapManager.getTileAtPosition(Camera.main.ScreenToWorldPoint((Vector2) Input.mousePosition), false)));
 			}
 		}
+		
+		// Depending on what the user has selected and what they are currenlty hovering over, change the mouse cursor
+		if (selectedObject != null) {
+			setCursor(selectedObject);
+		}
+	}
+	
+	private void setCursor(Selectable selectedObject) {
+		// We only need to set custom cursors if an ant unit is currently selected
+		if (selectedObject != null && selectedObject.GetComponent<AntUnit>() != null) {
+			Selectable hoveredObject = getSelectableAtPosition((Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition), false);
+			if (hoveredObject != null) {
+				// If a Tile is the topMostSelectable then we should display a 'move' type cursor
+				if (hoveredObject.GetComponent<Tile>() != null) {
+					Cursor.SetCursor(moveToCursor, Vector2.zero, CursorMode.Auto);
+					return;
+				}
+			}
+		}
+			
+		// Lastly, if no cursor has been set, use the default
+		Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.Auto);
 	}
 		
 	public Selectable getSelectableAtPosition(Vector2 position, bool isLocalPosition = true) {

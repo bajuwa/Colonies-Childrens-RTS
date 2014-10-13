@@ -9432,7 +9432,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 4bbb7c4bfb7e3064bbb0dfe9898edb5c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 4bbb7c4bfb7e3064bbb0dfe9898edb5c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -9461,6 +9461,10 @@ Prefab:
     - target: {fileID: 400000, guid: 4bbb7c4bfb7e3064bbb0dfe9898edb5c, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 4bbb7c4bfb7e3064bbb0dfe9898edb5c, type: 2}
+      propertyPath: orthographic size
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bbb7c4bfb7e3064bbb0dfe9898edb5c, type: 2}
@@ -19202,6 +19206,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8778b4e456e2f046a39afbd4079c8a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultCursor: {fileID: 2800000, guid: a12b9cc64f2575a43bb63614e7625a0c, type: 3}
+  moveToCursor: {fileID: 2800000, guid: 57ef3a54a1db5294b982ed935426a8b0, type: 3}
 --- !u!212 &1212017312
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -22812,7 +22818,7 @@ Transform:
   m_PrefabInternal: {fileID: 595442837}
   m_GameObject: {fileID: 1425824636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -30047,7 +30053,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1914749637}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.25254512, y: .0687039047, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

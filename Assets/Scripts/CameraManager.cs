@@ -6,7 +6,6 @@ public class CameraManager : MonoBehaviour {
 	public float maxOrthoSize = 15.0f;
 	
 	private Camera mainCam;
-	private GameObject mapManager;
 	private GameObject mapImage;
 	
 	private float cameraSpeed = 0.3f;
@@ -18,7 +17,6 @@ public class CameraManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () { 
 		mainCam = Camera.main;
-		mapManager = GameObject.FindGameObjectWithTag("MapManager");
 		mapImage = GameObject.FindGameObjectWithTag("MapBackground");
 	}
 	
