@@ -21,20 +21,26 @@ public class GathererUnit : AntUnit {
 			foreach (Collider2D col in itemsOnSameTile) {
 				if (col.gameObject.GetComponent<Food>() != null) {
 					Debug.Log("Detected food on current tile, picking up");
-					// Set the parent to our unit so that it is 'carried' when the unit is moving
-					col.gameObject.transform.parent = this.gameObject.transform;
-					// Also set the local position's z value to -1 to ensure it is visible above the unit
-					Vector3 tempPos = col.gameObject.transform.localPosition;
-					tempPos.z = -1; 
-					col.gameObject.transform.localPosition = tempPos;
-					// Disable the selectable script so that it doesn't interfere with selecting the underlying unit
-					col.gameObject.GetComponent<Selectable>().enabled = false;
+					pickUpFood(col.gameObject);
 				}
 			}
 		}
 		
 		// If the player is moving, then clear our 'dropped food' flag so that the unit can pick up food again
 		if (currentTile != targetTile) droppedFood = false;
+	}
+	
+	public void pickUpFood(GameObject gameObj) {
+		// Set the parent to our unit so that it is 'carried' when the unit is moving
+		gameObj.transform.parent = this.gameObject.transform;
+		
+		// Also set the local position's z value to -1 to ensure it is visible above the unit
+		Vector3 tempPos = gameObj.transform.localPosition;
+		tempPos.z = -1; 
+		gameObj.transform.localPosition = tempPos;
+		
+		// Re-enable the selectable script so that we can select it again
+		gameObj.GetComponent<Selectable>().enabled = true;
 	}
 	
 	public void dropFood() {
@@ -46,9 +52,12 @@ public class GathererUnit : AntUnit {
 		foodTransform.parent = GameObject.Find("Objects").transform;
 		
 		// Reset the z back to 0 to force the food back underneath the unit
-		Vector3 tempPos = foodTransform.position;
+		Vector3 tempPos = foodTransform.localPosition;
 		tempPos.z = 0;
-		foodTransform.position = tempPos;
+		foodTransform.localPosition = tempPos;
+		
+		// Disable the selectable script so that it doesn't interfere with selecting the underlying unit
+		foodTransform.gameObject.GetComponent<Selectable>().enabled = false;
 	}
 	
 	// Gatherers can walk on tiles and food items (but only if they aren't already carrying food themselves)
