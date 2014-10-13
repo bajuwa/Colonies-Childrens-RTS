@@ -25,11 +25,9 @@ public class CameraManager : MonoBehaviour {
 		// Update zoom based on scrollwheel
 		mainCam.orthographicSize -= Input.GetAxis("Mouse ScrollWheel");
 		mainCam.orthographicSize = Mathf.Clamp(mainCam.orthographicSize, minOrthoSize, maxOrthoSize);
-			
-		// Update map location when holding and dragging right mouse button
-		Vector3 tempCamPosition = Camera.main.transform.position;
 		
 		// Update the Maps position while cursor is against the edge of the camera view
+		Vector3 tempCamPosition = Camera.main.transform.position;
 		if (mouseIsAgainstCameraEdge()) {
 			// Then update the map position by how far the player moved their mouse while holding down
 			Vector3 tempMousePosition = mainCam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, Camera.main.transform.position.z));

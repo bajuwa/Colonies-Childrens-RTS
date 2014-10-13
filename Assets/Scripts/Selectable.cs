@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
+/**
+ * Provides an interface for the user to 'select' objects on the map in order to give commands or view details
+ */
 public class Selectable : MonoBehaviour {
 
 	// A list of 'entities' that have selected this selectable

@@ -53,7 +53,7 @@ public class MapUIManager : MonoBehaviour {
 			AntUnit antUnitScript = selectedObject.GetComponent<AntUnit>();
 			if (antUnitScript != null) {
 				// Set the unit on a path to their target
-				StartCoroutine(antUnitScript.moveTo(mapManager.getTileAtPosition(Camera.main.ScreenToWorldPoint((Vector2) Input.mousePosition), false)));
+				StartCoroutine(antUnitScript.moveTo(mapManager.getTileAtPosition(Camera.main.ScreenToWorldPoint((Vector2) Input.mousePosition))));
 			}
 		}
 		

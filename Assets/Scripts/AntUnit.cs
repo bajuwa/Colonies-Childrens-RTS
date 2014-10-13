@@ -3,6 +3,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
+/**
+ * Handles the generic behaviours that are common to all ant units, including:
+ * - movement
+ * - pathfinding
+ * - interactions (blocked by objects, battle calculations, etc)
+ */
 public class AntUnit : Selectable {
 	protected const float PATHFINDING_TIMEOUT_SECONDS = 20f;
 	
@@ -29,8 +35,17 @@ public class AntUnit : Selectable {
 		targetPath = getNewPath();
 	}
 	
+	// Takes note of our current positioning for future pathfinding 
+	// Note: should only be called during initial setup after the map 'snaps' the unit to the appropriate position
+	public void recordPosition() {
+		if (mapManager == null) setMapManager();
+		currentTile = mapManager.getTileAtPosition((Vector2)gameObject.transform.localPosition);
+		targetTile = currentTile;
+	}
+	
 	/**
 	 * Overridden methods from being a Selectable
+	 * When an ant is selected, the entire path they will be moving through will also be 'selected'
 	 */
 	public override void select(int id) {
 		base.select(id);
@@ -46,18 +61,10 @@ public class AntUnit : Selectable {
 		if (targetTile != null) targetTile.deselect(GetInstanceID());
 	}
 	
-	// Takes note of our current positioning for future pathfinding 
-	// Note: should only be called during initial setup after the map 'snaps' the unit to the appropriate position
-	public void recordPosition() {
-		if (mapManager == null) setMapManager();
-		currentTile = mapManager.getTileAtPosition((Vector2)gameObject.transform.localPosition);
-		targetTile = currentTile;
-	}
-	
 	/**
-	 * A coroutine that uses A* pathfinding to find an optimal path between the units
+	 * A coroutine that uses A* pathfinding to find an optimal path between the unit's
 	 * 'targetTile' to the given tileToMoveTo
-	 * Note: it does not use 'currentTile' since it is more often considered 'previousTile'
+	 * Note: it does not use 'currentTile' since that can often be considered 'previousTile' as well
 	 */
 	public IEnumerator moveTo(Tile tileToMoveTo) {
 		// Clear the previous path in case the user gave overriding commands
@@ -98,7 +105,7 @@ public class AntUnit : Selectable {
 				priorityQueue.add(copiedPath);
 			}
 			
-			// Yield the coroutine to let the rest of unity work for a bit
+			// Yield the coroutine to let the rest of unity work for a bit (until the next frame)
 			yield return null;
 		}
 		Debug.Log("Found optimal path");
@@ -110,7 +117,7 @@ public class AntUnit : Selectable {
 	
 	// Every frame, units should continue working towards their current target tile (if any)
 	protected virtual void Update() {
-		findPath();
+		move();
 	}
 	
 	protected void setMapManager() {
@@ -119,7 +126,11 @@ public class AntUnit : Selectable {
 		else Debug.Log("WARN: Found incorrect number of GameObjects with MapManager Tag.  Expected 1, found " + managers.Length);
 	}
 	
-	protected void findPath() {
+	/**
+	 * Moves from the 'currentTile' to the 'targetTile', taking in to account the units base speed and the terrain type
+	 * If the unit has reached the targetTile, it reads the next tile from the path (if available)
+	 */
+	protected void move() {
 		if (targetTile != null &&
 			(Vector2) gameObject.transform.localPosition != (Vector2) targetTile.transform.localPosition) {
 			// If we haven't already reached our next target, continue moving towards that coord
@@ -129,7 +140,7 @@ public class AntUnit : Selectable {
 				Time.deltaTime * calculatedVelocity
 			);
 		} else if (targetPath != null) {
-			// Since the positions are the same, we should carry over our 'target' to our new 'current' tile references
+			// Since the positions are now the same, we should carry over our 'target' to our new 'current' tile references
 			if (currentTile != targetTile) {
 				currentTile.GetComponent<Selectable>().deselect(GetInstanceID());
 				currentTile = targetTile;
@@ -157,7 +168,8 @@ public class AntUnit : Selectable {
 		}
 	}
 	
-	// By default, Ant Units can only walk on tiles
+	// Given a coordinate position on the map, determines whether the current unit is allowed to move to the tile
+	// TODO: Introduce an 'occupied' state to the tiles to prevent 2 units from moving to the same tile
 	protected bool canWalkTo(Vector2 position) {
 		Collider2D[] mapObjects = Physics2D.OverlapPointAll(position);
 		foreach (Collider2D mapObj in mapObjects) {
@@ -169,11 +181,17 @@ public class AntUnit : Selectable {
 		return true;
 	}
 	
+	// Given a specific game object, determine whether the current unit is allowed to be on the same tile as this object
 	// By default, Ant Units can only walk on tiles
 	protected virtual bool canWalkOn(GameObject gameObj) {
 		return gameObj.GetComponent<Tile>() != null;
 	}
 	
+	/**
+	 * Must use this when setting a new path in order to avoid loosing reference to the targetPath object
+	 * (it's destructor method won't be called if the reference is changed, so the previous path may never be
+	 * "deselected" if the reference is disconnected)
+	 */
 	protected void setPath(Path path) {
 		targetPath.setNewTileQueue(path.getTilePath());
 		if (isSelected()) targetPath.selectPath();

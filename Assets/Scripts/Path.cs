@@ -4,7 +4,10 @@ using System.Collections;
 using System.Collections.Generic;
 		
 /**
- * A path made up of tiles that also tracks the cumulative terrain values within the path and the heuristic value of the lastTileInPath
+ * A path made up of tiles that also tracks the cumulative terrain values 
+ * within the path and the heuristic value of the lastTileInPath
+ * Note: Inheriting from the 'ScriptableObject' class allows us access to the GetInstanceID method
+ *		 which we will be using when AntUnits must 'select' their determined paths route
  */
 public class Path : ScriptableObject, IComparable<Path> {
 	private float summedPathValue = 0;

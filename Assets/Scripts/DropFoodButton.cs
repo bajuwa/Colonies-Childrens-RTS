@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
+/**
+ * A script that manages a button to be displayed above a GathererUnit if they are holding a Food object
+ * Note: the object that this is attached to must be a direct child of the GathererUnit, and also have its own rigidbody and collider
+ */
 public class DropFoodButton : MonoBehaviour {
 
 	private MapUIManager uiManager;

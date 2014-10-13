@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 /**
- * Is in charge of handling the map as a whole entity
+ * Handles the map as a whole entity made up of a collection of tiles
  */
 public class MapManager : MonoBehaviour {
 		
@@ -89,11 +89,8 @@ public class MapManager : MonoBehaviour {
 			return adjacentTilePositions;
 		}
 		
-		public Tile getTileAtPosition(Vector2 position, bool isLocalPosition = true) {
-			return (Tile) Physics2D.OverlapPoint(
-				isLocalPosition ? (Vector2) tileSpriteParentTransform.TransformPoint(position) : position, 
-				tileMask
-			).gameObject.GetComponent(typeof(Tile));
+		public Tile getTileAtPosition(Vector2 position) {
+			return (Tile) Physics2D.OverlapPoint(position, tileMask).gameObject.GetComponent(typeof(Tile));
 		}
 		
 		private Vector2 getNearestLocation(Vector2 position) {

@@ -1,6 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * The AntUnit with the unique ability to walk on top of food in order to pick them up.
+ * Once food is picked up, they will move at half their speed, and they can press a small
+ * button displayed above them in order to drop their food
+ */
 public class GathererUnit : AntUnit {
 
 	private bool droppedFood = true;
@@ -41,6 +46,9 @@ public class GathererUnit : AntUnit {
 		
 		// Re-enable the selectable script so that we can select it again
 		gameObj.GetComponent<Selectable>().enabled = true;
+		
+		// When gatherers are carrying food, they move at half their original speed
+		speed /= 2f;
 	}
 	
 	public void dropFood() {
@@ -58,19 +66,26 @@ public class GathererUnit : AntUnit {
 		
 		// Disable the selectable script so that it doesn't interfere with selecting the underlying unit
 		foodTransform.gameObject.GetComponent<Selectable>().enabled = false;
+		
+		// When gatherers are carrying food, they move at half their original speed, so when they drop food, fix the speed stat
+		speed *= 2f;
 	}
 	
 	// Gatherers can walk on tiles and food items (but only if they aren't already carrying food themselves)
 	protected override bool canWalkOn(GameObject gameObj) {
 		// If this object is a child of us, we can safely ignore it
 		if (gameObj.transform.parent == transform) return true;
-		if (gameObj.GetComponent<Tile>() == null) {
-			// If it isn't a tile, and also isn't food, then we can't walk on it
-			if (gameObj.GetComponent<Food>() == null) return false;
-			// If it is food, we can only walk on it if we aren't already carrying food
-			if (this.gameObject.GetComponentInChildren<Food>() != null) return false;
-		}
+		
 		// If it is a tile, we can walk on it
+		if (gameObj.GetComponent<Tile>() != null) return true;
+		
+		// If it isn't a tile, and also isn't food, then we can't walk on it
+		if (gameObj.GetComponent<Food>() == null) return false;
+		
+		// If it is food, we can only walk on it if we aren't already carrying food
+		if (this.gameObject.GetComponentInChildren<Food>() != null) return false;
+		
+		// If none of the above conditions are met, we can safely walk on it
 		return true;
 	}
 }
