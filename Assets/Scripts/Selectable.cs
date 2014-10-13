@@ -30,4 +30,9 @@ public class Selectable : MonoBehaviour {
 		}
 		return false;
 	}
+	
+	public bool isSelectedBy(int id) {
+		if (selectedBy.ContainsKey(id)) return selectedBy[id];
+		return false;
+	}
 }

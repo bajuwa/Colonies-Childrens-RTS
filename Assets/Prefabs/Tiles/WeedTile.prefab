@@ -53,6 +53,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   terrainValue: 6
+  normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
+  selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
