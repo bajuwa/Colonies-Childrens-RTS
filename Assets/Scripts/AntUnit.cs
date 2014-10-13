@@ -129,20 +129,24 @@ public class AntUnit : Selectable {
 				Time.deltaTime * calculatedVelocity
 			);
 		} else if (targetPath != null) {
+			// Since the positions are the same, we should carry over our 'target' to our new 'current' tile references
+			if (currentTile != targetTile) {
+				currentTile.GetComponent<Selectable>().deselect(GetInstanceID());
+				currentTile = targetTile;
+				if (isSelected()) currentTile.select(GetInstanceID());
+			}
+			
 			// If we have reached our target, pick our next target from the given path
 			if (targetPath.getTilePath().Count > 0) {
 				// Before we actually move to the tile, we need to check that no obstacles are in the way
 				Tile nextTile = targetPath.pop();
 				if (!canWalkTo(nextTile.transform.position)) {
 					// If we can't walk on our next tile, cancel movement
-					Debug.Log("Encountered a tile that could not be walked on, cancelling movement");
 					setPath(getNewPath());
 					return;
 				}
 				
 				// Deselect our previous tile and switch the target tile we reached
-				currentTile.GetComponent<Selectable>().deselect(GetInstanceID());
-				currentTile = targetTile;
 				targetTile = nextTile;
 				if (isSelected()) targetTile.select(GetInstanceID());
 				
@@ -157,12 +161,17 @@ public class AntUnit : Selectable {
 	protected bool canWalkTo(Vector2 position) {
 		Collider2D[] mapObjects = Physics2D.OverlapPointAll(position);
 		foreach (Collider2D mapObj in mapObjects) {
-			if (mapObj.gameObject.GetComponent<Tile>() == null && mapObj.gameObject != this.gameObject) {
+			if (!canWalkOn(mapObj.gameObject) && mapObj.gameObject != this.gameObject) {
 				Debug.Log("Encountered a tile that could not be walked on: " + mapObj.gameObject.ToString());
 				return false;
 			}
 		}
 		return true;
+	}
+	
+	// By default, Ant Units can only walk on tiles
+	protected virtual bool canWalkOn(GameObject gameObj) {
+		return gameObj.GetComponent<Tile>() != null;
 	}
 	
 	protected void setPath(Path path) {

@@ -19,7 +19,7 @@ public class MapManager : MonoBehaviour {
 		
 			// Get all the tiles on the screen
 			List<GameObject> objects = new List<GameObject>();
-			string[] mapObjectTags = {"Tile", "AntUnit"};
+			string[] mapObjectTags = {"Tile", "AntUnit", "MapObject"};
 			foreach (string tag in mapObjectTags) {
 				GameObject[] gameObjects = GameObject.FindGameObjectsWithTag(tag);
 				Debug.Log("Found " + gameObjects.Length.ToString() + " objects with tag '" + tag + "'");

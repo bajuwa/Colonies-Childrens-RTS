@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TileObject : MonoBehaviour {
+public class Food : Selectable {
+
+	private int foodValue;
 
 	// Use this for initialization
 	void Start () {
