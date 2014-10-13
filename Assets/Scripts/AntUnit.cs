@@ -6,9 +6,6 @@ using System.Collections.Generic;
 public class AntUnit : Selectable {
 	protected const float PATHFINDING_TIMEOUT_SECONDS = 20f;
 	
-	// Sets ownership of the unit to determine allied vs enemy units
-	public int ownedBy = 1;
-	
 	// Unit Stats (TODO: protect once done dev testing)
 	public float currentHp = 10f;
 	public float maxHp = 10f;
@@ -134,16 +131,38 @@ public class AntUnit : Selectable {
 		} else if (targetPath != null) {
 			// If we have reached our target, pick our next target from the given path
 			if (targetPath.getTilePath().Count > 0) {
+				// Before we actually move to the tile, we need to check that no obstacles are in the way
+				Tile nextTile = targetPath.pop();
+				if (!canWalkTo(nextTile.transform.position)) {
+					// If we can't walk on our next tile, cancel movement
+					Debug.Log("Encountered a tile that could not be walked on, cancelling movement");
+					setPath(getNewPath());
+					return;
+				}
+				
 				// Deselect our previous tile and switch the target tile we reached
 				currentTile.GetComponent<Selectable>().deselect(GetInstanceID());
 				currentTile = targetTile;
-				targetTile = targetPath.pop();
+				targetTile = nextTile;
 				if (isSelected()) targetTile.select(GetInstanceID());
+				
 				// TODO: test out with 'max terrain value' instead of 'summed terrain value'
 				float secondsToTraverse = ((float) (currentTile.terrainValue + targetTile.terrainValue)) / speed;
 				calculatedVelocity = Vector2.Distance(currentTile.gameObject.transform.position, targetTile.gameObject.transform.position) / secondsToTraverse;
 			}
 		}
+	}
+	
+	// By default, Ant Units can only walk on tiles
+	protected bool canWalkTo(Vector2 position) {
+		Collider2D[] mapObjects = Physics2D.OverlapPointAll(position);
+		foreach (Collider2D mapObj in mapObjects) {
+			if (mapObj.gameObject.GetComponent<Tile>() == null && mapObj.gameObject != this.gameObject) {
+				Debug.Log("Encountered a tile that could not be walked on: " + mapObj.gameObject.ToString());
+				return false;
+			}
+		}
+		return true;
 	}
 	
 	protected void setPath(Path path) {

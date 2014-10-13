@@ -4,11 +4,19 @@ using System.Collections.Generic;
 
 public class Selectable : MonoBehaviour {
 
+	// A list of 'entities' that have selected this selectable
+	// This ensures that the selectable is not 'deselected' by one entity when another still wishes to 'select' it
 	public Dictionary<int, bool> selectedBy = new Dictionary<int, bool>();
+	
+	// Sets ownership to determine allied vs enemy vs neutral objects
+	// 0 is neutral, 1 and 2 are their respective player ids
+	// TODO: privatize once done dev
+	public int ownedBy = 0;
+	private Player player;
 
 	// Use this for initialization
 	void Start () {
-	
+		getPlayerScript();
 	}
 	
 	// Update is called once per frame
@@ -24,6 +32,11 @@ public class Selectable : MonoBehaviour {
 		selectedBy[id] = false;
 	}
 	
+	public bool isSelectable() {
+		if (player == null) getPlayerScript();
+		return (ownedBy == 0 || ownedBy == player.id); 
+	}
+	
 	public bool isSelected() {
 		foreach (KeyValuePair<int, bool> entry in selectedBy) {
 			if (entry.Value) return true;
@@ -34,5 +47,9 @@ public class Selectable : MonoBehaviour {
 	public bool isSelectedBy(int id) {
 		if (selectedBy.ContainsKey(id)) return selectedBy[id];
 		return false;
+	}
+	
+	private void getPlayerScript() {
+		player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>();
 	}
 }
