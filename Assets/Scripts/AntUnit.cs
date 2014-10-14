@@ -127,6 +127,12 @@ public class AntUnit : Selectable {
 		move();
 	}
 	
+	// Used to interrupt/cancel a units movement
+	public void interrupt() {
+		Debug.Log("Movement Interrupted!");
+		targetPath.setNewTileQueue(new Queue<Tile>());
+	}
+	
 	protected void setMapManager() {
 		GameObject[] managers = GameObject.FindGameObjectsWithTag("MapManager");
 		if (managers.Length == 1) mapManager = (MapManager) managers[0].GetComponent(typeof(MapManager));
