@@ -35,7 +35,7 @@ public class Selectable : MonoBehaviour {
 		selectedBy[id] = false;
 	}
 	
-	public bool isSelectable() {
+	public bool isNeutralOrFriendly() {
 		if (player == null) getPlayerScript();
 		return (ownedBy == 0 || ownedBy == player.id); 
 	}

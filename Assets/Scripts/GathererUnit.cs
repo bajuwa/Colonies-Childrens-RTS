@@ -46,6 +46,7 @@ public class GathererUnit : AntUnit {
 		
 		// Re-enable the selectable script so that we can select it again
 		gameObj.GetComponent<Selectable>().enabled = true;
+		gameObj.GetComponent<CircleCollider2D>().enabled = false;
 		
 		// When gatherers are carrying food, they move at half their original speed
 		speed /= 2f;
@@ -66,6 +67,7 @@ public class GathererUnit : AntUnit {
 		
 		// Disable the selectable script so that it doesn't interfere with selecting the underlying unit
 		foodTransform.gameObject.GetComponent<Selectable>().enabled = false;
+		foodTransform.gameObject.GetComponent<Collider2D>().enabled = true;
 		
 		// When gatherers are carrying food, they move at half their original speed, so when they drop food, fix the speed stat
 		speed *= 2f;

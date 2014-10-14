@@ -10,15 +10,17 @@ using System.Collections.Generic;
  * - interactions (blocked by objects, battle calculations, etc)
  */
 public class AntUnit : Selectable {
-	protected const float PATHFINDING_TIMEOUT_SECONDS = 20f;
+	protected bool isCalculatingPath = false;
 	
 	// Unit Stats (TODO: protect once done dev testing)
+	// When changing stats between different unit types, change them in the Prefab, not in any classes
 	public float currentHp = 10f;
 	public float maxHp = 10f;
 	public float attack = 1f;
 	public float defense = 2f;
 	public float speed = 5f;
 	public float calculatedVelocity;
+	public float calculatedAttack;
 	
 	protected MapManager mapManager;
 
@@ -67,6 +69,10 @@ public class AntUnit : Selectable {
 	 * Note: it does not use 'currentTile' since that can often be considered 'previousTile' as well
 	 */
 	public IEnumerator moveTo(Tile tileToMoveTo) {
+		// Avoid multiple calls to move the unit while the path is still being calculated
+		if (isCalculatingPath) yield break;
+		isCalculatingPath = true;
+	
 		// Clear the previous path in case the user gave overriding commands
 		targetPath.setNewTileQueue(new Queue<Tile>());
 		
@@ -83,8 +89,8 @@ public class AntUnit : Selectable {
 			// Pop our next path and check if we have reached our target yet
 			path = priorityQueue.pop();
 			if (tileToMoveTo == path.getLastTileInPath()) {
-				Debug.Log("Found optimal path: ");
-				path.printPath();
+				//Debug.Log("Found optimal path: ");
+				//path.printPath();
 				break;
 			}
 			
@@ -95,7 +101,7 @@ public class AntUnit : Selectable {
 				else visitedTiles[adjacentTile.GetInstanceID()] = true;
 				
 				// Add the tile to a deep copy of our original path
-				Debug.Log("Adding adjacentTile to path: " + adjacentTile.GetInstanceID() + " - " + adjacentTile.gameObject.transform.position.ToString());
+				//Debug.Log("Adding adjacentTile to path: " + adjacentTile.GetInstanceID() + " - " + adjacentTile.gameObject.transform.position.ToString());
 				Path copiedPath = getNewPath(path);
 				// Our A* heuristic is the straight line distance between our next tile and our target
 				float heuristic = Vector2.Distance(adjacentTile.gameObject.transform.position, tileToMoveTo.gameObject.transform.position);
@@ -108,10 +114,11 @@ public class AntUnit : Selectable {
 			// Yield the coroutine to let the rest of unity work for a bit (until the next frame)
 			yield return null;
 		}
-		Debug.Log("Found optimal path");
+		//Debug.Log("Found optimal path");
 		setPath(path);
 		
 		// Finish the coroutine
+		isCalculatingPath = false;
 		return true;
 	}
 	

@@ -48,12 +48,24 @@ public class MapUIManager : MonoBehaviour {
 		}
 		
 		// If the user right-clicks when a Friendly Ant Unit is selected, move that unit along a path to the right clicked tile
-		if (Input.GetMouseButtonDown(1) && selectedObject != null && selectedObject.isSelectable()) {
-			// Get the Ant Unit script (if any)
+		if (Input.GetMouseButtonDown(1) && selectedObject != null && selectedObject.isNeutralOrFriendly()) {
+			// Get the mouse position of where the user clicked
+			Vector2 mousePos = Camera.main.ScreenToWorldPoint((Vector2) Input.mousePosition);
+			
+			// Get the Ant Unit scripts
 			AntUnit antUnitScript = selectedObject.GetComponent<AntUnit>();
-			if (antUnitScript != null) {
+			WarriorUnit warriorUnitScript = selectedObject.GetComponent<WarriorUnit>();
+			Selectable clickedOnSelectable = getSelectableAtPosition(mousePos);
+			AntUnit clickedOnAntUnitScript = clickedOnSelectable.gameObject.GetComponent<AntUnit>();
+			
+			if (warriorUnitScript != null && clickedOnAntUnitScript != null && !clickedOnAntUnitScript.isNeutralOrFriendly()) {
+				// If the thing we have selected is a WarriorUnit, and we clicked on an enemey AntUnit, 
+				// set it as a target instead of a simple move
+				Debug.Log("Going to attack!");
+				warriorUnitScript.setTarget(clickedOnAntUnitScript);
+			} else if (antUnitScript != null) {
 				// Set the unit on a path to their target
-				StartCoroutine(antUnitScript.moveTo(mapManager.getTileAtPosition(Camera.main.ScreenToWorldPoint((Vector2) Input.mousePosition))));
+				StartCoroutine(antUnitScript.moveTo(mapManager.getTileAtPosition(mousePos)));
 			}
 		}
 		
@@ -99,7 +111,7 @@ public class MapUIManager : MonoBehaviour {
 	 */
 	private void setCursor(Selectable selectedObject) {
 		// We only need to set custom cursors if a friendly ant unit is currently selected
-		if (selectedObject != null && selectedObject.GetComponent<AntUnit>() != null && selectedObject.isSelectable()) {
+		if (selectedObject != null && selectedObject.GetComponent<AntUnit>() != null && selectedObject.isNeutralOrFriendly()) {
 			Selectable hoveredObject = getSelectableAtPosition((Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition));
 			if (hoveredObject != null) {
 				// If a Tile is the topMostSelectable then we should display a 'move' type cursor
