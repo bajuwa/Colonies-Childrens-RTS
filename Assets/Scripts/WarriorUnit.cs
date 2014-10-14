@@ -75,12 +75,13 @@ public class WarriorUnit : AntUnit {
 	
 	private void exchangeBlows(AntUnit antOne, AntUnit antTwo) {
 		// Calculate each ant's attack based on their remaining health and base attack stat
-		float antOneAttack = antOne.attack; //TODO: dynamic attack calculations
-		float antTwoAttack = antTwo.attack; //TODO: dynamic attack calculations
+		Debug.Log(antOne.currentHp / antOne.maxHp);
+		float antOneAttack = antOne.attack * (antOne.currentHp / antOne.maxHp); //TODO: dynamic attack calculations
+		float antTwoAttack = antTwo.attack * (antTwo.currentHp / antTwo.maxHp); //TODO: dynamic attack calculations
 		
 		// Calculate damage dealt by factoring in eachothers defenses and apply to current hp
-		antOne.currentHp -= Mathf.Max(antTwoAttack - antOne.defense, 0); //TODO: use random value in range
-		antTwo.currentHp -= Mathf.Max(antOneAttack - antTwo.defense, 0); //TODO: use random value in range
+		antOne.currentHp -= Mathf.Max(Random.Range(antTwoAttack/2, antTwoAttack) - antOne.defense, 0); //TODO: use random value in range
+		antTwo.currentHp -= Mathf.Max(Random.Range(antOneAttack/2, antOneAttack) - antTwo.defense, 0); //TODO: use random value in range
 	}
 	
 	// If a warrior comes in to contact with it's target, interrupt its movement so that 
