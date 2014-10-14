@@ -15,6 +15,7 @@ public class MapUIManager : MonoBehaviour {
 	public Texture2D defaultCursor;
 	public Texture2D moveToCursor;
 	public Texture2D gatherCursor;
+	public Texture2D attackCursor;
 
 	private Selectable selectedObject;
 	private MapManager mapManager;
@@ -49,6 +50,8 @@ public class MapUIManager : MonoBehaviour {
 		
 		// If the user right-clicks when a Friendly Ant Unit is selected, move that unit along a path to the right clicked tile
 		if (Input.GetMouseButtonDown(1) && selectedObject != null && selectedObject.isNeutralOrFriendly()) {
+			Debug.Log("User right clicked to give command to unit: " + selectedObject);
+		
 			// Get the mouse position of where the user clicked
 			Vector2 mousePos = Camera.main.ScreenToWorldPoint((Vector2) Input.mousePosition);
 			
@@ -56,7 +59,10 @@ public class MapUIManager : MonoBehaviour {
 			AntUnit antUnitScript = selectedObject.GetComponent<AntUnit>();
 			WarriorUnit warriorUnitScript = selectedObject.GetComponent<WarriorUnit>();
 			Selectable clickedOnSelectable = getSelectableAtPosition(mousePos);
-			AntUnit clickedOnAntUnitScript = clickedOnSelectable.gameObject.GetComponent<AntUnit>();
+			AntUnit clickedOnAntUnitScript = null;
+			if (clickedOnSelectable && clickedOnSelectable.gameObject) {
+				clickedOnAntUnitScript = clickedOnSelectable.gameObject.GetComponent<AntUnit>();
+			}
 			
 			if (warriorUnitScript != null && clickedOnAntUnitScript != null && !clickedOnAntUnitScript.isNeutralOrFriendly()) {
 				// If the thing we have selected is a WarriorUnit, and we clicked on an enemey AntUnit, 
@@ -65,6 +71,7 @@ public class MapUIManager : MonoBehaviour {
 				warriorUnitScript.setTarget(clickedOnAntUnitScript);
 			} else if (antUnitScript != null) {
 				// Set the unit on a path to their target
+				Debug.Log("Giving ant move to command");
 				StartCoroutine(antUnitScript.moveTo(mapManager.getTileAtPosition(mousePos)));
 			}
 		}
@@ -123,6 +130,12 @@ public class MapUIManager : MonoBehaviour {
 				// If Food is the topMostSelectable and we currently have a Gatherer selected, display a 'gather' type cursor
 				if (selectedObject.GetComponent<GathererUnit>() != null && hoveredObject.GetComponent<Food>() != null) {
 					Cursor.SetCursor(gatherCursor, Vector2.zero, CursorMode.Auto);
+					return;
+				}
+				
+				// If an AntUnit is the topMostSelectable and we currently have a Warrior selected, display an 'attack' type cursor
+				if (selectedObject.GetComponent<WarriorUnit>() != null && hoveredObject.GetComponent<AntUnit>() != null && !hoveredObject.isNeutralOrFriendly()) {
+					Cursor.SetCursor(attackCursor, Vector2.zero, CursorMode.Auto);
 					return;
 				}
 			}

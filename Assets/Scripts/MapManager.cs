@@ -90,7 +90,9 @@ public class MapManager : MonoBehaviour {
 		}
 		
 		public Tile getTileAtPosition(Vector2 position) {
-			return (Tile) Physics2D.OverlapPoint(position, tileMask).gameObject.GetComponent(typeof(Tile));
+			return Physics2D.OverlapPoint(position, tileMask) != null ?
+				   (Tile) Physics2D.OverlapPoint(position, tileMask).gameObject.GetComponent(typeof(Tile)) :
+				   null;
 		}
 		
 		private Vector2 getNearestLocation(Vector2 position) {

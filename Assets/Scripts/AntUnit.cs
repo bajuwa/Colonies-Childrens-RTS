@@ -11,6 +11,7 @@ using System.Collections.Generic;
  */
 public class AntUnit : Selectable {
 	protected bool isCalculatingPath = false;
+	protected bool isInBattle = false;
 	
 	// Unit Stats (TODO: protect once done dev testing)
 	// When changing stats between different unit types, change them in the Prefab, not in any classes
@@ -20,7 +21,6 @@ public class AntUnit : Selectable {
 	public float defense = 2f;
 	public float speed = 5f;
 	public float calculatedVelocity;
-	public float calculatedAttack;
 	
 	protected MapManager mapManager;
 
@@ -43,6 +43,25 @@ public class AntUnit : Selectable {
 		if (mapManager == null) setMapManager();
 		currentTile = mapManager.getTileAtPosition((Vector2)gameObject.transform.localPosition);
 		targetTile = currentTile;
+	}
+	
+	public void startBattle() {
+		Debug.Log("Another unit attacked me!");
+		isInBattle = true;
+		targetPath.setNewTileQueue(new Queue<Tile>());
+	}
+	
+	public void removeFromBattle() {
+		Debug.Log("Done battling");
+		isInBattle = false;
+		targetPath.setNewTileQueue(new Queue<Tile>());
+	}
+	
+	// Destroy this unit, making sure to destroy paths and selections
+	public void kill() {
+		Debug.Log("I was killed!");
+		this.deselect(GetInstanceID());
+		GameObject.Destroy(this.gameObject);
 	}
 	
 	/**
@@ -68,10 +87,11 @@ public class AntUnit : Selectable {
 	 * 'targetTile' to the given tileToMoveTo
 	 * Note: it does not use 'currentTile' since that can often be considered 'previousTile' as well
 	 */
-	public IEnumerator moveTo(Tile tileToMoveTo) {
+	public virtual IEnumerator moveTo(Tile tileToMoveTo) {
 		// Avoid multiple calls to move the unit while the path is still being calculated
-		if (isCalculatingPath) yield break;
+		if (isCalculatingPath || isInBattle || tileToMoveTo == null) yield break;
 		isCalculatingPath = true;
+		Debug.Log("Calculating path to new tile");
 	
 		// Clear the previous path in case the user gave overriding commands
 		targetPath.setNewTileQueue(new Queue<Tile>());
