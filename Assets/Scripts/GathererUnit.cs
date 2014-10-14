@@ -60,6 +60,9 @@ public class GathererUnit : AntUnit {
 		Transform foodTransform = this.gameObject.GetComponentInChildren<Food>().gameObject.transform;
 		foodTransform.parent = GameObject.Find("Objects").transform;
 		
+		// Make sure when dropped it snaps to the appropriate tile
+		foodTransform.position = mapManager.getTileAtPosition(foodTransform.position).transform.position;
+		
 		// Reset the z back to 0 to force the food back underneath the unit
 		Vector3 tempPos = foodTransform.localPosition;
 		tempPos.z = 0;
