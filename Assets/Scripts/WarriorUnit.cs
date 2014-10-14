@@ -80,8 +80,8 @@ public class WarriorUnit : AntUnit {
 		float antTwoAttack = antTwo.attack * (antTwo.currentHp / antTwo.maxHp); //TODO: dynamic attack calculations
 		
 		// Calculate damage dealt by factoring in eachothers defenses and apply to current hp
-		antOne.currentHp -= Mathf.Max(Random.Range(antTwoAttack/2, antTwoAttack) - antOne.defense, 0); //TODO: use random value in range
-		antTwo.currentHp -= Mathf.Max(Random.Range(antOneAttack/2, antOneAttack) - antTwo.defense, 0); //TODO: use random value in range
+		antOne.currentHp -= Mathf.Max(Random.Range(antTwoAttack*0.5f, antTwoAttack*1.5f) - antOne.defense, 0); //TODO: use random value in range
+		antTwo.currentHp -= Mathf.Max(Random.Range(antOneAttack*0.5f, antOneAttack*1.5f) - antTwo.defense, 0); //TODO: use random value in range
 	}
 	
 	// If a warrior comes in to contact with it's target, interrupt its movement so that 
