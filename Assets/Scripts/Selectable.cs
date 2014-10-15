@@ -11,6 +11,9 @@ public class Selectable : MonoBehaviour {
 	// This ensures that the selectable is not 'deselected' by one entity when another still wishes to 'select' it
 	public Dictionary<int, bool> selectedBy = new Dictionary<int, bool>();
 	
+	// Variable that gets the asset as a 2D texture
+	public Texture2D displayImage;
+	
 	// Sets ownership to determine allied vs enemy vs neutral objects
 	// 0 is neutral, 1 and 2 are their respective player ids
 	// TODO: privatize once done dev
