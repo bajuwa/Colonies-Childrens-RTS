@@ -22,4 +22,14 @@ public class Tile : Selectable {
 			spriteRenderer.sprite = normalTile;
 		}
 	}
+	public override string Description
+	{
+		get
+		{
+			return "A tile (specific tiles later";
+		}
+		set
+		{
+		}
+	}
 }

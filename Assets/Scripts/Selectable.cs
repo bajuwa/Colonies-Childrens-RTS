@@ -33,7 +33,8 @@ public class Selectable : MonoBehaviour {
 	public virtual void select(int id) {
 		selectedBy[id] = true;
 	}
-	
+	//The description of the asset's characteristic to be displayed on the GUI
+	public virtual string Description {get;set;}
 	public virtual void deselect(int id) {
 		selectedBy[id] = false;
 	}

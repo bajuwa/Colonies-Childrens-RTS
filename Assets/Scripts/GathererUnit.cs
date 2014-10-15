@@ -9,8 +9,18 @@ using System.Collections;
 public class GathererUnit : AntUnit {
 
 	private bool droppedFood = true;
-
-	// Use this for initialization
+	
+	//To be displayed on the GUI
+	public override string Description
+	{
+		get
+		{
+			return "Gatherers can pick up and carry fruit";
+		}
+		set
+		{
+		}
+	}
 	protected override void Start () {
 		base.Start();
 	}

@@ -9,7 +9,16 @@ public class Food : Selectable {
 	void Start () {
 	
 	}
-	
+	public override string Description
+	{
+		get
+		{
+			return "Send a gatherer to collect this";
+		}
+		set
+		{
+		}
+	}
 	// Update is called once per frame
 	void Update () {
 	

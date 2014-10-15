@@ -12,7 +12,17 @@ public class WarriorUnit : AntUnit {
 	protected override void Start() {
 		base.Start();
 	}
-	
+	//To be displayed on the GUI
+	public override string Description
+	{
+		get
+		{
+			return "Warriors can attack other units";
+		}
+		set
+		{
+		}
+	}
 	// Update is called once per frame
 	protected override void Update() {
 		base.Update();
