@@ -52,6 +52,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7b0abbe9417609488567adea4e7ff81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayImage: {fileID: 2800000, guid: 637ebfe6e3cf4674ab5d685dfc684c84, type: 3}
   ownedBy: 0
 --- !u!212 &21200000
 SpriteRenderer:
