@@ -17,6 +17,10 @@ public class MapUIManager : MonoBehaviour {
 	public Texture2D gatherCursor;
 	public Texture2D attackCursor;
 
+	// Bottom left GUI textures
+	public Texture2D uiHead;
+	public Texture2D uiStatus;
+	
 	private Selectable selectedObject;
 	private MapManager mapManager;
 
