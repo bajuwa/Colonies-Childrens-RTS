@@ -13,6 +13,10 @@ public class WarriorUnit : AntUnit {
 		base.Start();
 	}
 	
+	protected override void loadSprite() {
+		gameObject.GetComponent<SpriteRenderer>().sprite = player.warriorSprite;
+	}
+	
 	//To be displayed on the GUI
 	public override string description
 	{

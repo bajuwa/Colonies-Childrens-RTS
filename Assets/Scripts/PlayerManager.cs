@@ -1,12 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Player : MonoBehaviour {
+public class PlayerManager : MonoBehaviour {
 
-	public int id = 1;
-	
-	public Sprite gathererSprite;
-	public Sprite warriorSprite;
+	public int myPlayerId = 1;
 
 	// Use this for initialization
 	void Start () {

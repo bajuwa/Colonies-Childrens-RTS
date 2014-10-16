@@ -31,6 +31,7 @@ public class AntUnit : Selectable {
 	
 	// Use this for initialization
 	protected virtual void Start() {
+		loadPlayerScript(ownedBy);
 		setMapManager();
 		targetPath = getNewPath();
 	}
@@ -142,8 +143,11 @@ public class AntUnit : Selectable {
 	
 	// Every frame, units should continue working towards their current target tile (if any)
 	protected virtual void Update() {
+		if (gameObject.GetComponent<SpriteRenderer>().sprite == null) loadSprite();
 		move();
 	}
+	
+	protected virtual void loadSprite() {}
 	
 	// Used to interrupt/cancel a units movement
 	public void interrupt() {

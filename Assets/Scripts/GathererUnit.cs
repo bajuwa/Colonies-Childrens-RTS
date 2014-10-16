@@ -23,6 +23,9 @@ public class GathererUnit : AntUnit {
 	}
 	protected override void Start () {
 		base.Start();
+		
+		// Get our appropriate sprite based on our player
+		this.gameObject.GetComponent<SpriteRenderer>().sprite = player.gathererSprite;
 	}
 	
 	// Update is called once per frame
@@ -45,6 +48,10 @@ public class GathererUnit : AntUnit {
 		if (currentTile != targetTile) droppedFood = false;
 	}
 	
+	protected override void loadSprite() {
+		gameObject.GetComponent<SpriteRenderer>().sprite = player.gathererSprite;
+	}
+	
 	public void pickUpFood(GameObject gameObj) {
 		// Set the parent to our unit so that it is 'carried' when the unit is moving
 		gameObj.transform.parent = this.gameObject.transform;
@@ -55,7 +62,7 @@ public class GathererUnit : AntUnit {
 		gameObj.transform.localPosition = tempPos;
 		
 		// Re-enable the selectable script so that we can select it again
-		gameObj.GetComponent<Selectable>().enabled = true;
+		gameObj.GetComponent<Selectable>().enabled = false;
 		gameObj.GetComponent<CircleCollider2D>().enabled = false;
 		
 		// When gatherers are carrying food, they move at half their original speed
@@ -79,7 +86,7 @@ public class GathererUnit : AntUnit {
 		foodTransform.localPosition = tempPos;
 		
 		// Disable the selectable script so that it doesn't interfere with selecting the underlying unit
-		foodTransform.gameObject.GetComponent<Selectable>().enabled = false;
+		foodTransform.gameObject.GetComponent<Selectable>().enabled = true;
 		foodTransform.gameObject.GetComponent<Collider2D>().enabled = true;
 		
 		// When gatherers are carrying food, they move at half their original speed, so when they drop food, fix the speed stat

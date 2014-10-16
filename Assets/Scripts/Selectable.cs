@@ -14,6 +14,8 @@ public class Selectable : MonoBehaviour {
 	// Every selected needs to be able to highlight the tile beneath it (if any) using mapManager
 	protected MapManager mapManager;
 	
+	private PlayerManager playerManager;
+	
 	// Variable that gets the asset as a 2D texture
 	public Texture2D displayImage;
 	
@@ -24,42 +26,41 @@ public class Selectable : MonoBehaviour {
 	// 0 is neutral, 1 and 2 are their respective player ids
 	// TODO: privatize once done dev
 	public int ownedBy = 0;
-	private Player player;
+	protected Player player;
 
 	// Use this for initialization
 	void Start () {
-		getPlayerScript();
 		getMapManager();
+		playerManager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
+		if (player == null) loadPlayerScript(ownedBy);
+	}
 	
+	protected void loadPlayerScript(int playerId) {
+		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Player")) {
+			Player pScript = obj.GetComponent<Player>();
+			if (pScript.id == playerId) {
+				Debug.Log("Loading script from player: " + pScript.id);
+				player = pScript;
+				break;
+			}
+		}
 	}
 	
 	public virtual void select(int id) {
 		selectedBy[id] = true;
-		
-		// If this isn't already a tile, select the tile beneath this object
-		if (!mapManager) getMapManager();
-		if (this.gameObject.GetComponent<Tile>() == null) {
-			mapManager.getTileAtPosition(transform.position).select(id);
-		}
 	}
 	
 	public virtual void deselect(int id) {
 		selectedBy[id] = false;
-		
-		// If this isn't already a tile, deselect the tile beneath this object
-		if (!mapManager) getMapManager();
-		if (this.gameObject.GetComponent<Tile>() == null) {
-			mapManager.getTileAtPosition(transform.position).deselect(id);
-		}
 	}
 	
 	public bool isNeutralOrFriendly() {
-		if (player == null) getPlayerScript();
-		return (ownedBy == 0 || ownedBy == player.id); 
+		if (playerManager == null) playerManager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
+		return (ownedBy == 0 || ownedBy == playerManager.myPlayerId); 
 	}
 	
 	public bool isSelected() {
@@ -72,10 +73,6 @@ public class Selectable : MonoBehaviour {
 	public bool isSelectedBy(int id) {
 		if (selectedBy.ContainsKey(id)) return selectedBy[id];
 		return false;
-	}
-	
-	private void getPlayerScript() {
-		player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>();
 	}
 	
 	private void getMapManager() {
