@@ -12,8 +12,9 @@ public class WarriorUnit : AntUnit {
 	protected override void Start() {
 		base.Start();
 	}
+	
 	//To be displayed on the GUI
-	public override string Description
+	public override string description
 	{
 		get
 		{

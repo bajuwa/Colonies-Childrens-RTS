@@ -11,7 +11,7 @@ public class GathererUnit : AntUnit {
 	private bool droppedFood = true;
 	
 	//To be displayed on the GUI
-	public override string Description
+	public override string description
 	{
 		get
 		{

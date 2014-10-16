@@ -11,8 +11,14 @@ public class Selectable : MonoBehaviour {
 	// This ensures that the selectable is not 'deselected' by one entity when another still wishes to 'select' it
 	public Dictionary<int, bool> selectedBy = new Dictionary<int, bool>();
 	
+	// Every selected needs to be able to highlight the tile beneath it (if any) using mapManager
+	protected MapManager mapManager;
+	
 	// Variable that gets the asset as a 2D texture
 	public Texture2D displayImage;
+	
+	//The description of the asset's characteristic to be displayed on the GUI
+	public virtual string description {get;set;}
 	
 	// Sets ownership to determine allied vs enemy vs neutral objects
 	// 0 is neutral, 1 and 2 are their respective player ids
@@ -23,6 +29,7 @@ public class Selectable : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		getPlayerScript();
+		getMapManager();
 	}
 	
 	// Update is called once per frame
@@ -32,11 +39,22 @@ public class Selectable : MonoBehaviour {
 	
 	public virtual void select(int id) {
 		selectedBy[id] = true;
+		
+		// If this isn't already a tile, select the tile beneath this object
+		if (!mapManager) getMapManager();
+		if (this.gameObject.GetComponent<Tile>() == null) {
+			mapManager.getTileAtPosition(transform.position).select(id);
+		}
 	}
-	//The description of the asset's characteristic to be displayed on the GUI
-	public virtual string Description {get;set;}
+	
 	public virtual void deselect(int id) {
 		selectedBy[id] = false;
+		
+		// If this isn't already a tile, deselect the tile beneath this object
+		if (!mapManager) getMapManager();
+		if (this.gameObject.GetComponent<Tile>() == null) {
+			mapManager.getTileAtPosition(transform.position).deselect(id);
+		}
 	}
 	
 	public bool isNeutralOrFriendly() {
@@ -58,5 +76,9 @@ public class Selectable : MonoBehaviour {
 	
 	private void getPlayerScript() {
 		player = GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>();
+	}
+	
+	private void getMapManager() {
+		mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
 	}
 }

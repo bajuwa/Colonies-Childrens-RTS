@@ -9,7 +9,7 @@ public class Food : Selectable {
 	void Start () {
 	
 	}
-	public override string Description
+	public override string description
 	{
 		get
 		{

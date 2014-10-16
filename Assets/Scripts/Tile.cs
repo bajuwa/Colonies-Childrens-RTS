@@ -7,6 +7,17 @@ public class Tile : Selectable {
 	public Sprite normalTile;
 	public Sprite selectedTile;
 	private SpriteRenderer spriteRenderer;
+	
+	public override string description
+	{
+		get
+		{
+			return "A tile (specific tiles later";
+		}
+		set
+		{
+		}
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -20,16 +31,6 @@ public class Tile : Selectable {
 			spriteRenderer.sprite = selectedTile;
 		} else {
 			spriteRenderer.sprite = normalTile;
-		}
-	}
-	public override string Description
-	{
-		get
-		{
-			return "A tile (specific tiles later";
-		}
-		set
-		{
 		}
 	}
 }

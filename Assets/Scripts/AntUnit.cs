@@ -21,8 +21,6 @@ public class AntUnit : Selectable {
 	public float defense = 2f;
 	public float speed = 5f;
 	public float calculatedVelocity;
-	
-	protected MapManager mapManager;
 
 	/* Movement variables: All coords must be in local position to handle map panning! */
 	// Target Path carries the full list of tiles in order of planned traversal

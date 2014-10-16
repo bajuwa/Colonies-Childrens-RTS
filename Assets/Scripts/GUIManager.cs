@@ -18,10 +18,13 @@ public class GUIManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		//assign the texture a new texture based on what is selected and display it in the bottom left
-		headDisplay.texture = mUM.getCurrentlySelectedObject().displayImage;
-		//assign the GUIText new text based on what is selected and display it next to the head image
-		statusDisplay.text = mUM.getCurrentlySelectedObject().Description;
-		
+		// Get the currently selected object that we will be displaying information about
+		Selectable currentlySelected = mUM.getCurrentlySelectedObject();
+		if (currentlySelected) {
+			// Assign the texture a new texture based on what is selected and display it in the bottom left
+			headDisplay.texture = currentlySelected.displayImage;
+			// Assign the GUIText new text based on what is selected and display it next to the head image
+			statusDisplay.text = currentlySelected.description;
+		}
 	}
 }
