@@ -197,7 +197,7 @@ public class AntUnit : Selectable {
 				if (isSelected()) targetTile.select(GetInstanceID());
 				
 				// TODO: test out with 'max terrain value' instead of 'summed terrain value'
-				float secondsToTraverse = ((float) (currentTile.terrainValue + targetTile.terrainValue)) / speed;
+				float secondsToTraverse = (float) (Mathf.Max(currentTile.terrainValue, targetTile.terrainValue) + 2) / speed;
 				calculatedVelocity = Vector2.Distance(currentTile.gameObject.transform.position, targetTile.gameObject.transform.position) / secondsToTraverse;
 			}
 		}
