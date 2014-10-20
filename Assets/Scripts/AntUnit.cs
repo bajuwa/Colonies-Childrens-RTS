@@ -40,8 +40,12 @@ public class AntUnit : Selectable {
 	// Note: should only be called during initial setup after the map 'snaps' the unit to the appropriate position
 	public void recordPosition() {
 		if (mapManager == null) setMapManager();
+		if (currentTile) currentTile.occupied = false;
+		if (targetTile) targetTile.occupied = false;
 		currentTile = mapManager.getTileAtPosition((Vector2)gameObject.transform.localPosition);
 		targetTile = currentTile;
+		currentTile.occupied = true;
+		targetTile.occupied = true;
 	}
 	
 	public void startBattle() {
@@ -115,8 +119,8 @@ public class AntUnit : Selectable {
 			
 			// If we havent reached the target, expand on the currently popped path with all adjacent tile options
 			foreach (Tile adjacentTile in mapManager.getAdjacentTiles(path.getLastTileInPath())) {
-				// Only add it to the path if we haven't already visited it yet
-				if (visitedTiles.ContainsKey(adjacentTile.GetInstanceID())) continue;
+				// Only add it to the path if it is unoccuppied and we haven't already visited it yet
+				if (visitedTiles.ContainsKey(adjacentTile.GetInstanceID()) || adjacentTile.occupied) continue;
 				else visitedTiles[adjacentTile.GetInstanceID()] = true;
 				
 				// Add the tile to a deep copy of our original path
@@ -178,7 +182,9 @@ public class AntUnit : Selectable {
 			// Since the positions are now the same, we should carry over our 'target' to our new 'current' tile references
 			if (currentTile != targetTile) {
 				currentTile.GetComponent<Selectable>().deselect(GetInstanceID());
+				currentTile.occupied = false;
 				currentTile = targetTile;
+				currentTile.occupied = true;
 				if (isSelected()) currentTile.select(GetInstanceID());
 			}
 			
@@ -194,6 +200,8 @@ public class AntUnit : Selectable {
 				
 				// Deselect our previous tile and switch the target tile we reached
 				targetTile = nextTile;
+				targetTile.occupied = true;
+				currentTile.occupied = false;
 				if (isSelected()) targetTile.select(GetInstanceID());
 				
 				// TODO: test out with 'max terrain value' instead of 'summed terrain value'
@@ -208,7 +216,7 @@ public class AntUnit : Selectable {
 	protected bool canWalkTo(Vector2 position) {
 		Collider2D[] mapObjects = Physics2D.OverlapPointAll(position);
 		foreach (Collider2D mapObj in mapObjects) {
-			if (!canWalkOn(mapObj.gameObject) && mapObj.gameObject != this.gameObject) {
+			if (!canWalkOn(mapObj.gameObject) && mapObj.gameObject != this.gameObject && mapObj.gameObject != this.currentTile.gameObject) {
 				Debug.Log("Encountered a tile that could not be walked on: " + mapObj.gameObject.ToString());
 				return false;
 			}
@@ -219,7 +227,7 @@ public class AntUnit : Selectable {
 	// Given a specific game object, determine whether the current unit is allowed to be on the same tile as this object
 	// By default, Ant Units can only walk on tiles
 	protected virtual bool canWalkOn(GameObject gameObj) {
-		return gameObj.GetComponent<Tile>() != null;
+		return gameObj.GetComponent<Tile>() != null || gameObj.GetComponent<Tile>().occupied;
 	}
 	
 	/**
