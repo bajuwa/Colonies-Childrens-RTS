@@ -8,7 +8,7 @@ public class CameraManager : MonoBehaviour {
 	private Camera mainCam;
 	private GameObject mapImage;
 	
-	private float cameraSpeed = 0.3f;
+	public float cameraSpeed = 0.3f;
 	private float camMinX;
 	private float camMaxX;
 	private float camMinY;

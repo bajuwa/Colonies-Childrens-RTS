@@ -41,7 +41,7 @@ public class MapManager : MonoBehaviour {
 				obj.transform.localPosition = getNearestLocation((Vector2) obj.transform.localPosition);
 				
 				// If we are moving an AntUnit, then we need to get it to record its position for proper pathfinding
-				AntUnit antUnitScript = (AntUnit) obj.GetComponent(typeof(AntUnit));
+				AntUnit antUnitScript = (AntUnit) obj.GetComponent<AntUnit>();
 				if (antUnitScript != null) {
 					antUnitScript.recordPosition();
 				}

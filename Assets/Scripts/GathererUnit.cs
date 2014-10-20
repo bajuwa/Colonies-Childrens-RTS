@@ -34,7 +34,7 @@ public class GathererUnit : AntUnit {
 		base.Update();
 		
 		// If we have stopped moving and have landed on a food item, pick it up if we aren't already carrying some
-		if (!droppedFood && this.gameObject.GetComponentInChildren<Food>() == null && currentTile == targetTile && targetPath != null && targetPath.getTilePath().Count == 0) {
+		if (!droppedFood && this.gameObject.GetComponentInChildren<Food>() == null && getCurrentTile() == getTargetTile() && targetPath != null && targetPath.getTilePath().Count == 0) {
 			Collider2D[] itemsOnSameTile = Physics2D.OverlapPointAll(transform.position);
 			foreach (Collider2D col in itemsOnSameTile) {
 				if (col.gameObject.GetComponent<Food>() != null) {
@@ -45,7 +45,7 @@ public class GathererUnit : AntUnit {
 		}
 		
 		// If the player is moving, then clear our 'dropped food' flag so that the unit can pick up food again
-		if (currentTile != targetTile) droppedFood = false;
+		if (getCurrentTile() != getTargetTile()) droppedFood = false;
 	}
 	
 	protected override void loadSprite() {
@@ -98,8 +98,8 @@ public class GathererUnit : AntUnit {
 		// If this object is a child of us, we can safely ignore it
 		if (gameObj.transform.parent == transform) return true;
 		
-		// If it is a tile, we can walk on it
-		if (gameObj.GetComponent<Tile>() != null) return true;
+		// If it is an unoccupied tile, we can walk on it
+		if (gameObj.GetComponent<Tile>() != null && !gameObj.GetComponent<Tile>().occupied) return true;
 		
 		// If it isn't a tile, and also isn't food, then we can't walk on it
 		if (gameObj.GetComponent<Food>() == null) return false;

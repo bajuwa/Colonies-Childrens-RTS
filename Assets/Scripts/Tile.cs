@@ -18,9 +18,12 @@ public class Tile : Selectable {
 		{
 		}
 	}
+	
+	public bool occupied;
 
 	// Use this for initialization
 	void Start () {
+		occupied = false;
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 	}
 	

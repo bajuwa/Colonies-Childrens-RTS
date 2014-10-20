@@ -26,8 +26,8 @@ public class AntUnit : Selectable {
 	// Target Path carries the full list of tiles in order of planned traversal
 	protected Path targetPath;
 	// Target Coords represents the current short term target from targetPath when moving (should be an adjacent tile coord)
-	protected Tile targetTile;
-	protected Tile currentTile;
+	private Tile targetTile;
+	private Tile currentTile;
 	
 	// Use this for initialization
 	protected virtual void Start() {
@@ -39,9 +39,25 @@ public class AntUnit : Selectable {
 	// Takes note of our current positioning for future pathfinding 
 	// Note: should only be called during initial setup after the map 'snaps' the unit to the appropriate position
 	public void recordPosition() {
+		Debug.Log("Recording position for: " + this.gameObject.ToString() + " " + this.gameObject.GetInstanceID());
 		if (mapManager == null) setMapManager();
 		currentTile = mapManager.getTileAtPosition((Vector2)gameObject.transform.localPosition);
-		targetTile = currentTile;
+		setTargetTile(currentTile);
+	}
+	
+	private void setTargetTile(Tile newTargetTile) {
+		if (!newTargetTile) return;
+		if (targetTile) targetTile.occupied = false;
+		targetTile = newTargetTile;
+		newTargetTile.occupied = true;
+	}
+	
+	public Tile getTargetTile() {
+		return targetTile;
+	}
+	
+	public Tile getCurrentTile() {
+		return currentTile;
 	}
 	
 	public void startBattle() {
@@ -105,6 +121,13 @@ public class AntUnit : Selectable {
 		// Continue to check and expand the first Path in the queue until we reach our target
 		Path path;
 		while (true) {
+			// If we have no paths left in the queue, then a solution is impossible
+			if (priorityQueue.getCount() == 0) {
+				Debug.Log("Could not find a path to target tile");
+				isCalculatingPath = false;
+				return false;
+			}
+		
 			// Pop our next path and check if we have reached our target yet
 			path = priorityQueue.pop();
 			if (tileToMoveTo == path.getLastTileInPath()) {
@@ -115,8 +138,8 @@ public class AntUnit : Selectable {
 			
 			// If we havent reached the target, expand on the currently popped path with all adjacent tile options
 			foreach (Tile adjacentTile in mapManager.getAdjacentTiles(path.getLastTileInPath())) {
-				// Only add it to the path if we haven't already visited it yet
-				if (visitedTiles.ContainsKey(adjacentTile.GetInstanceID())) continue;
+				// Only add it to the path if it is unoccuppied and we haven't already visited it yet
+				if (visitedTiles.ContainsKey(adjacentTile.GetInstanceID()) || !canWalkTo(adjacentTile.transform.position)) continue;
 				else visitedTiles[adjacentTile.GetInstanceID()] = true;
 				
 				// Add the tile to a deep copy of our original path
@@ -143,6 +166,7 @@ public class AntUnit : Selectable {
 	
 	// Every frame, units should continue working towards their current target tile (if any)
 	protected virtual void Update() {
+		if (targetTile == null) recordPosition();
 		if (gameObject.GetComponent<SpriteRenderer>().sprite == null) loadSprite();
 		move();
 	}
@@ -178,7 +202,9 @@ public class AntUnit : Selectable {
 			// Since the positions are now the same, we should carry over our 'target' to our new 'current' tile references
 			if (currentTile != targetTile) {
 				currentTile.GetComponent<Selectable>().deselect(GetInstanceID());
+				currentTile.occupied = false;
 				currentTile = targetTile;
+				currentTile.occupied = true;
 				if (isSelected()) currentTile.select(GetInstanceID());
 			}
 			
@@ -188,16 +214,19 @@ public class AntUnit : Selectable {
 				Tile nextTile = targetPath.pop();
 				if (!canWalkTo(nextTile.transform.position)) {
 					// If we can't walk on our next tile, cancel movement
-					setPath(getNewPath());
+					Debug.Log("Encountered obstacle, recalculating path");
+					Tile tile = targetPath.clearPath();
+					Debug.Log(tile);
+					StartCoroutine(moveTo(tile));
 					return;
 				}
 				
-				// Deselect our previous tile and switch the target tile we reached
-				targetTile = nextTile;
+				// Switch the target tile we reached
+				setTargetTile(nextTile);
 				if (isSelected()) targetTile.select(GetInstanceID());
 				
 				// TODO: test out with 'max terrain value' instead of 'summed terrain value'
-				float secondsToTraverse = ((float) (currentTile.terrainValue + targetTile.terrainValue)) / speed;
+				float secondsToTraverse = (float) (Mathf.Max(currentTile.terrainValue, targetTile.terrainValue) + 2) / speed;
 				calculatedVelocity = Vector2.Distance(currentTile.gameObject.transform.position, targetTile.gameObject.transform.position) / secondsToTraverse;
 			}
 		}
@@ -208,8 +237,7 @@ public class AntUnit : Selectable {
 	protected bool canWalkTo(Vector2 position) {
 		Collider2D[] mapObjects = Physics2D.OverlapPointAll(position);
 		foreach (Collider2D mapObj in mapObjects) {
-			if (!canWalkOn(mapObj.gameObject) && mapObj.gameObject != this.gameObject) {
-				Debug.Log("Encountered a tile that could not be walked on: " + mapObj.gameObject.ToString());
+			if (!canWalkOn(mapObj.gameObject) && mapObj.gameObject != this.gameObject && mapObj.gameObject != this.currentTile.gameObject) {
 				return false;
 			}
 		}
@@ -219,7 +247,7 @@ public class AntUnit : Selectable {
 	// Given a specific game object, determine whether the current unit is allowed to be on the same tile as this object
 	// By default, Ant Units can only walk on tiles
 	protected virtual bool canWalkOn(GameObject gameObj) {
-		return gameObj.GetComponent<Tile>() != null;
+		return gameObj.GetComponent<Tile>() != null || gameObj.GetComponent<Tile>().occupied;
 	}
 	
 	/**
@@ -253,6 +281,10 @@ public class AntUnit : Selectable {
 			Path popped = priorityQueue[0];
 			priorityQueue.RemoveAt(0);
 			return popped;
+		}
+		
+		public int getCount() {
+			return priorityQueue.Count;
 		}
 	}
 	
