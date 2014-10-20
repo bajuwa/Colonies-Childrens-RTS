@@ -34,7 +34,7 @@ public class GathererUnit : AntUnit {
 		base.Update();
 		
 		// If we have stopped moving and have landed on a food item, pick it up if we aren't already carrying some
-		if (!droppedFood && this.gameObject.GetComponentInChildren<Food>() == null && currentTile == targetTile && targetPath != null && targetPath.getTilePath().Count == 0) {
+		if (!droppedFood && this.gameObject.GetComponentInChildren<Food>() == null && getCurrentTile() == getTargetTile() && targetPath != null && targetPath.getTilePath().Count == 0) {
 			Collider2D[] itemsOnSameTile = Physics2D.OverlapPointAll(transform.position);
 			foreach (Collider2D col in itemsOnSameTile) {
 				if (col.gameObject.GetComponent<Food>() != null) {
@@ -45,7 +45,7 @@ public class GathererUnit : AntUnit {
 		}
 		
 		// If the player is moving, then clear our 'dropped food' flag so that the unit can pick up food again
-		if (currentTile != targetTile) droppedFood = false;
+		if (getCurrentTile() != getTargetTile()) droppedFood = false;
 	}
 	
 	protected override void loadSprite() {

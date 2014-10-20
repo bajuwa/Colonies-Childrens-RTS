@@ -26,8 +26,8 @@ public class AntUnit : Selectable {
 	// Target Path carries the full list of tiles in order of planned traversal
 	protected Path targetPath;
 	// Target Coords represents the current short term target from targetPath when moving (should be an adjacent tile coord)
-	protected Tile targetTile;
-	protected Tile currentTile;
+	private Tile targetTile;
+	private Tile currentTile;
 	
 	// Use this for initialization
 	protected virtual void Start() {
@@ -40,12 +40,25 @@ public class AntUnit : Selectable {
 	// Note: should only be called during initial setup after the map 'snaps' the unit to the appropriate position
 	public void recordPosition() {
 		if (mapManager == null) setMapManager();
+		currentTile = mapManager.getTileAtPosition((Vector2)gameObject.transform.localPosition);
+		if (currentTile) currentTile.occupied = true;
+		setTargetTile(currentTile);
+	}
+	
+	private void setTargetTile(Tile newTargetTile) {
+		if (!newTargetTile) return;
 		if (currentTile) currentTile.occupied = false;
 		if (targetTile) targetTile.occupied = false;
-		currentTile = mapManager.getTileAtPosition((Vector2)gameObject.transform.localPosition);
-		targetTile = currentTile;
-		currentTile.occupied = true;
+		targetTile = newTargetTile;
 		targetTile.occupied = true;
+	}
+	
+	public Tile getTargetTile() {
+		return targetTile;
+	}
+	
+	public Tile getCurrentTile() {
+		return currentTile;
 	}
 	
 	public void startBattle() {
@@ -198,10 +211,8 @@ public class AntUnit : Selectable {
 					return;
 				}
 				
-				// Deselect our previous tile and switch the target tile we reached
-				targetTile = nextTile;
-				targetTile.occupied = true;
-				currentTile.occupied = false;
+				// Switch the target tile we reached
+				setTargetTile(nextTile);
 				if (isSelected()) targetTile.select(GetInstanceID());
 				
 				// TODO: test out with 'max terrain value' instead of 'summed terrain value'
