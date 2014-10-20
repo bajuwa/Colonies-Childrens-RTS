@@ -214,7 +214,10 @@ public class AntUnit : Selectable {
 				Tile nextTile = targetPath.pop();
 				if (!canWalkTo(nextTile.transform.position)) {
 					// If we can't walk on our next tile, cancel movement
-					setPath(getNewPath());
+					Debug.Log("Encountered obstacle, recalculating path");
+					Tile tile = targetPath.clearPath();
+					Debug.Log(tile);
+					StartCoroutine(moveTo(tile));
 					return;
 				}
 				

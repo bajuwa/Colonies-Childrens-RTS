@@ -31,6 +31,7 @@ public class Path : ScriptableObject, IComparable<Path> {
 	}
 	
 	public void add(Tile tile, float hValue) {
+		if (!tile) return;
 		summedPathValue += tile.terrainValue;
 		heuristicValue = hValue;
 		lastTileInPath = tile;
@@ -57,6 +58,14 @@ public class Path : ScriptableObject, IComparable<Path> {
 	
 	public Tile getLastTileInPath() {
 		return lastTileInPath;
+	}
+	
+	public Tile clearPath() {
+		Tile lastTile = null;
+		while (tilePath.Count > 0) {
+			lastTile = pop();
+		}
+		return lastTile;
 	}
 	
 	public void selectPath() {
