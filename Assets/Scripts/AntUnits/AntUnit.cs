@@ -48,9 +48,9 @@ public class AntUnit : Selectable {
 	
 	private void setTargetTile(Tile newTargetTile) {
 		if (!newTargetTile) return;
-		if (targetTile) targetTile.occupied = false;
+		if (targetTile) targetTile.occupiedBy = null;
 		targetTile = newTargetTile;
-		newTargetTile.occupied = true;
+		newTargetTile.occupiedBy = this.gameObject;
 	}
 	
 	public Tile getTargetTile() {
@@ -229,9 +229,9 @@ public class AntUnit : Selectable {
 			// Since the positions are now the same, we should carry over our 'target' to our new 'current' tile references
 			if (currentTile != targetTile) {
 				currentTile.GetComponent<Selectable>().deselect(GetInstanceID());
-				currentTile.occupied = false;
+				currentTile.occupiedBy = null;
 				currentTile = targetTile;
-				currentTile.occupied = true;
+				currentTile.occupiedBy = this.gameObject;
 				if (isSelected()) currentTile.select(GetInstanceID());
 			}
 			
@@ -256,7 +256,6 @@ public class AntUnit : Selectable {
 	}
 	
 	// Given a coordinate position on the map, determines whether the current unit is allowed to move to the tile
-	// TODO: Introduce an 'occupied' state to the tiles to prevent 2 units from moving to the same tile
 	protected bool canWalkTo(Vector2 position) {
 		Collider2D[] mapObjects = Physics2D.OverlapPointAll(position);
 		foreach (Collider2D mapObj in mapObjects) {
@@ -270,7 +269,7 @@ public class AntUnit : Selectable {
 	// Given a specific game object, determine whether the current unit is allowed to be on the same tile as this object
 	// By default, Ant Units can only walk on tiles
 	protected virtual bool canWalkOn(GameObject gameObj) {
-		return (gameObj.GetComponent<Tile>() != null && !gameObj.GetComponent<Tile>().occupied) || 
+		return (gameObj.GetComponent<Tile>() != null && !gameObj.GetComponent<Tile>().occupiedBy) || 
 			    gameObj.GetComponent<Scentpath>() != null;
 	}
 	

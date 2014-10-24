@@ -19,12 +19,12 @@ public class Tile : Selectable {
 		}
 	}
 	
-	public bool occupied;
+	public GameObject occupiedBy;
 
 	// Use this for initialization
 	protected override void Start () {
 		base.Start();
-		occupied = false;
+		occupiedBy = null;
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 	}
 	

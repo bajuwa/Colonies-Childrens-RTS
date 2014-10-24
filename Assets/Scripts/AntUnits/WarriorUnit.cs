@@ -138,10 +138,20 @@ public class WarriorUnit : AntUnit {
 	// Warriors can walk on tiles and food items (but only if they aren't already carrying food themselves)
 	protected override bool canWalkOn(GameObject gameObj) {
 		// If it is a tile or an ant unit (friendly or not), we can walk on it
+		if (gameObj.GetComponent<AntUnit>() != null) return true;
+		
+		if (gameObj.GetComponent<Scentpath>() != null) return true;
+		
+		if (gameObj.GetComponent<Tile>() != null) {
+			if (gameObj.GetComponent<Tile>().occupiedBy) {
+				if (gameObj.GetComponent<Tile>().occupiedBy.GetComponent<AntUnit>()) return true;
+				return false;
+			}
+			return true;
+		}
 		// Since food can be carried by units, check for that too
-		return (gameObj.GetComponent<AntUnit>() != null || 
-			   (gameObj.GetComponent<Tile>() != null && !gameObj.GetComponent<Tile>().occupied) || 
-			   (gameObj.transform.parent != null && gameObj.transform.parent.GetComponent<AntUnit>() != null) ||
-			   gameObj.GetComponent<Scentpath>() != null);
+		if (gameObj.transform.parent != null && gameObj.transform.parent.GetComponent<AntUnit>() != null) return true;
+		
+		return false;
 	}
 }
