@@ -10,10 +10,12 @@ public class MapManager : MonoBehaviour {
 		private float tileHeight = 0f;
 		private float tileWidth = 0f;
 		private int tileMask = 0;
+		private int scentpathMask = 0;	
 
 		// During startup, make sure all map objects are "snapped" to the closest valid position
 		void Start (){
 			tileMask =  1 << LayerMask.NameToLayer("Tile");
+			scentpathMask = 1 << LayerMask.NameToLayer("Scentpath");
 		
 			// Get all the tiles on the screen
 			List<GameObject> objects = new List<GameObject>();
@@ -90,6 +92,15 @@ public class MapManager : MonoBehaviour {
 			return Physics2D.OverlapPoint(position, tileMask) != null ?
 				   (Tile) Physics2D.OverlapPoint(position, tileMask).gameObject.GetComponent(typeof(Tile)) :
 				   null;
+		}
+		
+		public Scentpath getScentpathAtPosition(Vector2 position) {
+			CircleCollider2D tileCollider = (CircleCollider2D) Physics2D.OverlapPoint(
+				getTileAtPosition(position).transform.position, 
+				scentpathMask
+			);
+			if (tileCollider) return tileCollider.gameObject.GetComponent<Scentpath>();
+			return null;
 		}
 		
 		private Vector2 getNearestLocation(Vector2 position) {

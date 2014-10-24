@@ -113,7 +113,13 @@ public class AntUnit : Selectable {
 		
 		// Set up the priority queue for our pathfinding algo: A*
 		PriorityQueue priorityQueue = new PriorityQueue();
-		priorityQueue.add(getNewPath(targetTile, Vector2.Distance(targetTile.gameObject.transform.position, tileToMoveTo.gameObject.transform.position)));
+		priorityQueue.add(
+			getNewPath(
+				targetTile, 
+				Vector2.Distance(targetTile.gameObject.transform.position, tileToMoveTo.gameObject.transform.position), 
+				getTileCost(targetTile)
+			)
+		);
 		// Keep track of which tiles (by instance id) we have already 'visited' to cut down on running time
 		Dictionary<int, bool> visitedTiles = new Dictionary<int, bool>();
 		visitedTiles[targetTile.GetInstanceID()] = true;
@@ -147,9 +153,9 @@ public class AntUnit : Selectable {
 				Path copiedPath = getNewPath(path);
 				// Our A* heuristic is the straight line distance between our next tile and our target
 				float heuristic = Vector2.Distance(adjacentTile.gameObject.transform.position, tileToMoveTo.gameObject.transform.position);
-				copiedPath.add(adjacentTile, heuristic);
 				
 				// Add the full path back to our priority queue
+				copiedPath.add(adjacentTile, heuristic, getTileCost(adjacentTile));
 				priorityQueue.add(copiedPath);
 			}
 			
@@ -162,6 +168,13 @@ public class AntUnit : Selectable {
 		// Finish the coroutine
 		isCalculatingPath = false;
 		return true;
+	}
+	
+	private float getTileCost(Tile tile) {
+		float cost = tile.terrainValue;
+		Scentpath scent = mapManager.getScentpathAtPosition(tile.transform.position);
+		if (scent && scent.ownedBy == player.id) cost /= 2;
+		return cost;
 	}
 	
 	// Every frame, units should continue working towards their current target tile (if any)
@@ -192,7 +205,19 @@ public class AntUnit : Selectable {
 	protected void move() {
 		if (targetTile != null &&
 			(Vector2) gameObject.transform.localPosition != (Vector2) targetTile.transform.localPosition) {
-			// If we haven't already reached our next target, continue moving towards that coord
+			
+			// Get the tile we are currently over, and calculate speed based off its terrain value
+			Tile tileCurrentlyOver = mapManager.getTileAtPosition(transform.position);
+			float secondsToTraverse = (float) (tileCurrentlyOver.terrainValue + 2) / speed;
+			
+			// If we have a friendly scentpath on that tile, it will take half the time
+			Scentpath path = mapManager.getScentpathAtPosition(tileCurrentlyOver.transform.position);
+			if (path && path.ownedBy == player.id) secondsToTraverse /= 2;
+			
+			// Calculate our velocity based on our speed
+			calculatedVelocity = Vector2.Distance(currentTile.gameObject.transform.position, targetTile.gameObject.transform.position) / secondsToTraverse;
+			
+			// Move towards our target at our calculated velocity
 			gameObject.transform.localPosition = Vector2.MoveTowards(
 				gameObject.transform.localPosition, 
 				targetTile.transform.localPosition, 
@@ -224,10 +249,6 @@ public class AntUnit : Selectable {
 				// Switch the target tile we reached
 				setTargetTile(nextTile);
 				if (isSelected()) targetTile.select(GetInstanceID());
-				
-				// TODO: test out with 'max terrain value' instead of 'summed terrain value'
-				float secondsToTraverse = (float) (Mathf.Max(currentTile.terrainValue, targetTile.terrainValue) + 2) / speed;
-				calculatedVelocity = Vector2.Distance(currentTile.gameObject.transform.position, targetTile.gameObject.transform.position) / secondsToTraverse;
 			}
 		}
 	}
@@ -247,7 +268,8 @@ public class AntUnit : Selectable {
 	// Given a specific game object, determine whether the current unit is allowed to be on the same tile as this object
 	// By default, Ant Units can only walk on tiles
 	protected virtual bool canWalkOn(GameObject gameObj) {
-		return gameObj.GetComponent<Tile>() != null || gameObj.GetComponent<Tile>().occupied;
+		return (gameObj.GetComponent<Tile>() != null && !gameObj.GetComponent<Tile>().occupied) || 
+			    gameObj.GetComponent<Scentpath>() != null;
 	}
 	
 	/**
@@ -295,9 +317,9 @@ public class AntUnit : Selectable {
 		return (Path) ScriptableObject.CreateInstance("Path");
 	}
 	
-	protected Path getNewPath(Tile startingTile, float startingHeuristic) {
+	protected Path getNewPath(Tile startingTile, float startingHeuristic, float startingCost) {
 		Path path = (Path) ScriptableObject.CreateInstance("Path");
-		path.init(startingTile, startingHeuristic);
+		path.init(startingTile, startingHeuristic, startingCost);
 		return path;
 	}
 	

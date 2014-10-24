@@ -15,13 +15,15 @@ public class Path : ScriptableObject, IComparable<Path> {
 	private Tile lastTileInPath;
 	private Queue<Tile> tilePath = new Queue<Tile>();
 	
-	public void init(Tile startingTile, float startingHeuristic) {
-		this.add(startingTile, startingHeuristic);
+	public void init(Tile startingTile, float startingHeuristic, float startingCost) {
+		this.add(startingTile, startingHeuristic, startingCost);
 	}
 	
 	public void init(Path originalPath) {
+		float cost = originalPath.getSummedPathValue();
 		foreach (Tile tile in originalPath.getTilePath()) {
-			this.add(tile, originalPath.getHeuristicValue());
+			this.add(tile, originalPath.getHeuristicValue(), cost);
+			cost = 0;
 		}
 	}
 	
@@ -30,9 +32,9 @@ public class Path : ScriptableObject, IComparable<Path> {
 		tilePath = queue;
 	}
 	
-	public void add(Tile tile, float hValue) {
+	public void add(Tile tile, float hValue, float cost) {
 		if (!tile) return;
-		summedPathValue += tile.terrainValue;
+		summedPathValue += cost;
 		heuristicValue = hValue;
 		lastTileInPath = tile;
 		tilePath.Enqueue(tile);
@@ -50,6 +52,10 @@ public class Path : ScriptableObject, IComparable<Path> {
 	
 	public float getHeuristicValue() {
 		return heuristicValue;
+	}
+	
+	public float getSummedPathValue() {
+		return summedPathValue;
 	}
 	
 	public Queue<Tile> getTilePath() {

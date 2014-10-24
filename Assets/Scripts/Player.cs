@@ -8,6 +8,8 @@ public class Player : MonoBehaviour {
 	public Sprite gathererSprite;
 	public Sprite warriorSprite;
 	public Sprite scoutSprite;
+	
+	public GameObject scentpath;
 
 	// Use this for initialization
 	void Start () {

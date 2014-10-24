@@ -99,7 +99,10 @@ public class GathererUnit : AntUnit {
 		if (gameObj.transform.parent == transform) return true;
 		
 		// If it is an unoccupied tile, we can walk on it
-		if (gameObj.GetComponent<Tile>() != null && !gameObj.GetComponent<Tile>().occupied) return true;
+		if ((gameObj.GetComponent<Tile>() != null && !gameObj.GetComponent<Tile>().occupied) ||
+			gameObj.GetComponent<Scentpath>() != null) {
+			return true;
+		}
 		
 		// If it isn't a tile, and also isn't food, then we can't walk on it
 		if (gameObj.GetComponent<Food>() == null) return false;

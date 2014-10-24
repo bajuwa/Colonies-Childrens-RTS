@@ -137,6 +137,7 @@ public class WarriorUnit : AntUnit {
 		// Since food can be carried by units, check for that too
 		return (gameObj.GetComponent<AntUnit>() != null || 
 			   (gameObj.GetComponent<Tile>() != null && !gameObj.GetComponent<Tile>().occupied) || 
-			   (gameObj.transform.parent != null && gameObj.transform.parent.GetComponent<AntUnit>() != null));
+			   (gameObj.transform.parent != null && gameObj.transform.parent.GetComponent<AntUnit>() != null) ||
+			   gameObj.GetComponent<Scentpath>() != null);
 	}
 }
