@@ -10,12 +10,10 @@ public class MapManager : MonoBehaviour {
 		private float tileHeight = 0f;
 		private float tileWidth = 0f;
 		private int tileMask = 0;
-		private Transform tileSpriteParentTransform;
 
 		// During startup, make sure all map objects are "snapped" to the closest valid position
 		void Start (){
 			tileMask =  1 << LayerMask.NameToLayer("Tile");
-			tileSpriteParentTransform = transform.Find("Tiles");
 		
 			// Get all the tiles on the screen
 			List<GameObject> objects = new List<GameObject>();
@@ -61,9 +59,8 @@ public class MapManager : MonoBehaviour {
 			//Debug.Log("Getting adjacent tiles to: " + originTilePosition.ToString());
 			
 			// Get the tile object that is at the valid position 
-			// Warning: must temporarily convert to world space in case user tries to pan
 			CircleCollider2D tileCollider = (CircleCollider2D) Physics2D.OverlapPoint(
-				tileSpriteParentTransform.TransformPoint(originTilePosition), 
+				originTilePosition, 
 				tileMask
 			);
 			
@@ -71,7 +68,7 @@ public class MapManager : MonoBehaviour {
 			// Note: this relies on the circle colliders of the tiles being large enough to overlap slightly with adjacent tiles
 			// Warning: must temporarily convert to world space in case user tries to pan
 			Collider2D[] adjacentTileColliders = Physics2D.OverlapCircleAll(
-				tileSpriteParentTransform.TransformPoint(originTilePosition), 
+				originTilePosition, 
 				tileCollider.radius, 
 				tileMask
 			);
