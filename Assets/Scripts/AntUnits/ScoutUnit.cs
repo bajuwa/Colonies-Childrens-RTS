@@ -14,11 +14,19 @@ public class ScoutUnit : AntUnit {
 	}
 	
 	private void loadScentpath() {
-		scentpath = player.scentpath;
+		scentpath = player.scentpathSprite;
 	}
 	
 	private void loadScentpathParent() {
 		scentpathParent = GameObject.Find("Objects");
+	}
+	
+	protected override void loadSprite() {
+		gameObject.GetComponent<SpriteRenderer>().sprite = player.scoutSprite;
+	}
+	
+	protected override void loadDisplayImage() {
+		displayImage = player.scoutDisplay;
 	}
 	
 	// Update is called once per frame
@@ -42,11 +50,12 @@ public class ScoutUnit : AntUnit {
 				Quaternion.identity
 			);
 			newScentpath.transform.parent = scentpathParent.transform;
+			newScentpath.transform.localPosition = new Vector3(
+				newScentpath.transform.localPosition.x,
+				newScentpath.transform.localPosition.y,
+				0
+			);
 			newScentpath.GetComponent<Selectable>().ownedBy = player.id;
 		}
-	}
-	
-	protected override void loadSprite() {
-		gameObject.GetComponent<SpriteRenderer>().sprite = player.scoutSprite;
 	}
 }

@@ -22,13 +22,15 @@ public class Tile : Selectable {
 	public bool occupied;
 
 	// Use this for initialization
-	void Start () {
+	protected override void Start () {
+		base.Start();
 		occupied = false;
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	protected override void Update () {
+		base.Update();
 		// If the user has 'selected' a tile, update the tiles appearance
 		if (isSelected()) {
 			spriteRenderer.sprite = selectedTile;

@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c604fd8a527a13478328c02807bd3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayImage: {fileID: 2800000, guid: 8e6ced85e9492134ba6711b3418b4305, type: 3}
+  displayImage: {fileID: 0}
   ownedBy: 1
   currentHp: 10
   maxHp: 10

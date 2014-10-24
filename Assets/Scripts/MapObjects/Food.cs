@@ -15,18 +15,4 @@ public class Food : Selectable {
 		{
 		}
 	}
-	// Update is called once per frame
-	void Update () {
-	
-	}
-	
-	public override void select(int id) {
-		base.select(id);
-		mapManager.getTileAtPosition(transform.position).select(GetInstanceID());
-	}
-	
-	public override void deselect(int id) {
-		base.deselect(id);
-		mapManager.getTileAtPosition(transform.position).deselect(GetInstanceID());
-	}
 }

@@ -17,6 +17,10 @@ public class WarriorUnit : AntUnit {
 		gameObject.GetComponent<SpriteRenderer>().sprite = player.warriorSprite;
 	}
 	
+	protected override void loadDisplayImage() {
+		displayImage = player.warriorDisplay;
+	}
+	
 	//To be displayed on the GUI
 	public override string description
 	{

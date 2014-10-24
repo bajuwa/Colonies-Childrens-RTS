@@ -30,7 +30,8 @@ public class AntUnit : Selectable {
 	private Tile currentTile;
 	
 	// Use this for initialization
-	protected virtual void Start() {
+	protected override void Start() {
+		base.Start();
 		loadPlayerScript(ownedBy);
 		setMapManager();
 		targetPath = getNewPath();
@@ -178,7 +179,8 @@ public class AntUnit : Selectable {
 	}
 	
 	// Every frame, units should continue working towards their current target tile (if any)
-	protected virtual void Update() {
+	protected override void Update() {
+		base.Update();
 		if (targetTile == null) recordPosition();
 		if (gameObject.GetComponent<SpriteRenderer>().sprite == null) loadSprite();
 		move();

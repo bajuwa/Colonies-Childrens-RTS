@@ -116,7 +116,11 @@ MonoBehaviour:
   gathererSprite: {fileID: 21300000, guid: 7076470dc1dfcb04284f713d44553493, type: 3}
   warriorSprite: {fileID: 21300000, guid: 91c9df9cba5040e4c8be5f3bc6224c60, type: 3}
   scoutSprite: {fileID: 21300000, guid: ad2a3d16300cef54bb04d48ffbc3cc58, type: 3}
-  scentpath: {fileID: 100000, guid: 6aa10621f2ac4dd4f980a7339e675101, type: 2}
+  scentpathSprite: {fileID: 100000, guid: 6aa10621f2ac4dd4f980a7339e675101, type: 2}
+  gathererDisplay: {fileID: 2800000, guid: 7076470dc1dfcb04284f713d44553493, type: 3}
+  warriorDisplay: {fileID: 2800000, guid: 91c9df9cba5040e4c8be5f3bc6224c60, type: 3}
+  scoutDisplay: {fileID: 2800000, guid: 637ebfe6e3cf4674ab5d685dfc684c84, type: 3}
+  scentpathDisplay: {fileID: 2800000, guid: 40400a12bd8defa4ca9e61e3b3e80b8d, type: 3}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,7 +136,11 @@ MonoBehaviour:
   gathererSprite: {fileID: 21300000, guid: 8e6ced85e9492134ba6711b3418b4305, type: 3}
   warriorSprite: {fileID: 21300000, guid: 197b6fe74726a924a8000a89f797fa3f, type: 3}
   scoutSprite: {fileID: 21300000, guid: e9b6d566a8292584c858befa09d24ba7, type: 3}
-  scentpath: {fileID: 100000, guid: 0ea4ee24e8caf4d49af7a93c2c9799ec, type: 2}
+  scentpathSprite: {fileID: 100000, guid: 0ea4ee24e8caf4d49af7a93c2c9799ec, type: 2}
+  gathererDisplay: {fileID: 2800000, guid: 8e6ced85e9492134ba6711b3418b4305, type: 3}
+  warriorDisplay: {fileID: 2800000, guid: 197b6fe74726a924a8000a89f797fa3f, type: 3}
+  scoutDisplay: {fileID: 2800000, guid: ad2a3d16300cef54bb04d48ffbc3cc58, type: 3}
+  scentpathDisplay: {fileID: 2800000, guid: 40400a12bd8defa4ca9e61e3b3e80b8d, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -27,7 +27,7 @@ public class GUIManager : MonoBehaviour {
 		Selectable currentlySelected = mUM.getCurrentlySelectedObject();
 		if (currentlySelected) {
 			// Assign the texture a new texture based on what is selected and display it in the bottom left
-			headDisplay.texture = currentlySelected.displayImage;
+			headDisplay.texture = currentlySelected.getDisplayImage();
 			// Assign the GUIText new text based on what is selected and display it next to the head image
 			//statusDisplay.text = currentlySelected.description;
 			GUI.Label (new Rect (300,730,200,uiStatus.texture.height), currentlySelected.description, descriptionStyle);

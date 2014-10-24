@@ -29,15 +29,18 @@ public class Selectable : MonoBehaviour {
 	protected Player player;
 
 	// Use this for initialization
-	void Start () {
+	protected virtual void Start () {
 		getMapManager();
 		playerManager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	protected virtual void Update () {
 		if (player == null) loadPlayerScript(ownedBy);
+		if (!displayImage) loadDisplayImage();
 	}
+	
+	protected virtual void loadDisplayImage() {}
 	
 	protected void loadPlayerScript(int playerId) {
 		foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Player")) {
@@ -50,12 +53,18 @@ public class Selectable : MonoBehaviour {
 		}
 	}
 	
+	public Texture2D getDisplayImage() {
+		return displayImage;
+	}
+	
 	public virtual void select(int id) {
 		selectedBy[id] = true;
+		if (!this.gameObject.GetComponent<Tile>()) mapManager.getTileAtPosition(transform.position).select(GetInstanceID());
 	}
 	
 	public virtual void deselect(int id) {
 		selectedBy[id] = false;
+		if (!this.gameObject.GetComponent<Tile>()) mapManager.getTileAtPosition(transform.position).deselect(GetInstanceID());
 	}
 	
 	public bool isNeutralOrFriendly() {
