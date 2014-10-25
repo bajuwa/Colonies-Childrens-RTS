@@ -15,6 +15,6 @@ public class Scentpath : Selectable {
 	}
 	
 	protected override void loadDisplayImage() {
-		displayImage = player.scentpathDisplay;
+		displayImage = getTextureFromPlayer("scentpathDisplay");
 	}
 }

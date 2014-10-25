@@ -14,7 +14,7 @@ public class ScoutUnit : AntUnit {
 	}
 	
 	private void loadScentpath() {
-		scentpath = player.scentpathSprite;
+		scentpath = getGameObjectFromPlayer("scentpathGameObject");
 	}
 	
 	private void loadScentpathParent() {
@@ -22,11 +22,11 @@ public class ScoutUnit : AntUnit {
 	}
 	
 	protected override void loadSprite() {
-		gameObject.GetComponent<SpriteRenderer>().sprite = player.scoutSprite;
+		gameObject.GetComponent<SpriteRenderer>().sprite = getSpriteFromPlayer("scoutSprite");
 	}
 	
 	protected override void loadDisplayImage() {
-		displayImage = player.scoutDisplay;
+		displayImage = getTextureFromPlayer("scoutDisplay");
 	}
 	
 	// Update is called once per frame
@@ -39,11 +39,12 @@ public class ScoutUnit : AntUnit {
 		Scentpath path = mapManager.getScentpathAtPosition(transform.position);
 		if (path) {
 			// If a scentpath exists, and it isn't ours, replace it with our own
-			if (path.ownedBy != player.id) {
+			if (!path.isNeutralOrFriendly()) {
 				Destroy(path.gameObject);
 			}
 		} else {
 			// Otherwise, create and place one
+			if (!scentpath) return;
 			GameObject newScentpath = (GameObject) Object.Instantiate(
 				scentpath, 
 				mapManager.getTileAtPosition(transform.position).transform.position, 
@@ -55,7 +56,7 @@ public class ScoutUnit : AntUnit {
 				newScentpath.transform.localPosition.y,
 				0
 			);
-			newScentpath.GetComponent<Selectable>().ownedBy = player.id;
+			newScentpath.GetComponent<Ownable>().setAsMine();
 		}
 	}
 }

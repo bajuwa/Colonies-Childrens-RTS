@@ -23,9 +23,6 @@ public class GathererUnit : AntUnit {
 	}
 	protected override void Start () {
 		base.Start();
-		
-		// Get our appropriate sprite based on our player
-		this.gameObject.GetComponent<SpriteRenderer>().sprite = player.gathererSprite;
 	}
 	
 	// Update is called once per frame
@@ -49,11 +46,11 @@ public class GathererUnit : AntUnit {
 	}
 	
 	protected override void loadSprite() {
-		gameObject.GetComponent<SpriteRenderer>().sprite = player.gathererSprite;
+		gameObject.GetComponent<SpriteRenderer>().sprite = getSpriteFromPlayer("gathererSprite");
 	}
 	
 	protected override void loadDisplayImage() {
-		displayImage = player.gathererDisplay;
+		displayImage = getTextureFromPlayer("gathererDisplay");
 	}
 	
 	public void pickUpFood(GameObject gameObj) {

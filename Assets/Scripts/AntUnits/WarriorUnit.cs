@@ -14,11 +14,11 @@ public class WarriorUnit : AntUnit {
 	}
 	
 	protected override void loadSprite() {
-		gameObject.GetComponent<SpriteRenderer>().sprite = player.warriorSprite;
+		gameObject.GetComponent<SpriteRenderer>().sprite = getSpriteFromPlayer("warriorSprite");
 	}
 	
 	protected override void loadDisplayImage() {
-		displayImage = player.warriorDisplay;
+		displayImage = getTextureFromPlayer("warriorDisplay");
 	}
 	
 	//To be displayed on the GUI

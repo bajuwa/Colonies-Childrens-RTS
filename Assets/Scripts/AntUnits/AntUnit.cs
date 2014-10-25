@@ -32,8 +32,6 @@ public class AntUnit : Selectable {
 	// Use this for initialization
 	protected override void Start() {
 		base.Start();
-		loadPlayerScript(ownedBy);
-		setMapManager();
 		targetPath = getNewPath();
 	}
 	
@@ -174,7 +172,7 @@ public class AntUnit : Selectable {
 	private float getTileCost(Tile tile) {
 		float cost = tile.terrainValue;
 		Scentpath scent = mapManager.getScentpathAtPosition(tile.transform.position);
-		if (scent && scent.ownedBy == player.id) cost /= 2;
+		if (scent && scent.isNeutralOrFriendly()) cost /= 2;
 		return cost;
 	}
 	
@@ -182,11 +180,8 @@ public class AntUnit : Selectable {
 	protected override void Update() {
 		base.Update();
 		if (targetTile == null) recordPosition();
-		if (gameObject.GetComponent<SpriteRenderer>().sprite == null) loadSprite();
 		move();
 	}
-	
-	protected virtual void loadSprite() {}
 	
 	// Used to interrupt/cancel a units movement
 	public void interrupt() {
@@ -214,7 +209,7 @@ public class AntUnit : Selectable {
 			
 			// If we have a friendly scentpath on that tile, it will take half the time
 			Scentpath path = mapManager.getScentpathAtPosition(tileCurrentlyOver.transform.position);
-			if (path && path.ownedBy == player.id) secondsToTraverse /= 2;
+			if (path && path.isNeutralOrFriendly()) secondsToTraverse /= 2;
 			
 			// Calculate our velocity based on our speed
 			calculatedVelocity = Vector2.Distance(currentTile.gameObject.transform.position, targetTile.gameObject.transform.position) / secondsToTraverse;
