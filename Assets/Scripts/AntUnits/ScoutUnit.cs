@@ -39,7 +39,7 @@ public class ScoutUnit : AntUnit {
 		Scentpath path = mapManager.getScentpathAtPosition(transform.position);
 		if (path) {
 			// If a scentpath exists, and it isn't ours, replace it with our own
-			if (!path.isNeutralOrFriendly()) {
+			if (path.getPlayerId() != this.getPlayerId()) {
 				Destroy(path.gameObject);
 			}
 		} else {
