@@ -7,6 +7,8 @@ public class Anthill : Selectable {
 	private GameObject gathererToCreate;
 	private GameObject warriorToCreate;
 	private GameObject scoutToCreate;
+	
+	public int storedFoodPoints = 5;
 
 	// Use this for initialization
 	protected override void Start () {
@@ -18,12 +20,20 @@ public class Anthill : Selectable {
 		base.Update();
 	}
 	
+	public void spendStoredFoodPoints(int points) {
+		storedFoodPoints -= points;
+	}
+	
 	protected override void loadSprite() {
 		gameObject.GetComponent<SpriteRenderer>().sprite = getSpriteFromPlayer("anthillSprite");
 	}
 	
 	protected override void loadDisplayImage() {
 		displayImage = getTextureFromPlayer("anthillDisplay");
+	}
+	
+	public int getStoredFoodPoints() {
+		return storedFoodPoints;
 	}
 		
 	public Tile getNearestUnoccupiedTile(Vector2 position) {

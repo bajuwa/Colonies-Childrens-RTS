@@ -180,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownedBy: 0
   displayImage: {fileID: 0}
+  storedFoodPoints: 5
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -194,6 +195,9 @@ MonoBehaviour:
   ownedBy: 0
   displayImage: {fileID: 0}
   unitToCreate: {fileID: 100000, guid: 7108cce542297054499ea4521478a869, type: 2}
+  foodCost: 5
+  enabledImage: {fileID: 21300000, guid: e9b6d566a8292584c858befa09d24ba7, type: 3}
+  disabledImage: {fileID: 21300000, guid: 673af16361c387a4eb2917bcc4904514, type: 3}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -208,6 +212,9 @@ MonoBehaviour:
   ownedBy: 0
   displayImage: {fileID: 0}
   unitToCreate: {fileID: 100000, guid: f22c79121e6eaf649994687cc01cad69, type: 2}
+  foodCost: 5
+  enabledImage: {fileID: 21300000, guid: ad2a3d16300cef54bb04d48ffbc3cc58, type: 3}
+  disabledImage: {fileID: 21300000, guid: 673af16361c387a4eb2917bcc4904514, type: 3}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -222,6 +229,9 @@ MonoBehaviour:
   ownedBy: 0
   displayImage: {fileID: 0}
   unitToCreate: {fileID: 100000, guid: 26bb4411febfc364e8ec6ccda5e618bc, type: 2}
+  foodCost: 5
+  enabledImage: {fileID: 21300000, guid: 7007466e7dad3fd4285f165f89825c25, type: 3}
+  disabledImage: {fileID: 21300000, guid: 673af16361c387a4eb2917bcc4904514, type: 3}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

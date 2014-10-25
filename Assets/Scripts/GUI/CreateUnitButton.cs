@@ -9,6 +9,11 @@ public class CreateUnitButton : Button {
 	private Anthill anthillScript;
 	
 	public GameObject unitToCreate;
+	public int foodCost = 0;
+	
+	public Sprite enabledImage;
+	public Sprite disabledImage;
+	private bool buttonEnabled;
 
 	// Use this for initialization
 	protected override void Start() {
@@ -31,17 +36,30 @@ public class CreateUnitButton : Button {
 		// If we our parent object is selected, show this button
 		if (parentSelectable.isNeutralOrFriendly() && parentSelectable.isSelected()) {
 			renderer.enabled = true;
+			// If we can't afford to make this unit, disable the button
+			if (anthillScript.getStoredFoodPoints() < foodCost) {
+				buttonEnabled = false;
+				GetComponent<SpriteRenderer>().sprite = disabledImage;
+			} else {
+				buttonEnabled = true;
+				GetComponent<SpriteRenderer>().sprite = enabledImage;
+			}
 		} else {
 			renderer.enabled = false;
+			buttonEnabled = false;
 		}
+		
 	}
 	
 	protected override void OnMouseOver() {
 		base.OnMouseOver();
 		
 		// If user left-clicks the button, create the unit
-		if (renderer.enabled && Input.GetMouseButtonDown(0)) {
+		if (buttonEnabled && Input.GetMouseButtonDown(0)) {
 			if (!unitToCreate) return;
+			if (anthillScript.getStoredFoodPoints() < foodCost) return;
+			anthillScript.spendStoredFoodPoints(foodCost);
+			
 			Debug.Log("Calculating where to put new unit");
 			Tile nearestTile = anthillScript.getNearestUnoccupiedTile(transform.parent.position);
 			
