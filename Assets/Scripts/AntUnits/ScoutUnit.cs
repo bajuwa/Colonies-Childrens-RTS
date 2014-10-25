@@ -56,7 +56,7 @@ public class ScoutUnit : AntUnit {
 				newScentpath.transform.localPosition.y,
 				0
 			);
-			newScentpath.GetComponent<Ownable>().setAsMine();
+			newScentpath.GetComponent<Ownable>().setAsMine(getPlayerId());
 		}
 	}
 }

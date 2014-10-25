@@ -29,8 +29,12 @@ public class Ownable : MonoBehaviour {
 		return (ownedBy == 0 || ownedBy == playerManager.myPlayerId); 
 	}
 	
-	public void setAsMine() {
-		ownedBy = player.getId();
+	public int getPlayerId() {
+		return player.id;
+	}
+	
+	public void setAsMine(int playerId) {
+		ownedBy = playerId;
 	}
 	
 	protected Sprite getSpriteFromPlayer(string name) {

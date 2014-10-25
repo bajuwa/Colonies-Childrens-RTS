@@ -4,6 +4,9 @@ using System.Collections;
 public class CreateUnitButton : Button {
 
 	private Selectable parentSelectable;
+	private GameObject antUnitParent;
+	private MapManager mapManager;
+	private Anthill anthillScript;
 	
 	public GameObject unitToCreate;
 
@@ -21,6 +24,9 @@ public class CreateUnitButton : Button {
 	protected override void Update() {
 		base.Update();
 		loadParentSelectable();
+		if (!antUnitParent) antUnitParent = GameObject.Find("Units");
+		if (!mapManager) mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
+		if (!anthillScript) anthillScript = transform.parent.GetComponent<Anthill>();
 		
 		// If we our parent object is selected, show this button
 		if (parentSelectable.isNeutralOrFriendly() && parentSelectable.isSelected()) {
@@ -35,7 +41,23 @@ public class CreateUnitButton : Button {
 		
 		// If user left-clicks the button, create the unit
 		if (renderer.enabled && Input.GetMouseButtonDown(0)) {
+			if (!unitToCreate) return;
+			Debug.Log("Calculating where to put new unit");
+			Tile nearestTile = anthillScript.getNearestUnoccupiedTile(transform.parent.position);
+			
 			Debug.Log("Creating unit: " + unitToCreate.ToString());
+			GameObject instance = (GameObject) Object.Instantiate(
+				unitToCreate,
+				nearestTile.transform.position,
+				Quaternion.identity
+			);
+			instance.transform.parent = antUnitParent.transform;
+			instance.transform.localPosition = new Vector3(
+				instance.transform.localPosition.x,
+				instance.transform.localPosition.y,
+				0
+			);
+			instance.GetComponent<Ownable>().setAsMine(anthillScript.getPlayerId());
 		}
 	}
 }
