@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
   - 58: {fileID: 5800000}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Anthill
   m_TagString: MapObject
   m_Icon: {fileID: 0}

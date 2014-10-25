@@ -28,11 +28,15 @@ public class AntUnit : Selectable {
 	// Target Coords represents the current short term target from targetPath when moving (should be an adjacent tile coord)
 	private Tile targetTile;
 	private Tile currentTile;
+
+	private float anthillRange = 3f;
+	private int anthillMask = 0;
 	
 	// Use this for initialization
 	protected override void Start() {
 		base.Start();
 		targetPath = getNewPath();
+		anthillMask = 1 << LayerMask.NameToLayer("Anthill");
 	}
 	
 	// Takes note of our current positioning for future pathfinding 
@@ -42,6 +46,7 @@ public class AntUnit : Selectable {
 		if (mapManager == null) setMapManager();
 		currentTile = mapManager.getTileAtPosition((Vector2)gameObject.transform.localPosition);
 		setTargetTile(currentTile);
+		targetPath = getNewPath();
 	}
 	
 	private void setTargetTile(Tile newTargetTile) {
@@ -220,7 +225,7 @@ public class AntUnit : Selectable {
 				targetTile.transform.localPosition, 
 				Time.deltaTime * calculatedVelocity
 			);
-		} else if (targetPath != null) {
+		} else if (targetPath) {
 			// Since the positions are now the same, we should carry over our 'target' to our new 'current' tile references
 			if (currentTile != targetTile) {
 				currentTile.GetComponent<Selectable>().deselect(GetInstanceID());
@@ -246,8 +251,29 @@ public class AntUnit : Selectable {
 				// Switch the target tile we reached
 				setTargetTile(nextTile);
 				if (isSelected()) targetTile.select(GetInstanceID());
+			} else if (getNearbyAnthill(transform.position)) {
+				// If we have stopped moving and have landed within range of a friendly anthill, start to heal
+				healSelf();
 			}
 		}
+	}
+	
+	protected void healSelf() {
+		// If we are below perfect health, heal at a rate of 0.333 hp per second
+		if (currentHp < maxHp) currentHp = Mathf.Min(maxHp, currentHp + Time.deltaTime/3);
+	}
+	
+	protected Anthill getNearbyAnthill(Vector2 position) {
+		// Get all anthills within a certain range
+		Collider2D[] nearbyAnthills = Physics2D.OverlapCircleAll(position, anthillRange, anthillMask);
+		for (int i = 0; i < nearbyAnthills.Length; i++) {
+			// If we found an anthill, make sure its ours
+			Anthill anthill = nearbyAnthills[i].gameObject.GetComponent<Anthill>();
+			if (anthill.isNeutralOrFriendly()) return anthill;
+		}
+		
+		// If we couldn't find a friendly anthill within range, return null
+		return null;
 	}
 	
 	// Given a coordinate position on the map, determines whether the current unit is allowed to move to the tile
