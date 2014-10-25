@@ -29159,7 +29159,7 @@ GameObject:
   - 114: {fileID: 1648852482}
   - 58: {fileID: 1648852481}
   m_Layer: 0
-  m_Name: Fruit
+  m_Name: Blueberry
   m_TagString: MapObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30608,7 +30608,7 @@ GameObject:
   - 114: {fileID: 1747221023}
   - 58: {fileID: 1747221022}
   m_Layer: 0
-  m_Name: Fruit
+  m_Name: Blueberry
   m_TagString: MapObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
