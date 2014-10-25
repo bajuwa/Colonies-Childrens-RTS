@@ -172,7 +172,7 @@ public class AntUnit : Selectable {
 	private float getTileCost(Tile tile) {
 		float cost = tile.terrainValue;
 		Scentpath scent = mapManager.getScentpathAtPosition(tile.transform.position);
-		if (scent && scent.isNeutralOrFriendly()) cost /= 2;
+		if (!scent || !scent.isNeutralOrFriendly()) cost *= 2;
 		return cost;
 	}
 	
