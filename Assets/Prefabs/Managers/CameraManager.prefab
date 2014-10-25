@@ -40,8 +40,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29d97c67eecfc949a6e50eabf29c6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minOrthoSize: 5
-  maxOrthoSize: 10
+  minOrthoSize: 7
+  maxOrthoSize: 12
+  cameraSpeed: .5
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
