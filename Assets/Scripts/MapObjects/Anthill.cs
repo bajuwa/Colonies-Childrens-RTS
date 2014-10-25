@@ -20,6 +20,10 @@ public class Anthill : Selectable {
 		base.Update();
 	}
 	
+	public void addFoodPoints(int points) {
+		storedFoodPoints += points;
+	}
+	
 	public void spendStoredFoodPoints(int points) {
 		storedFoodPoints -= points;
 	}

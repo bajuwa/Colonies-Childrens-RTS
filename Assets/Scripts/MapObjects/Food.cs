@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Food : Selectable {
 
-	private int foodValue;
+	public int foodValue = 0;
 	
 	public override string description
 	{
@@ -14,5 +14,9 @@ public class Food : Selectable {
 		set
 		{
 		}
+	}
+	
+	public int getFoodValue() {
+		return foodValue;
 	}
 }

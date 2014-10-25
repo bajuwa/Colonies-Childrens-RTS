@@ -8,6 +8,8 @@ using System.Collections;
  */
 public class GathererUnit : AntUnit {
 
+	public float anthillRange = 3f;
+
 	private bool droppedFood = true;
 	
 	//To be displayed on the GUI
@@ -21,6 +23,7 @@ public class GathererUnit : AntUnit {
 		{
 		}
 	}
+	
 	protected override void Start () {
 		base.Start();
 	}
@@ -80,6 +83,16 @@ public class GathererUnit : AntUnit {
 		
 		// Make sure when dropped it snaps to the appropriate tile
 		foodTransform.position = mapManager.getTileAtPosition(foodTransform.position).transform.position;
+		
+		// Check to see if the new position would be in range of a friendly anthill
+		Collider2D[] nearbyObjects = Physics2D.OverlapCircleAll(foodTransform.position, anthillRange);
+		for (int i = 0; i < nearbyObjects.Length; i++) {
+			Anthill anthill = nearbyObjects[i].GetComponent<Anthill>();
+			if (!anthill) continue;
+			anthill.addFoodPoints(foodTransform.gameObject.GetComponent<Food>().getFoodValue());
+			Destroy(foodTransform.gameObject);
+			return;
+		}
 		
 		// Reset the z back to 0 to force the food back underneath the unit
 		Vector3 tempPos = foodTransform.localPosition;

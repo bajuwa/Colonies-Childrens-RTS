@@ -15372,6 +15372,7 @@ MonoBehaviour:
   defense: 2
   speed: 5
   calculatedVelocity: 0
+  anthillRange: 3
 --- !u!58 &911638097
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -18530,6 +18531,7 @@ MonoBehaviour:
   defense: 2
   speed: 5
   calculatedVelocity: 0
+  anthillRange: 3
 --- !u!58 &1030299579
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -29201,6 +29203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownedBy: 0
   displayImage: {fileID: 2800000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
+  foodValue: 10
 --- !u!212 &1648852483
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30649,6 +30652,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownedBy: 0
   displayImage: {fileID: 2800000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
+  foodValue: 10
 --- !u!212 &1747221024
 SpriteRenderer:
   m_ObjectHideFlags: 0
