@@ -77,7 +77,7 @@ public class MapUIManager : MonoBehaviour {
 			} else if (antUnitScript != null) {
 				// Set the unit on a path to their target
 				Debug.Log("Giving ant move to command");
-				StartCoroutine(antUnitScript.moveTo(mapManager.getTileAtPosition(mousePos)));
+				StartCoroutine(antUnitScript.moveTo(mapManager.getTileAtPosition(mousePos), true));
 			}
 		}
 		

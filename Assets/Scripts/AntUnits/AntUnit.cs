@@ -92,7 +92,7 @@ public class AntUnit : Attackable {
 	 * 'targetTile' to the given tileToMoveTo
 	 * Note: it does not use 'currentTile' since that can often be considered 'previousTile' as well
 	 */
-	public virtual IEnumerator moveTo(Tile tileToMoveTo) {
+	public virtual IEnumerator moveTo(Tile tileToMoveTo, bool activelySetNewTarget = false) {
 		// Avoid multiple calls to move the unit while the path is still being calculated
 		if (isCalculatingPath || isInBattle || tileToMoveTo == null) yield break;
 		isCalculatingPath = true;

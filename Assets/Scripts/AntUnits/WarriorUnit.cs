@@ -8,6 +8,9 @@ public class WarriorUnit : AntUnit {
 	
 	private Attackable attackTarget;
 	private Tile attackTargetLastKnowTileLocation;
+	
+	// Since we can cancel our own battle with an anthill by 'walking away', use a flag to detect this scenario and break up the battle
+	private bool hasSetNewPath = false;
 
 	// Use this for initialization
 	protected override void Start() {
@@ -48,7 +51,7 @@ public class WarriorUnit : AntUnit {
 				clearAttackTarget();
 			} else if (targetPath.getTilePath().Count == 0 || attackTargetLastKnowTileLocation != attackTargetCurrentLocation) {
 				Debug.Log("Calculating route to target!");
-				StartCoroutine(moveToTarget(attackTargetCurrentLocation));
+				StartCoroutine(moveToTarget(attackTargetCurrentLocation, true));
 			}
 			
 			// If the next tile in our path has an anthill we are attacking on it, stop early and attack from afar
@@ -60,9 +63,9 @@ public class WarriorUnit : AntUnit {
 				);
 				if (anthillCollider) {
 					Debug.Log("Attack the anthill!");
+					targetPath.setNewTileQueue(new Queue<Tile>());
 					StartCoroutine(commenceBattle(attackTarget));
 					clearAttackTarget();
-					targetPath.setNewTileQueue(new Queue<Tile>());
 				}
 			}
 		}
@@ -76,6 +79,7 @@ public class WarriorUnit : AntUnit {
 		
 		// If we are attacking an anthill, the battle will behave somewhat differently
 		Anthill anthill = opponent.GetComponent<Anthill>();
+		hasSetNewPath = false;
 		
 		// Set both units to be in 'attack mode' and generate a 'combat cloud'
 		GameObject cloud = null;
@@ -84,13 +88,16 @@ public class WarriorUnit : AntUnit {
 			isInBattle = true;
 			Vector3 pos = mapManager.getTileAtPosition(transform.position).transform.position;
 			cloud = GameObject.Instantiate(combatCloud, 
-													  new Vector3(pos.x, pos.y, transform.position.z - 1), 
-													  Quaternion.identity) as GameObject;
+										   new Vector3(pos.x, pos.y, transform.position.z - 1), 
+										   Quaternion.identity) as GameObject;
 			gameObject.renderer.enabled = false;
 			opponent.gameObject.renderer.enabled = false;
+		} else {
+			// If we are attacking an anthill, make sure to 'face' it
+			if (transform.position.x < opponent.transform.position.x) transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
 		}
 		
-		// Every second, battle calculations should take place
+		// Every second, battle calculations should take place only if we haven't started moving again
 		while (true) {
 			// Do one round of battle calculations
 			exchangeBlows(this, opponent);
@@ -100,14 +107,29 @@ public class WarriorUnit : AntUnit {
 			yield return new WaitForSeconds(1);
 			
 			// If we are fighting an anthill, we can be interrupted by another battle during our yield
-			if (anthill && isInBattle) break;
+			if (anthill && isInBattle) {
+				Debug.Log("Interrupted by another battle!");
+				break;
+			}
+			
+			// If we are fighting an anthill, can interrupt our own battle by leaving
+			if (anthill && hasSetNewPath) {
+				Debug.Log("Cancelled attack on anthill due to moving away!");
+				break;
+			}
 			
 			// Check if one of the units has died
-			if (this.currentHp <= 0 || opponent.currentHp <= 0) break;
+			if (this.currentHp <= 0 || opponent.currentHp <= 0) {
+				Debug.Log("Cancelled attack since at least one of us is dead!");
+				break;
+			}
 		}
+		
+		hasSetNewPath = false;
 		
 		// After the battle, 'cleanup' the unit(s) and the combat cloud
 		if (cloud) GameObject.Destroy(cloud);
+		if (transform.localScale.x < 0) transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
 		gameObject.renderer.enabled = true;
 		opponent.gameObject.renderer.enabled = true;
 		this.removeFromBattle();
@@ -150,14 +172,18 @@ public class WarriorUnit : AntUnit {
 	}
 	
 	// If a warrior is given a move command, we need to clear the attack target or else the unit will keep moving towards teh target
-	public override IEnumerator moveTo(Tile tileToMoveTo) {
+	public override IEnumerator moveTo(Tile tileToMoveTo, bool activelySetNewTarget = false) {
+		Debug.Log("calling moveTo");
+		hasSetNewPath = activelySetNewTarget;
 		clearAttackTarget();
-		return base.moveTo(tileToMoveTo);
+		return base.moveTo(tileToMoveTo, activelySetNewTarget);
 	}
 	
 	// Move to a target (without clearing attack target like moveTo)
-	private IEnumerator moveToTarget(Tile tileToMoveTo) {
-		return base.moveTo(tileToMoveTo);
+	private IEnumerator moveToTarget(Tile tileToMoveTo, bool activelySetNewTarget = false) {
+		hasSetNewPath = activelySetNewTarget;
+		Debug.Log("calling moveToTarget");
+		return base.moveTo(tileToMoveTo, activelySetNewTarget);
 	}
 	
 	// Warriors can walk on tiles and food items (but only if they aren't already carrying food themselves)
