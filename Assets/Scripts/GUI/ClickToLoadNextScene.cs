@@ -16,7 +16,8 @@ public class ClickToLoadNextScene : MonoBehaviour {
 		JOIN_GAME = 2,
 		TUTORIAL = 3,
 		RESULTS = 4,
-		MAP_ONE = 5
+		MAP_ONE = 5,
+		MULTI_PLAYER = 6
 	}
 
 	// Here is where we actually set which scene we want to go to when an object with this script is pressed
