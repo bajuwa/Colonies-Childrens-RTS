@@ -5,15 +5,8 @@ public class Food : Selectable {
 
 	public int foodValue = 0;
 	
-	public override string description
-	{
-		get
-		{
-			return "Send a gatherer to collect this";
-		}
-		set
-		{
-		}
+	public override string getDescription() {
+		return " A tasty piece of food that can help build new units if you bring it back to your Anthill!";
 	}
 	
 	public int getFoodValue() {

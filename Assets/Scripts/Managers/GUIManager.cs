@@ -13,6 +13,9 @@ public class GUIManager : MonoBehaviour {
 	public GUIText statusDisplay;
 	// Use this for initialization
 	public GUIStyle descriptionStyle;
+	
+	private Selectable currentlySelected;
+	
 	void Start () {
 		//Set it to null on runtime because the default is
 		//the unity logo.
@@ -21,16 +24,19 @@ public class GUIManager : MonoBehaviour {
 		
 	}
 	
+	void Update() {
+		currentlySelected = mUM.getCurrentlySelectedObject();
+	}
+	
 	// Update is called once per frame
 	void OnGUI () {
 		// Get the currently selected object that we will be displaying information about
-		Selectable currentlySelected = mUM.getCurrentlySelectedObject();
 		if (currentlySelected) {
 			// Assign the texture a new texture based on what is selected and display it in the bottom left
 			headDisplay.texture = currentlySelected.getDisplayImage();
 			// Assign the GUIText new text based on what is selected and display it next to the head image
 			//statusDisplay.text = currentlySelected.description;
-			GUI.Label (new Rect (300,730,200,uiStatus.texture.height), currentlySelected.description, descriptionStyle);
+			GUI.Label (new Rect (220,480,200,uiStatus.texture.height), currentlySelected.getDescription(), descriptionStyle);
 		}
 	}
 

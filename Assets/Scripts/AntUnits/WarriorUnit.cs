@@ -6,6 +6,16 @@ public class WarriorUnit : AntUnit {
 
 	public GameObject combatCloud;
 	
+	//To be displayed on the GUI
+	
+	//To be displayed on the GUI
+	public override string getDescription() {
+		if (isNeutralOrFriendly()) 
+			return "A good offensive unit that is able to attack enemy ants and anthills.";
+		else
+			return "Danger! This ant can kill your ants and destroy your anthill, attack it before it attacks you!";
+	}
+	
 	private Attackable attackTarget;
 	private Tile attackTargetLastKnowTileLocation;
 	
@@ -23,18 +33,6 @@ public class WarriorUnit : AntUnit {
 	
 	protected override void loadDisplayImage() {
 		displayImage = getTextureFromPlayer("warriorDisplay");
-	}
-	
-	//To be displayed on the GUI
-	public override string description
-	{
-		get
-		{
-			return "Warriors can attack other units";
-		}
-		set
-		{
-		}
 	}
 	// Update is called once per frame
 	protected override void Update() {

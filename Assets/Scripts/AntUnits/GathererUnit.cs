@@ -11,15 +11,11 @@ public class GathererUnit : AntUnit {
 	private bool droppedFood = true;
 	
 	//To be displayed on the GUI
-	public override string description
-	{
-		get
-		{
-			return "Gatherers can pick up and carry fruit";
-		}
-		set
-		{
-		}
+	public override string getDescription() {
+		if (isNeutralOrFriendly())
+			return "Able to pick up fruit and carry it back to your Anthill.";
+		else
+			return "Helps your enemy's colony grow larger if it can find food!";
 	}
 	
 	protected override void Start () {

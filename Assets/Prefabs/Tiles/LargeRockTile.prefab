@@ -52,11 +52,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78de88e25ab50e6429f9e7532d5cec92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
   ownedBy: 0
+  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
+  specificDescription: Large rocks take time to get around, you should avoid walking
+    over them.
+  occupiedBy: {fileID: 0}
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
