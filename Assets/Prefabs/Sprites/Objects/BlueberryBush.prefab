@@ -55,7 +55,7 @@ MonoBehaviour:
   ownedBy: 0
   displayImage: {fileID: 2800000, guid: 25447fe1930ad5f49890e4c28bb417eb, type: 3}
   objectToSpawn: {fileID: 100000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
-  objectRarity: 3
+  objectRarity: 1
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
