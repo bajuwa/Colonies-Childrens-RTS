@@ -15,7 +15,9 @@ public class Selectable : Ownable {
 	protected MapManager mapManager;
 	
 	//The description of the asset's characteristic to be displayed on the GUI
-	public virtual string description {get;set;}
+	public virtual string getDescription() {
+		return "";
+	}
 
 	// Use this for initialization
 	protected override void Start () {

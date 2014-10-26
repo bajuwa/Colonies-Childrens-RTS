@@ -7,6 +7,13 @@ public class Anthill : Attackable {
 	private GameObject gathererToCreate;
 	private GameObject warriorToCreate;
 	private GameObject scoutToCreate;
+	
+	public override string getDescription() {
+		if (isNeutralOrFriendly())
+			return "Bringing food back here will provide resources to train new Ant Units, but be careful that your enemies don't destroy your food while you're gone!";
+		else
+			return "This is your enemy's home, destroy it to win the game!";
+	}
 
 	// Use this for initialization
 	protected override void Start () {

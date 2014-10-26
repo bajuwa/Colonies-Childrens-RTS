@@ -5,6 +5,14 @@ public class ScoutUnit : AntUnit {
 
 	private GameObject scentpath;
 	private GameObject scentpathParent;
+	
+	//To be displayed on the GUI
+	public override string getDescription() {
+		if (isNeutralOrFriendly())
+			return "Automatically builds scent paths as they walk that help your other units move faster.";
+		else
+			return "Builds scent paths that help your enemy move faster!";
+	}
 
 	// Use this for initialization
 	protected override void Start () {

@@ -8,15 +8,10 @@ public class Tile : Selectable {
 	public Sprite selectedTile;
 	private SpriteRenderer spriteRenderer;
 	
-	public override string description
-	{
-		get
-		{
-			return "A tile (specific tiles later";
-		}
-		set
-		{
-		}
+	public string specificDescription;
+	
+	public override string getDescription() {
+		return specificDescription;
 	}
 	
 	public GameObject occupiedBy;
