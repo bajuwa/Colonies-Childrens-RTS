@@ -1,11 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class WarriorUnit : AntUnit {
 
 	public GameObject combatCloud;
 	
-	private AntUnit attackTarget;
+	private Attackable attackTarget;
 	private Tile attackTargetLastKnowTileLocation;
 
 	// Use this for initialization
@@ -49,24 +50,45 @@ public class WarriorUnit : AntUnit {
 				Debug.Log("Calculating route to target!");
 				StartCoroutine(moveToTarget(attackTargetCurrentLocation));
 			}
+			
+			// If the next tile in our path has an anthill we are attacking on it, stop early and attack from afar
+			if (targetPath.getTilePath().Count > 0) {
+				Tile nextTile = targetPath.getTilePath().Peek();
+				Collider2D anthillCollider = Physics2D.OverlapPoint(
+					nextTile.transform.position,
+					anthillMask
+				);
+				if (anthillCollider) {
+					Debug.Log("Attack the anthill!");
+					StartCoroutine(commenceBattle(attackTarget));
+					clearAttackTarget();
+					targetPath.setNewTileQueue(new Queue<Tile>());
+				}
+			}
 		}
 	}
 	
-	public IEnumerator commenceBattle(AntUnit opponent) {
+	public IEnumerator commenceBattle(Attackable opponent) {
 		// If we are already in a battle, we should abort the current commenceBattle request
 		Debug.Log(isInBattle);
 		if (isInBattle) yield break;
 		Debug.Log("Commencing attack!");
 		
+		// If we are attacking an anthill, the battle will behave somewhat differently
+		Anthill anthill = opponent.GetComponent<Anthill>();
+		
 		// Set both units to be in 'attack mode' and generate a 'combat cloud'
-		isInBattle = true;
+		GameObject cloud = null;
 		opponent.startBattle();
-		Vector3 pos = mapManager.getTileAtPosition(transform.position).transform.position;
-		GameObject cloud = GameObject.Instantiate(combatCloud, 
-												  new Vector3(pos.x, pos.y, transform.position.z - 1), 
-												  Quaternion.identity) as GameObject;
-		gameObject.renderer.enabled = false;
-		opponent.gameObject.renderer.enabled = false;
+		if (!anthill) {
+			isInBattle = true;
+			Vector3 pos = mapManager.getTileAtPosition(transform.position).transform.position;
+			cloud = GameObject.Instantiate(combatCloud, 
+													  new Vector3(pos.x, pos.y, transform.position.z - 1), 
+													  Quaternion.identity) as GameObject;
+			gameObject.renderer.enabled = false;
+			opponent.gameObject.renderer.enabled = false;
+		}
 		
 		// Every second, battle calculations should take place
 		while (true) {
@@ -74,15 +96,18 @@ public class WarriorUnit : AntUnit {
 			exchangeBlows(this, opponent);
 			
 			// Wait for 1 seconds
-			Debug.Log("AntOne: " + this.currentHp + ", AntTwo: " + opponent.currentHp);
+			Debug.Log("AttackableOne: " + this.currentHp + ", AttackableTwo: " + opponent.currentHp);
 			yield return new WaitForSeconds(1);
+			
+			// If we are fighting an anthill, we can be interrupted by another battle during our yield
+			if (anthill && isInBattle) break;
 			
 			// Check if one of the units has died
 			if (this.currentHp <= 0 || opponent.currentHp <= 0) break;
 		}
 		
 		// After the battle, 'cleanup' the unit(s) and the combat cloud
-		GameObject.Destroy(cloud);
+		if (cloud) GameObject.Destroy(cloud);
 		gameObject.renderer.enabled = true;
 		opponent.gameObject.renderer.enabled = true;
 		this.removeFromBattle();
@@ -92,7 +117,7 @@ public class WarriorUnit : AntUnit {
 		if (this.currentHp <= 0) this.kill();
 	}
 	
-	private void exchangeBlows(AntUnit antOne, AntUnit antTwo) {
+	private void exchangeBlows(Attackable antOne, Attackable antTwo) {
 		// Calculate each ant's attack based on their remaining health and base attack stat
 		Debug.Log(antOne.currentHp / antOne.maxHp);
 		float antOneAttack = antOne.attack * (antOne.currentHp / antOne.maxHp); //TODO: dynamic attack calculations
@@ -106,13 +131,13 @@ public class WarriorUnit : AntUnit {
 	// If a warrior comes in to contact with it's target, interrupt its movement so that 
 	// they will eventually overlap to start a 'battle'
 	void OnTriggerEnter2D(Collider2D other) {
-		if (attackTarget != null && other.gameObject.GetComponent<AntUnit>() == attackTarget) {
+		if (attackTarget != null && other.gameObject.GetComponent<Attackable>() == attackTarget) {
 			Debug.Log("Collided with target!");
 			attackTarget.interrupt();
 		}
 	}
 	
-	public void setTarget(AntUnit target) {
+	public void setTarget(Attackable target) {
 		Debug.Log("New target: " + target.ToString());
 		// Store data regarding our new target
 		attackTarget = target;
@@ -137,20 +162,16 @@ public class WarriorUnit : AntUnit {
 	
 	// Warriors can walk on tiles and food items (but only if they aren't already carrying food themselves)
 	protected override bool canWalkOn(GameObject gameObj) {
-		// If it is a tile or an ant unit (friendly or not), we can walk on it
-		if (gameObj.GetComponent<AntUnit>() != null) return true;
-		
 		if (gameObj.GetComponent<Scentpath>() != null) return true;
 		
-		if (gameObj.GetComponent<Tile>() != null) {
-			if (gameObj.GetComponent<Tile>().occupiedBy) {
-				if (gameObj.GetComponent<Tile>().occupiedBy.GetComponent<AntUnit>()) return true;
-				return false;
-			}
-			return true;
+		if (gameObj.GetComponent<Tile>() != null && !gameObj.GetComponent<Tile>().occupiedBy) return true;
+		
+		if (attackTarget) {
+			if (gameObj == attackTarget.gameObject) return true;
+		
+			// Since food can be carried by units, check for that too
+			if (gameObj.transform.parent != null && gameObj.transform.parent == attackTarget.gameObject.transform) return true;
 		}
-		// Since food can be carried by units, check for that too
-		if (gameObj.transform.parent != null && gameObj.transform.parent.GetComponent<AntUnit>() != null) return true;
 		
 		return false;
 	}

@@ -2,13 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Anthill : Selectable {
+public class Anthill : Attackable {
 
 	private GameObject gathererToCreate;
 	private GameObject warriorToCreate;
 	private GameObject scoutToCreate;
-	
-	public int storedFoodPoints = 5;
 
 	// Use this for initialization
 	protected override void Start () {
@@ -18,14 +16,17 @@ public class Anthill : Selectable {
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update();
+		maxHp = currentHp;
 	}
 	
 	public void addFoodPoints(int points) {
-		storedFoodPoints += points;
+		currentHp += points;
+		maxHp = currentHp;
 	}
 	
 	public void spendStoredFoodPoints(int points) {
-		storedFoodPoints -= points;
+		currentHp -= points;
+		maxHp = currentHp;
 	}
 	
 	protected override void loadSprite() {
@@ -37,7 +38,7 @@ public class Anthill : Selectable {
 	}
 	
 	public int getStoredFoodPoints() {
-		return storedFoodPoints;
+		return (int) Mathf.Ceil(currentHp);
 	}
 		
 	public Tile getNearestUnoccupiedTile(Vector2 position) {

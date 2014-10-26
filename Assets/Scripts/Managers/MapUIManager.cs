@@ -64,16 +64,16 @@ public class MapUIManager : MonoBehaviour {
 			AntUnit antUnitScript = selectedObject.GetComponent<AntUnit>();
 			WarriorUnit warriorUnitScript = selectedObject.GetComponent<WarriorUnit>();
 			Selectable clickedOnSelectable = getSelectableAtPosition(mousePos);
-			AntUnit clickedOnAntUnitScript = null;
+			Attackable clickedOnAttackableScript = null;
 			if (clickedOnSelectable && clickedOnSelectable.gameObject) {
-				clickedOnAntUnitScript = clickedOnSelectable.gameObject.GetComponent<AntUnit>();
+				clickedOnAttackableScript = clickedOnSelectable.gameObject.GetComponent<Attackable>();
 			}
 			
-			if (warriorUnitScript != null && clickedOnAntUnitScript != null && !clickedOnAntUnitScript.isNeutralOrFriendly()) {
+			if (warriorUnitScript != null && clickedOnAttackableScript != null && !clickedOnAttackableScript.isNeutralOrFriendly()) {
 				// If the thing we have selected is a WarriorUnit, and we clicked on an enemey AntUnit, 
 				// set it as a target instead of a simple move
 				Debug.Log("Going to attack!");
-				warriorUnitScript.setTarget(clickedOnAntUnitScript);
+				warriorUnitScript.setTarget(clickedOnAttackableScript);
 			} else if (antUnitScript != null) {
 				// Set the unit on a path to their target
 				Debug.Log("Giving ant move to command");
@@ -139,7 +139,7 @@ public class MapUIManager : MonoBehaviour {
 				}
 				
 				// If an AntUnit is the topMostSelectable and we currently have a Warrior selected, display an 'attack' type cursor
-				if (selectedObject.GetComponent<WarriorUnit>() != null && hoveredObject.GetComponent<AntUnit>() != null && !hoveredObject.isNeutralOrFriendly()) {
+				if (selectedObject.GetComponent<WarriorUnit>() != null && hoveredObject.GetComponent<Attackable>() != null && !hoveredObject.isNeutralOrFriendly()) {
 					Cursor.SetCursor(attackCursor, Vector2.zero, CursorMode.Auto);
 					return;
 				}

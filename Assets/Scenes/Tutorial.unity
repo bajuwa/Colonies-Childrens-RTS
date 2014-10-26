@@ -3279,7 +3279,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownedBy: 2
   displayImage: {fileID: 0}
-  storedFoodPoints: 5
+  currentHp: 10
+  maxHp: 10
+  attack: 1
+  defense: 2
 --- !u!212 &340280608
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5038,7 +5041,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownedBy: 1
   displayImage: {fileID: 0}
-  storedFoodPoints: 5
+  currentHp: 10
+  maxHp: 10
+  attack: 1
+  defense: 2
 --- !u!212 &517981872
 SpriteRenderer:
   m_ObjectHideFlags: 0

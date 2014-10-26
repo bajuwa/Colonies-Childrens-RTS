@@ -9,16 +9,9 @@ using System.Collections.Generic;
  * - pathfinding
  * - interactions (blocked by objects, battle calculations, etc)
  */
-public class AntUnit : Selectable {
+public class AntUnit : Attackable {
 	protected bool isCalculatingPath = false;
-	protected bool isInBattle = false;
 	
-	// Unit Stats (TODO: protect once done dev testing)
-	// When changing stats between different unit types, change them in the Prefab, not in any classes
-	public float currentHp = 10f;
-	public float maxHp = 10f;
-	public float attack = 1f;
-	public float defense = 2f;
 	public float speed = 5f;
 	public float calculatedVelocity;
 
@@ -29,8 +22,8 @@ public class AntUnit : Selectable {
 	private Tile targetTile;
 	private Tile currentTile;
 
-	private float anthillRange = 3f;
-	private int anthillMask = 0;
+	protected float anthillRange = 3f;
+	protected int anthillMask = 0;
 	
 	// Use this for initialization
 	protected override void Start() {
@@ -64,23 +57,16 @@ public class AntUnit : Selectable {
 		return currentTile;
 	}
 	
-	public void startBattle() {
-		Debug.Log("Another unit attacked me!");
+	public override void startBattle() {
+		base.startBattle();
 		isInBattle = true;
 		targetPath.setNewTileQueue(new Queue<Tile>());
 	}
 	
-	public void removeFromBattle() {
-		Debug.Log("Done battling");
+	public override void removeFromBattle() {
+		base.removeFromBattle();
 		isInBattle = false;
 		targetPath.setNewTileQueue(new Queue<Tile>());
-	}
-	
-	// Destroy this unit, making sure to destroy paths and selections
-	public void kill() {
-		Debug.Log("I was killed!");
-		this.deselect(GetInstanceID());
-		GameObject.Destroy(this.gameObject);
 	}
 	
 	/**
@@ -189,8 +175,8 @@ public class AntUnit : Selectable {
 	}
 	
 	// Used to interrupt/cancel a units movement
-	public void interrupt() {
-		Debug.Log("Movement Interrupted!");
+	public override void interrupt() {
+		base.interrupt();
 		targetPath.setNewTileQueue(new Queue<Tile>());
 	}
 	
