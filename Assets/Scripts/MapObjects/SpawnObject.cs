@@ -10,8 +10,10 @@ public class SpawnObject : Selectable {
 	// Example: at rarity 3, the object will spawn 3 times as often (rarity = 1 is the 'standard' point of rarity)
 	public float objectRarity;
 	
+	public string specificDescription;
+	
 	public override string getDescription() {
-		return "A good source of high quality food for your colony, but doesn't grow food very fast.";
+		return specificDescription;
 	}
 	
 	private GameObject objectToSpawnParent;

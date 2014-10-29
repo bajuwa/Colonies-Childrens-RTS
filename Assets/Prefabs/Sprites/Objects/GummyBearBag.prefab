@@ -12,7 +12,7 @@ GameObject:
   - 58: {fileID: 5800000}
   - 114: {fileID: 11400000}
   m_Layer: 0
-  m_Name: BlueberryBush
+  m_Name: GummyBearBag
   m_TagString: MapObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,10 +54,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownedBy: 0
   displayImage: {fileID: 2800000, guid: 25447fe1930ad5f49890e4c28bb417eb, type: 3}
-  objectToSpawn: {fileID: 100000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
-  objectRarity: 1
-  specificDescription: A good source of high quality food for your colony, but doesn't
-    grow food very fast.
+  objectToSpawn: {fileID: 100000, guid: 67563db4f7798f746ac49d4faaa3907d, type: 2}
+  objectRarity: 3
+  specificDescription: A source of junk food with low value, but plenty of food.
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
