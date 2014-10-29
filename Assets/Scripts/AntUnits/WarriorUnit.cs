@@ -188,7 +188,10 @@ public class WarriorUnit : AntUnit {
 	protected override bool canWalkOn(GameObject gameObj) {
 		if (gameObj.GetComponent<Scentpath>() != null) return true;
 		
-		if (gameObj.GetComponent<Tile>() != null && !gameObj.GetComponent<Tile>().occupiedBy) return true;
+		if (gameObj.GetComponent<Tile>() != null) {
+			if (gameObj.GetComponent<Tile>().occupiedBy != null && gameObj.GetComponent<Tile>().occupiedBy != attackTarget.gameObject) return false;
+			return true;
+		}
 		
 		if (attackTarget) {
 			if (gameObj == attackTarget.gameObject) return true;
