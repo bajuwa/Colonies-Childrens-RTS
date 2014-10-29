@@ -15,6 +15,7 @@ public class MapUIManager : MonoBehaviour {
 	// Cursor textures: Ensure that their raw image is labelled as a 'cursor'
 	public Texture2D defaultCursor;
 	public Texture2D moveToCursor;
+	public Texture2D moveToDisabledCursor;
 	public Texture2D gatherCursor;
 	public Texture2D attackCursor;
 
@@ -128,7 +129,11 @@ public class MapUIManager : MonoBehaviour {
 			if (hoveredObject != null) {
 				// If a Tile is the topMostSelectable then we should display a 'move' type cursor
 				if (hoveredObject.GetComponent<Tile>() != null || hoveredObject.GetComponent<Scentpath>() != null) {
-					Cursor.SetCursor(moveToCursor, Vector2.zero, CursorMode.Auto);
+					if (hoveredObject.gameObject.layer != LayerMask.NameToLayer("Tile")) {
+						Cursor.SetCursor(moveToDisabledCursor, Vector2.zero, CursorMode.Auto);
+					} else {
+						Cursor.SetCursor(moveToCursor, Vector2.zero, CursorMode.Auto);
+					}
 					return;
 				}
 				
