@@ -13083,6 +13083,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1118850471}
   - 114: {fileID: 1118850470}
+  - 148: {fileID: 1118850472}
   m_Layer: 0
   m_Name: NetworkManager
   m_TagString: Untagged
@@ -13101,6 +13102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a9147ad64e15f74bb18821dff785c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  antPrefab: {fileID: 100000, guid: 9ceda5c8cbabe0a4b8cea72b83402663, type: 2}
 --- !u!4 &1118850471
 Transform:
   m_ObjectHideFlags: 0
@@ -13113,6 +13115,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!148 &1118850472
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1118850469}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1118850471}
+  m_ViewID:
+    m_ID: 2
+    m_Type: 1
 --- !u!1 &1122262383
 GameObject:
   m_ObjectHideFlags: 0

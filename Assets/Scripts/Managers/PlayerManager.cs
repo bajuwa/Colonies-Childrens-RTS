@@ -9,7 +9,11 @@ public class PlayerManager : MonoBehaviour {
 	void Start () {
 	
 	}
-	
+	//assign whomever joins to be player 2
+	void OnConnectedToServer()
+	{
+		myPlayerId = 2;
+	}
 	// Update is called once per frame
 	void Update () {
 	

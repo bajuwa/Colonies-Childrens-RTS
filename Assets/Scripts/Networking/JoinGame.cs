@@ -12,9 +12,6 @@ public class JoinGame : MonoBehaviour {
 		MasterServer.RequestHostList("ColoniesAntBattle");
 		refreshing = true;
 	}
-	void OnLevelWasLoaded () {
-		Network.isMessageQueueRunning = true;
-	}
 	void OnFailedToConnect(NetworkConnectionError error) {
 		Debug.Log("Could not connect to server: " + error);
 	}
@@ -33,6 +30,7 @@ public class JoinGame : MonoBehaviour {
 			for (int i = 0; i<hostData.Length; i++) {
 				if(GUI.Button(new Rect(Screen.width/2 - 150, 100*i, Screen.width/4, 50), hostData[i].gameName)){
 					Network.Connect(hostData[i]);
+					Application.LoadLevel("MultiPlayerGame");
 					Debug.Log(hostData[i]);
 					
 				}

@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   - 58: {fileID: 5800000}
+  - 148: {fileID: 14800000}
   m_Layer: 0
   m_Name: WarriorUnit
   m_TagString: AntUnit
@@ -68,8 +69,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9e2cbcc2877d8c41a3b82a45f3d334e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displayImage: {fileID: 0}
   ownedBy: 0
+  displayImage: {fileID: 0}
   currentHp: 10
   maxHp: 10
   attack: 5
@@ -77,6 +78,18 @@ MonoBehaviour:
   speed: 3
   calculatedVelocity: 0
   combatCloud: {fileID: 100000, guid: 4a47007ebc478e94898bf7d763703b62, type: 2}
+--- !u!148 &14800000
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 5000000}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

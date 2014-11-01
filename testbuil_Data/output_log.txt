@@ -14,42 +14,42 @@ Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.050 seconds
+- Completed reload, in  0.055 seconds
 desktop: 1920x1080 60Hz; virtual: 3286x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.409248 ms
+UnloadTime: 0.416546 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 107.
-Total: 0.862303 ms (FindLiveObjects: 0.009991 ms CreateObjectMapping: 0.022287 ms MarkObjects: 0.093377 ms  DeleteObjects: 0.022671 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 108.
+Total: 0.831939 ms (FindLiveObjects: 0.010375 ms CreateObjectMapping: 0.022287 ms MarkObjects: 0.096835 ms  DeleteObjects: 0.022287 ms)
 
-UnloadTime: 0.417317 ms
+UnloadTime: 0.443444 ms
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 104.
-Total: 0.887665 ms (FindLiveObjects: 0.010375 ms CreateObjectMapping: 0.021903 ms MarkObjects: 0.144870 ms  DeleteObjects: 0.017676 ms)
+Total: 1.047897 ms (FindLiveObjects: 0.009990 ms CreateObjectMapping: 0.022287 ms MarkObjects: 0.222106 ms  DeleteObjects: 0.018060 ms)
 
 Registered
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-UnloadTime: 0.255924 ms
+UnloadTime: 0.333928 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1592.
-Total: 1.015242 ms (FindLiveObjects: 0.121045 ms CreateObjectMapping: 0.021519 ms MarkObjects: 0.463430 ms  DeleteObjects: 0.006916 ms)
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 1610.
+Total: 0.852305 ms (FindLiveObjects: 0.062635 ms CreateObjectMapping: 0.018829 ms MarkObjects: 0.392721 ms  DeleteObjects: 0.005764 ms)
 
 Found 248 objects with tag 'Tile'
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Found 6 objects with tag 'AntUnit'
+Found 4 objects with tag 'AntUnit'
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Found 6 objects with tag 'MapObject'
+Found 8 objects with tag 'MapObject'
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -57,27 +57,27 @@ Found 260 Total MapObjects
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Recording position for: ScoutUnit (UnityEngine.GameObject) 10548
+Recording position for: GathererUnit (UnityEngine.GameObject) 10616
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Recording position for: ScoutUnit (UnityEngine.GameObject) 10590
+Recording position for: WarriorUnit (UnityEngine.GameObject) 10626
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Recording position for: GathererUnit (UnityEngine.GameObject) 10592
+Recording position for: GathererUnit (UnityEngine.GameObject) 10660
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Recording position for: WarriorUnit (UnityEngine.GameObject) 10602
+Recording position for: WarriorUnit (UnityEngine.GameObject) 10952
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Recording position for: GathererUnit (UnityEngine.GameObject) 10634
+Loading script from player: 2
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Recording position for: WarriorUnit (UnityEngine.GameObject) 10924
+Loading script from player: 1
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -97,45 +97,166 @@ Loading script from player: 2
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Loading script from player: 2
+Recording position for: AntUnit(Clone) (UnityEngine.GameObject) -10046
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Loading script from player: 1
+Spawned an object at: 7.720704
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Loading script from player: 1
+Spawned an object at: 8.720778
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Loading script from player: 2
+User right clicked to give command to unit: WarriorUnit (WarriorUnit)
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Loading script from player: 2
+Giving ant move to command
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+calling moveTo
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Calculating path to new tile
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
+  at WarriorUnit.canWalkOn (UnityEngine.GameObject gameObj) [0x00000] in <filename unknown>:0 
+  at AntUnit.canWalkTo (Vector2 position) [0x00000] in <filename unknown>:0 
+  at AntUnit.move () [0x00000] in <filename unknown>:0 
+  at AntUnit.Update () [0x00000] in <filename unknown>:0 
+  at WarriorUnit.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
+
+User right clicked to give command to unit: WarriorUnit (WarriorUnit)
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Giving ant move to command
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+calling moveTo
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Calculating path to new tile
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
+  at WarriorUnit.canWalkOn (UnityEngine.GameObject gameObj) [0x00000] in <filename unknown>:0 
+  at AntUnit.canWalkTo (Vector2 position) [0x00000] in <filename unknown>:0 
+  at AntUnit.move () [0x00000] in <filename unknown>:0 
+  at AntUnit.Update () [0x00000] in <filename unknown>:0 
+  at WarriorUnit.Update () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
 
-Loading script from player: 1
+Spawned an object at: 13.7543
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Loading script from player: 2
+User right clicked to give command to unit: WarriorUnit (WarriorUnit)
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Spawned an object at: 12.63468
+Giving ant move to command
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+calling moveTo
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Calculating path to new tile
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at WarriorUnit.canWalkOn (UnityEngine.GameObject gameObj) [0x00000] in <filename unknown>:0 
+  at AntUnit.canWalkTo (Vector2 position) [0x00000] in <filename unknown>:0 
+  at AntUnit.move () [0x00000] in <filename unknown>:0 
+  at AntUnit.Update () [0x00000] in <filename unknown>:0 
+  at WarriorUnit.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+User right clicked to give command to unit: GathererUnit (GathererUnit)
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Giving ant move to command
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Calculating path to new tile
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+User right clicked to give command to unit: GathererUnit (GathererUnit)
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Giving ant move to command
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Calculating path to new tile
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+User right clicked to give command to unit: GathererUnit (GathererUnit)
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Giving ant move to command
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Calculating path to new tile
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Spawned an object at: 16.77126
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+User right clicked to give command to unit: GathererUnit (GathererUnit)
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Giving ant move to command
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Calculating path to new tile
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+User right clicked to give command to unit: GathererUnit (GathererUnit)
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Giving ant move to command
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+User right clicked to give command to unit: GathererUnit (GathererUnit)
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Giving ant move to command
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Calculating path to new tile
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
