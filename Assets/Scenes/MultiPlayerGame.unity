@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -572,7 +572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -657,7 +657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -991,7 +991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -1159,7 +1159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -1327,7 +1327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -1579,7 +1579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -1663,7 +1663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -1735,7 +1735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -1831,7 +1831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -1916,7 +1916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -2085,7 +2085,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -2170,7 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -2254,7 +2254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -2338,7 +2338,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -2506,7 +2506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -2590,7 +2590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -2675,7 +2675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -2759,7 +2759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -2843,7 +2843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -2884,89 +2884,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 1.5
   m_Center: {x: 0, y: 0}
---- !u!1 &308356833
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-  m_PrefabInternal: {fileID: 564720276}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 308356834}
-  - 212: {fileID: 308356837}
-  - 58: {fileID: 308356836}
-  - 114: {fileID: 308356835}
-  m_Layer: 0
-  m_Name: SpawnObject
-  m_TagString: MapObject
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &308356834
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-  m_PrefabInternal: {fileID: 564720276}
-  m_GameObject: {fileID: 308356833}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.39529324, y: -4.14670324, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 472971646}
-  m_RootOrder: 2
---- !u!114 &308356835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400000, guid: 2468bc1959fe85245b61b02a0544d386,
-    type: 2}
-  m_PrefabInternal: {fileID: 564720276}
-  m_GameObject: {fileID: 308356833}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f4573adbebcc7c43bc24ea5f8c4b14b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 25447fe1930ad5f49890e4c28bb417eb, type: 3}
-  objectToSpawn: {fileID: 100000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
-  objectRarity: 1
-  specificDescription: A good source of high quality food for your colony, but doesn't
-    grow food very fast.
---- !u!58 &308356836
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5800000, guid: 2468bc1959fe85245b61b02a0544d386,
-    type: 2}
-  m_PrefabInternal: {fileID: 564720276}
-  m_GameObject: {fileID: 308356833}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Radius: 1
-  m_Center: {x: 0, y: 0}
---- !u!212 &308356837
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21200000, guid: 2468bc1959fe85245b61b02a0544d386,
-    type: 2}
-  m_PrefabInternal: {fileID: 564720276}
-  m_GameObject: {fileID: 308356833}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 25447fe1930ad5f49890e4c28bb417eb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &309294426
 GameObject:
   m_ObjectHideFlags: 0
@@ -3010,7 +2927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -3095,7 +3012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -3180,7 +3097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -3265,7 +3182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -3349,7 +3266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -3434,7 +3351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -3500,7 +3417,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 340280604}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.7712727, y: 14.0928259, z: 2}
+  m_LocalPosition: {x: 17.7712727, y: 14.0928259, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1237253027}
@@ -3604,7 +3521,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -3689,7 +3606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -3774,7 +3691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -4026,7 +3943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -4110,7 +4027,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -4194,7 +4111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -4278,7 +4195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -4362,7 +4279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -4490,7 +4407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -4559,8 +4476,8 @@ Transform:
   m_Children:
   - {fileID: 517981869}
   - {fileID: 340280605}
-  - {fileID: 308356834}
   - {fileID: 1044324850}
+  - {fileID: 1572382190}
   - {fileID: 1226893929}
   - {fileID: 67916058}
   - {fileID: 981943623}
@@ -4633,7 +4550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -4718,7 +4635,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -4790,7 +4707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -4886,7 +4803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -4970,7 +4887,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -5054,7 +4971,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -5139,7 +5056,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -5223,7 +5140,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -5393,7 +5310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -5478,7 +5395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -5646,7 +5563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -5730,7 +5647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -5814,7 +5731,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -5886,7 +5803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -6078,7 +5995,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -6120,54 +6037,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 1.5
   m_Center: {x: 0, y: 0}
---- !u!1001 &564720276
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 472971646}
-    m_Modifications:
-    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 7.39529324
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -4.14670324
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-      propertyPath: m_Name
-      value: SpawnObject
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
-  m_RootGameObject: {fileID: 308356833}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
 --- !u!1 &571574386
 GameObject:
   m_ObjectHideFlags: 0
@@ -6211,7 +6080,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -6296,7 +6165,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -6380,7 +6249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -6464,7 +6333,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -6548,7 +6417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -6680,7 +6549,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -6764,7 +6633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -6848,7 +6717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7015,7 +6884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7100,7 +6969,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7232,7 +7101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7316,7 +7185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7400,7 +7269,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7484,7 +7353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7568,7 +7437,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7653,7 +7522,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7737,7 +7606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7821,7 +7690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7906,7 +7775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -7990,7 +7859,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -8074,7 +7943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -8242,7 +8111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -8326,7 +8195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -8410,7 +8279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -8495,7 +8364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -8580,7 +8449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -8748,7 +8617,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -8833,7 +8702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -8917,7 +8786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -9001,7 +8870,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -9141,7 +9010,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -9199,7 +9068,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
       propertyPath: m_LocalRotation.x
@@ -9219,7 +9088,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
       propertyPath: m_Name
@@ -9273,7 +9142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -9357,7 +9226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -9429,7 +9298,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -9513,7 +9382,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -9610,7 +9479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -9695,7 +9564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -9779,7 +9648,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -9863,7 +9732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -10038,7 +9907,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -10134,7 +10003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -10218,7 +10087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -10303,7 +10172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -10490,7 +10359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -10643,7 +10512,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -10727,7 +10596,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -10859,7 +10728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -10943,7 +10812,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -11027,7 +10896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -11112,7 +10981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -11266,7 +11135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -11362,7 +11231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -11447,7 +11316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -11660,7 +11529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -11745,7 +11614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -11932,7 +11801,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -12017,7 +11886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -12382,11 +12251,11 @@ Transform:
   m_PrefabInternal: {fileID: 814108725}
   m_GameObject: {fileID: 1044324849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.71898031, y: -.109221458, z: -1}
+  m_LocalPosition: {x: -4.71898031, y: -.109221458, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 472971646}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &1044324851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12527,7 +12396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -12611,7 +12480,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -12696,7 +12565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -12780,7 +12649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -12864,7 +12733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -12948,7 +12817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -13033,7 +12902,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -13156,7 +13025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -13240,7 +13109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -13324,7 +13193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -13492,7 +13361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -13576,7 +13445,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -13660,7 +13529,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -13744,7 +13613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -14079,7 +13948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -14247,7 +14116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -14332,7 +14201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -14417,7 +14286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -14552,7 +14421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -14636,7 +14505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -14720,7 +14589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -14804,7 +14673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -14888,7 +14757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -14972,7 +14841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -15161,7 +15030,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -15245,7 +15114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -15317,7 +15186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -15548,7 +15417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -15633,7 +15502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -15718,7 +15587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -15803,7 +15672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -15887,7 +15756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -15971,7 +15840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -16055,7 +15924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -16214,7 +16083,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -16299,7 +16168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -16371,7 +16240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -16467,7 +16336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -16551,7 +16420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -16635,7 +16504,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -16720,7 +16589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -16792,7 +16661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -16888,7 +16757,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -17130,7 +16999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -17226,7 +17095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -17310,7 +17179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -17394,7 +17263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -17478,7 +17347,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -17625,7 +17494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -17710,7 +17579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -17794,7 +17663,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -17866,7 +17735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -17962,7 +17831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -18131,7 +18000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -18215,7 +18084,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -18287,7 +18156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -18383,7 +18252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -18467,7 +18336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -18539,7 +18408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -18719,7 +18588,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -18803,7 +18672,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -18887,7 +18756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -18929,6 +18798,89 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 1.5
   m_Center: {x: 0, y: 0}
+--- !u!1 &1572382189
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+  m_PrefabInternal: {fileID: 1805103516}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1572382190}
+  - 212: {fileID: 1572382193}
+  - 58: {fileID: 1572382192}
+  - 114: {fileID: 1572382191}
+  m_Layer: 0
+  m_Name: SpawnObject
+  m_TagString: MapObject
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1572382190
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+  m_PrefabInternal: {fileID: 1805103516}
+  m_GameObject: {fileID: 1572382189}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.06921196, y: -4.09907055, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 472971646}
+  m_RootOrder: 3
+--- !u!114 &1572382191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 2468bc1959fe85245b61b02a0544d386,
+    type: 2}
+  m_PrefabInternal: {fileID: 1805103516}
+  m_GameObject: {fileID: 1572382189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4573adbebcc7c43bc24ea5f8c4b14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownedBy: 0
+  displayImage: {fileID: 2800000, guid: 25447fe1930ad5f49890e4c28bb417eb, type: 3}
+  objectToSpawn: {fileID: 100000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+  objectRarity: 1
+  specificDescription: A good source of high quality food for your colony, but doesn't
+    grow food very fast.
+--- !u!58 &1572382192
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5800000, guid: 2468bc1959fe85245b61b02a0544d386,
+    type: 2}
+  m_PrefabInternal: {fileID: 1805103516}
+  m_GameObject: {fileID: 1572382189}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 1
+  m_Center: {x: 0, y: 0}
+--- !u!212 &1572382193
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 2468bc1959fe85245b61b02a0544d386,
+    type: 2}
+  m_PrefabInternal: {fileID: 1805103516}
+  m_GameObject: {fileID: 1572382189}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 25447fe1930ad5f49890e4c28bb417eb, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1575395978
 GameObject:
   m_ObjectHideFlags: 0
@@ -18972,7 +18924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -19056,7 +19008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -19140,7 +19092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -19224,7 +19176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -19393,7 +19345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -19477,7 +19429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -19562,7 +19514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -19646,7 +19598,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -19730,7 +19682,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -19814,7 +19766,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -19886,7 +19838,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -19982,7 +19934,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -20066,7 +20018,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -20150,7 +20102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -20234,7 +20186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -20318,7 +20270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -20402,7 +20354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -20486,7 +20438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -20603,7 +20555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -20699,7 +20651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -20783,7 +20735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -20824,6 +20776,54 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 1.5
   m_Center: {x: 0, y: 0}
+--- !u!1001 &1805103516
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 472971646}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.06921196
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.09907055
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_Name
+      value: SpawnObject
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+  m_RootGameObject: {fileID: 1572382189}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1806439935
 GameObject:
   m_ObjectHideFlags: 0
@@ -20867,7 +20867,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -20951,7 +20951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -21035,7 +21035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -21119,7 +21119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -21204,7 +21204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -21419,7 +21419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -21503,7 +21503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -21587,7 +21587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -21671,7 +21671,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -21756,7 +21756,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -21840,7 +21840,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -21925,7 +21925,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -22009,7 +22009,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -22094,7 +22094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -22166,7 +22166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -22414,7 +22414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -22498,7 +22498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -22582,7 +22582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -22666,7 +22666,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -22750,7 +22750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -22835,7 +22835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -22919,7 +22919,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -23047,7 +23047,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -23131,7 +23131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -23263,7 +23263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -23348,7 +23348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -23432,7 +23432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -23516,7 +23516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -23600,7 +23600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -23673,7 +23673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -23769,7 +23769,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -23842,7 +23842,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -24022,7 +24022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 97ed772bd02a7924d9e78696bab77ce4, type: 3}
   terrainValue: 6
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -24175,7 +24175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 0}
+  displayImage: {fileID: 2800000, guid: 9c8704c3164b71140bb86bef68fc3840, type: 3}
   terrainValue: 1
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -24271,7 +24271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -24458,7 +24458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5236fc7aab09e3348979bd12c3c81da1, type: 3}
+  displayImage: {fileID: 2800000, guid: 729ec7a4745e288468ef7a6169dfae31, type: 3}
   terrainValue: 10
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
@@ -24543,7 +24543,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 0ed80944e1c56da42a5c1dbbcc82aec3, type: 3}
+  displayImage: {fileID: 2800000, guid: c955352879a721f4dadfb248f3d123ef, type: 3}
   terrainValue: 4
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
