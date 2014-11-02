@@ -15,8 +15,7 @@ public class AntUnit : Attackable {
 	public float speed = 5f;
 	public float calculatedVelocity;
 	
-	private Animator animator;
-	protected int STATE = 0;
+	protected Animator animator;
 
 	/* Movement variables: All coords must be in local position to handle map panning! */
 	// Target Path carries the full list of tiles in order of planned traversal
@@ -174,7 +173,6 @@ public class AntUnit : Attackable {
 	protected override void Update() {
 		base.Update();
 		if (!animator) loadAnimator();
-		if (animator) animator.SetInteger("STATE", STATE);
 		if (targetTile == null) recordPosition();
 		move();
 	}
