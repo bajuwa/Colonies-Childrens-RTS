@@ -241,6 +241,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &30583261
 SpriteRenderer:
@@ -325,6 +326,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &31478770
 SpriteRenderer:
@@ -409,6 +411,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &35835108
 SpriteRenderer:
@@ -481,6 +484,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &43835402
 SpriteRenderer:
@@ -578,6 +582,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &56604763
 SpriteRenderer:
@@ -663,6 +668,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &58409518
 SpriteRenderer:
@@ -746,6 +752,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 100000, guid: 67563db4f7798f746ac49d4faaa3907d, type: 2}
   objectRarity: 3
   specificDescription: A source of junk food with low value, but plenty of food.
+  specificName: Candy Bag
 --- !u!58 &67916060
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -829,6 +836,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &84853090
 SpriteRenderer:
@@ -997,6 +1005,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &94427064
 SpriteRenderer:
@@ -1164,6 +1173,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &116668016
 SpriteRenderer:
@@ -1236,6 +1246,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &117869653
 SpriteRenderer:
@@ -1332,6 +1343,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &126654307
 SpriteRenderer:
@@ -1416,6 +1428,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &126864277
 SpriteRenderer:
@@ -1500,6 +1513,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &130715434
 SpriteRenderer:
@@ -1584,6 +1598,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &151322980
 SpriteRenderer:
@@ -1668,6 +1683,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &167515011
 SpriteRenderer:
@@ -1740,6 +1756,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &174107918
 SpriteRenderer:
@@ -1837,6 +1854,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &176830710
 SpriteRenderer:
@@ -1922,6 +1940,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &185893919
 SpriteRenderer:
@@ -2006,6 +2025,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &187832185
 SpriteRenderer:
@@ -2091,6 +2111,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &197212095
 SpriteRenderer:
@@ -2175,6 +2196,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &206013023
 SpriteRenderer:
@@ -2259,6 +2281,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &217575804
 SpriteRenderer:
@@ -2343,6 +2366,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &217842245
 SpriteRenderer:
@@ -2427,6 +2451,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &230543905
 SpriteRenderer:
@@ -2511,6 +2536,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &239747476
 SpriteRenderer:
@@ -2596,6 +2622,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &254694249
 SpriteRenderer:
@@ -2680,6 +2707,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &275572131
 SpriteRenderer:
@@ -2764,6 +2792,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &303716247
 SpriteRenderer:
@@ -2848,6 +2877,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &303944899
 SpriteRenderer:
@@ -2933,6 +2963,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &309294429
 SpriteRenderer:
@@ -3018,6 +3049,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &312036451
 SpriteRenderer:
@@ -3103,6 +3135,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &318667787
 SpriteRenderer:
@@ -3187,6 +3220,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &318777775
 SpriteRenderer:
@@ -3272,6 +3306,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &331097693
 SpriteRenderer:
@@ -3356,6 +3391,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &336167131
 SpriteRenderer:
@@ -3527,6 +3563,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &355667412
 SpriteRenderer:
@@ -3612,6 +3649,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &362695639
 SpriteRenderer:
@@ -3697,6 +3735,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &365686206
 SpriteRenderer:
@@ -3781,6 +3820,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &405740172
 SpriteRenderer:
@@ -3948,6 +3988,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &414100109
 SpriteRenderer:
@@ -4032,6 +4073,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &415082833
 SpriteRenderer:
@@ -4116,6 +4158,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &417508956
 SpriteRenderer:
@@ -4200,6 +4243,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &429887664
 SpriteRenderer:
@@ -4284,6 +4328,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &433213920
 SpriteRenderer:
@@ -4412,6 +4457,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &451056166
 SpriteRenderer:
@@ -4556,6 +4602,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &474099914
 SpriteRenderer:
@@ -4640,6 +4687,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &479648917
 SpriteRenderer:
@@ -4712,6 +4760,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &484753160
 SpriteRenderer:
@@ -4808,6 +4857,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &495954385
 SpriteRenderer:
@@ -4892,6 +4942,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &508573953
 SpriteRenderer:
@@ -4977,6 +5028,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &510051856
 SpriteRenderer:
@@ -5061,6 +5113,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &510489078
 SpriteRenderer:
@@ -5145,6 +5198,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &514383657
 SpriteRenderer:
@@ -5316,6 +5370,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &521555529
 SpriteRenderer:
@@ -5400,6 +5455,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &524353701
 SpriteRenderer:
@@ -5484,6 +5540,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &525019672
 SpriteRenderer:
@@ -5568,6 +5625,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &528499245
 SpriteRenderer:
@@ -5652,6 +5710,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &531224341
 SpriteRenderer:
@@ -5736,6 +5795,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &531725341
 SpriteRenderer:
@@ -5808,6 +5868,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &534694255
 SpriteRenderer:
@@ -6001,6 +6062,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &563102678
 SpriteRenderer:
@@ -6086,6 +6148,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &571574389
 SpriteRenderer:
@@ -6170,6 +6233,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &572773403
 SpriteRenderer:
@@ -6254,6 +6318,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &572850050
 SpriteRenderer:
@@ -6338,6 +6403,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &577338444
 SpriteRenderer:
@@ -6422,6 +6488,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &586046455
 SpriteRenderer:
@@ -6554,6 +6621,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &612727063
 SpriteRenderer:
@@ -6638,6 +6706,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &616694765
 SpriteRenderer:
@@ -6722,6 +6791,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &618790194
 SpriteRenderer:
@@ -6890,6 +6960,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &644583641
 SpriteRenderer:
@@ -6974,6 +7045,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &645680846
 SpriteRenderer:
@@ -7106,6 +7178,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &657269851
 SpriteRenderer:
@@ -7190,6 +7263,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &687848518
 SpriteRenderer:
@@ -7274,6 +7348,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &690916354
 SpriteRenderer:
@@ -7358,6 +7433,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &691742256
 SpriteRenderer:
@@ -7443,6 +7519,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &692516489
 SpriteRenderer:
@@ -7527,6 +7604,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &692716834
 SpriteRenderer:
@@ -7611,6 +7689,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &693717350
 SpriteRenderer:
@@ -7696,6 +7775,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &694690340
 SpriteRenderer:
@@ -7780,6 +7860,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &706263173
 SpriteRenderer:
@@ -7864,6 +7945,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &719765592
 SpriteRenderer:
@@ -7949,6 +8031,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &723603603
 SpriteRenderer:
@@ -8116,6 +8199,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &753937129
 SpriteRenderer:
@@ -8200,6 +8284,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &755862057
 SpriteRenderer:
@@ -8285,6 +8370,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &792304270
 SpriteRenderer:
@@ -8370,6 +8456,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &793568220
 SpriteRenderer:
@@ -8454,6 +8541,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &794820667
 SpriteRenderer:
@@ -8538,6 +8626,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &795304263
 SpriteRenderer:
@@ -8623,6 +8712,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &796895999
 SpriteRenderer:
@@ -8707,6 +8797,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &797735871
 SpriteRenderer:
@@ -8791,6 +8882,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &800645600
 SpriteRenderer:
@@ -8876,6 +8968,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &800806367
 SpriteRenderer:
@@ -9015,6 +9108,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &811693223
 SpriteRenderer:
@@ -9147,6 +9241,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &821978130
 SpriteRenderer:
@@ -9231,6 +9326,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &825998211
 SpriteRenderer:
@@ -9303,6 +9399,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &827035678
 SpriteRenderer:
@@ -9388,6 +9485,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &841422441
 SpriteRenderer:
@@ -9485,6 +9583,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &861857494
 SpriteRenderer:
@@ -9569,6 +9668,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &872887245
 SpriteRenderer:
@@ -9653,6 +9753,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &872945133
 SpriteRenderer:
@@ -9737,6 +9838,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &879033442
 SpriteRenderer:
@@ -9912,6 +10014,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &922002486
 SpriteRenderer:
@@ -10008,6 +10111,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &927861821
 SpriteRenderer:
@@ -10093,6 +10197,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &945252200
 SpriteRenderer:
@@ -10177,6 +10282,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &954896291
 SpriteRenderer:
@@ -10364,6 +10470,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &959461102
 SpriteRenderer:
@@ -10517,6 +10624,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &967454699
 SpriteRenderer:
@@ -10601,6 +10709,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &967719124
 SpriteRenderer:
@@ -10733,6 +10842,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &972001415
 SpriteRenderer:
@@ -10817,6 +10927,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &975094576
 SpriteRenderer:
@@ -10902,6 +11013,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &978370429
 SpriteRenderer:
@@ -10986,6 +11098,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &978939271
 SpriteRenderer:
@@ -11081,6 +11194,7 @@ MonoBehaviour:
   foodValue: 10
   specificDescription: A tasty piece of food that can help build new units if you
     bring it back to your Anthill!
+  specificName: Blueberry
 --- !u!212 &981943626
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11140,6 +11254,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &982681419
 SpriteRenderer:
@@ -11237,6 +11352,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &990496580
 SpriteRenderer:
@@ -11322,6 +11438,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &991340761
 SpriteRenderer:
@@ -11450,6 +11567,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1001675322
 SpriteRenderer:
@@ -11535,6 +11653,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1008310080
 SpriteRenderer:
@@ -11619,6 +11738,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1012555674
 SpriteRenderer:
@@ -11807,6 +11927,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1032698031
 SpriteRenderer:
@@ -11891,6 +12012,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1042496042
 SpriteRenderer:
@@ -12274,6 +12396,7 @@ MonoBehaviour:
   objectRarity: 1
   specificDescription: A good source of high quality food for your colony, but doesn't
     grow food very fast.
+  specificName: Berry Bush
 --- !u!58 &1044324852
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12401,6 +12524,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1053683457
 SpriteRenderer:
@@ -12486,6 +12610,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1058905343
 SpriteRenderer:
@@ -12570,6 +12695,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1071048017
 SpriteRenderer:
@@ -12654,6 +12780,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1086682804
 SpriteRenderer:
@@ -12738,6 +12865,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1087721428
 SpriteRenderer:
@@ -12823,6 +12951,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1098484485
 SpriteRenderer:
@@ -12907,6 +13036,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1105955147
 SpriteRenderer:
@@ -13044,6 +13174,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1122262386
 SpriteRenderer:
@@ -13128,6 +13259,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1132714993
 SpriteRenderer:
@@ -13212,6 +13344,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1157800105
 SpriteRenderer:
@@ -13296,6 +13429,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1163964096
 SpriteRenderer:
@@ -13380,6 +13514,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1165054849
 SpriteRenderer:
@@ -13464,6 +13599,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1173985343
 SpriteRenderer:
@@ -13548,6 +13684,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1189478437
 SpriteRenderer:
@@ -13633,6 +13770,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1211759677
 SpriteRenderer:
@@ -13788,6 +13926,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 100000, guid: 67563db4f7798f746ac49d4faaa3907d, type: 2}
   objectRarity: 3
   specificDescription: A source of junk food with low value, but plenty of food.
+  specificName: Candy Bag
 --- !u!58 &1226893931
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -13968,6 +14107,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1229508629
 SpriteRenderer:
@@ -14136,6 +14276,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1238104676
 SpriteRenderer:
@@ -14221,6 +14362,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1240138808
 SpriteRenderer:
@@ -14305,6 +14447,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1240291771
 SpriteRenderer:
@@ -14440,6 +14583,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1250896251
 SpriteRenderer:
@@ -14524,6 +14668,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1253383238
 SpriteRenderer:
@@ -14608,6 +14753,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1254921493
 SpriteRenderer:
@@ -14692,6 +14838,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1255983230
 SpriteRenderer:
@@ -14776,6 +14923,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1259601688
 SpriteRenderer:
@@ -14860,6 +15008,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1262576144
 SpriteRenderer:
@@ -15001,6 +15150,65 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+  nameStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 16
+    m_FontStyle: 1
+    m_Alignment: 4
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
 --- !u!1 &1264603095
 GameObject:
   m_ObjectHideFlags: 0
@@ -15049,6 +15257,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1264603098
 SpriteRenderer:
@@ -15133,6 +15342,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1265197027
 SpriteRenderer:
@@ -15205,6 +15415,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1269821038
 SpriteRenderer:
@@ -15301,6 +15512,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1274010339
 SpriteRenderer:
@@ -15437,6 +15649,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1277810525
 SpriteRenderer:
@@ -15522,6 +15735,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1286022248
 SpriteRenderer:
@@ -15607,6 +15821,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1288371007
 SpriteRenderer:
@@ -15691,6 +15906,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1290952200
 SpriteRenderer:
@@ -15775,6 +15991,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1297733416
 SpriteRenderer:
@@ -15859,6 +16076,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1318219822
 SpriteRenderer:
@@ -15943,6 +16161,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1319901482
 SpriteRenderer:
@@ -16103,6 +16322,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1347701006
 SpriteRenderer:
@@ -16187,6 +16407,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1351808416
 SpriteRenderer:
@@ -16259,6 +16480,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1359214924
 SpriteRenderer:
@@ -16355,6 +16577,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1361930016
 SpriteRenderer:
@@ -16439,6 +16662,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1369475064
 SpriteRenderer:
@@ -16524,6 +16748,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1375632569
 SpriteRenderer:
@@ -16608,6 +16833,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1385142906
 SpriteRenderer:
@@ -16680,6 +16906,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1390663099
 SpriteRenderer:
@@ -16776,6 +17003,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1423358834
 SpriteRenderer:
@@ -16871,6 +17099,7 @@ MonoBehaviour:
   foodValue: 10
   specificDescription: A tasty piece of food that can help build new units if you
     bring it back to your Anthill!
+  specificName: Blueberry
 --- !u!212 &1425466073
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -17018,6 +17247,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1427324630
 SpriteRenderer:
@@ -17114,6 +17344,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1428182885
 SpriteRenderer:
@@ -17198,6 +17429,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1432929905
 SpriteRenderer:
@@ -17282,6 +17514,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1440966234
 SpriteRenderer:
@@ -17367,6 +17600,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1442360362
 SpriteRenderer:
@@ -17514,6 +17748,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1446112227
 SpriteRenderer:
@@ -17598,6 +17833,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1466652726
 SpriteRenderer:
@@ -17682,6 +17918,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1470756121
 SpriteRenderer:
@@ -17754,6 +17991,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1480045307
 SpriteRenderer:
@@ -17851,6 +18089,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1484117219
 SpriteRenderer:
@@ -17935,6 +18174,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1490159871
 SpriteRenderer:
@@ -18019,6 +18259,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1504728891
 SpriteRenderer:
@@ -18103,6 +18344,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1505822129
 SpriteRenderer:
@@ -18175,6 +18417,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1507646424
 SpriteRenderer:
@@ -18271,6 +18514,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1508180598
 SpriteRenderer:
@@ -18355,6 +18599,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1517779426
 SpriteRenderer:
@@ -18427,6 +18672,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1519277725
 SpriteRenderer:
@@ -18523,6 +18769,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1521686847
 SpriteRenderer:
@@ -18607,6 +18854,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1554400202
 SpriteRenderer:
@@ -18691,6 +18939,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1562936943
 SpriteRenderer:
@@ -18776,6 +19025,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1567211146
 SpriteRenderer:
@@ -18860,6 +19110,7 @@ MonoBehaviour:
   objectRarity: 1
   specificDescription: A good source of high quality food for your colony, but doesn't
     grow food very fast.
+  specificName: Berry Bush
 --- !u!58 &1572382192
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -18943,6 +19194,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1575395981
 SpriteRenderer:
@@ -19027,6 +19279,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1575563085
 SpriteRenderer:
@@ -19111,6 +19364,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1592784912
 SpriteRenderer:
@@ -19196,6 +19450,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1592875409
 SpriteRenderer:
@@ -19280,6 +19535,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1592953027
 SpriteRenderer:
@@ -19364,6 +19620,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1633172742
 SpriteRenderer:
@@ -19449,6 +19706,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1642476148
 SpriteRenderer:
@@ -19533,6 +19791,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1644571762
 SpriteRenderer:
@@ -19617,6 +19876,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1660439783
 SpriteRenderer:
@@ -19701,6 +19961,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1663803614
 SpriteRenderer:
@@ -19785,6 +20046,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1692034730
 SpriteRenderer:
@@ -19857,6 +20119,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1697224017
 SpriteRenderer:
@@ -19953,6 +20216,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1706727463
 SpriteRenderer:
@@ -20037,6 +20301,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1710583154
 SpriteRenderer:
@@ -20121,6 +20386,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1716402857
 SpriteRenderer:
@@ -20205,6 +20471,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1741045691
 SpriteRenderer:
@@ -20289,6 +20556,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1744237298
 SpriteRenderer:
@@ -20373,6 +20641,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1746951735
 SpriteRenderer:
@@ -20458,6 +20727,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1753806389
 SpriteRenderer:
@@ -20574,6 +20844,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1781419469
 SpriteRenderer:
@@ -20670,6 +20941,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1782875707
 SpriteRenderer:
@@ -20754,6 +21026,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1799843133
 SpriteRenderer:
@@ -20886,6 +21159,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1806439938
 SpriteRenderer:
@@ -20970,6 +21244,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1809928767
 SpriteRenderer:
@@ -21054,6 +21329,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1810625788
 SpriteRenderer:
@@ -21139,6 +21415,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1815326276
 SpriteRenderer:
@@ -21223,6 +21500,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1817863060
 SpriteRenderer:
@@ -21354,6 +21632,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1835001712
 SpriteRenderer:
@@ -21438,6 +21717,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1849241887
 SpriteRenderer:
@@ -21522,6 +21802,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1852296931
 SpriteRenderer:
@@ -21606,6 +21887,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1855987960
 SpriteRenderer:
@@ -21691,6 +21973,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1863529254
 SpriteRenderer:
@@ -21775,6 +22058,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1869989707
 SpriteRenderer:
@@ -21860,6 +22144,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1877059883
 SpriteRenderer:
@@ -21944,6 +22229,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1901145246
 SpriteRenderer:
@@ -22029,6 +22315,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1901405792
 SpriteRenderer:
@@ -22113,6 +22400,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1904155268
 SpriteRenderer:
@@ -22186,6 +22474,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1907011005
 SpriteRenderer:
@@ -22282,6 +22571,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1909088524
 SpriteRenderer:
@@ -22433,6 +22723,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1916302220
 SpriteRenderer:
@@ -22517,6 +22808,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1919779966
 SpriteRenderer:
@@ -22601,6 +22893,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1936758364
 SpriteRenderer:
@@ -22685,6 +22978,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1940025588
 SpriteRenderer:
@@ -22770,6 +23064,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1940620063
 SpriteRenderer:
@@ -22854,6 +23149,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1960484104
 SpriteRenderer:
@@ -22938,6 +23234,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1976752012
 SpriteRenderer:
@@ -23066,6 +23363,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1991088806
 SpriteRenderer:
@@ -23150,6 +23448,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &1993842957
 SpriteRenderer:
@@ -23283,6 +23582,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2010632945
 SpriteRenderer:
@@ -23367,6 +23667,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2012578066
 SpriteRenderer:
@@ -23451,6 +23752,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2013343943
 SpriteRenderer:
@@ -23535,6 +23837,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2033882398
 SpriteRenderer:
@@ -23620,6 +23923,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2043046571
 SpriteRenderer:
@@ -23692,6 +23996,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2054258404
 SpriteRenderer:
@@ -23789,6 +24094,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2058749795
 SpriteRenderer:
@@ -23861,6 +24167,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2064214370
 SpriteRenderer:
@@ -23957,6 +24264,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Ants can't swim!
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2078344883
 SpriteRenderer:
@@ -24042,6 +24350,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Weeds are still and sometimes large, making them hard to maneuver
     around.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2087132825
 SpriteRenderer:
@@ -24194,6 +24503,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Very flat dirt that is easy to walk over.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2099515974
 SpriteRenderer:
@@ -24290,6 +24600,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2111574848
 SpriteRenderer:
@@ -24478,6 +24789,7 @@ MonoBehaviour:
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Large rocks take time to get around, you should avoid walking
     over them.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2124880663
 SpriteRenderer:
@@ -24562,6 +24874,7 @@ MonoBehaviour:
   normalTile: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   selectedTile: {fileID: 21300000, guid: 894a5fdbb50e6c547be0e224ceac576c, type: 3}
   specificDescription: Blades of grass are somewhat difficult to walk through.
+  specificName: 
   occupiedBy: {fileID: 0}
 --- !u!212 &2137914210
 SpriteRenderer:
