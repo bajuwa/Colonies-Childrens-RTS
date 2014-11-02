@@ -57,6 +57,7 @@ MonoBehaviour:
   foodValue: 10
   specificDescription: A tasty piece of food that can help build new units if you
     bring it back to your Anthill!
+  specificName: Blueberry
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

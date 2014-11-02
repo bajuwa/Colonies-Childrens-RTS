@@ -57,6 +57,7 @@ MonoBehaviour:
   objectToSpawn: {fileID: 100000, guid: 67563db4f7798f746ac49d4faaa3907d, type: 2}
   objectRarity: 3
   specificDescription: A source of junk food with low value, but plenty of food.
+  specificName: Candy Bag
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

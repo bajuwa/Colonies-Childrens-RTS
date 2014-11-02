@@ -13,6 +13,7 @@ public class GUIManager : MonoBehaviour {
 	public GUIText statusDisplay;
 	// Use this for initialization
 	public GUIStyle descriptionStyle;
+	public GUIStyle nameStyle;
 	
 	private Selectable currentlySelected;
 	
@@ -38,6 +39,7 @@ public class GUIManager : MonoBehaviour {
 			headDisplay.texture = currentlySelected.getDisplayImage();
 			// Assign the GUIText new text based on what is selected and display it next to the head image
 			GUI.Label (new Rect (220,480,200,uiStatus.texture.height), currentlySelected.getDescription(), descriptionStyle);
+			GUI.Label (new Rect (262,372,100,uiStatus.texture.height), currentlySelected.getName(), nameStyle);
 			
 			// If the currently selected object is an ant unit, display its stats
 			AntUnit antUnitScript = currentlySelected.GetComponent<AntUnit>();

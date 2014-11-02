@@ -18,6 +18,9 @@ public class Selectable : Ownable {
 	public virtual string getDescription() {
 		return "";
 	}
+	public virtual string getName() {
+		return "";
+	}
 
 	// Use this for initialization
 	protected override void Start () {

@@ -9,9 +9,14 @@ public class Tile : Selectable {
 	private SpriteRenderer spriteRenderer;
 	
 	public string specificDescription;
+	public string specificName;
 	
 	public override string getDescription() {
 		return specificDescription;
+	}
+	
+	public override string getName() {
+		return specificName;
 	}
 	
 	public GameObject occupiedBy;

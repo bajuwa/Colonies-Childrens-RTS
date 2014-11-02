@@ -57,6 +57,7 @@ MonoBehaviour:
   foodValue: 2
   specificDescription: While gummy bears certainly aren't nutritious, there are plenty
     to spare
+  specificName: Gummy Bear
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

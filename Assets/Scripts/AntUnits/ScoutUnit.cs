@@ -13,6 +13,10 @@ public class ScoutUnit : AntUnit {
 		else
 			return "Builds scent paths that help your enemy move faster!";
 	}
+	
+	public override string getName() {
+		return "Scout";
+	}
 
 	// Use this for initialization
 	protected override void Start () {

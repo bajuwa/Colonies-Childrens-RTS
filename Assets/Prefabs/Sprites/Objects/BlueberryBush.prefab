@@ -58,6 +58,7 @@ MonoBehaviour:
   objectRarity: 1
   specificDescription: A good source of high quality food for your colony, but doesn't
     grow food very fast.
+  specificName: Berry Bush
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
