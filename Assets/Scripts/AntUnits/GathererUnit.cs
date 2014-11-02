@@ -46,8 +46,11 @@ public class GathererUnit : AntUnit {
 		if (getCurrentTile() != getTargetTile()) droppedFood = false;
 	}
 	
-	protected override void loadSprite() {
-		gameObject.GetComponent<SpriteRenderer>().sprite = getSpriteFromPlayer("gathererSprite");
+	protected override void loadAnimator() {
+		//gameObject.GetComponent<SpriteRenderer>().sprite = getSpriteFromPlayer("gathererSprite");
+		if (gameObject.GetComponent<Animator>()) return;
+		
+		gameObject.AddComponent<Animator>().runtimeAnimatorController = getAnimatorFromPlayer("gathererAnimator");
 	}
 	
 	protected override void loadDisplayImage() {

@@ -37,6 +37,11 @@ public class Ownable : MonoBehaviour {
 		ownedBy = playerId;
 	}
 	
+	protected RuntimeAnimatorController getAnimatorFromPlayer(string name) {
+		if (!player) return null;
+		return player.getAnimator(name);
+	}
+	
 	protected Sprite getSpriteFromPlayer(string name) {
 		if (!player) return null;
 		return player.getSprite(name);

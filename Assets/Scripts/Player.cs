@@ -7,9 +7,14 @@ public class Player : MonoBehaviour {
 	public int id = 1;
 
 	// List of sprites/textures/objects that can change depending on who they are owned by
+	private Dictionary<string, RuntimeAnimatorController> animators = new Dictionary<string, RuntimeAnimatorController>();
 	private Dictionary<string, Sprite> sprites = new Dictionary<string, Sprite>();
 	private Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
 	private Dictionary<string, GameObject> gameObjects = new Dictionary<string, GameObject>();
+	
+	public RuntimeAnimatorController gathererAnimator;
+	public RuntimeAnimatorController warriorAnimator;
+	public RuntimeAnimatorController scoutAnimator;
 	
 	public Sprite gathererSprite;
 	public Sprite warriorSprite;
@@ -26,6 +31,10 @@ public class Player : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		animators.Add("gathererAnimator", gathererAnimator);
+		animators.Add("warriorAnimator", warriorAnimator);
+		animators.Add("scoutAnimator", scoutAnimator);
+		
 		sprites.Add("gathererSprite", gathererSprite);
 		sprites.Add("warriorSprite", warriorSprite);
 		sprites.Add("scoutSprite", scoutSprite);
@@ -47,6 +56,11 @@ public class Player : MonoBehaviour {
 	
 	public int getId() {
 		return id;
+	}
+	
+	public RuntimeAnimatorController getAnimator(string name) {
+		if (animators.ContainsKey(name)) return animators[name];
+		return null;
 	}
 	
 	public Sprite getSprite(string name) {

@@ -1679,6 +1679,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  gathererAnimator: {fileID: 9100000, guid: 858c959143b9d2c4692be6f3a2ab313d, type: 2}
+  warriorAnimator: {fileID: 0}
+  scoutAnimator: {fileID: 0}
   gathererSprite: {fileID: 21300000, guid: 7076470dc1dfcb04284f713d44553493, type: 3}
   warriorSprite: {fileID: 21300000, guid: 45aae1dbadc1f74469e40d6f3a16ac40, type: 3}
   scoutSprite: {fileID: 21300000, guid: 7745173eddb08b64ca456c0ef554934f, type: 3}
@@ -3808,8 +3811,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: f27d86858339b9b43830ebc763aea85d, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: f27d86858339b9b43830ebc763aea85d, type: 2}
+      propertyPath: gathererAnimator
+      value: 
+      objectReference: {fileID: 9100000, guid: 858c959143b9d2c4692be6f3a2ab313d, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f27d86858339b9b43830ebc763aea85d, type: 2}
   m_RootGameObject: {fileID: 376357221}
@@ -24414,6 +24421,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  gathererAnimator: {fileID: 9100000, guid: 858c959143b9d2c4692be6f3a2ab313d, type: 2}
+  warriorAnimator: {fileID: 0}
+  scoutAnimator: {fileID: 0}
   gathererSprite: {fileID: 21300000, guid: 8e6ced85e9492134ba6711b3418b4305, type: 3}
   warriorSprite: {fileID: 21300000, guid: 197b6fe74726a924a8000a89f797fa3f, type: 3}
   scoutSprite: {fileID: 21300000, guid: 4cd4497cbda1d7647a0af67697f9f55e, type: 3}
