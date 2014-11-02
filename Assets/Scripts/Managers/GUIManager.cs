@@ -35,6 +35,11 @@ public class GUIManager : MonoBehaviour {
 	void OnGUI () {
 		// Get the currently selected object that we will be displaying information about
 		if (currentlySelected) {
+			// Ensure the gui is visible if we have selected an object
+			uiHead.enabled = true;
+			uiStatus.enabled = true;
+			headDisplay.enabled = true;
+		
 			// Assign the texture a new texture based on what is selected and display it in the bottom left
 			headDisplay.texture = currentlySelected.getDisplayImage();
 			// Assign the GUIText new text based on what is selected and display it next to the head image
@@ -54,6 +59,11 @@ public class GUIManager : MonoBehaviour {
 				);
 				GUI.Label (new Rect (240,530,200,20), stats, descriptionStyle);
 			}
+		} else {
+			// Ensure the gui is invisible if we have not selected an object
+			uiHead.enabled = false;
+			uiStatus.enabled = false;
+			headDisplay.enabled = false;
 		}
 	}
 
