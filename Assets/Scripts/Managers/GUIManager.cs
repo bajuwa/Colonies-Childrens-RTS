@@ -22,7 +22,7 @@ public class GUIManager : MonoBehaviour {
 		headDisplay.texture = null;
 		statusDisplay.text = null;
 		
-		mUM = GameObject.Find("MapUIManager").GetComponent<MapUIManager>();
+		mUM = GameObject.Find("UIManager").GetComponent<MapUIManager>();
 	}
 	
 	void Update() {
