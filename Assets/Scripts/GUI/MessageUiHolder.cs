@@ -25,14 +25,8 @@ public class MessageUiHolder : MonoBehaviour {
 		}
 		
 		if (messageIndex >= messages.Length) {
-			title.enabled = false;
-			message.enabled = false;
-			guiTexture.enabled = false;
 			isReady = true;
 		} else {
-			title.enabled = true;
-			message.enabled = true;
-			guiTexture.enabled = true;
 			isReady = false;
 			
 			title.text = messageTitle;
