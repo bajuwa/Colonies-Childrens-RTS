@@ -5305,9 +5305,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1577974276}
   - {fileID: 1108071910}
   - {fileID: 1296997387}
+  - {fileID: 634533308}
   m_Father: {fileID: 44364465}
   m_RootOrder: 2
 --- !u!212 &420147137
@@ -7622,6 +7622,109 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &634533307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100236, guid: 0a3f233b614b4854abd7fbe480b8cd7f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 634533308}
+  - 212: {fileID: 634533312}
+  - 114: {fileID: 634533311}
+  - 50: {fileID: 634533310}
+  - 58: {fileID: 634533309}
+  m_Layer: 0
+  m_Name: WarriorUnit
+  m_TagString: AntUnit
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &634533308
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400236, guid: 0a3f233b614b4854abd7fbe480b8cd7f, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634533307}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -14.1770067, y: .0600090027, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 420147136}
+  m_RootOrder: 2
+--- !u!58 &634533309
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5800232, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634533307}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Radius: 1
+  m_Center: {x: 0, y: 0}
+--- !u!50 &634533310
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000008, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634533307}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!114 &634533311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400232, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634533307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e2cbcc2877d8c41a3b82a45f3d334e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownedBy: 2
+  displayImage: {fileID: 0}
+  currentHp: 10
+  maxHp: 10
+  attack: 5
+  defense: 0
+  speed: 3
+  calculatedVelocity: 0
+  combatCloud: {fileID: 100000, guid: 4a47007ebc478e94898bf7d763703b62, type: 2}
+--- !u!212 &634533312
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200236, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634533307}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &635824616
 GameObject:
@@ -10656,70 +10759,55 @@ MonoBehaviour:
   messageUi: {fileID: 1329488079}
   nextTutorialButton: {fileID: 1799449729}
   instructions:
-  - title: Welcome!
+  - title: Warriors
     messages:
-    - Welcome to Colonies!  To learn how to play, follow along with this tutorial
-      by clicking on this message.
-  - title: Camera
+    - Warriors are dedicated military Ants that you can use to attack your enemy.
+    - While Ants of all types can be involved in a fight, only Warrior Ants can initiate
+      one.
+    - If you select one of your Warrior Ants and look at the Display Box, you can
+      see that it has a high attack, perfect for a Fight!
+  - title: Attack
     messages:
-    - In order to move your camera, simply move your cursor against the edge of the
-      map.
-    - In addition to moving the camera, you can also zoom in and out using the scroll
-      wheel.
-  - title: Ant Units
+    - In order to initiate an attack, simply Left-Click the Warrior you wish to attack
+      with, and then Right-Click the Ant you want to attack.
+    - You'll notice that while you have your Warrior selected, your cursor will turn
+      in to a Sword if you hover over an attackle object.
+    - Once you've told your Warrior to Attack, it will automatically set off on a
+      path towards its target.
+    - Give it a try by having one of your Red Warriors attack one of the Blue Gatherers
+      to the north.
+  - title: Fighting
     messages:
-    - Once you know how to move yourself around, the next thing to learn is how to
-      move around your Ant Units
-    - 'While there are various types of Ant Units in Colonies, they all share the
-      same controls: Left-Click to select, Right-Click to move.'
-  - title: Selecting Ants
+    - When your Warrior catches up with its target, the two will begin Fighting and
+      raise up a dust cloud.
+    - They will not stop fighting until one of the Ants is defeated, and they cannot
+      be interrupted.
+    - Once the Fight is over, only the winning Ant will remain!
+    - If you lost this Fight, use your second Warrior to finish the job!
+  - title: Health
     messages:
-    - Give it a try by selecting one of your Ant Units using the Left-Click in the
-      bottom left of the screen (You're Red by the way!)
-    - Once you have selected an Ant, have a look at the Display Box in the bottom
-      left of your screen.
-    - This box will tell you about the object you have selected.  If an Ant is selected,
-      you will also see its health and other stats
-    - If at any time you are confused about an object on the map, Left-Click to select
-      it and have a look at the Display Box!
-  - title: Moving Ants
+    - Even though your Ant may survive a Fight, it probably hasn't come out unscathed.
+    - If you select your Warrior Ant after it has been in a fight, you will notice
+      its damaged health in the Display Box.
+  - title: Healing
     messages:
-    - Now that you know how to select your Ants, next is to be able to move them.
-    - As mentioned, once you have selected an Ant, all you have to do is Right-Click
-      on an empty tile in order to move them.
-    - Since some tiles are more difficult to walk over than others, it may take your
-      Ant a while to reach its destination...
-    - But don't worry, you Ant will choose the quickest route possible so you don't
-      have to do it yourself!
-    - For now we won't talk too much about the effects of Terrain, but feel free to
-      select some tiles and read about their descriptions!
-  - title: Change Direction
+    - When your Ants are low on health, its best to bring them back home.
+    - If you place your Ants in one of the tiles adjacent to your Anthill, they will
+      automatically regenerate Health.
+    - Now, select your injured Warrior and bring it back home, make sure to keep an
+      eye on it's Health once it gets back!
+  - title: Cancelling Attack
     messages:
-    - If you change your mind and want to interrupt one of your Ants, simply give
-      it a new Move Command.
-    - Select your ant with the Left-Click, then Right-Click to choose your new destination.
-    - If you want your Ant to stop moving completely, try telling it to move to the
-      tile it's already on!
-  - title: Multiple Commands
+    - If at any time you decide you want to cancel your Warrior's attack, simply give
+      it a new command.
+    - Select your Warrior while he is walking towards his target, and Right-Click
+      anywhere other than its current attack target.
+    - Voila!  Your Warrior has now stopped chasing after its target and it will no
+      longer trigger a Fight!
+  - title: Next Up...
     messages:
-    - Don't forget that Colonies is a Real-Time-Strategy (RTS)!  That means you can
-      control multiple Ants at once without having to wait.
-    - 'Give it a try: Select one of your Ants and move it far away.  Then select your
-      other Ant and move it as well.'
-  - title: Special Commands
-    messages:
-    - In addition to moving, every type of Ant has its own Special Command that is
-      unique.
-    - While we won't be covering that now, just make sure to look at your cursor when
-      you have one of your Ants selected.
-    - It will change according to what action you will be giving your Ant when you
-      select that tile!
-  - title: Done!
-    messages:
-    - Well, that's it for your basic controls in Colonies!  But that's not all there
-      is to learn...
-    - Each Ant Unit has a purpose in Colonies, so in the next few Lessons we will
-      cover each of the 3 types of Ants you can control!
+    - Now that we know how to gather Food and fight other Ants, its time for a more
+      strategic Ant type...
 --- !u!212 &933455611
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12375,7 +12463,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 420147136}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!58 &1108071911
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12418,7 +12506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownedBy: 1
   displayImage: {fileID: 0}
-  currentHp: .100000001
+  currentHp: 10
   maxHp: 10
   attack: 5
   defense: 0
@@ -15025,11 +15113,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1296997386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.9617519, y: -14.1827717, z: 0}
+  m_LocalPosition: {x: -14.1770067, y: -12.3355865, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 420147136}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!58 &1296997388
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -15072,7 +15160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ownedBy: 1
   displayImage: {fileID: 0}
-  currentHp: .100000001
+  currentHp: 10
   maxHp: 10
   attack: 5
   defense: 0
@@ -18100,109 +18188,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &1577974275
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100266, guid: 0a3f233b614b4854abd7fbe480b8cd7f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1577974276}
-  - 212: {fileID: 1577974280}
-  - 50: {fileID: 1577974279}
-  - 58: {fileID: 1577974278}
-  - 114: {fileID: 1577974277}
-  m_Layer: 0
-  m_Name: GathererUnit
-  m_TagString: AntUnit
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1577974276
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400266, guid: 0a3f233b614b4854abd7fbe480b8cd7f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1577974275}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.2524548, y: -12.2362251, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1763022171}
-  m_Father: {fileID: 420147136}
-  m_RootOrder: 0
---- !u!114 &1577974277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400262, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1577974275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c604fd8a527a13478328c02807bd3d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownedBy: 1
-  displayImage: {fileID: 0}
-  currentHp: 10
-  maxHp: 10
-  attack: 1
-  defense: 2
-  speed: 5
-  calculatedVelocity: 0
---- !u!58 &1577974278
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5800260, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1577974275}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Radius: 1
-  m_Center: {x: 0, y: 0}
---- !u!50 &1577974279
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5000010, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1577974275}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!212 &1577974280
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21200266, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1577974275}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1580456919
 GameObject:
   m_ObjectHideFlags: 0
@@ -20436,102 +20421,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &1763022170
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100306, guid: 0a3f233b614b4854abd7fbe480b8cd7f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1763022171}
-  - 212: {fileID: 1763022175}
-  - 114: {fileID: 1763022174}
-  - 58: {fileID: 1763022173}
-  - 50: {fileID: 1763022172}
-  m_Layer: 0
-  m_Name: gather
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1763022171
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400306, guid: 0a3f233b614b4854abd7fbe480b8cd7f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1763022170}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.38418579e-07, y: 1.40343559, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1577974276}
-  m_RootOrder: 0
---- !u!50 &1763022172
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5000012, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1763022170}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!58 &1763022173
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5800296, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1763022170}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Radius: .5
-  m_Center: {x: 0, y: 0}
---- !u!114 &1763022174
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400300, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1763022170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: df1df296f80b2514cae6581e0eae4d53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownedBy: 0
-  displayImage: {fileID: 0}
---- !u!212 &1763022175
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21200306, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1763022170}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f60d640abc2e4af4a869223f056c9989, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1764952634
 GameObject:
