@@ -26,16 +26,13 @@ public class JoinGame : MonoBehaviour {
 		}
 	}
 	void OnGUI(){
-		if (!Network.isClient) {
-			if(hostData != null){
-				for (int i = 0; i<hostData.Length; i++) {
-					if(GUI.Button(new Rect(Screen.width/2 - 150, 100*i, Screen.width/4, 50), hostData[i].gameName)){
-						Network.Connect(hostData[i]);
-					
-					}
-				} 
+		if(hostData != null){
+			for (int i = 0; i<hostData.Length; i++) {
+				if(GUI.Button(new Rect(Screen.width/2 - 150, 100*i, Screen.width/4, 50), hostData[i].gameName)){
+					Network.Connect(hostData[i]);
+				}
 			} 
-		}
+		} 
 	}
 	[RPC]
 	public void LoadLevel(string level, int levelPrefix){
@@ -53,7 +50,7 @@ public class JoinGame : MonoBehaviour {
 		// All network views loaded from a level will get a prefix into their NetworkViewID.
 		// This will prevent old updates from clients leaking into a newly created scene.
 		Network.SetLevelPrefix(levelPrefix);
-		Application.LoadLevelAdditive(level);
+		Application.LoadLevel(level);
 		yield return new WaitForEndOfFrame();
 		yield return new WaitForEndOfFrame();
 		Debug.Log("Loading complete");

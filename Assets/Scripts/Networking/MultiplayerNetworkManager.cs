@@ -7,10 +7,6 @@ public class MultiplayerNetworkManager : MonoBehaviour {
 	void Start () {
 	
 	}
-	void OnConnectedToServer()
-	{
-		Network.Instantiate(antPrefab, transform.position, transform.rotation, 0);
-	}
 	// Update is called once per frame
 	void Update () {
 	

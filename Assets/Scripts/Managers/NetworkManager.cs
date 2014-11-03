@@ -35,11 +35,6 @@ public class NetworkManager : MonoBehaviour {
 		
 	}
 	[RPC]
-	public void LoadLevel(string level, int levelPrefix)
-	{
-		Application.LoadLevel(level);
-	}
-	/*
 	public void LoadLevel(string level, int levelPrefix){
 		StartCoroutine(loadLevel(level, levelPrefix));
 	}
@@ -55,7 +50,7 @@ public class NetworkManager : MonoBehaviour {
 		// All network views loaded from a level will get a prefix into their NetworkViewID.
 		// This will prevent old updates from clients leaking into a newly created scene.
 		Network.SetLevelPrefix(levelPrefix);
-		Application.LoadLevelAdditive(level);
+		Application.LoadLevel(level);
 		yield return new WaitForEndOfFrame();
 		yield return new WaitForEndOfFrame();
 		Debug.Log("Loading complete");
@@ -70,5 +65,5 @@ public class NetworkManager : MonoBehaviour {
 			Debug.Log("sending load msg");
 			go.SendMessage("OnNetworkLoadedLevel", SendMessageOptions.DontRequireReceiver);
 		}
-	}*/
+	}
 }
