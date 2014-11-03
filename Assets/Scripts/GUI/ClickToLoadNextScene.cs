@@ -14,7 +14,7 @@ public class ClickToLoadNextScene : MonoBehaviour {
 		MAIN_MENU = 0,
 		CREATE_GAME = 1,
 		JOIN_GAME = 2,
-		TUTORIAL = 3,
+		TUTORIAL_BASICS = 3,
 		RESULTS = 4,
 		MULTI_PLAYER_WAIT = 5,
 		MULTI_PLAYER_LOAD = 6

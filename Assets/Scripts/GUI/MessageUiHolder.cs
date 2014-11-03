@@ -3,44 +3,46 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class MessageUiHolder : MonoBehaviour {
-
-	public string messageTitle;
-	public string messageContent;
-	public Queue<string> messageQueue;
 	
 	public PlaceTextFromCorner title;
 	public PlaceTextFromCorner message;
+	public bool isReady;
+
+	private string messageTitle;
+	private string[] messages;
+	private int messageIndex = 0;
 
 	// Use this for initialization
 	void Start () {
-		messageQueue = new Queue<string>();
+		messages = new string[0];
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (messageContent == "" && messageQueue.Count == 0) {
+		if (Input.GetMouseButtonDown(0) && guiTexture.HitTest(Input.mousePosition)) {
+			// If the player clicked the box, advance to the next message
+			messageIndex++;
+		}
+		
+		if (messageIndex >= messages.Length) {
 			title.enabled = false;
 			message.enabled = false;
 			guiTexture.enabled = false;
+			isReady = true;
 		} else {
 			title.enabled = true;
 			message.enabled = true;
 			guiTexture.enabled = true;
-			
-			if (Input.GetMouseButtonDown(0) && guiTexture.HitTest(Input.mousePosition)) {
-				// If the player clicked the box, advance to the next message
-				if (messageQueue.Count == 0) messageContent = "";
-				else messageContent = messageQueue.Dequeue();
-			}
+			isReady = false;
 			
 			title.text = messageTitle;
-			message.text = messageContent;
+			message.text = messages[messageIndex];
 		}
 	}
 	
-	public void setNewMessages(string title, Queue<string> messages) {
+	public void setNewMessages(string title, string[] newMessages) {
+		messageIndex = 0;
 		messageTitle = title;
-		messageContent = messages.Dequeue();
-		messageQueue = messages;
+		messages = newMessages;
 	}
 }
