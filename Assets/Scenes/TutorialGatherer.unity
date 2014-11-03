@@ -209,6 +209,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1760136073}
+  - {fileID: 1127841400}
+  - {fileID: 26479863}
+  - {fileID: 1362822936}
+  - {fileID: 1924188687}
   m_Father: {fileID: 44364465}
   m_RootOrder: 1
 --- !u!212 &19439601
@@ -233,6 +237,90 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &26479862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+  m_PrefabInternal: {fileID: 110812343}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 26479863}
+  - 212: {fileID: 26479866}
+  - 58: {fileID: 26479865}
+  - 114: {fileID: 26479864}
+  m_Layer: 0
+  m_Name: BlueberryBush
+  m_TagString: MapObject
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &26479863
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+  m_PrefabInternal: {fileID: 110812343}
+  m_GameObject: {fileID: 26479862}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.77745771, y: .0453988984, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 19439600}
+  m_RootOrder: 2
+--- !u!114 &26479864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 2468bc1959fe85245b61b02a0544d386,
+    type: 2}
+  m_PrefabInternal: {fileID: 110812343}
+  m_GameObject: {fileID: 26479862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4573adbebcc7c43bc24ea5f8c4b14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownedBy: 0
+  displayImage: {fileID: 2800000, guid: 63dfa675046b14a49a12e0721a433b86, type: 3}
+  objectToSpawn: {fileID: 100000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+  objectRarity: 1
+  specificDescription: A good source of high quality food for your colony, but doesn't
+    grow food very fast.
+  specificName: Berry Bush
+--- !u!58 &26479865
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5800000, guid: 2468bc1959fe85245b61b02a0544d386,
+    type: 2}
+  m_PrefabInternal: {fileID: 110812343}
+  m_GameObject: {fileID: 26479862}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 1
+  m_Center: {x: 0, y: 0}
+--- !u!212 &26479866
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 2468bc1959fe85245b61b02a0544d386,
+    type: 2}
+  m_PrefabInternal: {fileID: 110812343}
+  m_GameObject: {fileID: 26479862}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 63dfa675046b14a49a12e0721a433b86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &26888080
 GameObject:
@@ -1584,6 +1672,94 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &110812343
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 19439600}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.77745771
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .0453988984
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+  m_RootGameObject: {fileID: 26479862}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
+--- !u!1001 &121549278
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 19439600}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5.91678286
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.9476186
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+  m_RootGameObject: {fileID: 1362822935}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &124117583
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,6 +3286,50 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &269903825
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 19439600}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 7.03481674
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.13507652
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+  m_RootGameObject: {fileID: 1127841399}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &273802983
 GameObject:
   m_ObjectHideFlags: 0
@@ -5306,7 +5526,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1577974276}
-  - {fileID: 1108071910}
   m_Father: {fileID: 44364465}
   m_RootOrder: 2
 --- !u!212 &420147137
@@ -7083,70 +7302,64 @@ MonoBehaviour:
   messageUi: {fileID: 1329488079}
   nextTutorialButton: {fileID: 1152122158}
   instructions:
-  - title: Welcome!
+  - title: Gatherer
     messages:
-    - Welcome to Colonies!  To learn how to play, follow along with this tutorial
-      by clicking on this message.
-  - title: Camera
+    - The Gatherer is undoubtably your most important type of Ant in Colonies.
+    - Using your Gatherers, you can venture out in to the map and collect food, which
+      will help you thrive.
+  - title: Food
     messages:
-    - In order to move your camera, simply move your cursor against the edge of the
-      map.
-    - In addition to moving the camera, you can also zoom in and out using the scroll
-      wheel.
-  - title: Ant Units
+    - While food can come in all shapes and sizes, each piece of food shares a few
+      common properties.
+    - First off, each piece of Food has a Value.  This Food Value will come in to
+      effect when creating new Ant Units.
+    - Basically, the higher the Food Value, the more Ant Units you can make with it.
+    - Next is Rarity, which tells you how often you can expect to see the food.
+    - Naturally, higher valued Food will be more rare, and lower valued Food will
+      be fairly common.
+    - To find out the Value and Rarity of a food, try selecting one with Left-Click.
+  - title: Pick Up Food
     messages:
-    - Once you know how to move yourself around, the next thing to learn is how to
-      move around your Ant Units
-    - 'While there are various types of Ant Units in Colonies, they all share the
-      same controls: Left-Click to select, Right-Click to move.'
-  - title: Selecting Ants
+    - Regardless of how Valuable or Rare a piece of Food is, it means nothing if you
+      can't bring it back to your Anthill.
+    - In order to do so, you will need to select your Gatherer with Left-Click, then
+      Right-Click on some Food.
+    - This triggers a Gatherers Gather Command, which is shown by the Gloved Cursor
+      when you hover over Food.
+    - When your Gatherer reaches the Food, it will automatically pick it up.
+    - Give it a try now;  Go pick up one of the Blueberries in the center of the map.
+  - title: Moving Food
     messages:
-    - Give it a try by selecting one of your Ant Units using the Left-Click in the
-      bottom left of the screen (You're Red by the way!)
-    - Once you have selected an Ant, have a look at the Display Box in the bottom
-      left of your screen.
-    - This box will tell you about the object you have selected.  If an Ant is selected,
-      you will also see its health and other stats
-    - If at any time you are confused about an object on the map, Left-Click to select
-      it and have a look at the Display Box!
-  - title: Moving Ants
+    - Now that you have picked up some Food, try moving your Gatherer back to your
+      Anthill.
+    - Notice how your Gatherer moves slower while it's holding Food?
+    - So long as your Gatherer is carrying Food, it will move at half its normal speed
+      until you drop the Food again.
+  - title: Drop Food
     messages:
-    - Now that you know how to select your Ants, next is to be able to move them.
-    - As mentioned, once you have selected an Ant, all you have to do is Right-Click
-      on an empty tile in order to move them.
-    - Since some tiles are more difficult to walk over than others, it may take your
-      Ant a while to reach its destination...
-    - But don't worry, you Ant will choose the quickest route possible so you don't
-      have to do it yourself!
-    - For now we won't talk too much about the effects of Terrain, but feel free to
-      select some tiles and read about their descriptions!
-  - title: Change Direction
+    - Once you've picked up the Blueberry, you will notice a button hovering overtop
+      of your Gatherer.
+    - If you press this button, your Gatherer will drop the piece of Food it's carrying.
+    - As you play Colonies, you may find many reasons to drop your Food, but the most
+      important reason is to place it in your Anthill.
+  - title: Anthills
     messages:
-    - If you change your mind and want to interrupt one of your Ants, simply give
-      it a new Move Command.
-    - Select your ant with the Left-Click, then Right-Click to choose your new destination.
-    - If you want your Ant to stop moving completely, try telling it to move to the
-      tile it's already on!
-  - title: Multiple Commands
+    - Your Anthill is considered your "Home Base", as it is where you store your Food
+      and create new Ant Units.
+    - If you drop food in one of the tiles adjacent to your Anthill, it will automatically
+      be deposited in to your Food Storage.
+    - Your Gatherer is then free to go collect more Food for your Colony!
+  - title: Weak and Vulnerable
     messages:
-    - Don't forget that Colonies is a Real-Time-Strategy (RTS)!  That means you can
-      control multiple Ants at once without having to wait.
-    - 'Give it a try: Select one of your Ants and move it far away.  Then select your
-      other Ant and move it as well.'
-  - title: Special Commands
-    messages:
-    - In addition to moving, every type of Ant has its own Special Command that is
-      unique.
-    - While we won't be covering that now, just make sure to look at your cursor when
-      you have one of your Ants selected.
-    - It will change according to what action you will be giving your Ant when you
-      select that tile!
-  - title: Done!
-    messages:
-    - Well, that's it for your basic controls in Colonies!  But that's not all there
-      is to learn...
-    - Each Ant Unit has a purpose in Colonies, so in the next few Lessons we will
-      cover each of the 3 types of Ants you can control!
+    - Gatherers are very important to your Colony, but you should note they are weak
+      and vulnerable.
+    - Take a look at the stats of your Gatherer by selecting it with Left-Click and
+      looking at the Display Box in the bottom left.
+    - See how low its Attack and Defense stats are?
+    - This means that if it were to be attacked out in the map, it could die fairly
+      easily, preventing you from gatherering the vital Food!
+    - In order to protect your Gatherers, you should invest in some Warriors, which
+      we will cover in our next Lesson.
 --- !u!212 &568763121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12181,6 +12394,50 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &1082294211
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 19439600}
+    m_Modifications:
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -2.49277925
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.0518214703
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+  m_RootGameObject: {fileID: 1924188686}
+  m_IsPrefabParent: 0
+  m_IsExploded: 1
 --- !u!1 &1088102771
 GameObject:
   m_ObjectHideFlags: 0
@@ -12265,109 +12522,6 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!1 &1108071909
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 100236, guid: 0a3f233b614b4854abd7fbe480b8cd7f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1108071910}
-  - 212: {fileID: 1108071914}
-  - 114: {fileID: 1108071913}
-  - 50: {fileID: 1108071912}
-  - 58: {fileID: 1108071911}
-  m_Layer: 0
-  m_Name: WarriorUnit
-  m_TagString: AntUnit
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1108071910
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 400236, guid: 0a3f233b614b4854abd7fbe480b8cd7f, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1108071909}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.4616852, y: -12.3355865, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 420147136}
-  m_RootOrder: 1
---- !u!58 &1108071911
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5800232, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1108071909}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Radius: 1
-  m_Center: {x: 0, y: 0}
---- !u!50 &1108071912
-Rigidbody2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5000008, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1108071909}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
---- !u!114 &1108071913
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11400232, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1108071909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9e2cbcc2877d8c41a3b82a45f3d334e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ownedBy: 1
-  displayImage: {fileID: 0}
-  currentHp: .100000001
-  maxHp: 10
-  attack: 5
-  defense: 0
-  speed: 3
-  calculatedVelocity: 0
-  combatCloud: {fileID: 100000, guid: 4a47007ebc478e94898bf7d763703b62, type: 2}
---- !u!212 &1108071914
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 21200236, guid: 0a3f233b614b4854abd7fbe480b8cd7f,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1108071909}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1109878125
 GameObject:
@@ -12622,6 +12776,90 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1127841399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+  m_PrefabInternal: {fileID: 269903825}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1127841400}
+  - 212: {fileID: 1127841403}
+  - 58: {fileID: 1127841402}
+  - 114: {fileID: 1127841401}
+  m_Layer: 0
+  m_Name: BlueberryBush
+  m_TagString: MapObject
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1127841400
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 2468bc1959fe85245b61b02a0544d386, type: 2}
+  m_PrefabInternal: {fileID: 269903825}
+  m_GameObject: {fileID: 1127841399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7.03481674, y: -4.13507652, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 19439600}
+  m_RootOrder: 1
+--- !u!114 &1127841401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 2468bc1959fe85245b61b02a0544d386,
+    type: 2}
+  m_PrefabInternal: {fileID: 269903825}
+  m_GameObject: {fileID: 1127841399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4573adbebcc7c43bc24ea5f8c4b14b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownedBy: 0
+  displayImage: {fileID: 2800000, guid: 63dfa675046b14a49a12e0721a433b86, type: 3}
+  objectToSpawn: {fileID: 100000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+  objectRarity: 1
+  specificDescription: A good source of high quality food for your colony, but doesn't
+    grow food very fast.
+  specificName: Berry Bush
+--- !u!58 &1127841402
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5800000, guid: 2468bc1959fe85245b61b02a0544d386,
+    type: 2}
+  m_PrefabInternal: {fileID: 269903825}
+  m_GameObject: {fileID: 1127841399}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 1
+  m_Center: {x: 0, y: 0}
+--- !u!212 &1127841403
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 2468bc1959fe85245b61b02a0544d386,
+    type: 2}
+  m_PrefabInternal: {fileID: 269903825}
+  m_GameObject: {fileID: 1127841399}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 63dfa675046b14a49a12e0721a433b86, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1128230130
 GameObject:
@@ -15509,6 +15747,89 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0fdd423c411095d4990f8b41ae48dcf4, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1362822935
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+  m_PrefabInternal: {fileID: 121549278}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1362822936}
+  - 212: {fileID: 1362822939}
+  - 114: {fileID: 1362822938}
+  - 58: {fileID: 1362822937}
+  m_Layer: 0
+  m_Name: Blueberry
+  m_TagString: MapObject
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1362822936
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+  m_PrefabInternal: {fileID: 121549278}
+  m_GameObject: {fileID: 1362822935}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 5.91678286, y: -1.9476186, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 19439600}
+  m_RootOrder: 3
+--- !u!58 &1362822937
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5800000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 121549278}
+  m_GameObject: {fileID: 1362822935}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 1
+  m_Center: {x: 0, y: 0}
+--- !u!114 &1362822938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 121549278}
+  m_GameObject: {fileID: 1362822935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b0abbe9417609488567adea4e7ff81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownedBy: 0
+  displayImage: {fileID: 2800000, guid: 05e05e03ea7de97408030c1dbc3c4c11, type: 3}
+  foodValue: 10
+  specificDescription: A rare and valuable piece of food that can help build new units
+    if you bring it back to your Anthill!
+  specificName: Blueberry
+--- !u!212 &1362822939
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 121549278}
+  m_GameObject: {fileID: 1362822935}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1371556694
 Prefab:
@@ -22616,6 +22937,89 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1 &1924188686
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+  m_PrefabInternal: {fileID: 1082294211}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1924188687}
+  - 212: {fileID: 1924188690}
+  - 114: {fileID: 1924188689}
+  - 58: {fileID: 1924188688}
+  m_Layer: 0
+  m_Name: Blueberry
+  m_TagString: MapObject
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1924188687
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400000, guid: 1c69d789655d3324dbc5bd79bd7633ce, type: 2}
+  m_PrefabInternal: {fileID: 1082294211}
+  m_GameObject: {fileID: 1924188686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.49277925, y: -.0518214703, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 19439600}
+  m_RootOrder: 4
+--- !u!58 &1924188688
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5800000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 1082294211}
+  m_GameObject: {fileID: 1924188686}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Radius: 1
+  m_Center: {x: 0, y: 0}
+--- !u!114 &1924188689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 1082294211}
+  m_GameObject: {fileID: 1924188686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b0abbe9417609488567adea4e7ff81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ownedBy: 0
+  displayImage: {fileID: 2800000, guid: 05e05e03ea7de97408030c1dbc3c4c11, type: 3}
+  foodValue: 10
+  specificDescription: A rare and valuable piece of food that can help build new units
+    if you bring it back to your Anthill!
+  specificName: Blueberry
+--- !u!212 &1924188690
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21200000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 1082294211}
+  m_GameObject: {fileID: 1924188686}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1925158746
 GameObject:
   m_ObjectHideFlags: 0
