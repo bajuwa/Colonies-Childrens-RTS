@@ -10,6 +10,10 @@ public class Scentpath : Selectable {
 			return "This scent path makes your enemy's Ants move faster, have your own scout build over top of it instead!";
 	}
 	
+	public override string getName() {
+		return "Scentpath";
+	}
+	
 	protected override void loadDisplayImage() {
 		displayImage = getTextureFromPlayer("scentpathDisplay");
 	}

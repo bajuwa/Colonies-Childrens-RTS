@@ -16,6 +16,10 @@ public class WarriorUnit : AntUnit {
 			return "Danger! This ant can kill your ants and destroy your anthill, attack it before it attacks you!";
 	}
 	
+	public override string getName() {
+		return "Warrior";
+	}
+	
 	private Attackable attackTarget;
 	private Tile attackTargetLastKnowTileLocation;
 	

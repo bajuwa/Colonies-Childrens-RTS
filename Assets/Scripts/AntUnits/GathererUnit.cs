@@ -18,6 +18,10 @@ public class GathererUnit : AntUnit {
 			return "Helps your enemy's colony grow larger if it can find food!";
 	}
 	
+	public override string getName() {
+		return "Gatherer";
+	}
+	
 	protected override void Start () {
 		base.Start();
 	}

@@ -14,6 +14,10 @@ public class Anthill : Attackable {
 		else
 			return "This is your enemy's home, destroy it to win the game!";
 	}
+	
+	public override string getName() {
+		return "Anthill";
+	}
 
 	// Use this for initialization
 	protected override void Start () {

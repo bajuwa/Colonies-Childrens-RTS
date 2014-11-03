@@ -11,9 +11,14 @@ public class SpawnObject : Selectable {
 	public float objectRarity;
 	
 	public string specificDescription;
+	public string specificName;
 	
 	public override string getDescription() {
 		return specificDescription;
+	}
+	
+	public override string getName() {
+		return specificName;
 	}
 	
 	private GameObject objectToSpawnParent;
