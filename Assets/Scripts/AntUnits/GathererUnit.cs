@@ -52,10 +52,8 @@ public class GathererUnit : AntUnit {
 	}
 	
 	protected override void loadAnimator() {
-		if (animator) return; 
-		Debug.Log("Loading animator");
-		animator = gameObject.AddComponent("Animator") as Animator;
-		animator.runtimeAnimatorController = getAnimatorFromPlayer("gathererAnimator");
+		if (!GetComponent("Animator")) animator = gameObject.AddComponent("Animator") as Animator;
+		if (!animator.runtimeAnimatorController) animator.runtimeAnimatorController = getAnimatorFromPlayer("gathererAnimator");
 	}
 	
 	protected override void loadDisplayImage() {
@@ -68,7 +66,8 @@ public class GathererUnit : AntUnit {
 		
 		// Also set the local position's z value to -1 to ensure it is visible above the unit
 		Vector3 tempPos = gameObj.transform.localPosition;
-		tempPos.z = -1; 
+		tempPos.y += 0.8f; 
+		tempPos.z = -1f; 
 		gameObj.transform.localPosition = tempPos;
 		
 		// Re-enable the selectable script so that we can select it again
