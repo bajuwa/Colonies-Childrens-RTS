@@ -1,0 +1,249 @@
+fileFormatVersion: 2
+guid: dc14e42208a6cf147a348e495e0cbb87
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: R_warrior_0
+    21300002: R_warrior_1
+    21300004: R_warrior_2
+    21300006: R_warrior_3
+    21300008: R_warrior_4
+    21300010: R_warrior_5
+    21300012: R_warrior_6
+    21300014: R_warrior_7
+    21300016: R_warrior_8
+    21300018: R_warrior_9
+    21300020: R_warrior_10
+    21300022: R_warrior_11
+    21300024: R_warrior_12
+    21300026: R_warrior_13
+    21300028: R_warrior_14
+    21300030: R_warrior_15
+    21300032: R_warrior_16
+    21300034: R_warrior_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: R_warrior_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 0
+        width: 97
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 0
+        width: 97
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_2
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 0
+        width: 97
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_3
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 0
+        width: 97
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_4
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 0
+        width: 95
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_5
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 0
+        width: 96
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_6
+      rect:
+        serializedVersion: 2
+        x: 811
+        y: 1
+        width: 94
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_7
+      rect:
+        serializedVersion: 2
+        x: 926
+        y: 0
+        width: 99
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_8
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 0
+        width: 97
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_9
+      rect:
+        serializedVersion: 2
+        x: 1153
+        y: 0
+        width: 98
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_10
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 0
+        width: 94
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_11
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 0
+        width: 97
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_12
+      rect:
+        serializedVersion: 2
+        x: 1644
+        y: 0
+        width: 100
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_13
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 0
+        width: 97
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_14
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 0
+        width: 97
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_15
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 0
+        width: 97
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_16
+      rect:
+        serializedVersion: 2
+        x: 2103
+        y: 0
+        width: 96
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_warrior_17
+      rect:
+        serializedVersion: 2
+        x: 2214
+        y: 0
+        width: 101
+        height: 140
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

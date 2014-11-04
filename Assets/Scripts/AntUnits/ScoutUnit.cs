@@ -33,8 +33,11 @@ public class ScoutUnit : AntUnit {
 		scentpathParent = GameObject.Find("Objects");
 	}
 	
-	protected override void loadSprite() {
-		gameObject.GetComponent<SpriteRenderer>().sprite = getSpriteFromPlayer("scoutSprite");
+	protected override void loadAnimator() {
+		if (animator) return; 
+		Debug.Log("Loading animator");
+		animator = gameObject.AddComponent("Animator") as Animator;
+		animator.runtimeAnimatorController = getAnimatorFromPlayer("scoutAnimator");
 	}
 	
 	protected override void loadDisplayImage() {
@@ -70,5 +73,9 @@ public class ScoutUnit : AntUnit {
 			);
 			newScentpath.GetComponent<Ownable>().setAsMine(getPlayerId());
 		}
+		
+		// Determine what animation we should be playing
+		if (getCurrentTile() != getTargetTile()) animator.SetInteger("STATE", 1);
+		else animator.SetInteger("STATE", 0);
 	}
 }

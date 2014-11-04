@@ -1,0 +1,249 @@
+fileFormatVersion: 2
+guid: f76ca6acca1ba5e48a31858fddf11d83
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: R_scout_0
+    21300002: R_scout_1
+    21300004: R_scout_2
+    21300006: R_scout_3
+    21300008: R_scout_4
+    21300010: R_scout_5
+    21300012: R_scout_6
+    21300014: R_scout_7
+    21300016: R_scout_8
+    21300018: R_scout_9
+    21300020: R_scout_10
+    21300022: R_scout_11
+    21300024: R_scout_12
+    21300026: R_scout_13
+    21300028: R_scout_14
+    21300030: R_scout_15
+    21300032: R_scout_16
+    21300034: R_scout_17
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: R_scout_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 3
+        width: 87
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_1
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 3
+        width: 83
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_2
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 3
+        width: 79
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 3
+        width: 85
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_4
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 5
+        width: 87
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_5
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 3
+        width: 83
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_6
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 1
+        width: 83
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_7
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 1
+        width: 85
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_8
+      rect:
+        serializedVersion: 2
+        x: 904
+        y: 1
+        width: 85
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_9
+      rect:
+        serializedVersion: 2
+        x: 1007
+        y: 1
+        width: 80
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_10
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 1
+        width: 83
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_11
+      rect:
+        serializedVersion: 2
+        x: 1212
+        y: 1
+        width: 76
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_12
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 1
+        width: 83
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_13
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 1
+        width: 87
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_14
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1
+        width: 84
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_15
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 1
+        width: 79
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_16
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 1
+        width: 84
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_scout_17
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 1
+        width: 77
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

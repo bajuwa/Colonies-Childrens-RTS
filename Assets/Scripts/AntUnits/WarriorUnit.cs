@@ -31,8 +31,11 @@ public class WarriorUnit : AntUnit {
 		base.Start();
 	}
 	
-	protected override void loadSprite() {
-		gameObject.GetComponent<SpriteRenderer>().sprite = getSpriteFromPlayer("warriorSprite");
+	protected override void loadAnimator() {
+		if (animator) return; 
+		Debug.Log("Loading animator");
+		animator = gameObject.AddComponent("Animator") as Animator;
+		animator.runtimeAnimatorController = getAnimatorFromPlayer("warriorAnimator");
 	}
 	
 	protected override void loadDisplayImage() {
@@ -71,6 +74,11 @@ public class WarriorUnit : AntUnit {
 				}
 			}
 		}
+		
+		// Determine what animation we should be playing
+		if (attackTarget) animator.SetInteger("STATE", 2);
+		else if (getCurrentTile() != getTargetTile()) animator.SetInteger("STATE", 1);
+		else animator.SetInteger("STATE", 0);
 	}
 	
 	public IEnumerator commenceBattle(Attackable opponent) {
