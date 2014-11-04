@@ -128,12 +128,17 @@ public class MapUIManager : MonoBehaviour {
 			Selectable hoveredObject = getSelectableAtPosition((Vector2) Camera.main.ScreenToWorldPoint(Input.mousePosition));
 			if (hoveredObject != null) {
 				// If a Tile is the topMostSelectable then we should display a 'move' type cursor
-				if (hoveredObject.GetComponent<Tile>() != null || hoveredObject.GetComponent<Scentpath>() != null) {
+				if (hoveredObject.GetComponent<Tile>() != null) {
 					if (hoveredObject.gameObject.layer != LayerMask.NameToLayer("Tile")) {
 						Cursor.SetCursor(moveToDisabledCursor, Vector2.zero, CursorMode.Auto);
 					} else {
 						Cursor.SetCursor(moveToCursor, Vector2.zero, CursorMode.Auto);
 					}
+					return;
+				}
+				
+				if (hoveredObject.GetComponent<Scentpath>() != null) {
+					Cursor.SetCursor(moveToCursor, Vector2.zero, CursorMode.Auto);
 					return;
 				}
 				
