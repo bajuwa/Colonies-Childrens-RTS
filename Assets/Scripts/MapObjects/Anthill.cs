@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -7,6 +8,8 @@ public class Anthill : Attackable {
 	private GameObject gathererToCreate;
 	private GameObject warriorToCreate;
 	private GameObject scoutToCreate;
+	
+	private TextMesh foodStorageText;
 	
 	public override string getDescription() {
 		if (isNeutralOrFriendly())
@@ -22,12 +25,14 @@ public class Anthill : Attackable {
 	// Use this for initialization
 	protected override void Start () {
 		base.Start();
+		foodStorageText = transform.Find("FoodPoints").gameObject.GetComponent<TextMesh>();
 	}
 	
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update();
 		maxHp = currentHp;
+		if (foodStorageText) foodStorageText.text = string.Format("{0:0}", maxHp);
 	}
 	
 	public void addFoodPoints(int points) {

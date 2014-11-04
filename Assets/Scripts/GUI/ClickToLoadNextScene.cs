@@ -14,10 +14,15 @@ public class ClickToLoadNextScene : MonoBehaviour {
 		MAIN_MENU = 0,
 		CREATE_GAME = 1,
 		JOIN_GAME = 2,
-		TUTORIAL = 3,
+		TUTORIAL_BASICS = 3,
 		RESULTS = 4,
 		MULTI_PLAYER_WAIT = 5,
-		MULTI_PLAYER_LOAD = 6
+		MULTI_PLAYER_LOAD = 6,
+		TUTORIAL_GATHERER = 7,
+		TUTORIAL_WARRIOR = 8,
+		TUTORIAL_SCOUT = 9,
+		TUTORIAL_ANTHILL = 10,
+		TUTORIAL_QUEEN = 11
 	}
 
 	// Here is where we actually set which scene we want to go to when an object with this script is pressed
