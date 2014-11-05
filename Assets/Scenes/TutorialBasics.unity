@@ -1613,6 +1613,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
+  gathererAnimator: {fileID: 9100000, guid: c509e5bd5478ecb4abae6b0d2ca9a602, type: 2}
+  warriorAnimator: {fileID: 9100000, guid: 8d610639bcb7e274da0aec6f9ad9b106, type: 2}
+  scoutAnimator: {fileID: 9100000, guid: 71165b4acfa93be429d465ea64513cbb, type: 2}
   gathererSprite: {fileID: 21300000, guid: 7076470dc1dfcb04284f713d44553493, type: 3}
   warriorSprite: {fileID: 21300000, guid: 45aae1dbadc1f74469e40d6f3a16ac40, type: 3}
   scoutSprite: {fileID: 21300000, guid: 7745173eddb08b64ca456c0ef554934f, type: 3}
@@ -4528,6 +4531,7 @@ GameObject:
   - 4: {fileID: 376357222}
   - 212: {fileID: 376357225}
   - 114: {fileID: 376357224}
+  - 148: {fileID: 376357226}
   - 148: {fileID: 376357223}
   m_Layer: 0
   m_Name: PlayerManager
@@ -4560,7 +4564,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 376357222}
   m_ViewID:
-    m_ID: 1
+    m_ID: 2
     m_Type: 1
 --- !u!114 &376357224
 MonoBehaviour:
@@ -4598,6 +4602,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &376357226
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: f27d86858339b9b43830ebc763aea85d,
+    type: 2}
+  m_PrefabInternal: {fileID: 325735085}
+  m_GameObject: {fileID: 376357221}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 376357222}
+  m_ViewID:
+    m_ID: 1
+    m_Type: 1
 --- !u!1 &377358453
 GameObject:
   m_ObjectHideFlags: 0
@@ -23874,6 +23891,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  gathererAnimator: {fileID: 9100000, guid: f00d31eae9380024ba184eb471cb0e9c, type: 2}
+  warriorAnimator: {fileID: 9100000, guid: 74f41bbd92d798649b80cb014ef3e0e7, type: 2}
+  scoutAnimator: {fileID: 9100000, guid: 10b530862e220ec4f97ffef17c3f0aeb, type: 2}
   gathererSprite: {fileID: 21300000, guid: 8e6ced85e9492134ba6711b3418b4305, type: 3}
   warriorSprite: {fileID: 21300000, guid: 197b6fe74726a924a8000a89f797fa3f, type: 3}
   scoutSprite: {fileID: 21300000, guid: 4cd4497cbda1d7647a0af67697f9f55e, type: 3}
