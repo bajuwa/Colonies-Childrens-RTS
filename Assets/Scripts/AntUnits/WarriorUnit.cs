@@ -101,11 +101,11 @@ public class WarriorUnit : AntUnit {
 										   new Vector3(pos.x, pos.y, transform.position.z - 1), 
 										   Quaternion.identity) as GameObject;
 			if (getPlayerId() == 1) {
-				cloud.transform.Find("RedHead").gameObject.renderer.material.mainTexture = this.displayImage;
-				cloud.transform.Find("BlueHead").gameObject.renderer.material.mainTexture = opponent.displayImage;
+				cloud.transform.Find("RedHead").gameObject.GetComponent<SpriteRenderer>().sprite = this.getFightSprite();
+				cloud.transform.Find("BlueHead").gameObject.GetComponent<SpriteRenderer>().sprite = opponent.getFightSprite();
 			} else {
-				cloud.transform.Find("RedHead").gameObject.renderer.material.mainTexture = opponent.displayImage;
-				cloud.transform.Find("BlueHead").gameObject.renderer.material.mainTexture = this.displayImage;
+				cloud.transform.Find("RedHead").gameObject.GetComponent<SpriteRenderer>().sprite = opponent.getFightSprite();
+				cloud.transform.Find("BlueHead").gameObject.GetComponent<SpriteRenderer>().sprite = this.getFightSprite();
 			}
 			cloud.transform.parent = GameObject.Find("Objects").transform;
 			gameObject.renderer.enabled = false;
@@ -155,6 +155,10 @@ public class WarriorUnit : AntUnit {
 		if (opponent.currentHp <= 0) opponent.kill();
 		// Note: if this unit dies, make sure to delete it at the end!
 		if (this.currentHp <= 0) this.kill();
+	}
+	
+	public override Sprite getFightSprite() {
+		return getSpriteFromPlayer("warriorSprite");
 	}
 	
 	private void exchangeBlows(Attackable antOne, Attackable antTwo) {

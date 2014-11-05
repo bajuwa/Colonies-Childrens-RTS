@@ -29,5 +29,9 @@ public class Attackable : Selectable {
 	public virtual void interrupt() {
 		Debug.Log("Interrupted!");
 	}
+	
+	public virtual Sprite getFightSprite() {
+		return null;
+	}
 
 }

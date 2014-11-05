@@ -60,6 +60,10 @@ public class GathererUnit : AntUnit {
 		displayImage = getTextureFromPlayer("gathererDisplay");
 	}
 	
+	public override Sprite getFightSprite() {
+		return getSpriteFromPlayer("gathererSprite");
+	}
+	
 	public void pickUpFood(GameObject gameObj) {
 		// Set the parent to our unit so that it is 'carried' when the unit is moving
 		gameObj.transform.parent = this.gameObject.transform;

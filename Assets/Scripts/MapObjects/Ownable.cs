@@ -10,6 +10,7 @@ public class Ownable : MonoBehaviour {
 	// TODO: privatize once done dev
 	public int ownedBy = 0;
 	private Player player;
+	private Player opponentPlayer;
 	
 	// Variable that gets the asset as a 2D texture
 	public Texture2D displayImage;
@@ -47,6 +48,11 @@ public class Ownable : MonoBehaviour {
 		return player.getSprite(name);
 	}
 	
+	protected Sprite getSpriteFromOpponent(string name) {
+		if (!opponentPlayer) return null;
+		return opponentPlayer.getSprite(name);
+	}
+	
 	protected Texture2D getTextureFromPlayer(string name) {
 		if (!player) return null;
 		return player.getTexture(name);
@@ -64,6 +70,8 @@ public class Ownable : MonoBehaviour {
 				Debug.Log("Loading script from player: " + pScript.getId());
 				player = pScript;
 				break;
+			} else {
+				opponentPlayer = pScript;
 			}
 		}
 	}

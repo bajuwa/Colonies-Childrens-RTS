@@ -44,6 +44,10 @@ public class ScoutUnit : AntUnit {
 		displayImage = getTextureFromPlayer("scoutDisplay");
 	}
 	
+	public override Sprite getFightSprite() {
+		return getSpriteFromPlayer("scoutSprite");
+	}
+	
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update();
