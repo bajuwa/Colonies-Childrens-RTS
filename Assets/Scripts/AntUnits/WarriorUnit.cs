@@ -100,6 +100,14 @@ public class WarriorUnit : AntUnit {
 			cloud = GameObject.Instantiate(combatCloud, 
 										   new Vector3(pos.x, pos.y, transform.position.z - 1), 
 										   Quaternion.identity) as GameObject;
+			if (getPlayerId() == 1) {
+				cloud.transform.Find("RedHead").gameObject.renderer.material.mainTexture = this.displayImage;
+				cloud.transform.Find("BlueHead").gameObject.renderer.material.mainTexture = opponent.displayImage;
+			} else {
+				cloud.transform.Find("RedHead").gameObject.renderer.material.mainTexture = opponent.displayImage;
+				cloud.transform.Find("BlueHead").gameObject.renderer.material.mainTexture = this.displayImage;
+			}
+			cloud.transform.parent = GameObject.Find("Objects").transform;
 			gameObject.renderer.enabled = false;
 			opponent.gameObject.renderer.enabled = false;
 		} else {

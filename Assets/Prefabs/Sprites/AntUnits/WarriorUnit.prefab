@@ -77,6 +77,7 @@ MonoBehaviour:
   defense: 0
   speed: 3
   calculatedVelocity: 0
+  healingAnimation: {fileID: 100000, guid: faecf6fc22c020c4b8dfc305915736dc, type: 2}
   combatCloud: {fileID: 100000, guid: 4a47007ebc478e94898bf7d763703b62, type: 2}
 --- !u!148 &14800000
 NetworkView:

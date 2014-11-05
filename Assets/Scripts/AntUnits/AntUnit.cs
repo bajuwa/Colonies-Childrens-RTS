@@ -27,6 +27,9 @@ public class AntUnit : Attackable {
 	protected float anthillRange = 3f;
 	protected int anthillMask = 0;
 	
+	public GameObject healingAnimation;
+	private const string HEALING_ANIMATION_NAME = "HealingAnimation";
+	
 	// Use this for initialization
 	protected override void Start() {
 		base.Start();
@@ -242,16 +245,38 @@ public class AntUnit : Attackable {
 				// Switch the target tile we reached
 				setTargetTile(nextTile);
 				if (isSelected()) targetTile.select(GetInstanceID());
-			} else if (getNearbyAnthill(transform.position)) {
+			} else if (getNearbyAnthill(transform.position) && currentHp < maxHp) {
 				// If we have stopped moving and have landed within range of a friendly anthill, start to heal
 				healSelf();
+			} else {
+				stopHealingSelf();
 			}
 		}
 	}
 	
 	protected void healSelf() {
 		// If we are below perfect health, heal at a rate of 0.333 hp per second
-		if (currentHp < maxHp) currentHp = Mathf.Min(maxHp, currentHp + Time.deltaTime/3);
+		currentHp = Mathf.Min(maxHp, currentHp + Time.deltaTime/3);
+		// Ensure we show a healing animation
+		if (!transform.Find(HEALING_ANIMATION_NAME)) spawnHealingAnimation();
+		
+	}
+	
+	protected void spawnHealingAnimation() {
+		GameObject newHealingAnimation = (GameObject) GameObject.Instantiate(healingAnimation, transform.position, Quaternion.identity);
+		newHealingAnimation.transform.position = new Vector3(
+			newHealingAnimation.transform.position.x,
+			newHealingAnimation.transform.position.y,
+			newHealingAnimation.transform.position.z - 1
+		);
+		newHealingAnimation.transform.parent = transform;
+		newHealingAnimation.name = HEALING_ANIMATION_NAME;
+	}
+	
+	protected void stopHealingSelf() {
+		// If we are below perfect health, heal at a rate of 0.333 hp per second
+		if (transform.Find(HEALING_ANIMATION_NAME))
+			Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
 	}
 	
 	protected Anthill getNearbyAnthill(Vector2 position) {

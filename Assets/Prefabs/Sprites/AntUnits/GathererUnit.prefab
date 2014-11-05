@@ -134,6 +134,7 @@ MonoBehaviour:
   defense: 2
   speed: 5
   calculatedVelocity: 0
+  healingAnimation: {fileID: 100000, guid: faecf6fc22c020c4b8dfc305915736dc, type: 2}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1
