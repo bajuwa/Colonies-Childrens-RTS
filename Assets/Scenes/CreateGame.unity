@@ -140,7 +140,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 381258689}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 20, y: 10}
   m_Center: {x: 0, y: 0}
 --- !u!114 &381258691
@@ -340,7 +340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbae749cdc8c1cb4c99951eb6d0030ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextScene: 5
+  nextScene: 6
 --- !u!61 &1447324622
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -350,7 +350,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 1447324618}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 20, y: 10}
   m_Center: {x: 0, y: 0}
 --- !u!1001 &1531306018
@@ -394,7 +394,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: 074dcb807adbee140a623057396570b7, type: 2}
       propertyPath: nextScene
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 074dcb807adbee140a623057396570b7, type: 2}

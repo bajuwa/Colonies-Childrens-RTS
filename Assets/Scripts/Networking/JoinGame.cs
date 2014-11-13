@@ -4,6 +4,7 @@ using System.Collections;
 public class JoinGame : MonoBehaviour {
 	private bool refreshing;
 	private HostData[] hostData;
+	public static HostData hostGame;
 	// Use this for initialization
 	void Start () {
 		refreshHostList();
@@ -12,9 +13,11 @@ public class JoinGame : MonoBehaviour {
 		MasterServer.RequestHostList("ColoniesAntBattle");
 		refreshing = true;
 	}
+	/*
 	void OnFailedToConnect(NetworkConnectionError error) {
 		Debug.Log("Could not connect to server: " + error);
 	}
+	*/
 	// Update is called once per frame
 	void Update () {
 		//generates the list of ongoing games
@@ -29,7 +32,9 @@ public class JoinGame : MonoBehaviour {
 		if(hostData != null){
 			for (int i = 0; i<hostData.Length; i++) {
 				if(GUI.Button(new Rect(Screen.width/2 - 150, 100*i, Screen.width/4, 50), hostData[i].gameName)){
-					Network.Connect(hostData[i]);
+					hostGame = hostData[i];
+					Application.LoadLevel("MultiPlayerGame");
+					//Network.Connect(hostData[i]);
 				}
 			} 
 		} 

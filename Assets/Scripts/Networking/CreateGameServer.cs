@@ -7,9 +7,7 @@ public class CreateGameServer : MonoBehaviour {
 	void Start () {
 	
 	}
-	void OnServerInitialized() {
-		Application.LoadLevel("MultiPlayerLoad");
-	}
+
 	// Update is called once per frame
 	void OnGUI () {
 		gameName = GUI.TextField(new Rect (Screen.width/2,Screen.height/2,200,50), gameName, 10);
