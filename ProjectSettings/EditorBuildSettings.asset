@@ -27,3 +27,5 @@ EditorBuildSettings:
     path: Assets/Scenes/TutorialScout.unity
   - enabled: 1
     path: Assets/Scenes/TutorialAnthill.unity
+  - enabled: 1
+    path: Assets/Scenes/TutorialQueen.unity

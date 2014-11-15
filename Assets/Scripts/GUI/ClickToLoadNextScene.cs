@@ -21,7 +21,8 @@ public class ClickToLoadNextScene : MonoBehaviour {
 		TUTORIAL_GATHERER = 7,
 		TUTORIAL_WARRIOR = 8,
 		TUTORIAL_SCOUT = 9,
-		TUTORIAL_ANTHILL = 10
+		TUTORIAL_ANTHILL = 10,
+		TUTORIAL_QUEEN = 11
 	}
 
 	// Here is where we actually set which scene we want to go to when an object with this script is pressed
