@@ -18,6 +18,7 @@ public class MapUIManager : MonoBehaviour {
 	public Texture2D moveToDisabledCursor;
 	public Texture2D gatherCursor;
 	public Texture2D attackCursor;
+	public Texture2D buildCursor;
 
 	// Bottom left GUI textures
 	public Texture2D uiHead;
@@ -151,6 +152,12 @@ public class MapUIManager : MonoBehaviour {
 				// If an AntUnit is the topMostSelectable and we currently have a Warrior selected, display an 'attack' type cursor
 				if (selectedObject.GetComponent<WarriorUnit>() != null && hoveredObject.GetComponent<Attackable>() != null && !hoveredObject.isNeutralOrFriendly()) {
 					Cursor.SetCursor(attackCursor, Vector2.zero, CursorMode.Auto);
+					return;
+				}
+				
+				// If a ruined anthill is the topMostSelectable and we currently have a Queen selected, display a 'build' type cursor
+				if (selectedObject.GetComponent<QueenUnit>() != null && hoveredObject.GetComponent<DeadAnthill>() != null) {
+					Cursor.SetCursor(buildCursor, Vector2.zero, CursorMode.Auto);
 					return;
 				}
 			}

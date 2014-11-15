@@ -10,9 +10,12 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
+  - 50: {fileID: 5000000}
+  - 58: {fileID: 5800000}
+  - 148: {fileID: 14800000}
   m_Layer: 0
-  m_Name: MapUIManager
-  m_TagString: Untagged
+  m_Name: QueenUnit
+  m_TagString: AntUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,11 +27,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5000000
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!58 &5800000
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Radius: 1
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -37,18 +66,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8778b4e456e2f046a39afbd4079c8a7, type: 3}
+  m_Script: {fileID: 11500000, guid: e871efa0b959d394fbb858317ae9fb81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultCursor: {fileID: 2800000, guid: a12b9cc64f2575a43bb63614e7625a0c, type: 3}
-  moveToCursor: {fileID: 2800000, guid: 57ef3a54a1db5294b982ed935426a8b0, type: 3}
-  moveToDisabledCursor: {fileID: 2800000, guid: e723a4e0d6d8dc343b37a414734fcc88,
-    type: 3}
-  gatherCursor: {fileID: 2800000, guid: f4300cdf8d87cba4c99b7ca76254bb14, type: 3}
-  attackCursor: {fileID: 2800000, guid: bddc2c9a6aad65046922f52bc24c51f4, type: 3}
-  buildCursor: {fileID: 2800000, guid: f60d640abc2e4af4a869223f056c9989, type: 3}
-  uiHead: {fileID: 2800000, guid: 7745fa921b164334fa9d188b08931e9a, type: 3}
-  uiStatus: {fileID: 2800000, guid: 618658bb285a9964ba3303cf7fdf93ae, type: 3}
+  ownedBy: 1
+  displayImage: {fileID: 0}
+  currentHp: 10
+  maxHp: 10
+  attack: 0
+  defense: 3
+  speed: 2
+  calculatedVelocity: 0
+  healingAnimation: {fileID: 100000, guid: faecf6fc22c020c4b8dfc305915736dc, type: 2}
+  anthillPrefab: {fileID: 100000, guid: 935c6047de751c44cb5a54d5eccd4ebe, type: 2}
+--- !u!148 &14800000
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 5000000}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1

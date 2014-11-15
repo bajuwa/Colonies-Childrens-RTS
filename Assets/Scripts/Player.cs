@@ -15,15 +15,18 @@ public class Player : MonoBehaviour {
 	public RuntimeAnimatorController gathererAnimator;
 	public RuntimeAnimatorController warriorAnimator;
 	public RuntimeAnimatorController scoutAnimator;
+	public RuntimeAnimatorController queenAnimator;
 	
 	public Sprite gathererSprite;
 	public Sprite warriorSprite;
 	public Sprite scoutSprite;
+	public Sprite queenSprite;
 	public Sprite anthillSprite;
 
 	public Texture2D gathererDisplay;
 	public Texture2D warriorDisplay;
 	public Texture2D scoutDisplay;
+	public Texture2D queenDisplay;
 	public Texture2D scentpathDisplay;
 	public Texture2D anthillDisplay;
 	
@@ -34,15 +37,18 @@ public class Player : MonoBehaviour {
 		animators.Add("gathererAnimator", gathererAnimator);
 		animators.Add("warriorAnimator", warriorAnimator);
 		animators.Add("scoutAnimator", scoutAnimator);
+		animators.Add("queenAnimator", queenAnimator);
 		
 		sprites.Add("gathererSprite", gathererSprite);
 		sprites.Add("warriorSprite", warriorSprite);
 		sprites.Add("scoutSprite", scoutSprite);
+		sprites.Add("queenSprite", queenSprite);
 		sprites.Add("anthillSprite", anthillSprite);
 		
 		textures.Add("gathererDisplay", gathererDisplay);
 		textures.Add("warriorDisplay", warriorDisplay);
 		textures.Add("scoutDisplay", scoutDisplay);
+		textures.Add("queenDisplay", queenDisplay);
 		textures.Add("scentpathDisplay", scentpathDisplay);
 		textures.Add("anthillDisplay", anthillDisplay);
 		
