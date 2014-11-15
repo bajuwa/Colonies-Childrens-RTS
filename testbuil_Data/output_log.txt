@@ -1,69 +1,51 @@
-Initialize engine version: 4.5.2f1 (9abb1b59b47c)
+Initialize engine version: 4.5.5f1 (7684ad0c5a44)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 660 Ti (ID=0x1183)
+    Renderer: NVIDIA GeForce GTX 770 (ID=0x1184)
     Vendor:   NVIDIA
-    VRAM:     1989 MB
+    VRAM:     1985 MB
 Default GameObject Tag: Player already registered
  
 (Filename:  Line: 66)
 
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.051 seconds
-desktop: 1920x1080 60Hz; virtual: 3286x1080 at 0,0
+Platform assembly: C:\Users\jason\Documents\gitrepo\IAT410\testbuil_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\jason\Documents\gitrepo\IAT410\testbuil_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\jason\Documents\gitrepo\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\jason\Documents\gitrepo\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+- Completed reload, in  0.026 seconds
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.215189 ms
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 114.
-Total: 0.472649 ms (FindLiveObjects: 0.004611 ms CreateObjectMapping: 0.009990 ms MarkObjects: 0.048417 ms  DeleteObjects: 0.011528 ms)
-
-UnloadTime: 0.288969 ms
+Platform assembly: C:\Users\jason\Documents\gitrepo\IAT410\testbuil_Data\Managed\System.dll (this message is harmless)
+UnloadTime: 0.211529 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1825.
-Total: 0.927622 ms (FindLiveObjects: 0.069936 ms CreateObjectMapping: 0.031509 ms MarkObjects: 0.451514 ms  DeleteObjects: 0.016139 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1681.
+Total: 0.548279 ms (FindLiveObjects: 0.042130 ms CreateObjectMapping: 0.011702 ms MarkObjects: 0.252781 ms  DeleteObjects: 0.009069 ms)
 
 Found 248 objects with tag 'Tile'
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Found 4 objects with tag 'AntUnit'
+Found 2 objects with tag 'AntUnit'
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Found 8 objects with tag 'MapObject'
+Found 0 objects with tag 'MapObject'
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Found 260 Total MapObjects
+Found 250 Total MapObjects
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Recording position for: GathererUnit (UnityEngine.GameObject) 10942
+Recording position for: GathererUnit (UnityEngine.GameObject) 10524
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Recording position for: WarriorUnit (UnityEngine.GameObject) 10952
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Recording position for: GathererUnit (UnityEngine.GameObject) 10986
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Recording position for: WarriorUnit (UnityEngine.GameObject) 11290
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Loading script from player: 2
+Recording position for: GathererUnit (UnityEngine.GameObject) 10720
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -71,137 +53,15 @@ Loading script from player: 1
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Loading animator
+Missing a diegetic ant sprite, attempting to initialize
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-ArgumentException: The prefab you want to instantiate is null.
-  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at AntUnit.spawnHealingAnimation () [0x00000] in <filename unknown>:0 
-  at AntUnit.healSelf () [0x00000] in <filename unknown>:0 
-  at AntUnit.move () [0x00000] in <filename unknown>:0 
-  at AntUnit.Update () [0x00000] in <filename unknown>:0 
-  at WarriorUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
 
 Loading script from player: 1
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at WinConditionManager.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 1
+Missing a diegetic ant sprite, attempting to initialize
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Loading animator
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-ArgumentException: The prefab you want to instantiate is null.
-  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at AntUnit.spawnHealingAnimation () [0x00000] in <filename unknown>:0 
-  at AntUnit.healSelf () [0x00000] in <filename unknown>:0 
-  at AntUnit.move () [0x00000] in <filename unknown>:0 
-  at AntUnit.Update () [0x00000] in <filename unknown>:0 
-  at WarriorUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-ArgumentException: The prefab you want to instantiate is null.
-  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at AntUnit.spawnHealingAnimation () [0x00000] in <filename unknown>:0 
-  at AntUnit.healSelf () [0x00000] in <filename unknown>:0 
-  at AntUnit.move () [0x00000] in <filename unknown>:0 
-  at AntUnit.Update () [0x00000] in <filename unknown>:0 
-  at WarriorUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-ArgumentException: The prefab you want to instantiate is null.
-  at UnityEngine.Object.CheckNullArgument (System.Object arg, System.String message) [0x00000] in <filename unknown>:0 
-  at UnityEngine.Object.Instantiate (UnityEngine.Object original, Vector3 position, Quaternion rotation) [0x00000] in <filename unknown>:0 
-  at AntUnit.spawnHealingAnimation () [0x00000] in <filename unknown>:0 
-  at AntUnit.healSelf () [0x00000] in <filename unknown>:0 
-  at AntUnit.move () [0x00000] in <filename unknown>:0 
-  at AntUnit.Update () [0x00000] in <filename unknown>:0 
-  at WarriorUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Spawned an object at: 4.593009
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 7.625689
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: WarriorUnit (WarriorUnit)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Giving ant move to command
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-calling moveTo
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Calculating path to new tile
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 16.70851
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 17.70914
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: WarriorUnit (WarriorUnit)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Giving ant move to command
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-calling moveTo
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Calculating path to new tile
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 25.77576
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WarriorUnit.canWalkOn (UnityEngine.GameObject gameObj) [0x00000] in <filename unknown>:0 
-  at AntUnit.canWalkTo (Vector2 position) [0x00000] in <filename unknown>:0 
-  at AntUnit.move () [0x00000] in <filename unknown>:0 
-  at AntUnit.Update () [0x00000] in <filename unknown>:0 
-  at WarriorUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
 
