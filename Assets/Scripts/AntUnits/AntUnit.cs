@@ -61,6 +61,11 @@ public class AntUnit : Attackable {
 		newTargetTile.occupiedBy = this.gameObject;
 	}
 	
+	protected void resetTargetTile() {
+		targetTile.deselect(GetInstanceID());
+		setTargetTile(currentTile);
+	}
+	
 	public Tile getTargetTile() {
 		return targetTile;
 	}

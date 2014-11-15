@@ -30,6 +30,23 @@ public class GathererUnit : AntUnit {
 	
 	// Update is called once per frame
 	protected override void Update () {
+		// If the next tile in our path has an anthill we are scheduled to drop food at, stop and drop food
+		if (getTargetTile()) {
+			Collider2D[] colliders = Physics2D.OverlapPointAll(getTargetTile().transform.position);
+			bool foundAnthill = false;
+			foreach (Collider2D col in colliders) {
+				if (col.gameObject == dropOffAtAnthill) foundAnthill = true;
+			}
+			if (foundAnthill) {
+				Debug.Log("Auto-dropping food off at the anthill");
+				resetTargetTile();
+				Queue<Tile> goBackToCurrent = new Queue<Tile>();
+				goBackToCurrent.Enqueue(getCurrentTile());
+				targetPath.setNewTileQueue(goBackToCurrent);
+				dropFood();
+			}
+		}
+		
 		// Leave the movement up to the AntUnit class
 		base.Update();
 		
@@ -41,20 +58,6 @@ public class GathererUnit : AntUnit {
 					Debug.Log("Detected food on current tile, picking up");
 					pickUpFood(col.gameObject);
 				}
-			}
-		}
-		
-		// If the next tile in our path has an anthill we are scheduled to drop food at, stop and drop food
-		if (targetPath.getTilePath().Count > 0) {
-			Tile nextTile = targetPath.getTilePath().Peek();
-			Collider2D anthillCollider = Physics2D.OverlapPoint(
-				nextTile.transform.position,
-				anthillMask
-			);
-			if (anthillCollider) {
-				Debug.Log("Auto-dropping food off at the anthill");
-				targetPath.setNewTileQueue(new Queue<Tile>());
-				dropFood();
 			}
 		}
 		
