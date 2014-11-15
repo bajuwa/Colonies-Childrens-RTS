@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /**
  * The AntUnit with the unique ability to walk on top of food in order to pick them up.
@@ -9,6 +10,7 @@ using System.Collections;
 public class GathererUnit : AntUnit {
 
 	private bool droppedFood = true;
+	private GameObject dropOffAtAnthill;
 	
 	//To be displayed on the GUI
 	public override string getDescription() {
@@ -42,6 +44,20 @@ public class GathererUnit : AntUnit {
 			}
 		}
 		
+		// If the next tile in our path has an anthill we are scheduled to drop food at, stop and drop food
+		if (targetPath.getTilePath().Count > 0) {
+			Tile nextTile = targetPath.getTilePath().Peek();
+			Collider2D anthillCollider = Physics2D.OverlapPoint(
+				nextTile.transform.position,
+				anthillMask
+			);
+			if (anthillCollider) {
+				Debug.Log("Auto-dropping food off at the anthill");
+				targetPath.setNewTileQueue(new Queue<Tile>());
+				dropFood();
+			}
+		}
+		
 		// Determine what animation we should be playing
 		if (GetComponentsInChildren<Food>().Length > 0) setAnimation(2);
 		else if (getCurrentTile() != getTargetTile()) setAnimation(1);
@@ -61,6 +77,20 @@ public class GathererUnit : AntUnit {
 	
 	protected override string getAnimationName() {
 		return "gathererAnimator";
+	}
+	
+	// If a gatherer is given a move command to an anthill while holding fruit, we need to set the drop off variable
+	public override IEnumerator moveTo(Tile tileToMoveTo, bool activelySetNewTarget = false) {
+		if (this.gameObject.GetComponentInChildren<Food>() != null) {
+			Debug.Log("Have food, going to drop off at home");
+			Anthill anthill = getNearbyAnthill(tileToMoveTo.transform.position);
+			if (anthill && anthill.isNeutralOrFriendly()) dropOffAtAnthill = anthill.gameObject;
+		}
+		return base.moveTo(tileToMoveTo, activelySetNewTarget);
+	}
+	
+	public void setDropOffAtAnthill(GameObject obj) {
+		dropOffAtAnthill = obj;
 	}
 	
 	public void pickUpFood(GameObject gameObj) {
@@ -84,6 +114,7 @@ public class GathererUnit : AntUnit {
 	public void dropFood() {
 		// To avoid automatically picking the food back up again, set a flag
 		droppedFood = true;
+		dropOffAtAnthill = null;
 		
 		// Reassign the food back to the 'Objects' sprite in the map
 		Transform foodTransform = this.gameObject.GetComponentInChildren<Food>().gameObject.transform;
@@ -117,6 +148,9 @@ public class GathererUnit : AntUnit {
 	protected override bool canWalkOn(GameObject gameObj) {
 		// If this object is a child of us, we can safely ignore it
 		if (gameObj.transform.parent == transform) return true;
+		
+		// If it is the anthill we are commanded to drop food off at, we can (sort of) walk on it
+		if (gameObj == dropOffAtAnthill) return true;
 		
 		// If it is an unoccupied tile, we can walk on it
 		if ((gameObj.GetComponent<Tile>() != null && !gameObj.GetComponent<Tile>().occupiedBy) ||

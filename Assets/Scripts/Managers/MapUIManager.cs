@@ -19,6 +19,7 @@ public class MapUIManager : MonoBehaviour {
 	public Texture2D gatherCursor;
 	public Texture2D attackCursor;
 	public Texture2D buildCursor;
+	public Texture2D dropAtHomeCursor;
 
 	// Bottom left GUI textures
 	public Texture2D uiHead;
@@ -158,6 +159,12 @@ public class MapUIManager : MonoBehaviour {
 				// If a ruined anthill is the topMostSelectable and we currently have a Queen selected, display a 'build' type cursor
 				if (selectedObject.GetComponent<QueenUnit>() != null && hoveredObject.GetComponent<DeadAnthill>() != null) {
 					Cursor.SetCursor(buildCursor, Vector2.zero, CursorMode.Auto);
+					return;
+				}
+				
+				// If a friendly anthill is the topMostSelectable and we currently have a Gatherer with food selected, tell it to drop food off
+				if (selectedObject.GetComponent<GathererUnit>() != null && selectedObject.GetComponentInChildren<Food>() != null && hoveredObject.GetComponent<Anthill>() != null && hoveredObject.isNeutralOrFriendly()) {
+					Cursor.SetCursor(dropAtHomeCursor, Vector2.zero, CursorMode.Auto);
 					return;
 				}
 			}
