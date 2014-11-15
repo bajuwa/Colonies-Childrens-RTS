@@ -15,7 +15,10 @@ public class AntUnit : Attackable {
 	public float speed = 5f;
 	public float calculatedVelocity;
 	
-	protected Animator animator;
+	public bool enableDiegeticUnitCount = true;
+	private Transform backLeftAnt;
+	private Transform backRightAnt;
+	private Transform frontAnt;
 
 	/* Movement variables: All coords must be in local position to handle map panning! */
 	// Target Path carries the full list of tiles in order of planned traversal
@@ -29,6 +32,10 @@ public class AntUnit : Attackable {
 	
 	public GameObject healingAnimation;
 	private const string HEALING_ANIMATION_NAME = "HealingAnimation";
+	
+	protected virtual string getAnimationName() {
+		return "";
+	}
 	
 	// Use this for initialization
 	protected override void Start() {
@@ -175,12 +182,79 @@ public class AntUnit : Attackable {
 	// Every frame, units should continue working towards their current target tile (if any)
 	protected override void Update() {
 		base.Update();
-		if (!animator) loadAnimator();
+		loadAnimator();
 		if (targetTile == null) recordPosition();
 		move();
+		updateDiegeticUnits();
 	}
 	
-	protected virtual void loadAnimator() {}
+	private void loadAnimator() {
+		if (enableDiegeticUnitCount) {
+			Transform[] diegeticChildren = {
+				this.gameObject.transform.Find("BackLeftAnt"),
+				this.gameObject.transform.Find("BackRightAnt"),
+				this.gameObject.transform.Find("FrontAnt")
+			};
+			
+			foreach (Transform diegeticChild in diegeticChildren) {
+				if (!diegeticChild || diegeticChild.GetComponent("Animator")) continue;
+				Animator childAnimator = diegeticChild.gameObject.AddComponent("Animator") as Animator;
+				if (!childAnimator.runtimeAnimatorController) childAnimator.runtimeAnimatorController = getAnimatorFromPlayer(getAnimationName());
+			}
+		} else {
+			Animator singleAnimator = this.gameObject.GetComponent("Animator") as Animator;
+			if (!singleAnimator) singleAnimator = this.gameObject.AddComponent("Animator") as Animator;
+			if (!singleAnimator.runtimeAnimatorController) singleAnimator.runtimeAnimatorController = getAnimatorFromPlayer(getAnimationName());
+		}
+	}
+	
+	private void updateDiegeticUnits() {
+		if (!enableDiegeticUnitCount) return;
+	
+		if (!backLeftAnt || !backRightAnt || !frontAnt) {
+			Debug.Log("Missing a diegetic ant sprite, attempting to initialize");
+			initializeDiegeticAnts();
+			return;
+		}
+		
+		// Some aspects of the game may disable sprites, so only apply diegetics when we are still enabled
+		if (!this.GetComponent<SpriteRenderer>().enabled) {
+			backLeftAnt.gameObject.active = false;
+			backRightAnt.gameObject.active = false;
+			frontAnt.gameObject.active = false;
+			return;
+		}
+		
+		if (currentHp/maxHp <= .33f) {
+			backLeftAnt.gameObject.active = false;
+			backRightAnt.gameObject.active = false;
+			frontAnt.gameObject.active = true;
+		} else if (currentHp/maxHp <= .66f) {
+			backLeftAnt.gameObject.active = true;
+			backRightAnt.gameObject.active = true;
+			frontAnt.gameObject.active = false;
+		} else {
+			backLeftAnt.gameObject.active = true;
+			backRightAnt.gameObject.active = true;
+			frontAnt.gameObject.active = true;
+		}
+	}
+	
+	private void initializeDiegeticAnts() {
+		backLeftAnt = transform.Find("BackLeftAnt");
+		backRightAnt = transform.Find("BackRightAnt");
+		frontAnt = transform.Find("FrontAnt");
+	}
+	
+	protected void setAnimation(int state) {
+		if (enableDiegeticUnitCount) {
+			if (backLeftAnt) backLeftAnt.gameObject.GetComponent<Animator>().SetInteger("STATE", state);
+			if (backRightAnt) backRightAnt.gameObject.GetComponent<Animator>().SetInteger("STATE", state);
+			if (frontAnt) frontAnt.gameObject.GetComponent<Animator>().SetInteger("STATE", state);
+		} else {
+			this.gameObject.GetComponent<Animator>().SetInteger("STATE", state);
+		}
+	}
 	
 	// Used to interrupt/cancel a units movement
 	public override void interrupt() {

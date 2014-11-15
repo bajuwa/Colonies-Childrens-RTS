@@ -21,19 +21,16 @@ public class QueenUnit : AntUnit {
 		base.Start();
 	}
 	
-	protected override void loadAnimator() {
-		if (animator) return; 
-		Debug.Log("Loading animator");
-		animator = gameObject.AddComponent("Animator") as Animator;
-		animator.runtimeAnimatorController = getAnimatorFromPlayer("queenAnimator");
-	}
-	
 	protected override void loadDisplayImage() {
 		displayImage = getTextureFromPlayer("queenDisplay");
 	}
 	
 	public override Sprite getFightSprite() {
 		return getSpriteFromPlayer("queenSprite");
+	}
+	
+	protected override string getAnimationName() {
+		return "queenAnimator";
 	}
 	
 	// Update is called once per frame
@@ -52,8 +49,8 @@ public class QueenUnit : AntUnit {
 		}
 		
 		// Determine what animation we should be playing
-		if (getCurrentTile() != getTargetTile()) animator.SetInteger("STATE", 1);
-		else animator.SetInteger("STATE", 0);
+		if (getCurrentTile() != getTargetTile()) setAnimation(1);
+		else setAnimation(0);
 	}
 	
 	private void createNewAnthill(GameObject deadAnthillObject) {

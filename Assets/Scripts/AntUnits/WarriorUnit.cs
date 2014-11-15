@@ -7,8 +7,6 @@ public class WarriorUnit : AntUnit {
 	public GameObject combatCloud;
 	
 	//To be displayed on the GUI
-	
-	//To be displayed on the GUI
 	public override string getDescription() {
 		if (isNeutralOrFriendly()) 
 			return "A good offensive unit that is able to attack enemy ants and anthills.";
@@ -31,16 +29,14 @@ public class WarriorUnit : AntUnit {
 		base.Start();
 	}
 	
-	protected override void loadAnimator() {
-		if (animator) return; 
-		Debug.Log("Loading animator");
-		animator = gameObject.AddComponent("Animator") as Animator;
-		animator.runtimeAnimatorController = getAnimatorFromPlayer("warriorAnimator");
-	}
-	
 	protected override void loadDisplayImage() {
 		displayImage = getTextureFromPlayer("warriorDisplay");
 	}
+	
+	protected override string getAnimationName() {
+		return "warriorAnimator";
+	}
+	
 	// Update is called once per frame
 	protected override void Update() {
 		base.Update();
@@ -76,9 +72,9 @@ public class WarriorUnit : AntUnit {
 		}
 		
 		// Determine what animation we should be playing
-		if (attackTarget) animator.SetInteger("STATE", 2);
-		else if (getCurrentTile() != getTargetTile()) animator.SetInteger("STATE", 1);
-		else animator.SetInteger("STATE", 0);
+		if (attackTarget) setAnimation(2);
+		else if (getCurrentTile() != getTargetTile()) setAnimation(1);
+		else setAnimation(0);
 	}
 	
 	public IEnumerator commenceBattle(Attackable opponent) {
@@ -168,8 +164,8 @@ public class WarriorUnit : AntUnit {
 		float antTwoAttack = antTwo.attack * (antTwo.currentHp / antTwo.maxHp); //TODO: dynamic attack calculations
 		
 		// Calculate damage dealt by factoring in eachothers defenses and apply to current hp
-		antOne.currentHp -= Mathf.Max(Random.Range(antTwoAttack*0.5f, antTwoAttack*1.5f) - antOne.defense, 0); //TODO: use random value in range
-		antTwo.currentHp -= Mathf.Max(Random.Range(antOneAttack*0.5f, antOneAttack*1.5f) - antTwo.defense, 0); //TODO: use random value in range
+		antOne.currentHp -= Mathf.Max(Random.Range(antTwoAttack*0.5f, antTwoAttack*1.5f) - antOne.defense, 0);
+		antTwo.currentHp -= Mathf.Max(Random.Range(antOneAttack*0.5f, antOneAttack*1.5f) - antTwo.defense, 0);
 	}
 	
 	// If a warrior comes in to contact with it's target, interrupt its movement so that 

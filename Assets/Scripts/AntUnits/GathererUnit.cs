@@ -43,17 +43,12 @@ public class GathererUnit : AntUnit {
 		}
 		
 		// Determine what animation we should be playing
-		if (GetComponentsInChildren<Food>().Length > 0) animator.SetInteger("STATE", 2);
-		else if (getCurrentTile() != getTargetTile()) animator.SetInteger("STATE", 1);
-		else animator.SetInteger("STATE", 0);
+		if (GetComponentsInChildren<Food>().Length > 0) setAnimation(2);
+		else if (getCurrentTile() != getTargetTile()) setAnimation(1);
+		else setAnimation(0);
 		
 		// If the player is moving, then clear our 'dropped food' flag so that the unit can pick up food again
 		if (getCurrentTile() != getTargetTile()) droppedFood = false;
-	}
-	
-	protected override void loadAnimator() {
-		if (!GetComponent("Animator")) animator = gameObject.AddComponent("Animator") as Animator;
-		if (!animator.runtimeAnimatorController) animator.runtimeAnimatorController = getAnimatorFromPlayer("gathererAnimator");
 	}
 	
 	protected override void loadDisplayImage() {
@@ -62,6 +57,10 @@ public class GathererUnit : AntUnit {
 	
 	public override Sprite getFightSprite() {
 		return getSpriteFromPlayer("gathererSprite");
+	}
+	
+	protected override string getAnimationName() {
+		return "gathererAnimator";
 	}
 	
 	public void pickUpFood(GameObject gameObj) {

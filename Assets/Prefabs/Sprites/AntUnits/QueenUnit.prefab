@@ -77,6 +77,7 @@ MonoBehaviour:
   defense: 3
   speed: 2
   calculatedVelocity: 0
+  enableDiegeticUnitCount: 0
   healingAnimation: {fileID: 100000, guid: faecf6fc22c020c4b8dfc305915736dc, type: 2}
   anthillPrefab: {fileID: 100000, guid: 935c6047de751c44cb5a54d5eccd4ebe, type: 2}
 --- !u!148 &14800000
