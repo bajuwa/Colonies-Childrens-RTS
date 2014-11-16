@@ -3,10 +3,13 @@ using System.Collections;
 
 public class NetworkManager : MonoBehaviour {
 	//Name MUST be unique on master server
+	public GameObject anthill;
+	public GameObject gatherer;
 	private const string typeName = "ColoniesAntBattle";
 	private string gameName = CreateGameServer.gameName;
 	private HostData hostGame = JoinGame.hostGame;
 	private int lastLevelPrefix = 0;
+	private int playerId = 1;
 	
 	private void Start () {
 		if (hostGame == null) {
@@ -29,8 +32,9 @@ public class NetworkManager : MonoBehaviour {
 			Debug.Log("Registered");
 		}
 	}
-	void OnPlayerConnected() {
-		Debug.Log("Player joined");
+	void OnPlayerConnected() 
+	{
+		Network.Instantiate(gatherer, transform.position = new Vector3(0,0,-2), transform.rotation, 0);
 	}
 	// Update is called once per frame
 	void Update () {

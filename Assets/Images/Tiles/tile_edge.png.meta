@@ -1,7 +1,8 @@
 fileFormatVersion: 2
 guid: 0fdd423c411095d4990f8b41ae48dcf4
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: tile_edge
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
