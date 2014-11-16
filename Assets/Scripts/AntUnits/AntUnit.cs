@@ -191,6 +191,14 @@ public class AntUnit : Attackable {
 		if (targetTile == null) recordPosition();
 		move();
 		updateDiegeticUnits();
+		flipIfGoingLeft();
+	}
+	
+	private void flipIfGoingLeft() {
+		if ((targetTile.transform.position.x < this.transform.position.x && transform.localScale.x > 0) || 
+			(targetTile.transform.position.x > this.transform.position.x && transform.localScale.x < 0)) {
+			transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+		}
 	}
 	
 	private void loadAnimator() {
