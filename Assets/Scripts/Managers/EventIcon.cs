@@ -6,7 +6,7 @@ public class EventIcon : MonoBehaviour {
     public Vector2 eventLocation;
 	
 	private Transform arrow;
-	private float spaceBuffer = 0.05f;
+	public float spaceBuffer = 0.08f;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +30,7 @@ public class EventIcon : MonoBehaviour {
 		
 		// Rotate the arrow indicator to point at the location
 		float newAngle = SignedAngleBetween(transform.position, eventLocation)-90;
-		transform.rotation = Quaternion.Euler(new Vector3(0, 0, newAngle));
+		arrow.rotation = Quaternion.Euler(new Vector3(0, 0, newAngle));
 	}
 	
 	private float SignedAngleBetween(Vector2 p1, Vector2 p2) {
