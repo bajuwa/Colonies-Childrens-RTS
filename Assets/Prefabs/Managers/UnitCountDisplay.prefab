@@ -74,6 +74,8 @@ GameObject:
   - 4: {fileID: 400008}
   - 131: {fileID: 13100000}
   - 114: {fileID: 11400010}
+  - 114: {fileID: 11400028}
+  - 61: {fileID: 6100006}
   m_Layer: 0
   m_Name: queenHead
   m_TagString: Untagged
@@ -91,6 +93,8 @@ GameObject:
   - 4: {fileID: 400010}
   - 131: {fileID: 13100002}
   - 114: {fileID: 11400012}
+  - 114: {fileID: 11400026}
+  - 61: {fileID: 6100004}
   m_Layer: 0
   m_Name: scoutHead
   m_TagString: Untagged
@@ -108,6 +112,8 @@ GameObject:
   - 4: {fileID: 400012}
   - 131: {fileID: 13100004}
   - 114: {fileID: 11400014}
+  - 114: {fileID: 11400024}
+  - 61: {fileID: 6100002}
   m_Layer: 0
   m_Name: warriorHead
   m_TagString: Untagged
@@ -125,6 +131,8 @@ GameObject:
   - 4: {fileID: 400014}
   - 131: {fileID: 13100006}
   - 114: {fileID: 11400016}
+  - 114: {fileID: 11400022}
+  - 61: {fileID: 6100000}
   m_Layer: 0
   m_Name: gathererHead
   m_TagString: Untagged
@@ -295,6 +303,50 @@ Transform:
   - {fileID: 400008}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!61 &6100000
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!61 &6100002
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!61 &6100004
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!61 &6100006
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -788,6 +840,54 @@ MonoBehaviour:
   fromTop: 0
   fromLeft: 0
   fromRight: -15
+--- !u!114 &11400022
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: gatherer
+--- !u!114 &11400024
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: warrior
+--- !u!114 &11400026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: scout
+--- !u!114 &11400028
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: queen
 --- !u!131 &13100000
 GUITexture:
   m_ObjectHideFlags: 1

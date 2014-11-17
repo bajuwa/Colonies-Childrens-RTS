@@ -1,17 +1,58 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class UnitCount : Ownable {
 
 	private bool setupSuccess = false;
-	private int gathererCount = 0;
-	private int warriorCount = 0;
-	private int scoutCount = 0;
-	private int queenCount = 0;
+	
+	private List<GameObject> gatherers;
+	private int gathererIndex = 0;
+	
+	private List<GameObject> warriors;
+	private int warriorIndex = 0;
+	
+	private List<GameObject> scouts;
+	private int scoutIndex = 0;
+	
+	private List<GameObject> queens;
+	private int queenIndex = 0;
+	
+	public void centerOnNext(string name) {
+		switch (name) {
+			case "gatherer":
+				if (gatherers.Count == 0) return;
+				if (gathererIndex >= gatherers.Count) gathererIndex = 0;
+				centerOn(gatherers[gathererIndex++]);
+				break;
+			case "warrior":
+				if (warriors.Count == 0) return;
+				if (warriorIndex >= warriors.Count) warriorIndex = 0;
+				centerOn(warriors[warriorIndex++]);
+				break;
+			case "scout":
+				if (scouts.Count == 0) return;
+				if (scoutIndex >= scouts.Count) scoutIndex = 0;
+				centerOn(scouts[scoutIndex++]);
+				break;
+			case "queen":
+				if (queens.Count == 0) return;
+				if (queenIndex >= queens.Count) queenIndex = 0;
+				centerOn(queens[queenIndex++]);
+				break;
+			default:
+				Debug.Log("Invalid name given to center on!");
+				break;
+		}
+	}
 
 	// Use this for initialization
 	protected override void Start () {
 		base.Start();
+		gatherers = new List<GameObject>();
+		warriors = new List<GameObject>();
+		scouts = new List<GameObject>();
+		queens = new List<GameObject>();
 		setup();
 	}
 	
@@ -33,24 +74,32 @@ public class UnitCount : Ownable {
 	}
 	
 	private void countUnits() {
-		gathererCount = 0;
-		warriorCount = 0;
-		scoutCount = 0;
-		queenCount = 0;
+		gatherers = new List<GameObject>();
+		warriors = new List<GameObject>();
+		scouts = new List<GameObject>();
+		queens = new List<GameObject>();
 		GameObject[] ants = GameObject.FindGameObjectsWithTag("AntUnit");
 		foreach (GameObject ant in ants) {
 			if (!ant.GetComponent<Ownable>().isNeutralOrFriendly()) continue;
-			if (ant.GetComponent<GathererUnit>()) gathererCount++;
-			if (ant.GetComponent<WarriorUnit>()) warriorCount++;
-			if (ant.GetComponent<ScoutUnit>()) scoutCount++;
-			if (ant.GetComponent<QueenUnit>()) queenCount++;
+			if (ant.GetComponent<GathererUnit>()) gatherers.Add(ant);
+			if (ant.GetComponent<WarriorUnit>()) warriors.Add(ant);
+			if (ant.GetComponent<ScoutUnit>()) scouts.Add(ant);
+			if (ant.GetComponent<QueenUnit>()) queens.Add(ant);
 		}
 	}
 	
 	private void updateCounts() {
-		transform.Find("gathererHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + gathererCount.ToString();
-		transform.Find("warriorHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + warriorCount.ToString();
-		transform.Find("scoutHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + scoutCount.ToString();
-		transform.Find("queenHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + queenCount.ToString();
+		transform.Find("gathererHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + gatherers.Count.ToString();
+		transform.Find("warriorHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + warriors.Count.ToString();
+		transform.Find("scoutHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + scouts.Count.ToString();
+		transform.Find("queenHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + queens.Count.ToString();
+	}
+	
+	private void centerOn(GameObject obj) {
+		Camera.main.transform.position = new Vector3(
+			obj.transform.position.x,
+			obj.transform.position.y,
+			Camera.main.transform.position.z
+		);
 	}
 }
