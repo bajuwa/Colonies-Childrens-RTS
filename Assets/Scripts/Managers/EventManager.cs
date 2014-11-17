@@ -35,9 +35,6 @@ public class EventManager : MonoBehaviour {
 	void Start () {
 		events = new List<GameObject>();
 		eventsToRemove = new List<GameObject>();
-		
-		// test
-		addEvent(new Vector2(-5,5));
 	}
 	
 	// Update is called once per frame
@@ -47,9 +44,6 @@ public class EventManager : MonoBehaviour {
 			if (isOnScreen(eventIcon.GetComponent<EventIcon>().eventLocation)) {
 				// If the event is on screen, remove it from the event list
 				eventsToRemove.Add(eventIcon);
-			} else {
-				// If offscreen, display an icon that shows the user where to look
-				
 			}
 		}
 		

@@ -6,6 +6,8 @@ public class WarriorUnit : AntUnit {
 
 	public GameObject combatCloud;
 	
+	private EventManager eventManager;
+	
 	//To be displayed on the GUI
 	public override string getDescription() {
 		if (isNeutralOrFriendly()) 
@@ -40,6 +42,8 @@ public class WarriorUnit : AntUnit {
 	// Update is called once per frame
 	protected override void Update() {
 		base.Update();
+		
+		if (!eventManager) eventManager = GameObject.Find("EventManager").GetComponent<EventManager>() as EventManager;
 		
 		// Base our movement/pathfinding off of our attack target (if any)
 		if (attackTarget != null) {
@@ -82,6 +86,7 @@ public class WarriorUnit : AntUnit {
 		Debug.Log(isInBattle);
 		if (isInBattle) yield break;
 		Debug.Log("Commencing attack!");
+		eventManager.addEvent(opponent.gameObject.transform.position);
 		
 		// If we are attacking an anthill, the battle will behave somewhat differently
 		Anthill anthill = opponent.GetComponent<Anthill>();
