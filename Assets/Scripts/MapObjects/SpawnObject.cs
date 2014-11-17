@@ -65,21 +65,40 @@ public class SpawnObject : Selectable {
 			
 			// Generate a random value to compare against our chance
 			if (Random.Range(0f, 100f) < chance) {
-				Debug.Log("Spawned an object at: " + Time.time);
-				// Create the new object at a random open location
-				GameObject newFood = (GameObject) Object.Instantiate(
-					objectToSpawn,
-					openTiles[Random.Range(0, ((int)numOfOpenTiles)-1)].transform.position,
-					Quaternion.identity
-				);
+				//Note: The if clause just checks to see if the game is a networked game.
+				//If so then we need to instantiate objects on the network. Also we only want
+				//the "server" player to be spawning objects so a second if clause is for the server
+				//to run and generate. Everything in the else clause is the original code and has been left
+				//alone with the exception of the else clause.
+				if (Network.isServer || Network.isClient) {
+					if (networkView.isMine) {
+						Debug.Log("Spawned an object at: " + Time.time);
+						GameObject newFood = (GameObject) Network.Instantiate(
+							objectToSpawn,
+							openTiles[Random.Range(0, ((int)numOfOpenTiles)-1)].transform.position,
+							Quaternion.identity,
+							0
+						);
+					}
+				}
 				
-				// Configure its settings
-				newFood.transform.parent = objectToSpawnParent.transform;
-				newFood.transform.localPosition = new Vector3(
-					newFood.transform.localPosition.x,
-					newFood.transform.localPosition.y,
-					0
-				);
+				else {
+					Debug.Log("Spawned an object at: " + Time.time);
+					// Create the new object at a random open location
+					GameObject newFood = (GameObject) Object.Instantiate(
+						objectToSpawn,
+						openTiles[Random.Range(0, ((int)numOfOpenTiles)-1)].transform.position,
+						Quaternion.identity
+					);
+				
+					// Configure its settings
+					newFood.transform.parent = objectToSpawnParent.transform;
+					newFood.transform.localPosition = new Vector3(
+						newFood.transform.localPosition.x,
+						newFood.transform.localPosition.y,
+						0
+					);
+				}
 			}
 		}
 	}

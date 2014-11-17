@@ -12,6 +12,7 @@ GameObject:
   - 114: {fileID: 11400000}
   - 50: {fileID: 5000000}
   - 58: {fileID: 5800000}
+  - 148: {fileID: 14800000}
   m_Layer: 0
   m_Name: AntUnit
   m_TagString: AntUnit
@@ -78,6 +79,18 @@ MonoBehaviour:
   calculatedVelocity: 0
   enableDiegeticUnitCount: 1
   healingAnimation: {fileID: 0}
+--- !u!148 &14800000
+NetworkView:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 11400000}
+  m_ViewID:
+    m_ID: 0
+    m_Type: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
