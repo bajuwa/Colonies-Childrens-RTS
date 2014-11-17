@@ -29,6 +29,10 @@ public class Player : MonoBehaviour {
 	public Texture2D queenDisplay;
 	public Texture2D scentpathDisplay;
 	public Texture2D anthillDisplay;
+	public Texture2D gathererHead;
+	public Texture2D warriorHead;
+	public Texture2D scoutHead;
+	public Texture2D queenHead;
 	
 	public GameObject scentpathGameObject;
 	
@@ -51,6 +55,10 @@ public class Player : MonoBehaviour {
 		textures.Add("queenDisplay", queenDisplay);
 		textures.Add("scentpathDisplay", scentpathDisplay);
 		textures.Add("anthillDisplay", anthillDisplay);
+		textures.Add("gathererHead", gathererHead);
+		textures.Add("warriorHead", warriorHead);
+		textures.Add("scoutHead", scoutHead);
+		textures.Add("queenHead", queenHead);
 		
 		gameObjects.Add("scentpathGameObject", scentpathGameObject);
 	}
@@ -76,6 +84,7 @@ public class Player : MonoBehaviour {
 	
 	public Texture2D getTexture(string name) {
 		if (textures.ContainsKey(name)) return textures[name];
+		Debug.Log("Did not find texture by the name: " + name);
 		return null;
 	}
 	
