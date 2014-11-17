@@ -46,7 +46,7 @@ public class EventManager : MonoBehaviour {
 		foreach (GameObject eventIcon in events) {
 			if (isOnScreen(eventIcon.GetComponent<EventIcon>().eventLocation)) {
 				// If the event is on screen, remove it from the event list
-				//eventsToRemove.Add(eventIcon);
+				eventsToRemove.Add(eventIcon);
 			} else {
 				// If offscreen, display an icon that shows the user where to look
 				
