@@ -126,6 +126,9 @@ public class GathererUnit : AntUnit {
 		droppedFood = true;
 		dropOffAtAnthill = null;
 		
+		// When gatherers are carrying food, they move at half their original speed, so when they drop food, fix the speed stat
+		speed *= 2f;
+		
 		// Reassign the food back to the 'Objects' sprite in the map
 		Transform foodTransform = this.gameObject.GetComponentInChildren<Food>().gameObject.transform;
 		foodTransform.parent = GameObject.Find("Objects").transform;
@@ -149,9 +152,6 @@ public class GathererUnit : AntUnit {
 		// Disable the selectable script so that it doesn't interfere with selecting the underlying unit
 		foodTransform.gameObject.GetComponent<Selectable>().enabled = true;
 		foodTransform.gameObject.GetComponent<Collider2D>().enabled = true;
-		
-		// When gatherers are carrying food, they move at half their original speed, so when they drop food, fix the speed stat
-		speed *= 2f;
 	}
 	
 	// Gatherers can walk on tiles and food items (but only if they aren't already carrying food themselves)
