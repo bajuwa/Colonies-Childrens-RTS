@@ -41,7 +41,7 @@ public class NetworkManager : MonoBehaviour {
 		//Network.Instantiate(gatherer, gathererBlueSpawn.transform.position, transform.rotation, 0);
 		Network.Instantiate(anthill, transform.position = new Vector3(0,0,-2), transform.rotation, 0);
 	}
-	/*void OnConnectedToServer()
+	void OnConnectedToServer()
 	{
 		playerId = 2;
 		GameObject testobject = (GameObject) Network.Instantiate(gatherer, transform.position = new Vector3(1,2,-4), transform.rotation,0);
@@ -50,7 +50,7 @@ public class NetworkManager : MonoBehaviour {
 	}
 	[RPC] void changePlayerId(int player)
 	{
-<<<<<<< HEAD
+
 		NetworkView anthillNetwork = NetworkView.Find(anthillID);
 		NetworkView gathererNetwork = NetworkView.Find(gathererID);
 		GameObject anthillObject = anthillNetwork.gameObject;
@@ -68,12 +68,7 @@ public class NetworkManager : MonoBehaviour {
 					gathererObject.transform.localPosition.y,
 					0);
 	}
-=======
-		Debug.Log("Before Change");
-		
-		Debug.Log("After change");
-	}*/
->>>>>>> parent of 286b7b9... Networking Update#2
+
 	// Update is called once per frame
 	void Update () {
 		if (!antUnitParent) antUnitParent = GameObject.Find("Units");
