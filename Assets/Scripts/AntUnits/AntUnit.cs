@@ -133,6 +133,7 @@ public class AntUnit : Attackable {
 		
 		// Continue to check and expand the first Path in the queue until we reach our target
 		Path path;
+		float startingTime = Time.time;
 		while (true) {
 			// If we have no paths left in the queue, then a solution is impossible
 			if (priorityQueue.getCount() == 0) {
@@ -166,8 +167,11 @@ public class AntUnit : Attackable {
 				priorityQueue.add(copiedPath);
 			}
 			
-			// Yield the coroutine to let the rest of unity work for a bit (until the next frame)
-			yield return null;
+			// If 100 milliseconds have passed Yield the coroutine to let the rest of unity work for a bit (until the next frame)
+			if (Time.time - startingTime > 0.1f) {
+				yield return null;
+				startingTime = Time.time;
+			}
 		}
 		//Debug.Log("Found optimal path");
 		setPath(path);
