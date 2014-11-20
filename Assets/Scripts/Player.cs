@@ -16,6 +16,7 @@ public class Player : MonoBehaviour {
 	public RuntimeAnimatorController warriorAnimator;
 	public RuntimeAnimatorController scoutAnimator;
 	public RuntimeAnimatorController queenAnimator;
+	public RuntimeAnimatorController anthillAnimator;
 	
 	public Sprite gathererSprite;
 	public Sprite warriorSprite;
@@ -53,6 +54,7 @@ public class Player : MonoBehaviour {
 		animators.Add("warriorAnimator", warriorAnimator);
 		animators.Add("scoutAnimator", scoutAnimator);
 		animators.Add("queenAnimator", queenAnimator);
+		animators.Add("anthillAnimator", anthillAnimator);
 		
 		sprites.Add("gathererSprite", gathererSprite);
 		sprites.Add("warriorSprite", warriorSprite);

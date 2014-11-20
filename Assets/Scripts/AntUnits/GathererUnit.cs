@@ -111,6 +111,7 @@ public class GathererUnit : AntUnit {
 		tempPos.y += 0.8f; 
 		tempPos.z = -1f; 
 		gameObj.transform.localPosition = tempPos;
+		gameObj.transform.localScale = new Vector3(1,1,1);
 		
 		// Re-enable the selectable script so that we can select it again
 		gameObj.GetComponent<Selectable>().enabled = false;

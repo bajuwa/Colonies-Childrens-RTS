@@ -33,6 +33,7 @@ public class Anthill : Attackable {
 		base.Update();
 		maxHp = currentHp;
 		if (foodStorageText) foodStorageText.text = string.Format("{0:0}", maxHp);
+		loadAnimator();
 	}
 	
 	public void addFoodPoints(int points) {
@@ -45,8 +46,10 @@ public class Anthill : Attackable {
 		maxHp = currentHp;
 	}
 	
-	protected override void loadSprite() {
-		gameObject.GetComponent<SpriteRenderer>().sprite = getSpriteFromPlayer("anthillSprite");
+	private void loadAnimator() {
+		Animator singleAnimator = this.gameObject.GetComponent("Animator") as Animator;
+		if (!singleAnimator) singleAnimator = this.gameObject.AddComponent("Animator") as Animator;
+		if (!singleAnimator.runtimeAnimatorController) singleAnimator.runtimeAnimatorController = getAnimatorFromPlayer("anthillAnimator");
 	}
 	
 	protected override void loadDisplayImage() {

@@ -42,6 +42,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minOrthoSize: 7
   maxOrthoSize: 12
+  percentOfScreenToTriggerPan: .0199999996
   cameraSpeed: .5
 --- !u!212 &21200000
 SpriteRenderer:
