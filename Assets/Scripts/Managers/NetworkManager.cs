@@ -12,6 +12,8 @@ public class NetworkManager : MonoBehaviour {
 	private const string typeName = "ColoniesAntBattle";
 	private string gameName = CreateGameServer.gameName;
 	private HostData hostGame = JoinGame.hostGame;
+	private GameObject antHillParent;
+	private GameObject antUnitParent;
 	private int playerId = 1;
 	
 	private void Start () {
@@ -60,10 +62,21 @@ public class NetworkManager : MonoBehaviour {
 		GameObject gathererObject = gathererNetwork.gameObject;
 		anthillObject.GetComponent<Ownable>().setAsMine(player);
 		gathererObject.GetComponent<Ownable>().setAsMine(player);
+		anthillObject.transform.parent = antHillParent.transform;
+				anthillObject.transform.localPosition = new Vector3(
+					anthillObject.transform.localPosition.x,
+					anthillObject.transform.localPosition.y,
+					0);
+		gathererObject.transform.parent = antUnitParent.transform;
+				gathererObject.transform.localPosition = new Vector3(
+					gathererObject.transform.localPosition.x,
+					gathererObject.transform.localPosition.y,
+					0);
 	}
 	// Update is called once per frame
 	void Update () {
-
+		if (!antUnitParent) antUnitParent = GameObject.Find("Units");
+		if (!antHillParent) antHillParent = GameObject.Find("Objects");
 	}
 	
 
