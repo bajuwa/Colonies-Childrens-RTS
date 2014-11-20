@@ -7,6 +7,8 @@ public class NetworkManager : MonoBehaviour {
 	public GameObject gatherer;
 	public GameObject gathererRedSpawn;
 	public GameObject gathererBlueSpawn;
+	public GameObject redAnthillSpawn;
+	public GameObject blueAnthillSpawn;
 	private const string typeName = "ColoniesAntBattle";
 	private string gameName = CreateGameServer.gameName;
 	private HostData hostGame = JoinGame.hostGame;

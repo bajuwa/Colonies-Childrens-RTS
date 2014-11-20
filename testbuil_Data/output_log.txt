@@ -14,22 +14,22 @@ Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.050 seconds
+- Completed reload, in  0.051 seconds
 desktop: 1920x1080 60Hz; virtual: 3286x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.219801 ms
+UnloadTime: 0.222490 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 120.
-Total: 0.391952 ms (FindLiveObjects: 0.005764 ms CreateObjectMapping: 0.009990 ms MarkObjects: 0.048417 ms  DeleteObjects: 0.011143 ms)
+Total: 0.393490 ms (FindLiveObjects: 0.005764 ms CreateObjectMapping: 0.010375 ms MarkObjects: 0.048033 ms  DeleteObjects: 0.011528 ms)
 
-UnloadTime: 0.292043 ms
+UnloadTime: 0.290890 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1859.
-Total: 0.954136 ms (FindLiveObjects: 0.070320 ms CreateObjectMapping: 0.031894 ms MarkObjects: 0.458815 ms  DeleteObjects: 0.016523 ms)
+Total: 0.956442 ms (FindLiveObjects: 0.070320 ms CreateObjectMapping: 0.033431 ms MarkObjects: 0.456894 ms  DeleteObjects: 0.016139 ms)
 
 Found 248 objects with tag 'Tile'
  
@@ -105,42 +105,6 @@ Missing a diegetic ant sprite, attempting to initialize
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 Loading script from player: 1
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The server has disconnected from the client. Most likely the server has shut down.
- 
-(Filename:  Line: 745)
-
-Spawned an object at: 63.74232
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 75.75923
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 97.86003
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 182.4623
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 212.7119
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 231.8789
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 318.3809
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 419.0994
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 

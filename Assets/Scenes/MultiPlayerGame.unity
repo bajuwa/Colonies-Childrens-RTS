@@ -1166,8 +1166,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 1.5
   m_Center: {x: 0, y: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &119516017
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,7 +1193,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 472971646}
   m_RootOrder: 8
->>>>>>> origin/geoff
 --- !u!1 &126654304
 GameObject:
   m_ObjectHideFlags: 0
@@ -4501,6 +4498,8 @@ Transform:
   - {fileID: 1425466070}
   - {fileID: 1232399068}
   - {fileID: 790411849}
+  - {fileID: 119516018}
+  - {fileID: 1070398688}
   m_Father: {fileID: 965986473}
   m_RootOrder: 1
 --- !u!212 &472971647
@@ -12095,8 +12094,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 1.5
   m_Center: {x: 0, y: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &1070398687
 GameObject:
   m_ObjectHideFlags: 0
@@ -12124,7 +12121,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 472971646}
   m_RootOrder: 9
->>>>>>> origin/geoff
 --- !u!1 &1071048014
 GameObject:
   m_ObjectHideFlags: 0
@@ -12583,6 +12579,8 @@ MonoBehaviour:
   gatherer: {fileID: 100000, guid: f22c79121e6eaf649994687cc01cad69, type: 2}
   gathererRedSpawn: {fileID: 1701379992}
   gathererBlueSpawn: {fileID: 1568896891}
+  redAnthillSpawn: {fileID: 119516017}
+  blueAnthillSpawn: {fileID: 1070398687}
 --- !u!4 &1118850471
 Transform:
   m_ObjectHideFlags: 0
