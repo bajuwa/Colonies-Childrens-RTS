@@ -14,22 +14,22 @@ Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.053 seconds
+- Completed reload, in  0.050 seconds
 desktop: 1920x1080 60Hz; virtual: 3286x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.215575 ms
+UnloadTime: 0.215574 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 118.
-Total: 0.378506 ms (FindLiveObjects: 0.004611 ms CreateObjectMapping: 0.009991 ms MarkObjects: 0.050723 ms  DeleteObjects: 0.011143 ms)
+Total: 0.387341 ms (FindLiveObjects: 0.004995 ms CreateObjectMapping: 0.009606 ms MarkObjects: 0.050723 ms  DeleteObjects: 0.011143 ms)
 
-UnloadTime: 0.285897 ms
+UnloadTime: 0.288584 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1907.
-Total: 0.952222 ms (FindLiveObjects: 0.071858 ms CreateObjectMapping: 0.032662 ms MarkObjects: 0.465351 ms  DeleteObjects: 0.015755 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1903.
+Total: 0.951830 ms (FindLiveObjects: 0.071858 ms CreateObjectMapping: 0.032278 ms MarkObjects: 0.462273 ms  DeleteObjects: 0.014986 ms)
 
 Found 248 objects with tag 'Tile'
  
@@ -97,27 +97,11 @@ NullReferenceException: Object reference not set to an instance of an object
  
 (Filename:  Line: -1)
 
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Recording position for: UnitererUnit(Clone) (UnityEngine.GameObject) -10044
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Missing a diegetic ant sprite, attempting to initialize
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
 Loading script from player: 1
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Recording position for: UnitererUnit(Clone) (UnityEngine.GameObject) -10164
+Recording position for: GathererUnit(Clone) (UnityEngine.GameObject) -10054
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 

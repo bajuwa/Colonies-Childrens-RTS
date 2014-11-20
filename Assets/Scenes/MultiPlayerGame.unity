@@ -1234,33 +1234,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 1.5
   m_Center: {x: 0, y: 0}
---- !u!1 &119516017
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 119516018}
-  m_Layer: 0
-  m_Name: RedAnthillSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &119516018
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 119516017}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.3366098, y: -14.4259596, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 472971646}
-  m_RootOrder: 10
 --- !u!1 &126654304
 GameObject:
   m_ObjectHideFlags: 0
@@ -4950,8 +4923,6 @@ Transform:
   - {fileID: 1646216681}
   - {fileID: 1232399068}
   - {fileID: 790411849}
-  - {fileID: 119516018}
-  - {fileID: 1070398688}
   m_Father: {fileID: 965986473}
   m_RootOrder: 1
 --- !u!212 &472971647
@@ -12788,33 +12759,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 1.5
   m_Center: {x: 0, y: 0}
---- !u!1 &1070398687
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1070398688}
-  m_Layer: 0
-  m_Name: BlueAnthillSpawn
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1070398688
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1070398687}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 17.5878201, y: 13.92554, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 472971646}
-  m_RootOrder: 11
 --- !u!1 &1071048014
 GameObject:
   m_ObjectHideFlags: 0
@@ -13321,8 +13265,6 @@ MonoBehaviour:
   gatherer: {fileID: 100000, guid: f22c79121e6eaf649994687cc01cad69, type: 2}
   gathererRedSpawn: {fileID: 1701379992}
   gathererBlueSpawn: {fileID: 1568896891}
-  redAnthillSpawn: {fileID: 119516017}
-  blueAnthillSpawn: {fileID: 1070398687}
 --- !u!4 &1118850471
 Transform:
   m_ObjectHideFlags: 0

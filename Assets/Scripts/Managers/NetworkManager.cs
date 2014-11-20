@@ -7,8 +7,6 @@ public class NetworkManager : MonoBehaviour {
 	public GameObject gatherer;
 	public GameObject gathererRedSpawn;
 	public GameObject gathererBlueSpawn;
-	public GameObject redAnthillSpawn;
-	public GameObject blueAnthillSpawn;
 	private const string typeName = "ColoniesAntBattle";
 	private string gameName = CreateGameServer.gameName;
 	private HostData hostGame = JoinGame.hostGame;
@@ -35,32 +33,25 @@ public class NetworkManager : MonoBehaviour {
 			Debug.Log("Registered");
 		}
 	}
-	//instantiate Player 1 (the server) stuff
 	void OnPlayerConnected() 
 	{
-		Network.Instantiate(gatherer, gathererRedSpawn.transform.position, Quaternion.identity, 0); //initial gatherer
-		Network.Instantiate(anthill, redAnthillSpawn.transform.position, Quaternion.identity, 0); //initial anthill
+		Network.Instantiate(gatherer, transform.position = new Vector3(-14, -12, -2), transform.rotation, 0);
+		//Network.Instantiate(gatherer, gathererBlueSpawn.transform.position, transform.rotation, 0);
+		Network.Instantiate(anthill, transform.position = new Vector3(0,0,-2), transform.rotation, 0);
 	}
-	//instantiate Player 2 (the client) stuff
-	void OnConnectedToServer()
+	/*void OnConnectedToServer()
 	{
 		playerId = 2;
-		GameObject antHillObject = (GameObject) Network.Instantiate(gatherer, gathererBlueSpawn.transform.position, Quaternion.identity,0);
-		GameObject gathererObject = (GameObject) Network.Instantiate(anthill, blueAnthillSpawn.transform.position, Quaternion.identity, 0); //initial anthill
-		NetworkView anthillNetwork = antHillObject.networkView;
-		NetworkView gathererNetwork = gathererObject.networkView;
-		networkView.RPC("changePlayerId", RPCMode.AllBuffered, anthillNetwork.viewID, gathererNetwork.viewID, playerId);
+		GameObject testobject = (GameObject) Network.Instantiate(gatherer, transform.position = new Vector3(1,2,-4), transform.rotation,0);
+		testobject.GetComponent<Ownable>().setAsMine(playerId);
+		//testobject.networkView.RPC("changePlayerId", RPCMode.AllBuffered, playerId);
 	}
-	//tells both server and client that this anthill is player 2s
-	[RPC] void changePlayerId(NetworkViewID anthillID, NetworkViewID gathererID, int player)
+	[RPC] void changePlayerId(int player)
 	{
-		NetworkView anthillNetwork = NetworkView.Find(anthillID);
-		NetworkView gathererNetwork = NetworkView.Find(gathererID);
-		GameObject anthillObject = anthillNetwork.gameObject;
-		GameObject gathererObject = gathererNetwork.gameObject;
-		anthillObject.GetComponent<Ownable>().setAsMine(player);
-		gathererObject.GetComponent<Ownable>().setAsMine(player);
-	}
+		Debug.Log("Before Change");
+		
+		Debug.Log("After change");
+	}*/
 	// Update is called once per frame
 	void Update () {
 
