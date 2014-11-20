@@ -20,7 +20,7 @@ public class WinConditionManager : MonoBehaviour {
 			else playerTwoAlive = true;
 		}
 		
-		if (!playerOneAlive || !playerTwoAlive) endGame();
+		//if (!playerOneAlive || !playerTwoAlive) endGame();
 	}
 	
 	private void endGame() {
