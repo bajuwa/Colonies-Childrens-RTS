@@ -34,7 +34,13 @@ public class ScoutUnit : AntUnit {
 	}
 	
 	protected override void loadDisplayImage() {
-		displayImage = getTextureFromPlayer("scoutDisplay");
+		if (currentHp/maxHp <= .33f) {
+			displayImage = getTextureFromPlayer("scoutDisplayDying");
+		} else if (currentHp/maxHp <= .66f) {
+			displayImage = getTextureFromPlayer("scoutDisplayDamaged");
+		} else {
+			displayImage = getTextureFromPlayer("scoutDisplayHealthy");
+		}
 	}
 	
 	public override Sprite getFightSprite() {

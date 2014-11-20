@@ -31,7 +31,7 @@ public class Selectable : Ownable {
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update();
-		if (!displayImage) loadDisplayImage();
+		loadDisplayImage();
 		if (gameObject.GetComponent<SpriteRenderer>().sprite == null) loadSprite();
 	}
 	

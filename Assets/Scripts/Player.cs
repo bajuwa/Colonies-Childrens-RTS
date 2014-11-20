@@ -23,10 +23,21 @@ public class Player : MonoBehaviour {
 	public Sprite queenSprite;
 	public Sprite anthillSprite;
 
-	public Texture2D gathererDisplay;
-	public Texture2D warriorDisplay;
-	public Texture2D scoutDisplay;
-	public Texture2D queenDisplay;
+	public Texture2D gathererDisplayHealthy;
+	public Texture2D warriorDisplayHealthy;
+	public Texture2D scoutDisplayHealthy;
+	public Texture2D queenDisplayHealthy;
+
+	public Texture2D gathererDisplayDamaged;
+	public Texture2D warriorDisplayDamaged;
+	public Texture2D scoutDisplayDamaged;
+	public Texture2D queenDisplayDamaged;
+
+	public Texture2D gathererDisplayDying;
+	public Texture2D warriorDisplayDying;
+	public Texture2D scoutDisplayDying;
+	public Texture2D queenDisplayDying;
+	
 	public Texture2D scentpathDisplay;
 	public Texture2D anthillDisplay;
 	public Texture2D gathererHead;
@@ -49,10 +60,21 @@ public class Player : MonoBehaviour {
 		sprites.Add("queenSprite", queenSprite);
 		sprites.Add("anthillSprite", anthillSprite);
 		
-		textures.Add("gathererDisplay", gathererDisplay);
-		textures.Add("warriorDisplay", warriorDisplay);
-		textures.Add("scoutDisplay", scoutDisplay);
-		textures.Add("queenDisplay", queenDisplay);
+		textures.Add("gathererDisplayHealthy", gathererDisplayHealthy);
+		textures.Add("warriorDisplayHealthy", warriorDisplayHealthy);
+		textures.Add("scoutDisplayHealthy", scoutDisplayHealthy);
+		textures.Add("queenDisplayHealthy", queenDisplayHealthy);
+		
+		textures.Add("gathererDisplayDamaged", gathererDisplayDamaged);
+		textures.Add("warriorDisplayDamaged", warriorDisplayDamaged);
+		textures.Add("scoutDisplayDamaged", scoutDisplayDamaged);
+		textures.Add("queenDisplayDamaged", queenDisplayDamaged);
+		
+		textures.Add("gathererDisplayDying", gathererDisplayDying);
+		textures.Add("warriorDisplayDying", warriorDisplayDying);
+		textures.Add("scoutDisplayDying", scoutDisplayDying);
+		textures.Add("queenDisplayDying", queenDisplayDying);
+		
 		textures.Add("scentpathDisplay", scentpathDisplay);
 		textures.Add("anthillDisplay", anthillDisplay);
 		textures.Add("gathererHead", gathererHead);

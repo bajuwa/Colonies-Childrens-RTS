@@ -71,7 +71,13 @@ public class GathererUnit : AntUnit {
 	}
 	
 	protected override void loadDisplayImage() {
-		displayImage = getTextureFromPlayer("gathererDisplay");
+		if (currentHp/maxHp <= .33f) {
+			displayImage = getTextureFromPlayer("gathererDisplayDying");
+		} else if (currentHp/maxHp <= .66f) {
+			displayImage = getTextureFromPlayer("gathererDisplayDamaged");
+		} else {
+			displayImage = getTextureFromPlayer("gathererDisplayHealthy");
+		}
 	}
 	
 	public override Sprite getFightSprite() {
