@@ -44,13 +44,15 @@ public class NetworkManager : MonoBehaviour {
 
 	void OnConnectedToServer()
 	{
-		playerId = 2;
-		GameObject testobject = (GameObject) Network.Instantiate(gatherer, transform.position = new Vector3(1,2,-4), transform.rotation,0);
-		testobject.GetComponent<Ownable>().setAsMine(playerId);
-		//testobject.networkView.RPC("changePlayerId", RPCMode.AllBuffered, playerId);
+		GameObject antHillObject = (GameObject) Network.Instantiate(gatherer, gathererBlueSpawn.transform.position, Quaternion.identity,0);
+		GameObject gathererObject = (GameObject) Network.Instantiate(anthill, blueAnthillSpawn.transform.position, Quaternion.identity, 0); //initial anthill
+		NetworkView anthillNetwork = antHillObject.networkView;
+		NetworkView gathererNetwork = gathererObject.networkView;
+		networkView.RPC("changePlayerId", RPCMode.AllBuffered, anthillNetwork.viewID, gathererNetwork.viewID, 2);
 	}
-	[RPC] void changePlayerId(int player)
+	[RPC] void changePlayerId(NetworkViewID anthillID, NetworkViewID gathererID, int player)
 	{
+	
 
 		NetworkView anthillNetwork = NetworkView.Find(anthillID);
 		NetworkView gathererNetwork = NetworkView.Find(gathererID);
