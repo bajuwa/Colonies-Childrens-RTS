@@ -14,28 +14,28 @@ Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.057 seconds
+- Completed reload, in  0.053 seconds
 desktop: 1920x1080 60Hz; virtual: 3286x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.506464 ms
+UnloadTime: 0.215575 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 118.
+Total: 0.378506 ms (FindLiveObjects: 0.004611 ms CreateObjectMapping: 0.009991 ms MarkObjects: 0.050723 ms  DeleteObjects: 0.011143 ms)
+
+UnloadTime: 0.285897 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 115.
-Total: 0.936075 ms (FindLiveObjects: 0.010759 ms CreateObjectMapping: 0.022671 ms MarkObjects: 0.098756 ms  DeleteObjects: 0.023056 ms)
-
-UnloadTime: 0.313946 ms
-Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
-
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1942.
-Total: 0.969891 ms (FindLiveObjects: 0.072626 ms CreateObjectMapping: 0.033047 ms MarkObjects: 0.489556 ms  DeleteObjects: 0.014986 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1907.
+Total: 0.952222 ms (FindLiveObjects: 0.071858 ms CreateObjectMapping: 0.032662 ms MarkObjects: 0.465351 ms  DeleteObjects: 0.015755 ms)
 
 Found 248 objects with tag 'Tile'
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Found 4 objects with tag 'AntUnit'
+Found 0 objects with tag 'AntUnit'
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -43,39 +43,7 @@ Found 10 objects with tag 'MapObject'
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Found 262 Total MapObjects
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Recording position for: WarriorUnit (UnityEngine.GameObject) 10944
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Recording position for: GathererUnit (UnityEngine.GameObject) 11024
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Recording position for: GathererUnit (UnityEngine.GameObject) 11316
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Recording position for: WarriorUnit (UnityEngine.GameObject) 11404
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Missing a diegetic ant sprite, attempting to initialize
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Loading script from player: 1
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Missing a diegetic ant sprite, attempting to initialize
+Found 258 Total MapObjects
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -92,6 +60,51 @@ Loading script from player: 2
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2474)
+
+View ID AllocatedID: 0 not found during lookup. Strange behaviour may occur
+ 
+(Filename:  Line: 1681)
+
+Received state update for view id' AllocatedID: 0' but the NetworkView doesn't exist
+ 
+(Filename:  Line: 2474)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at WinConditionManager.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Loading script from player: 2
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+Recording position for: UnitererUnit(Clone) (UnityEngine.GameObject) -10044
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
 Missing a diegetic ant sprite, attempting to initialize
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
@@ -104,119 +117,15 @@ Loading script from player: 1
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
+Recording position for: UnitererUnit(Clone) (UnityEngine.GameObject) -10164
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
 Missing a diegetic ant sprite, attempting to initialize
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Registered
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 4.653644
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 Loading script from player: 1
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Recording position for: GathererUnit(Clone) (UnityEngine.GameObject) -10088
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Missing a diegetic ant sprite, attempting to initialize
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Registered
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 13.72128
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: GathererUnit(Clone) (GathererUnit)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Giving ant move to command
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Calculating path to new tile
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: GathererUnit(Clone) (GathererUnit)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Giving ant move to command
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Calculating path to new tile
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 19.77081
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 23.78776
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: GathererUnit(Clone) (GathererUnit)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Giving ant move to command
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Calculating path to new tile
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Spawned an object at: 26.80437
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Detected food on current tile, picking up
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: GathererUnit(Clone) (GathererUnit)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Giving ant move to command
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Have food, going to drop off at home
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Calculating path to new tile
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: GathererUnit(Clone) (GathererUnit)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Giving ant move to command
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Have food, going to drop off at home
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Calculating path to new tile
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 

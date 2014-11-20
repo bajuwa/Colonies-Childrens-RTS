@@ -64,18 +64,45 @@ public class CreateUnitButton : Button {
 			Tile nearestTile = anthillScript.getNearestUnoccupiedTile(transform.parent.position);
 			
 			Debug.Log("Creating unit: " + unitToCreate.ToString());
-			GameObject instance = (GameObject) Object.Instantiate(
-				unitToCreate,
-				nearestTile.transform.position,
-				Quaternion.identity
-			);
-			instance.transform.parent = antUnitParent.transform;
-			instance.transform.localPosition = new Vector3(
-				instance.transform.localPosition.x,
-				instance.transform.localPosition.y,
-				0
-			);
-			instance.GetComponent<Ownable>().setAsMine(anthillScript.getPlayerId());
+			//Note: Everything in the "if" statement is network based.
+			//It checks if the game is networked (if the network is a server or client)
+			//and then network instantiates that object.
+			//Everything in the else clause is untouched (except for the else clause itself
+			//and functions as it did before the change
+			if (Network.isServer || Network.isClient) {
+				GameObject instance = (GameObject) Network.Instantiate(
+					unitToCreate,
+					nearestTile.transform.position,
+					Quaternion.identity,
+					0
+				);
+				instance.transform.parent = antUnitParent.transform;
+				instance.transform.localPosition = new Vector3(
+					instance.transform.localPosition.x,
+					instance.transform.localPosition.y,
+					0
+				);
+				if (Network.isServer) {
+					instance.GetComponent<Ownable>().setAsMine(1);
+					}
+				else {
+					instance.GetComponent<Ownable>().setAsMine(2);
+				}
+			}
+			else {
+				GameObject instance = (GameObject) Object.Instantiate(
+					unitToCreate,
+					nearestTile.transform.position,
+					Quaternion.identity
+				);
+				instance.transform.parent = antUnitParent.transform;
+				instance.transform.localPosition = new Vector3(
+					instance.transform.localPosition.x,
+					instance.transform.localPosition.y,
+					0
+				);
+				instance.GetComponent<Ownable>().setAsMine(anthillScript.getPlayerId());
+			}
 		}
 	}
 }
