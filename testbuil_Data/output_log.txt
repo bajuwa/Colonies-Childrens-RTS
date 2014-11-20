@@ -20,6 +20,7 @@ desktop: 1920x1080 60Hz; virtual: 3286x1080 at 0,0
 <RI> Input initialized.
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\System.dll (this message is harmless)
 <<<<<<< HEAD
+<<<<<<< HEAD
 UnloadTime: 0.428458 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
@@ -34,6 +35,8 @@ Total: 0.895727 ms (FindLiveObjects: 0.009990 ms CreateObjectMapping: 0.022287 m
 
 Registered
 =======
+=======
+>>>>>>> parent of 286b7b9... Networking Update#2
 UnloadTime: 0.215574 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 

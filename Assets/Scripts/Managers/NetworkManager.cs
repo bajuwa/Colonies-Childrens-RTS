@@ -41,6 +41,7 @@ public class NetworkManager : MonoBehaviour {
 		//Network.Instantiate(gatherer, gathererBlueSpawn.transform.position, transform.rotation, 0);
 		Network.Instantiate(anthill, transform.position = new Vector3(0,0,-2), transform.rotation, 0);
 	}
+
 	void OnConnectedToServer()
 	{
 		playerId = 2;
@@ -68,6 +69,7 @@ public class NetworkManager : MonoBehaviour {
 					gathererObject.transform.localPosition.y,
 					0);
 	}
+
 
 	// Update is called once per frame
 	void Update () {
