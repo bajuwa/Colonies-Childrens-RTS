@@ -349,25 +349,44 @@ public class AntUnit : Attackable {
 		// If we are below perfect health, heal at a rate of 0.333 hp per second
 		currentHp = Mathf.Min(maxHp, currentHp + Time.deltaTime/3);
 		// Ensure we show a healing animation
-		if (!transform.Find(HEALING_ANIMATION_NAME)) spawnHealingAnimation();
+		if ((!enableDiegeticUnitCount && !transform.Find(HEALING_ANIMATION_NAME)) || 
+			(enableDiegeticUnitCount && !frontAnt.transform.Find(HEALING_ANIMATION_NAME))) {
+				spawnHealingAnimation();
+		}
 		
 	}
 	
 	protected void spawnHealingAnimation() {
+		Debug.Log("Spawning Healing Animation");
+		if (enableDiegeticUnitCount) {
+			if (backLeftAnt) attachHealingAnimationTo(backLeftAnt.gameObject);
+			if (backRightAnt) attachHealingAnimationTo(backRightAnt.gameObject);
+			if (frontAnt) attachHealingAnimationTo(frontAnt.gameObject);
+		} else {
+			attachHealingAnimationTo(this.gameObject);
+		}
+	}
+	
+	private void attachHealingAnimationTo(GameObject gameObj) {
 		GameObject newHealingAnimation = (GameObject) GameObject.Instantiate(healingAnimation, transform.position, Quaternion.identity);
-		newHealingAnimation.transform.position = new Vector3(
-			newHealingAnimation.transform.position.x,
-			newHealingAnimation.transform.position.y,
-			newHealingAnimation.transform.position.z - 1
-		);
-		newHealingAnimation.transform.parent = transform;
 		newHealingAnimation.name = HEALING_ANIMATION_NAME;
+		newHealingAnimation.transform.parent = gameObj.transform;
+		newHealingAnimation.transform.localScale = new Vector3(1,1,1);
+		newHealingAnimation.transform.localPosition = new Vector3(
+			0,
+			-0.08f,
+			-2
+		);
 	}
 	
 	protected void stopHealingSelf() {
-		// If we are below perfect health, heal at a rate of 0.333 hp per second
-		if (transform.Find(HEALING_ANIMATION_NAME))
+		if (enableDiegeticUnitCount) {
+			if (backLeftAnt && backLeftAnt.Find(HEALING_ANIMATION_NAME)) Destroy(backLeftAnt.Find(HEALING_ANIMATION_NAME).gameObject);
+			if (backRightAnt && backRightAnt.Find(HEALING_ANIMATION_NAME)) Destroy(backRightAnt.Find(HEALING_ANIMATION_NAME).gameObject);
+			if (frontAnt && frontAnt.Find(HEALING_ANIMATION_NAME)) Destroy(frontAnt.Find(HEALING_ANIMATION_NAME).gameObject);
+		} else {
 			Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
+		}
 	}
 	
 	protected Anthill getNearbyAnthill(Vector2 position) {
