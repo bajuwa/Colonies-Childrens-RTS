@@ -12029,53 +12029,29 @@ MonoBehaviour:
   instructions:
   - title: Warriors
     messages:
-    - Warriors are dedicated military Ants that you can use to attack your enemy.
-    - While Ants of all types can be involved in a fight, only Warrior Ants can initiate
-      one.
-    - If you select one of your Warrior Ants and look at the Display Box, you can
-      see that it has a high attack, perfect for a Fight!
-  - title: Attack
+    - "Warriors are your powerful attack units.  They fight enemy ants and are used
+      to destroy the enemy\u2019s anthill."
+    - "Only Warriors can attack other units.  You\u2019ll need them to protect your
+      other weaker ants from the enemy warriors."
+  - title: Attacking
     messages:
-    - In order to initiate an attack, simply Left-Click the Warrior you wish to attack
-      with, and then Right-Click the Ant you want to attack.
-    - You'll notice that while you have your Warrior selected, your cursor will turn
-      in to a Sword if you hover over an attackle object.
-    - Once you've told your Warrior to Attack, it will automatically set off on a
-      path towards its target.
-    - Give it a try by having one of your Red Warriors attack one of the Blue Gatherers
-      to the north.
-  - title: Fighting
+    - To attack enemy ants, Left Click on a Warrior ant to select it, and Right Click
+      on a enemy ant to attack it.
+    - Be warned!  The lower your warriors health, the lower its attacked, so don't
+      pick a fight you know you will lose!
+  - title: On Guard!
     messages:
-    - When your Warrior catches up with its target, the two will begin Fighting and
-      raise up a dust cloud.
-    - They will not stop fighting until one of the Ants is defeated, and they cannot
-      be interrupted.
-    - Once the Fight is over, only the winning Ant will remain!
-    - If you lost this Fight, use your second Warrior to finish the job!
-  - title: Health
+    - Try it now with your Red ants and attack the Blue warrior ants.
+  - title: Aftermath
     messages:
-    - Even though your Ant may survive a Fight, it probably hasn't come out unscathed.
-    - If you select your Warrior Ant after it has been in a fight, you will notice
-      its damaged health in the Display Box.
+    - "You\u2019ll see that once the fight is over and if you survive, that some of
+      the ants in the little unit has disappeared."
+    - This means that your ants are getting low in health so bring them home to heal
+      by the Anthill.
   - title: Healing
     messages:
-    - When your Ants are low on health, its best to bring them back home.
-    - If you place your Ants in one of the tiles adjacent to your Anthill, they will
-      automatically regenerate Health.
-    - Now, select your injured Warrior and bring it back home, make sure to keep an
-      eye on it's Health once it gets back!
-  - title: Cancelling Attack
-    messages:
-    - If at any time you decide you want to cancel your Warrior's attack, simply give
-      it a new command.
-    - Select your Warrior while he is walking towards his target, and Right-Click
-      anywhere other than its current attack target.
-    - Voila!  Your Warrior has now stopped chasing after its target and it will no
-      longer trigger a Fight!
-  - title: Next Up...
-    messages:
-    - Now that we know how to gather Food and fight other Ants, its time for a more
-      strategic Ant type...
+    - In order to heal, your ant must be in a tile directly adjacent to one of your
+      anthills.
 --- !u!212 &933455611
 SpriteRenderer:
   m_ObjectHideFlags: 0

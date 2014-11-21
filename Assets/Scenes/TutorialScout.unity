@@ -223,7 +223,7 @@ Animator:
   m_GameObject: {fileID: 5043593}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 25751b955a131c9479322c8334a2d7f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: e68812fd3ab78c6419f48ad7aaf26295, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -735,7 +735,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 34206978}
   m_ViewID:
-    m_ID: 2
+    m_ID: 7
     m_Type: 1
 --- !u!148 &34206984
 NetworkView:
@@ -748,7 +748,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 34206979}
   m_ViewID:
-    m_ID: 3
+    m_ID: 8
     m_Type: 1
 --- !u!1 &34579856
 GameObject:
@@ -1963,16 +1963,30 @@ MonoBehaviour:
   gathererAnimator: {fileID: 9100000, guid: c509e5bd5478ecb4abae6b0d2ca9a602, type: 2}
   warriorAnimator: {fileID: 9100000, guid: 8d610639bcb7e274da0aec6f9ad9b106, type: 2}
   scoutAnimator: {fileID: 9100000, guid: 71165b4acfa93be429d465ea64513cbb, type: 2}
-  queenAnimator: {fileID: 9100000, guid: 71165b4acfa93be429d465ea64513cbb, type: 2}
+  queenAnimator: {fileID: 9100000, guid: cd308f399b86d7b42ae5fc0e93c0aaad, type: 2}
+  anthillAnimator: {fileID: 9100000, guid: f59f1a3bbeafe9949938f93532169543, type: 2}
   gathererSprite: {fileID: 21300000, guid: 5bb565751224cd6468c4ccdbf12a58e0, type: 3}
   warriorSprite: {fileID: 21300000, guid: 45aae1dbadc1f74469e40d6f3a16ac40, type: 3}
   scoutSprite: {fileID: 21300000, guid: 7745173eddb08b64ca456c0ef554934f, type: 3}
-  queenSprite: {fileID: 21300000, guid: 90c2afdefd076ae4289e537ff93fd598, type: 3}
+  queenSprite: {fileID: 21300000, guid: 044b13b751a98654fa24a5eb6791dd1d, type: 3}
   anthillSprite: {fileID: 21300000, guid: ab4b2f74bed6aab4586e515b66b728fa, type: 3}
-  gathererDisplay: {fileID: 2800000, guid: 5bb565751224cd6468c4ccdbf12a58e0, type: 3}
-  warriorDisplay: {fileID: 2800000, guid: 45aae1dbadc1f74469e40d6f3a16ac40, type: 3}
-  scoutDisplay: {fileID: 2800000, guid: 7745173eddb08b64ca456c0ef554934f, type: 3}
-  queenDisplay: {fileID: 2800000, guid: 90c2afdefd076ae4289e537ff93fd598, type: 3}
+  gathererDisplayHealthy: {fileID: 2800000, guid: 5bb565751224cd6468c4ccdbf12a58e0,
+    type: 3}
+  warriorDisplayHealthy: {fileID: 2800000, guid: 45aae1dbadc1f74469e40d6f3a16ac40,
+    type: 3}
+  scoutDisplayHealthy: {fileID: 2800000, guid: 7745173eddb08b64ca456c0ef554934f, type: 3}
+  queenDisplayHealthy: {fileID: 2800000, guid: 044b13b751a98654fa24a5eb6791dd1d, type: 3}
+  gathererDisplayDamaged: {fileID: 2800000, guid: 7f53c54b6562f704280c683fc3a5a1f1,
+    type: 3}
+  warriorDisplayDamaged: {fileID: 2800000, guid: 9df609d72d3201c478b20ee1705a2b08,
+    type: 3}
+  scoutDisplayDamaged: {fileID: 2800000, guid: e5e16438d1efba246b055f2771d49f87, type: 3}
+  queenDisplayDamaged: {fileID: 2800000, guid: d871715ffe2256f43b873da05979c5ee, type: 3}
+  gathererDisplayDying: {fileID: 2800000, guid: 4414b0cfe7b9875458a76abbb6219f5f,
+    type: 3}
+  warriorDisplayDying: {fileID: 2800000, guid: 9e45cf8e33c413d4e9cceef7611ae4f2, type: 3}
+  scoutDisplayDying: {fileID: 2800000, guid: a150d9825f6773f4ea09bfa2836b2016, type: 3}
+  queenDisplayDying: {fileID: 2800000, guid: 4cfb853163a83f145b440972f7aa5869, type: 3}
   scentpathDisplay: {fileID: 2800000, guid: 40400a12bd8defa4ca9e61e3b3e80b8d, type: 3}
   anthillDisplay: {fileID: 2800000, guid: ab4b2f74bed6aab4586e515b66b728fa, type: 3}
   gathererHead: {fileID: 2800000, guid: ab054b6f10448fa4d8428024f231d0e7, type: 3}
@@ -3292,7 +3306,7 @@ Animator:
   m_GameObject: {fileID: 231429318}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 25751b955a131c9479322c8334a2d7f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: e68812fd3ab78c6419f48ad7aaf26295, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -4454,7 +4468,7 @@ Animator:
   m_GameObject: {fileID: 335894181}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 25751b955a131c9479322c8334a2d7f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: e68812fd3ab78c6419f48ad7aaf26295, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -5256,6 +5270,8 @@ GameObject:
   - 114: {fileID: 376357224}
   - 148: {fileID: 376357226}
   - 148: {fileID: 376357227}
+  - 148: {fileID: 376357229}
+  - 148: {fileID: 376357228}
   - 148: {fileID: 376357223}
   m_Layer: 0
   m_Name: PlayerManager
@@ -5288,7 +5304,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 376357222}
   m_ViewID:
-    m_ID: 4
+    m_ID: 9
     m_Type: 1
 --- !u!114 &376357224
 MonoBehaviour:
@@ -5337,7 +5353,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 376357222}
   m_ViewID:
-    m_ID: 5
+    m_ID: 10
     m_Type: 1
 --- !u!148 &376357227
 NetworkView:
@@ -5350,7 +5366,33 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 376357222}
   m_ViewID:
-    m_ID: 1
+    m_ID: 11
+    m_Type: 1
+--- !u!148 &376357228
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800006, guid: f27d86858339b9b43830ebc763aea85d,
+    type: 2}
+  m_PrefabInternal: {fileID: 325735085}
+  m_GameObject: {fileID: 376357221}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 376357222}
+  m_ViewID:
+    m_ID: 5
+    m_Type: 1
+--- !u!148 &376357229
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800004, guid: f27d86858339b9b43830ebc763aea85d,
+    type: 2}
+  m_PrefabInternal: {fileID: 325735085}
+  m_GameObject: {fileID: 376357221}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 376357222}
+  m_ViewID:
+    m_ID: 6
     m_Type: 1
 --- !u!1 &377358453
 GameObject:
@@ -5872,6 +5914,8 @@ GameObject:
   - 4: {fileID: 410347959}
   - 131: {fileID: 410347961}
   - 114: {fileID: 410347960}
+  - 114: {fileID: 410347963}
+  - 61: {fileID: 410347962}
   m_Layer: 0
   m_Name: gathererHead
   m_TagString: Untagged
@@ -5930,6 +5974,31 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!61 &410347962
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828947537}
+  m_GameObject: {fileID: 410347958}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!114 &410347963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400022, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828947537}
+  m_GameObject: {fileID: 410347958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: gatherer
 --- !u!1 &412962885
 GameObject:
   m_ObjectHideFlags: 0
@@ -6280,7 +6349,7 @@ Animator:
   m_GameObject: {fileID: 449660501}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 25751b955a131c9479322c8334a2d7f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: e68812fd3ab78c6419f48ad7aaf26295, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -8566,6 +8635,8 @@ GameObject:
   - 50: {fileID: 622799062}
   - 58: {fileID: 622799061}
   - 114: {fileID: 622799060}
+  - 148: {fileID: 622799065}
+  - 148: {fileID: 622799064}
   m_Layer: 0
   m_Name: ScoutUnit
   m_TagString: AntUnit
@@ -8661,6 +8732,32 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &622799064
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800002, guid: 26bb4411febfc364e8ec6ccda5e618bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1765822565}
+  m_GameObject: {fileID: 622799058}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 622799059}
+  m_ViewID:
+    m_ID: 1
+    m_Type: 1
+--- !u!148 &622799065
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 26bb4411febfc364e8ec6ccda5e618bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 1765822565}
+  m_GameObject: {fileID: 622799058}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 622799060}
+  m_ViewID:
+    m_ID: 2
+    m_Type: 1
 --- !u!1 &624811592
 GameObject:
   m_ObjectHideFlags: 0
@@ -15400,7 +15497,7 @@ Animator:
   m_GameObject: {fileID: 1216392927}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 25751b955a131c9479322c8334a2d7f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: e68812fd3ab78c6419f48ad7aaf26295, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -15923,7 +16020,7 @@ Animator:
   m_GameObject: {fileID: 1262222544}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 25751b955a131c9479322c8334a2d7f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: e68812fd3ab78c6419f48ad7aaf26295, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -18724,38 +18821,26 @@ MonoBehaviour:
   instructions:
   - title: Scouts
     messages:
-    - Scouts are a unique strategic unit that can help you move your Ants across the
-      map faster.
-  - title: Scentpaths
+    - Scouts are a special type of ant.  They move very fast and everywhere they walk
+      on, they leave a Scent Path behind.
+    - These Scent Paths allow all the other ants you have to move much faster on them.  This
+      is especially useful for areas where the ground is hard to walk on.
+  - title: Scent Paths
     messages:
-    - When a Scout moves across a tile, it automatically lays down part of it's "Scent
-      Path".
-    - This scent path will double the movement speed of any of your Ants that walk
-      over it.
-    - Lets have your Scout lay down its scent path now.
-    - Select your Red Scout and move it anywhere on the map.
-  - title: Using Paths
+    - "The Scout will automatically leave behind the Scent Path so try moving it around
+      the map and cover the space with your Scent.\r\n"
+  - title: Speed Boost
     messages:
-    - Now that you have a scent path, lets have your other Ant use it.
-    - Select your Red Gatherer and move it near your Scout.
-    - While it doesn't make too much a difference over dirt, putting scent paths over
-      Grass and Rocks can greatly cut down on movement time!
+    - Next, try moving a different type of ant, like the Gatherer, over these Scent
+      Paths.  See how they go much faster now?
+    - "If you want to control the field, you\u2019ll want to cover as much space as
+      you can with your Scout."
   - title: Enemy Paths
     messages:
-    - You're not the only one making Scent Paths.  Have a look to the north of your
-      Anthill.
-    - See that Blue Scout and all those Blue Scent Paths?
-    - Those Scent Paths will help your Enemy's Ants move faster, which is bad news
-      for you!
-    - But don't worry, you can get rid of them by putting a Scent Path of your own
-      on top of it.
-    - Select your Scout, then have it walk overtop of some of the Blue Scent Paths.
-  - title: Control the Map
-    messages:
-    - If you utilize your Scouts properly, you could end up gaining controlling the
-      map!
-    - Keep this in mind while playing Colonies, as it could make or break your attempt
-      at victory!
+    - Remember, the enemy ants also have their own Scouts.  They can cover up your
+      Scent Paths with their own, which means you can cover their paths with yours!
+    - "Try covering the blue Scent Paths with your own and take over the space for
+      the Red team!\r\n"
 --- !u!212 &1465735184
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -18819,7 +18904,7 @@ Animator:
   m_GameObject: {fileID: 1475800098}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 25751b955a131c9479322c8334a2d7f2, type: 2}
+  m_Controller: {fileID: 9100000, guid: e68812fd3ab78c6419f48ad7aaf26295, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -19397,6 +19482,8 @@ GameObject:
   - 4: {fileID: 1523711004}
   - 131: {fileID: 1523711006}
   - 114: {fileID: 1523711005}
+  - 114: {fileID: 1523711008}
+  - 61: {fileID: 1523711007}
   m_Layer: 0
   m_Name: scoutHead
   m_TagString: Untagged
@@ -19455,6 +19542,31 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!61 &1523711007
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100004, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828947537}
+  m_GameObject: {fileID: 1523711003}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!114 &1523711008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400026, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828947537}
+  m_GameObject: {fileID: 1523711003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: scout
 --- !u!1 &1528851957
 GameObject:
   m_ObjectHideFlags: 0
@@ -20198,6 +20310,8 @@ GameObject:
   - 50: {fileID: 1580934964}
   - 58: {fileID: 1580934963}
   - 114: {fileID: 1580934962}
+  - 148: {fileID: 1580934967}
+  - 148: {fileID: 1580934966}
   m_Layer: 0
   m_Name: ScoutUnit
   m_TagString: AntUnit
@@ -20293,6 +20407,32 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &1580934966
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800002, guid: 26bb4411febfc364e8ec6ccda5e618bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 918480899}
+  m_GameObject: {fileID: 1580934960}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1580934961}
+  m_ViewID:
+    m_ID: 3
+    m_Type: 1
+--- !u!148 &1580934967
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 26bb4411febfc364e8ec6ccda5e618bc,
+    type: 2}
+  m_PrefabInternal: {fileID: 918480899}
+  m_GameObject: {fileID: 1580934960}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1580934962}
+  m_ViewID:
+    m_ID: 4
+    m_Type: 1
 --- !u!1 &1587747665
 GameObject:
   m_ObjectHideFlags: 0
@@ -22806,6 +22946,8 @@ GameObject:
   - 4: {fileID: 1773491688}
   - 131: {fileID: 1773491690}
   - 114: {fileID: 1773491689}
+  - 114: {fileID: 1773491692}
+  - 61: {fileID: 1773491691}
   m_Layer: 0
   m_Name: warriorHead
   m_TagString: Untagged
@@ -22864,6 +23006,31 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!61 &1773491691
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828947537}
+  m_GameObject: {fileID: 1773491687}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!114 &1773491692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400024, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828947537}
+  m_GameObject: {fileID: 1773491687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: warrior
 --- !u!1 &1774158094
 GameObject:
   m_ObjectHideFlags: 0
@@ -24993,6 +25160,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minOrthoSize: 7
   maxOrthoSize: 12
+  percentOfScreenToTriggerPan: .0199999996
   cameraSpeed: .5
 --- !u!212 &1914749639
 SpriteRenderer:
@@ -26609,22 +26777,36 @@ MonoBehaviour:
   gathererAnimator: {fileID: 9100000, guid: f00d31eae9380024ba184eb471cb0e9c, type: 2}
   warriorAnimator: {fileID: 9100000, guid: 74f41bbd92d798649b80cb014ef3e0e7, type: 2}
   scoutAnimator: {fileID: 9100000, guid: 10b530862e220ec4f97ffef17c3f0aeb, type: 2}
-  queenAnimator: {fileID: 9100000, guid: 10b530862e220ec4f97ffef17c3f0aeb, type: 2}
+  queenAnimator: {fileID: 9100000, guid: 023217b652a37644f90b1495d0d5b16c, type: 2}
+  anthillAnimator: {fileID: 9100000, guid: 26fba35d4ed167a4a84597e4a5f25ad5, type: 2}
   gathererSprite: {fileID: 21300000, guid: dc075d287bdefde47bb8713314441bfe, type: 3}
   warriorSprite: {fileID: 21300000, guid: 79a74a66b5894fc4288a8d100ab8f6d0, type: 3}
   scoutSprite: {fileID: 21300000, guid: 4cd4497cbda1d7647a0af67697f9f55e, type: 3}
   queenSprite: {fileID: 21300000, guid: 90c2afdefd076ae4289e537ff93fd598, type: 3}
   anthillSprite: {fileID: 21300000, guid: 470088b5fd6ff4546892dcfb8d93cd57, type: 3}
-  gathererDisplay: {fileID: 2800000, guid: dc075d287bdefde47bb8713314441bfe, type: 3}
-  warriorDisplay: {fileID: 2800000, guid: 79a74a66b5894fc4288a8d100ab8f6d0, type: 3}
-  scoutDisplay: {fileID: 2800000, guid: 4cd4497cbda1d7647a0af67697f9f55e, type: 3}
-  queenDisplay: {fileID: 2800000, guid: 90c2afdefd076ae4289e537ff93fd598, type: 3}
+  gathererDisplayHealthy: {fileID: 2800000, guid: dc075d287bdefde47bb8713314441bfe,
+    type: 3}
+  warriorDisplayHealthy: {fileID: 2800000, guid: 79a74a66b5894fc4288a8d100ab8f6d0,
+    type: 3}
+  scoutDisplayHealthy: {fileID: 2800000, guid: 4cd4497cbda1d7647a0af67697f9f55e, type: 3}
+  queenDisplayHealthy: {fileID: 2800000, guid: 90c2afdefd076ae4289e537ff93fd598, type: 3}
+  gathererDisplayDamaged: {fileID: 2800000, guid: eead7e6967af0b0478cc2bc5b65d5405,
+    type: 3}
+  warriorDisplayDamaged: {fileID: 2800000, guid: 7c6a8f4c1094b4a429e039527abf330b,
+    type: 3}
+  scoutDisplayDamaged: {fileID: 2800000, guid: 8336698f5269e434ca0511687795ce07, type: 3}
+  queenDisplayDamaged: {fileID: 2800000, guid: 88c8054987e1d7243ad37c257ea3d2a5, type: 3}
+  gathererDisplayDying: {fileID: 2800000, guid: 173270f9f498f0e409fddd6695d3968f,
+    type: 3}
+  warriorDisplayDying: {fileID: 2800000, guid: 082fd0361e0ef4f4dac1c2fff285b69c, type: 3}
+  scoutDisplayDying: {fileID: 2800000, guid: a68e78cef05e6c544a6593c9a8dd7e9b, type: 3}
+  queenDisplayDying: {fileID: 2800000, guid: 1fcb782d9b8e15a4481f89c12e55580e, type: 3}
   scentpathDisplay: {fileID: 2800000, guid: 40400a12bd8defa4ca9e61e3b3e80b8d, type: 3}
   anthillDisplay: {fileID: 2800000, guid: 470088b5fd6ff4546892dcfb8d93cd57, type: 3}
-  gathererHead: {fileID: 2800000, guid: ab054b6f10448fa4d8428024f231d0e7, type: 3}
-  warriorHead: {fileID: 2800000, guid: b399fa389eac97a4daa0edf4b761644a, type: 3}
-  scoutHead: {fileID: 2800000, guid: 8ba118d6adacf93428bb5e6c9181fd5e, type: 3}
-  queenHead: {fileID: 2800000, guid: 100d8393b5c2974468f5faace210941b, type: 3}
+  gathererHead: {fileID: 2800000, guid: 96b986f2def34e64f82239e2671cedd0, type: 3}
+  warriorHead: {fileID: 2800000, guid: 65fc05c14040ab6439341f0de7246c08, type: 3}
+  scoutHead: {fileID: 2800000, guid: 8ee288252102af04bacadf298acbaae5, type: 3}
+  queenHead: {fileID: 2800000, guid: 32afd8bcd20da4e44b8d26ecc6172d1d, type: 3}
   scentpathGameObject: {fileID: 100000, guid: 0ea4ee24e8caf4d49af7a93c2c9799ec, type: 2}
 --- !u!212 &2095073239
 SpriteRenderer:
@@ -26914,6 +27096,8 @@ GameObject:
   - 4: {fileID: 2142455255}
   - 131: {fileID: 2142455257}
   - 114: {fileID: 2142455256}
+  - 114: {fileID: 2142455259}
+  - 61: {fileID: 2142455258}
   m_Layer: 0
   m_Name: queenHead
   m_TagString: Untagged
@@ -26972,3 +27156,28 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!61 &2142455258
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100006, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828947537}
+  m_GameObject: {fileID: 2142455254}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!114 &2142455259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400028, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1828947537}
+  m_GameObject: {fileID: 2142455254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: queen

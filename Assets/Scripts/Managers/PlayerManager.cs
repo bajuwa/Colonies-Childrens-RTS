@@ -21,7 +21,6 @@ public class PlayerManager : MonoBehaviour {
 		// Unless we are dead, a totalAnthillCount of 0 means we haven't properly loaded our counts
 		if (totalAnthillCount == 0) {
 			Object[] gameObjects = GameObject.FindObjectsOfType(typeof(Anthill)) as Object[];
-			Debug.Log(gameObjects);
 			foreach (Anthill gameObj in gameObjects) {
 				if (gameObj.GetComponent<Ownable>() && gameObj.GetComponent<Ownable>().isNeutralOrFriendly()) totalAnthillCount++;
 			}

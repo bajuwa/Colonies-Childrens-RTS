@@ -1719,7 +1719,7 @@ MonoBehaviour:
   gathererAnimator: {fileID: 9100000, guid: c509e5bd5478ecb4abae6b0d2ca9a602, type: 2}
   warriorAnimator: {fileID: 9100000, guid: 8d610639bcb7e274da0aec6f9ad9b106, type: 2}
   scoutAnimator: {fileID: 9100000, guid: 71165b4acfa93be429d465ea64513cbb, type: 2}
-  queenAnimator: {fileID: 9100000, guid: 71165b4acfa93be429d465ea64513cbb, type: 2}
+  queenAnimator: {fileID: 9100000, guid: cd308f399b86d7b42ae5fc0e93c0aaad, type: 2}
   anthillAnimator: {fileID: 9100000, guid: f59f1a3bbeafe9949938f93532169543, type: 2}
   gathererSprite: {fileID: 21300000, guid: 5bb565751224cd6468c4ccdbf12a58e0, type: 3}
   warriorSprite: {fileID: 21300000, guid: 45aae1dbadc1f74469e40d6f3a16ac40, type: 3}
@@ -3061,46 +3061,30 @@ MonoBehaviour:
   instructions:
   - title: Anthills
     messages:
-    - Anthills are the most important structure in Colonies, so it's best to know
-      how to use them.
-    - They can store Food, create Ants, and heal damaged Ants.
-  - title: Food Storage
+    - The Anthill is the most important structure on the map.  If the enemy destroys
+      your Anthill, you lose the game!
+    - "You want to destroy the enemy\u2019s Anthill before they destroy yours!\r\n"
+    - The Anthill is also used to create new units, provided you have enough food
+      in it, and to heal ants that stand next to it.
+    - "It is very important so be sure to protect it well!\r\n"
+  - title: Gather
     messages:
-    - First step in using your Anthill is to gather Food and store it.
-    - Remember how to use your Gatherer?  Good!  Now get out there and gather some
-      food!
-    - After you bring back the food and drop it near the Anthill, you will automatically
-      score some Food Points in your Food Storage.
-    - You can now use these points to create more units!
+    - 'Now to put what you learned previously to use.  Command your Gatherer to collect
+      some food and bring it back to the anthill. '
   - title: Create Ants
     messages:
-    - You can't do much with just a Gatherer, so why not make some Warriors?
-    - To create any unit, select your Anthill with Left-Click, then click one of the
-      buttons surrounding your Anthill.
-    - 'Each of the buttons represents an Ant: Apple for Gatherer, Sword for Warrior,
-      and Movement/Feet for Scout'
-    - If you don't have enough Food Points to make a unit, its button will be replaced
-      by a Banned sign and you won't be able to create any of that type of Ant until
-      you get more food.
+    - Once you have some food points, Left Click on the Anthill to bring up some buttons
+      around it.  Each button will build a different type of ant.
+    - The Apple will create Gatherers, the Sword will create Warriors, the Footprint
+      will create Scouts and the Crown will create Queens.
   - title: Attack!
     messages:
-    - Now that you have some Warriors, Attack!
-    - Select one of your Warriors and Right-Click on your enemy's Anthill, which is
-      located in the top right of the map.
-    - Anthills are tough, so you'll probably need more than just a single Warrior
-      to take it down!
-  - title: Win or Lose
-    messages:
-    - When attacked, an Anthill will slowly lose the Food they have stored in them,
-      and if they reach 0, the Anthill is destroyed!
-    - If you can take out your enemy's Anthills, then you win the game!
-    - ' but be warned, if your Anthills are destroyed first then you lose!'
-    - Make sure to defend your Anthill as best you can, but also make sure to attack
-      your opponents Anthill!
-  - title: Congratulations!
-    messages:
-    - You've made it through the Colonies Tutorial!
-    - Now you're all ready to start playing, so go out there and go get 'em!
+    - "Why don\u2019t you try building some Warriors.  Once you have them, command
+      them to attack the Blue anthill at the top right corner of the map."
+    - The Warriors will continue to attack the Anthill until no more food remains,
+      which means the Anthill is destroyed and you win the game!
+    - "Of course, in a real game, the other player won\u2019t make it so easy so it\u2019ll
+      be up to you to come out on top!"
 --- !u!212 &245808841
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4866,7 +4850,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 354446334}
   m_ViewID:
-    m_ID: 4
+    m_ID: 1
     m_Type: 1
 --- !u!1001 &355401606
 Prefab:
@@ -5390,7 +5374,7 @@ GameObject:
   - 148: {fileID: 382201435}
   - 148: {fileID: 382201434}
   m_Layer: 0
-  m_Name: UnitererUnit
+  m_Name: GathererUnit
   m_TagString: AntUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5436,7 +5420,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 382201436}
   m_ViewID:
-    m_ID: 10
+    m_ID: 5
     m_Type: 1
 --- !u!114 &382201436
 MonoBehaviour:
@@ -20605,7 +20589,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 1595575001}
   m_ViewID:
-    m_ID: 5
+    m_ID: 10
     m_Type: 1
 --- !u!1 &1607463937
 GameObject:
@@ -22879,7 +22863,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 1769045230}
   m_ViewID:
-    m_ID: 1
+    m_ID: 11
     m_Type: 1
 --- !u!1 &1773016416
 GameObject:
@@ -26901,7 +26885,7 @@ MonoBehaviour:
   gathererAnimator: {fileID: 9100000, guid: f00d31eae9380024ba184eb471cb0e9c, type: 2}
   warriorAnimator: {fileID: 9100000, guid: 74f41bbd92d798649b80cb014ef3e0e7, type: 2}
   scoutAnimator: {fileID: 9100000, guid: 10b530862e220ec4f97ffef17c3f0aeb, type: 2}
-  queenAnimator: {fileID: 9100000, guid: 10b530862e220ec4f97ffef17c3f0aeb, type: 2}
+  queenAnimator: {fileID: 9100000, guid: 023217b652a37644f90b1495d0d5b16c, type: 2}
   anthillAnimator: {fileID: 9100000, guid: 26fba35d4ed167a4a84597e4a5f25ad5, type: 2}
   gathererSprite: {fileID: 21300000, guid: dc075d287bdefde47bb8713314441bfe, type: 3}
   warriorSprite: {fileID: 21300000, guid: 79a74a66b5894fc4288a8d100ab8f6d0, type: 3}
@@ -27465,5 +27449,5 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 2143612462}
   m_ViewID:
-    m_ID: 2
+    m_ID: 12
     m_Type: 1
