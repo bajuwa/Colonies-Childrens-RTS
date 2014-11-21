@@ -15,7 +15,7 @@ GameObject:
   - 148: {fileID: 14800000}
   - 148: {fileID: 14800002}
   m_Layer: 0
-  m_Name: UnitererUnit
+  m_Name: GathererUnit
   m_TagString: AntUnit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
