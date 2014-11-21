@@ -79,6 +79,13 @@ public class SpawnObject : Selectable {
 							Quaternion.identity,
 							0
 						);
+						// Configure its settings
+						newFood.transform.parent = objectToSpawnParent.transform;
+						newFood.transform.localPosition = new Vector3(
+						newFood.transform.localPosition.x,
+						newFood.transform.localPosition.y,
+						0
+						);
 					}
 				}
 				

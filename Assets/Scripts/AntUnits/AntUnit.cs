@@ -288,7 +288,6 @@ public class AntUnit : Attackable {
 	protected void move() {
 		if (targetTile != null &&
 			(Vector2) gameObject.transform.localPosition != (Vector2) targetTile.transform.localPosition) {
-			
 			// Get the tile we are currently over, and calculate speed based off its terrain value
 			Tile tileCurrentlyOver = mapManager.getTileAtPosition(transform.position);
 			float secondsToTraverse = (float) (tileCurrentlyOver.terrainValue + 2) / speed;

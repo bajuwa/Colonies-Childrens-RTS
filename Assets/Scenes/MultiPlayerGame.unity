@@ -128,6 +128,7 @@ GameObject:
   - 4: {fileID: 19868233}
   - 212: {fileID: 19868232}
   - 114: {fileID: 19868231}
+  - 148: {fileID: 19868234}
   m_Layer: 0
   m_Name: RedPlayer
   m_TagString: Player
@@ -203,6 +204,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2092846065}
   m_RootOrder: 0
+--- !u!148 &19868234
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 19868230}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 19868231}
+  m_ViewID:
+    m_ID: 39
+    m_Type: 1
 --- !u!1 &30583258
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,7 +836,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 67916058}
   m_ViewID:
-    m_ID: 16
+    m_ID: 40
     m_Type: 1
 --- !u!1 &84853087
 GameObject:
@@ -10683,6 +10696,7 @@ GameObject:
   - 212: {fileID: 981943626}
   - 114: {fileID: 981943625}
   - 58: {fileID: 981943624}
+  - 148: {fileID: 981943627}
   m_Layer: 0
   m_Name: Blueberry
   m_TagString: MapObject
@@ -10755,6 +10769,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &981943627
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 1991005027}
+  m_GameObject: {fileID: 981943622}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 981943623}
+  m_ViewID:
+    m_ID: 41
+    m_Type: 1
 --- !u!1 &982681417
 GameObject:
   m_ObjectHideFlags: 0
@@ -13404,6 +13431,7 @@ GameObject:
   - 4: {fileID: 1212017310}
   - 212: {fileID: 1212017312}
   - 114: {fileID: 1212017311}
+  - 148: {fileID: 1212017313}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -13468,6 +13496,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &1212017313
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1212017309}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1212017311}
+  m_ViewID:
+    m_ID: 42
+    m_Type: 1
 --- !u!1 &1226893928
 GameObject:
   m_ObjectHideFlags: 0
@@ -13576,7 +13616,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 1226893929}
   m_ViewID:
-    m_ID: 25
+    m_ID: 43
     m_Type: 1
 --- !u!1 &1229508626
 GameObject:
@@ -15553,6 +15593,7 @@ GameObject:
   - 4: {fileID: 1320180141}
   - 212: {fileID: 1320180140}
   - 114: {fileID: 1320180139}
+  - 148: {fileID: 1320180142}
   m_Layer: 0
   m_Name: BluePlayer
   m_TagString: Player
@@ -15628,6 +15669,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2092846065}
   m_RootOrder: 1
+--- !u!148 &1320180142
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1320180138}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1320180139}
+  m_ViewID:
+    m_ID: 38
+    m_Type: 1
 --- !u!1 &1347701003
 GameObject:
   m_ObjectHideFlags: 0
@@ -16450,6 +16503,7 @@ GameObject:
   - 212: {fileID: 1425466073}
   - 114: {fileID: 1425466072}
   - 58: {fileID: 1425466071}
+  - 148: {fileID: 1425466074}
   m_Layer: 0
   m_Name: Blueberry
   m_TagString: MapObject
@@ -16522,6 +16576,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &1425466074
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 992321729}
+  m_GameObject: {fileID: 1425466069}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1425466070}
+  m_ViewID:
+    m_ID: 44
+    m_Type: 1
 --- !u!1 &1425824636
 GameObject:
   m_ObjectHideFlags: 0
@@ -18483,7 +18550,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1568896891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.4456406, y: 11.9260998, z: 0}
+  m_LocalPosition: {x: 16.4456406, y: 11.9260998, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 801402505}
@@ -19629,7 +19696,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1701379992}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.2130804, y: -12.1771202, z: 0}
+  m_LocalPosition: {x: -14.2130804, y: -12.1771202, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 801402505}
@@ -24072,7 +24139,6 @@ GameObject:
   - 4: {fileID: 2092846065}
   - 212: {fileID: 2092846064}
   - 114: {fileID: 2092846063}
-  - 148: {fileID: 2092846067}
   - 148: {fileID: 2092846066}
   m_Layer: 0
   m_Name: PlayerManager
@@ -24142,19 +24208,6 @@ NetworkView:
   m_Observed: {fileID: 2092846063}
   m_ViewID:
     m_ID: 36
-    m_Type: 1
---- !u!148 &2092846067
-NetworkView:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 14800002, guid: f27d86858339b9b43830ebc763aea85d,
-    type: 2}
-  m_PrefabInternal: {fileID: 1766150997}
-  m_GameObject: {fileID: 2092846062}
-  m_Enabled: 1
-  m_StateSynchronization: 1
-  m_Observed: {fileID: 2092846065}
-  m_ViewID:
-    m_ID: 1
     m_Type: 1
 --- !u!1 &2099515972
 GameObject:

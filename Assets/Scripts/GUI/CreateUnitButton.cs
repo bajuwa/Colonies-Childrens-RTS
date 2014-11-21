@@ -7,6 +7,7 @@ public class CreateUnitButton : Button {
 	private GameObject antUnitParent;
 	private MapManager mapManager;
 	private Anthill anthillScript;
+	private NetworkManager netMan;
 	
 	public GameObject unitToCreate;
 	public int foodCost = 0;
@@ -32,7 +33,7 @@ public class CreateUnitButton : Button {
 		if (!antUnitParent) antUnitParent = GameObject.Find("Units");
 		if (!mapManager) mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
 		if (!anthillScript) anthillScript = transform.parent.GetComponent<Anthill>();
-		
+		if (!netMan) netMan = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
 		// If we our parent object is selected, show this button
 		if (parentSelectable.isNeutralOrFriendly() && parentSelectable.isSelected()) {
 			renderer.enabled = true;
@@ -82,12 +83,8 @@ public class CreateUnitButton : Button {
 					instance.transform.localPosition.y,
 					0
 				);
-				if (Network.isServer) {
-					instance.GetComponent<Ownable>().setAsMine(1);
-					}
-				else {
-					instance.GetComponent<Ownable>().setAsMine(2);
-				}
+				//instance.GetComponent<Ownable>().setAsMine(anthillScript.getPlayerId());
+				if (Network.isClient) netMan.changeID(instance); //have to change ID of Player 2's stuff
 			}
 			else {
 				GameObject instance = (GameObject) Object.Instantiate(
