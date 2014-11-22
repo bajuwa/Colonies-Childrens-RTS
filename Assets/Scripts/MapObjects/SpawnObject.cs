@@ -12,7 +12,7 @@ public class SpawnObject : Selectable {
 	
 	public string specificDescription;
 	public string specificName;
-	
+	private NetworkManager netMan;
 	public override string getDescription() {
 		return specificDescription;
 	}
@@ -86,6 +86,8 @@ public class SpawnObject : Selectable {
 						newFood.transform.localPosition.y,
 						0
 						);
+						Debug.Log(newFood + " is newFood");
+						netMan.changeInstant(newFood, "Object");
 					}
 				}
 				

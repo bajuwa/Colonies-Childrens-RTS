@@ -56,7 +56,7 @@ public class NetworkManager : MonoBehaviour {
 		Anthill antHill = anthillObject.GetComponent<Anthill>();
 		antHill.addFoodPoints(20);
 		NetworkView anthillNetworkView = anthillObject.networkView;
-		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetworkView.viewID, "AntHill");
+		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetworkView.viewID, "Object");
 	}
 	//called when a player connects for the client player. Instantiates the blue anthill on the network
 	//and then sends an RPC call the the server to get them to change the blue anthill to blue for the server player.
@@ -71,20 +71,19 @@ public class NetworkManager : MonoBehaviour {
 					antHillObject.transform.localPosition.y,
 					-2);
 		networkView.RPC("changePlayerId", RPCMode.All, anthillNetwork.viewID, 2);
-		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetwork.viewID, "AntHill");
+		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetwork.viewID, "Object");
 		Anthill antHill = antHillObject.GetComponent<Anthill>();
 		antHill.addFoodPoints(20);
 	}
 	public void changeID(GameObject instance)
 	{
 		NetworkView unitNetwork = instance.networkView;
-		//networkView.RPC("fixInstantiation", RPCMode.All, unitNetwork.viewID, "Unit");
 		networkView.RPC("changePlayerId", RPCMode.All, unitNetwork.viewID, 2);
 	}
-	public void changeInstant(GameObject instance)
+	public void changeInstant(GameObject instance, string type)
 	{
 		NetworkView unitNetwork = instance.networkView;
-		networkView.RPC("fixInstantiation", RPCMode.All, unitNetwork.viewID, "Unit");
+		networkView.RPC("fixInstantiation", RPCMode.All, unitNetwork.viewID, type);
 	}
 	//RPC call for changing the anthill and units to player 2
 	[RPC] void changePlayerId(NetworkViewID anthillID, int player)
@@ -105,7 +104,7 @@ public class NetworkManager : MonoBehaviour {
 		
 		NetworkView objectNetworkView = NetworkView.Find(objectNetworkViewID);
 		GameObject gameObject = objectNetworkView.gameObject;
-		if (type == "AntHill"){
+		if (type == "Object"){
 			Debug.Log("GameObject is anthill: " + gameObject);
 			gameObject.transform.parent = antHillParent.transform;
 			antHillParent.transform.localPosition = new Vector3(
