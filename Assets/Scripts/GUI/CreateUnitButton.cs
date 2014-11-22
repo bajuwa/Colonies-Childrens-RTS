@@ -9,17 +9,18 @@ public class CreateUnitButton : Button {
 	private PlayerManager playerManager;
 	private Anthill anthillScript;
 	
+	private Color originalColor;
+	
 	public GameObject unitToCreate;
 	public int foodCost = 0;
 	
-	public Sprite enabledImage;
-	public Sprite disabledImage;
 	private bool buttonEnabled;
 
 	// Use this for initialization
 	protected override void Start() {
 		base.Start();
 		loadParentSelectable();
+		originalColor = renderer.material.color;
 	}
 	
 	private void loadParentSelectable() {
@@ -41,10 +42,10 @@ public class CreateUnitButton : Button {
 			// If we can't afford to make this unit, disable the button
 			if (anthillScript.getStoredFoodPoints() < foodCost || hasReachedUnitCap()) {
 				buttonEnabled = false;
-				GetComponent<SpriteRenderer>().sprite = disabledImage;
+				renderer.material.color = Color.grey;
 			} else {
 				buttonEnabled = true;
-				GetComponent<SpriteRenderer>().sprite = enabledImage;
+				renderer.material.color = Color.white;
 			}
 		} else {
 			renderer.enabled = false;
