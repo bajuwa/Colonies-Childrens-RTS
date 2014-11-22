@@ -98,9 +98,16 @@ public class WarriorUnit : AntUnit {
 		if (!anthill) {
 			isInBattle = true;
 			Vector3 pos = mapManager.getTileAtPosition(transform.position).transform.position;
-			cloud = GameObject.Instantiate(combatCloud, 
+			if (Network.isClient || Network.isServer) {
+				cloud = Network.Instantiate(combatCloud,
+											new Vector3(pos.x, pos.y, transform.position.z - 1),
+											Quaternion.identity, 0) as GameObject;
+			}
+			else {
+				cloud = GameObject.Instantiate(combatCloud, 
 										   new Vector3(pos.x, pos.y, transform.position.z - 1), 
 										   Quaternion.identity) as GameObject;
+				}
 			if (getPlayerId() == 1) {
 				cloud.transform.Find("RedHead").gameObject.GetComponent<SpriteRenderer>().sprite = this.getFightSprite();
 				cloud.transform.Find("BlueHead").gameObject.GetComponent<SpriteRenderer>().sprite = opponent.getFightSprite();
@@ -147,7 +154,14 @@ public class WarriorUnit : AntUnit {
 		hasSetNewPath = false;
 		
 		// After the battle, 'cleanup' the unit(s) and the combat cloud
-		if (cloud) GameObject.Destroy(cloud);
+		if (cloud) {
+			if (Network.isClient || Network.isServer) {
+				Network.Destroy(cloud);
+			}
+			else {
+				GameObject.Destroy(cloud);
+			}
+		}
 		if (transform.localScale.x < 0) transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
 		gameObject.renderer.enabled = true;
 		opponent.gameObject.renderer.enabled = true;
@@ -169,8 +183,27 @@ public class WarriorUnit : AntUnit {
 		float antTwoAttack = antTwo.attack * (antTwo.currentHp / antTwo.maxHp); //TODO: dynamic attack calculations
 		
 		// Calculate damage dealt by factoring in eachothers defenses and apply to current hp
-		antOne.currentHp -= Mathf.Max(Random.Range(antTwoAttack*0.5f, antTwoAttack*1.5f) - antOne.defense, 0);
-		antTwo.currentHp -= Mathf.Max(Random.Range(antOneAttack*0.5f, antOneAttack*1.5f) - antTwo.defense, 0);
+		float hpOne = Mathf.Max(Random.Range(antTwoAttack*0.5f, antTwoAttack*1.5f) - antOne.defense, 0);
+		float hpTwo = Mathf.Max(Random.Range(antOneAttack*0.5f, antOneAttack*1.5f) - antTwo.defense, 0);
+		if (Network.isClient || Network.isServer) {
+			NetworkView networkAntOne = antOne.networkView;
+			NetworkView networkAntTwo = antTwo.networkView;
+			networkView.RPC("setHPNetwork", RPCMode.All, hpOne, hpTwo, networkAntOne.viewID, networkAntTwo.viewID);
+		}
+		else {
+		antOne.currentHp -= hpOne;
+		antTwo.currentHp -= hpTwo;
+		}
+	}
+	[RPC] private void setHPNetwork(float hpOne, float hpTwo, NetworkViewID antOne, NetworkViewID antTwo) {
+		NetworkView networkAntOne = NetworkView.Find(antOne);
+		NetworkView networkAntTwo = NetworkView.Find(antTwo);
+		GameObject gameObjectAntOne = networkAntOne.gameObject;
+		GameObject gameObjectAntTwo = networkAntTwo.gameObject;
+		Attackable attAntOne = gameObjectAntOne.GetComponent<Attackable>();
+		Attackable attAntTwo = gameObjectAntTwo.GetComponent<Attackable>();
+		attAntOne.currentHp -= hpOne;
+		attAntTwo.currentHp -= hpTwo;
 	}
 	
 	// If a warrior comes in to contact with it's target, interrupt its movement so that 

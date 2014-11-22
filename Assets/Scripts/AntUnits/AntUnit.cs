@@ -343,26 +343,46 @@ public class AntUnit : Attackable {
 	protected void healSelf() {
 		// If we are below perfect health, heal at a rate of 0.333 hp per second
 		currentHp = Mathf.Min(maxHp, currentHp + Time.deltaTime/3);
+		networkView.RPC("NetworkHealSelf", RPCMode.Others,(int) currentHp);
 		// Ensure we show a healing animation
 		if (!transform.Find(HEALING_ANIMATION_NAME)) spawnHealingAnimation();
 		
 	}
-	
+	[RPC] void NetworkHealSelf (int hp) {
+		currentHp = hp;
+	}
 	protected void spawnHealingAnimation() {
-		GameObject newHealingAnimation = (GameObject) GameObject.Instantiate(healingAnimation, transform.position, Quaternion.identity);
-		newHealingAnimation.transform.position = new Vector3(
+		if (Network.isClient || Network.isServer) {
+			GameObject newHealingAnimation = (GameObject) Network.Instantiate(healingAnimation, transform.position, Quaternion.identity, 0);
+			newHealingAnimation.transform.position = new Vector3(
 			newHealingAnimation.transform.position.x,
 			newHealingAnimation.transform.position.y,
 			newHealingAnimation.transform.position.z - 1
-		);
-		newHealingAnimation.transform.parent = transform;
-		newHealingAnimation.name = HEALING_ANIMATION_NAME;
+			);
+			newHealingAnimation.transform.parent = transform;
+			newHealingAnimation.name = HEALING_ANIMATION_NAME;
+		}
+		else{
+			GameObject newHealingAnimation = (GameObject) GameObject.Instantiate(healingAnimation, transform.position, Quaternion.identity);
+			newHealingAnimation.transform.position = new Vector3(
+				newHealingAnimation.transform.position.x,
+				newHealingAnimation.transform.position.y,
+				newHealingAnimation.transform.position.z - 1
+			);
+			newHealingAnimation.transform.parent = transform;
+			newHealingAnimation.name = HEALING_ANIMATION_NAME;
+		}
+		
 	}
 	
 	protected void stopHealingSelf() {
 		// If we are below perfect health, heal at a rate of 0.333 hp per second
 		if (transform.Find(HEALING_ANIMATION_NAME))
-			Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
+			if (Network.isClient || Network.isServer) {
+				Network.Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
+			} else {
+				Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
+				}
 	}
 	
 	protected Anthill getNearbyAnthill(Vector2 position) {

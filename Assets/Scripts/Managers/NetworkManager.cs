@@ -55,32 +55,19 @@ public class NetworkManager : MonoBehaviour {
 		antHill.addFoodPoints(20);
 		NetworkView anthillNetworkView = anthillObject.networkView;
 		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetworkView.viewID, "AntHill");
-		/*antUnitObject.transform.parent = antUnitParent.transform;
-				antUnitObject.transform.localPosition = new Vector3(
-					antUnitObject.transform.localPosition.x,
-					antUnitObject.transform.localPosition.y,
-					0);*/
-		//Network.Instantiate(gatherer, new Vector3(0,0,-2), Quaternion.identity, 0); //initial gatherer
 	}
 	//called when a player connects for the client player. Instantiates the blue anthill on the network
 	//and then sends an RPC call the the server to get them to change the blue anthill to blue for the server player.
 	void OnConnectedToServer()
 	{
-		Camera.mainCamera.transform.position = new Vector3(17, 12, -10);
+		Camera.mainCamera.transform.position = new Vector3(17, 12, -10); //set camera for player 2
 		GameObject antHillObject = (GameObject) Network.Instantiate(anthill, blueAnthillSpawn.transform.position, Quaternion.identity,0);
-		//GameObject gathererObject = (GameObject) Network.Instantiate(gatherer, gathererBlueSpawn.transform.position, Quaternion.identity, 0); //initial anthill
 		NetworkView anthillNetwork = antHillObject.networkView;
-		//NetworkView gathererNetwork = gathererObject.networkView;
 		antHillObject.transform.parent = antHillParent.transform;
 				antHillObject.transform.localPosition = new Vector3(
 					antHillObject.transform.localPosition.x,
 					antHillObject.transform.localPosition.y,
 					-2);
-		/*gathererObject.transform.parent = antUnitParent.transform;
-				gathererObject.transform.localPosition = new Vector3(
-					gathererObject.transform.localPosition.x,
-					gathererObject.transform.localPosition.y,
-					0);*/
 		networkView.RPC("changePlayerId", RPCMode.All, anthillNetwork.viewID, 2);
 		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetwork.viewID, "AntHill");
 		Anthill antHill = antHillObject.GetComponent<Anthill>();
@@ -89,7 +76,7 @@ public class NetworkManager : MonoBehaviour {
 	public void changeID(GameObject instance)
 	{
 		NetworkView unitNetwork = instance.networkView;
-		//networkView.RPC("fixInstantiation", RPCMode.All, unitNetwork.viewID, "Unit");
+		networkView.RPC("fixInstantiation", RPCMode.All, unitNetwork.viewID, "Unit");
 		networkView.RPC("changePlayerId", RPCMode.All, unitNetwork.viewID, 2);
 		
 	
@@ -101,11 +88,8 @@ public class NetworkManager : MonoBehaviour {
 	
 		Debug.Log("Change player ID");
 		NetworkView anthillNetwork = NetworkView.Find(anthillID);
-		//NetworkView gathererNetwork = NetworkView.Find(gathererID);
 		GameObject anthillObject = anthillNetwork.gameObject;
-		//GameObject gathererObject = gathererNetwork.gameObject;
 		anthillObject.GetComponent<Ownable>().setAsMine(player);
-		//gathererObject.GetComponent<Ownable>().setAsMine(player);
 		Debug.Log("Changed");
 	}
 
