@@ -83,6 +83,7 @@ public class CreateUnitButton : Button {
 					instance.transform.localPosition.y,
 					-2
 				);
+				netMan.changeInstant(instance);
 				if (Network.isClient) netMan.changeID(instance); //have to change ID of Player 2's stuff
 			}
 			else {

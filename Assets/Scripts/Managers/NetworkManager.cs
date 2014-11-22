@@ -26,6 +26,7 @@ public class NetworkManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!antUnitParent) antUnitParent = GameObject.Find("Units");
+		Debug.Log(antUnitParent + " is Set");
 		if (!antHillParent) antHillParent = GameObject.Find("Objects");
 		if (!mapManager) mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
 	}
@@ -47,10 +48,11 @@ public class NetworkManager : MonoBehaviour {
 		//GameObject antUnitObject = (GameObject) Network.Instantiate(gatherer, gathererRedSpawn.transform.position, Quaternion.identity, 0); //initial gatherer
 		GameObject anthillObject = (GameObject) Network.Instantiate(anthill, redAnthillSpawn.transform.position, Quaternion.identity, 0); //initial anthill
 		anthillObject.transform.parent = antHillParent.transform;
-				anthillObject.transform.localPosition = new Vector3(
-					anthillObject.transform.localPosition.x,
-					anthillObject.transform.localPosition.y,
+		anthillObject.transform.localPosition = new Vector3(
+				anthillObject.transform.localPosition.x,
+				anthillObject.transform.localPosition.y,
 					-2);
+		
 		Anthill antHill = anthillObject.GetComponent<Anthill>();
 		antHill.addFoodPoints(20);
 		NetworkView anthillNetworkView = anthillObject.networkView;
@@ -76,11 +78,13 @@ public class NetworkManager : MonoBehaviour {
 	public void changeID(GameObject instance)
 	{
 		NetworkView unitNetwork = instance.networkView;
-		networkView.RPC("fixInstantiation", RPCMode.All, unitNetwork.viewID, "Unit");
+		//networkView.RPC("fixInstantiation", RPCMode.All, unitNetwork.viewID, "Unit");
 		networkView.RPC("changePlayerId", RPCMode.All, unitNetwork.viewID, 2);
-		
-	
-	
+	}
+	public void changeInstant(GameObject instance)
+	{
+		NetworkView unitNetwork = instance.networkView;
+		networkView.RPC("fixInstantiation", RPCMode.All, unitNetwork.viewID, "Unit");
 	}
 	//RPC call for changing the anthill and units to player 2
 	[RPC] void changePlayerId(NetworkViewID anthillID, int player)
@@ -98,6 +102,7 @@ public class NetworkManager : MonoBehaviour {
 	//to properly instantiate the other player's units. 
 	[RPC] void fixInstantiation(NetworkViewID objectNetworkViewID, string type)
 	{
+		
 		NetworkView objectNetworkView = NetworkView.Find(objectNetworkViewID);
 		GameObject gameObject = objectNetworkView.gameObject;
 		if (type == "AntHill"){
@@ -111,6 +116,7 @@ public class NetworkManager : MonoBehaviour {
 		if (type == "Unit") {
 			gameObject.transform.parent = antUnitParent.transform;
 			Debug.Log("GameObject is antunit: " + gameObject);
+			Debug.Log(antUnitParent + " is here!!!!!!");
 				antUnitParent.transform.localPosition = new Vector3(
 					antUnitParent.transform.localPosition.x,
 					antUnitParent.transform.localPosition.y,

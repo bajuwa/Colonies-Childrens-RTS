@@ -343,6 +343,7 @@ public class AntUnit : Attackable {
 	protected void healSelf() {
 		// If we are below perfect health, heal at a rate of 0.333 hp per second
 		currentHp = Mathf.Min(maxHp, currentHp + Time.deltaTime/3);
+		Debug.Log("Network view healing");
 		networkView.RPC("NetworkHealSelf", RPCMode.Others,(int) currentHp);
 		// Ensure we show a healing animation
 		if (!transform.Find(HEALING_ANIMATION_NAME)) spawnHealingAnimation();
