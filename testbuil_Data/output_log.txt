@@ -14,22 +14,22 @@ Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.051 seconds
+- Completed reload, in  0.055 seconds
 desktop: 1920x1080 60Hz; virtual: 3286x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.226719 ms
+UnloadTime: 0.426540 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 120.
-Total: 0.393877 ms (FindLiveObjects: 0.006148 ms CreateObjectMapping: 0.009991 ms MarkObjects: 0.050723 ms  DeleteObjects: 0.011528 ms)
+Total: 0.881516 ms (FindLiveObjects: 0.013833 ms CreateObjectMapping: 0.023056 ms MarkObjects: 0.096836 ms  DeleteObjects: 0.024209 ms)
 
-UnloadTime: 0.301652 ms
+UnloadTime: 0.317023 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1866.
-Total: 0.956065 ms (FindLiveObjects: 0.072242 ms CreateObjectMapping: 0.032278 ms MarkObjects: 0.463430 ms  DeleteObjects: 0.015370 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1862.
+Total: 0.950685 ms (FindLiveObjects: 0.071090 ms CreateObjectMapping: 0.032278 ms MarkObjects: 0.460740 ms  DeleteObjects: 0.015755 ms)
 
 Found 248 objects with tag 'Tile'
  
@@ -112,23 +112,11 @@ Missing a diegetic ant sprite, attempting to initialize
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Network View synchronization error. Received packet but the observed class is not supported as a synchronization type
- 
-(Filename:  Line: 311)
-
-Network View synchronization error. Received packet but the observed class is not supported as a synchronization type
- 
-(Filename:  Line: 311)
-
-Network View synchronization error. Received packet but the observed class is not supported as a synchronization type
- 
-(Filename:  Line: 311)
-
 Calculating where to put new unit
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Creating unit: ScoutUnit (UnityEngine.GameObject)
+Creating unit: WarriorUnit (UnityEngine.GameObject)
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -140,15 +128,11 @@ Changed
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-I CHANGE STUFF
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
 Loading script from player: 2
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Recording position for: ScoutUnit(Clone) (UnityEngine.GameObject) -10264
+Recording position for: WarriorUnit(Clone) (UnityEngine.GameObject) -10258
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -156,16 +140,7 @@ Missing a diegetic ant sprite, attempting to initialize
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: ScoutUnit(Clone) (ScoutUnit)
+User right clicked to give command to unit: WarriorUnit(Clone) (WarriorUnit)
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -173,65 +148,15 @@ Giving ant move to command
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
+calling moveTo
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
 Calculating path to new tile
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: ScoutUnit(Clone) (ScoutUnit)
+User right clicked to give command to unit: WarriorUnit(Clone) (WarriorUnit)
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -239,95 +164,14 @@ Giving ant move to command
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
-Calculating path to new tile
+calling moveTo
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
+  at WarriorUnit.canWalkOn (UnityEngine.GameObject gameObj) [0x00000] in <filename unknown>:0 
+  at AntUnit.canWalkTo (Vector2 position) [0x00000] in <filename unknown>:0 
+  at AntUnit+<moveTo>c__Iterator0.MoveNext () [0x00000] in <filename unknown>:0 
  
 (Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: ScoutUnit(Clone) (ScoutUnit)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Giving ant move to command
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Calculating path to new tile
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at ScoutUnit.Update () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-The server has disconnected from the client. Most likely the server has shut down.
- 
-(Filename:  Line: 745)
 

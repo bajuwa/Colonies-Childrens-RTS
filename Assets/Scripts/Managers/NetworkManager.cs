@@ -15,7 +15,6 @@ public class NetworkManager : MonoBehaviour {
 	private GameObject antHillParent;
 	private GameObject antUnitParent;
 	private MapManager mapManager;
-	private int playerId = 1;
 	
 	private void Start () {
 		if (hostGame == null) {
@@ -80,9 +79,18 @@ public class NetworkManager : MonoBehaviour {
 					gathererObject.transform.localPosition.x,
 					gathererObject.transform.localPosition.y,
 					0);*/
-		networkView.RPC("changePlayerId", RPCMode.AllBuffered, anthillNetwork.viewID, 2);
+		networkView.RPC("changePlayerId", RPCMode.All, anthillNetwork.viewID, 2);
 		Anthill antHill = antHillObject.GetComponent<Anthill>();
 		antHill.addFoodPoints(20);
+	}
+	public void changeID(GameObject instance)
+	{
+		NetworkView unitNetwork = instance.networkView;
+		//networkView.RPC("fixInstantiation", RPCMode.AllBuffered, unitNetwork.viewID);
+		networkView.RPC("changePlayerId", RPCMode.All, unitNetwork.viewID, 2);
+		
+	
+	
 	}
 	//RPC call for changing the anthill and units to player 2
 	[RPC] void changePlayerId(NetworkViewID anthillID, int player)
@@ -97,16 +105,7 @@ public class NetworkManager : MonoBehaviour {
 		//gathererObject.GetComponent<Ownable>().setAsMine(player);
 		Debug.Log("Changed");
 	}
-	public void changeID(GameObject instance)
-	{
-		NetworkView unitNetwork = instance.networkView;
-		//networkView.RPC("fixInstantiation", RPCMode.AllBuffered, unitNetwork.viewID);
-		networkView.RPC("changePlayerId", RPCMode.AllBuffered, unitNetwork.viewID, 2);
-		Debug.Log("I CHANGE STUFF");
-		
-	
-	
-	}
+
 	//Not working yet but when a player creates a unit from their anthill, it is no clickable by the enemy
 	//(they only can get the information from the tiles). The purpose of this function is to get a player
 	//to properly instantiate the other player's units. 
