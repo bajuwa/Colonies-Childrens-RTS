@@ -14,22 +14,22 @@ Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\UnityEngine.dll into Unity Child Domain
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll (this message is harmless)
 Loading C:\IAT410Project\IAT410\testbuil_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-- Completed reload, in  0.055 seconds
+- Completed reload, in  0.052 seconds
 desktop: 1920x1080 60Hz; virtual: 3286x1080 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 Platform assembly: C:\IAT410Project\IAT410\testbuil_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 0.426540 ms
+UnloadTime: 0.224414 ms
 Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 120.
-Total: 0.881516 ms (FindLiveObjects: 0.013833 ms CreateObjectMapping: 0.023056 ms MarkObjects: 0.096836 ms  DeleteObjects: 0.024209 ms)
+Total: 0.384270 ms (FindLiveObjects: 0.006148 ms CreateObjectMapping: 0.009991 ms MarkObjects: 0.051492 ms  DeleteObjects: 0.011143 ms)
 
-UnloadTime: 0.317023 ms
+UnloadTime: 0.297425 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
 Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1862.
-Total: 0.950685 ms (FindLiveObjects: 0.071090 ms CreateObjectMapping: 0.032278 ms MarkObjects: 0.460740 ms  DeleteObjects: 0.015755 ms)
+Total: 0.941462 ms (FindLiveObjects: 0.070321 ms CreateObjectMapping: 0.031894 ms MarkObjects: 0.456129 ms  DeleteObjects: 0.015755 ms)
 
 Found 248 objects with tag 'Tile'
  
@@ -52,6 +52,10 @@ Change player ID
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
 Changed
+ 
+(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
+
+GameObject is anthill: Anthill(Clone) (UnityEngine.GameObject)
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
 
@@ -99,79 +103,4 @@ Loading script from player: 2
 Loading script from player: 1
  
 (Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Loading script from player: 1
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Recording position for: WarriorUnit(Clone) (UnityEngine.GameObject) -10170
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Missing a diegetic ant sprite, attempting to initialize
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Calculating where to put new unit
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Creating unit: WarriorUnit (UnityEngine.GameObject)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Change player ID
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Changed
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Loading script from player: 2
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Recording position for: WarriorUnit(Clone) (UnityEngine.GameObject) -10258
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Missing a diegetic ant sprite, attempting to initialize
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: WarriorUnit(Clone) (WarriorUnit)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Giving ant move to command
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-calling moveTo
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Calculating path to new tile
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-User right clicked to give command to unit: WarriorUnit(Clone) (WarriorUnit)
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-Giving ant move to command
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-calling moveTo
- 
-(Filename: C:/BuildAgent/work/d63dfc6385190b60/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 49)
-
-NullReferenceException: Object reference not set to an instance of an object
-  at WarriorUnit.canWalkOn (UnityEngine.GameObject gameObj) [0x00000] in <filename unknown>:0 
-  at AntUnit.canWalkTo (Vector2 position) [0x00000] in <filename unknown>:0 
-  at AntUnit+<moveTo>c__Iterator0.MoveNext () [0x00000] in <filename unknown>:0 
- 
-(Filename:  Line: -1)
 

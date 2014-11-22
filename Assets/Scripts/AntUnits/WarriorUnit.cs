@@ -211,14 +211,19 @@ public class WarriorUnit : AntUnit {
 	
 	// Warriors can walk on tiles and food items (but only if they aren't already carrying food themselves)
 	protected override bool canWalkOn(GameObject gameObj) {
-		if (gameObj.GetComponent<Scentpath>() != null) return true;
+		Debug.Log("GameObj: " + gameObj);
+		if (gameObj.GetComponent<Scentpath>() != null) {
+		Debug.Log("GameObj is a Scentpath:" + gameObj);
+		return true;}
 		
 		if (gameObj.GetComponent<Tile>() != null) {
+			Debug.Log("GameObj is a Tile:" + gameObj);
 			if (gameObj.GetComponent<Tile>().occupiedBy != null && gameObj.GetComponent<Tile>().occupiedBy != attackTarget.gameObject) return false;
 			return true;
 		}
 		
 		if (attackTarget) {
+			Debug.Log("Attack target sfldjkslfkj" + gameObj);
 			if (gameObj == attackTarget.gameObject) return true;
 		
 			// Since food can be carried by units, check for that too

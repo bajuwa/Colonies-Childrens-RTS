@@ -34,7 +34,6 @@ public class NetworkManager : MonoBehaviour {
 		Network.InitializeServer(2, 25000, !Network.HavePublicAddress());
 		MasterServer.RegisterHost(typeName, gameName);
 	}
-	
 	//Messages
 	//When the server is created, log the registration
 	void OnMasterServerEvent(MasterServerEvent mse) {
@@ -51,9 +50,11 @@ public class NetworkManager : MonoBehaviour {
 				anthillObject.transform.localPosition = new Vector3(
 					anthillObject.transform.localPosition.x,
 					anthillObject.transform.localPosition.y,
-					0);
+					-2);
 		Anthill antHill = anthillObject.GetComponent<Anthill>();
 		antHill.addFoodPoints(20);
+		NetworkView anthillNetworkView = anthillObject.networkView;
+		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetworkView.viewID, "AntHill");
 		/*antUnitObject.transform.parent = antUnitParent.transform;
 				antUnitObject.transform.localPosition = new Vector3(
 					antUnitObject.transform.localPosition.x,
@@ -65,6 +66,7 @@ public class NetworkManager : MonoBehaviour {
 	//and then sends an RPC call the the server to get them to change the blue anthill to blue for the server player.
 	void OnConnectedToServer()
 	{
+		Camera.mainCamera.transform.position = new Vector3(17, 12, -10);
 		GameObject antHillObject = (GameObject) Network.Instantiate(anthill, blueAnthillSpawn.transform.position, Quaternion.identity,0);
 		//GameObject gathererObject = (GameObject) Network.Instantiate(gatherer, gathererBlueSpawn.transform.position, Quaternion.identity, 0); //initial anthill
 		NetworkView anthillNetwork = antHillObject.networkView;
@@ -73,20 +75,21 @@ public class NetworkManager : MonoBehaviour {
 				antHillObject.transform.localPosition = new Vector3(
 					antHillObject.transform.localPosition.x,
 					antHillObject.transform.localPosition.y,
-					0);
+					-2);
 		/*gathererObject.transform.parent = antUnitParent.transform;
 				gathererObject.transform.localPosition = new Vector3(
 					gathererObject.transform.localPosition.x,
 					gathererObject.transform.localPosition.y,
 					0);*/
 		networkView.RPC("changePlayerId", RPCMode.All, anthillNetwork.viewID, 2);
+		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetwork.viewID, "AntHill");
 		Anthill antHill = antHillObject.GetComponent<Anthill>();
 		antHill.addFoodPoints(20);
 	}
 	public void changeID(GameObject instance)
 	{
 		NetworkView unitNetwork = instance.networkView;
-		//networkView.RPC("fixInstantiation", RPCMode.AllBuffered, unitNetwork.viewID);
+		//networkView.RPC("fixInstantiation", RPCMode.All, unitNetwork.viewID, "Unit");
 		networkView.RPC("changePlayerId", RPCMode.All, unitNetwork.viewID, 2);
 		
 	
@@ -109,16 +112,26 @@ public class NetworkManager : MonoBehaviour {
 	//Not working yet but when a player creates a unit from their anthill, it is no clickable by the enemy
 	//(they only can get the information from the tiles). The purpose of this function is to get a player
 	//to properly instantiate the other player's units. 
-	[RPC] void fixInstantiation(NetworkViewID objectNetworkViewID)
+	[RPC] void fixInstantiation(NetworkViewID objectNetworkViewID, string type)
 	{
-		Debug.Log("Fix Instantiation");
 		NetworkView objectNetworkView = NetworkView.Find(objectNetworkViewID);
 		GameObject gameObject = objectNetworkView.gameObject;
-		gameObject.transform.parent = antUnitParent.transform;
+		if (type == "AntHill"){
+			Debug.Log("GameObject is anthill: " + gameObject);
+			gameObject.transform.parent = antHillParent.transform;
+			antHillParent.transform.localPosition = new Vector3(
+				antHillParent.transform.localPosition.x,
+				antHillParent.transform.localPosition.y,
+				-2);
+		}
+		if (type == "Unit") {
+			gameObject.transform.parent = antUnitParent.transform;
+			Debug.Log("GameObject is antunit: " + gameObject);
 				antUnitParent.transform.localPosition = new Vector3(
 					antUnitParent.transform.localPosition.x,
 					antUnitParent.transform.localPosition.y,
-					0);
+					-2);
+		}
 	
 	}
 
