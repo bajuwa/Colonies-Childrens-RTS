@@ -385,7 +385,7 @@ public class AntUnit : Attackable {
 			if (backRightAnt && backRightAnt.Find(HEALING_ANIMATION_NAME)) Destroy(backRightAnt.Find(HEALING_ANIMATION_NAME).gameObject);
 			if (frontAnt && frontAnt.Find(HEALING_ANIMATION_NAME)) Destroy(frontAnt.Find(HEALING_ANIMATION_NAME).gameObject);
 		} else {
-			Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
+			if (transform.Find(HEALING_ANIMATION_NAME)) Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
 		}
 	}
 	

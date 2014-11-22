@@ -50,7 +50,7 @@ public class Anthill : Attackable {
 		Animator singleAnimator = this.gameObject.GetComponent("Animator") as Animator;
 		if (!singleAnimator) singleAnimator = this.gameObject.AddComponent("Animator") as Animator;
 		if (!singleAnimator.runtimeAnimatorController) singleAnimator.runtimeAnimatorController = getAnimatorFromPlayer("anthillAnimator");
-		singleAnimator.SetInteger("STATE", 0);
+		if (singleAnimator.runtimeAnimatorController) singleAnimator.SetInteger("STATE", 0);
 	}
 	
 	protected override void loadDisplayImage() {
