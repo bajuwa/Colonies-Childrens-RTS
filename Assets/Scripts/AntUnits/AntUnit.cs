@@ -356,43 +356,12 @@ public class AntUnit : Attackable {
 		}
 		
 	}
+	
 	[RPC] void NetworkHealSelf (int hp) {
 		currentHp = hp;
 	}
-	protected void spawnHealingAnimation() {
-<<<<<<< HEAD
-		if (Network.isClient || Network.isServer) {
-			GameObject newHealingAnimation = (GameObject) Network.Instantiate(healingAnimation, transform.position, Quaternion.identity, 0);
-			newHealingAnimation.transform.position = new Vector3(
-			newHealingAnimation.transform.position.x,
-			newHealingAnimation.transform.position.y,
-			newHealingAnimation.transform.position.z - 1
-			);
-			newHealingAnimation.transform.parent = transform;
-			newHealingAnimation.name = HEALING_ANIMATION_NAME;
-		}
-		else{
-			GameObject newHealingAnimation = (GameObject) GameObject.Instantiate(healingAnimation, transform.position, Quaternion.identity);
-			newHealingAnimation.transform.position = new Vector3(
-				newHealingAnimation.transform.position.x,
-				newHealingAnimation.transform.position.y,
-				newHealingAnimation.transform.position.z - 1
-			);
-			newHealingAnimation.transform.parent = transform;
-			newHealingAnimation.name = HEALING_ANIMATION_NAME;
-		}
-		
-	}
 	
-	protected void stopHealingSelf() {
-		// If we are below perfect health, heal at a rate of 0.333 hp per second
-		if (transform.Find(HEALING_ANIMATION_NAME))
-			if (Network.isClient || Network.isServer) {
-				Network.Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
-			} else {
-				Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
-				}
-=======
+	protected void spawnHealingAnimation() {
 		Debug.Log("Spawning Healing Animation");
 		if (enableDiegeticUnitCount) {
 			if (backLeftAnt) attachHealingAnimationTo(backLeftAnt.gameObject);
@@ -403,8 +372,32 @@ public class AntUnit : Attackable {
 		}
 	}
 	
+	protected void stopHealingSelf() {
+		if (enableDiegeticUnitCount) {
+			if (backLeftAnt && backLeftAnt.Find(HEALING_ANIMATION_NAME)) destroyThis(backLeftAnt.Find(HEALING_ANIMATION_NAME).gameObject);
+			if (backRightAnt && backRightAnt.Find(HEALING_ANIMATION_NAME)) destroyThis(backRightAnt.Find(HEALING_ANIMATION_NAME).gameObject);
+			if (frontAnt && frontAnt.Find(HEALING_ANIMATION_NAME)) destroyThis(frontAnt.Find(HEALING_ANIMATION_NAME).gameObject);
+		} else {
+			if (transform.Find(HEALING_ANIMATION_NAME)) destroyThis(transform.Find(HEALING_ANIMATION_NAME).gameObject);
+		}
+		// If we are below perfect health, heal at a rate of 0.333 hp per second
+	}
+	
+	private void destroyThis(GameObject gameObj) {
+		if (Network.isClient || Network.isServer) {
+			Network.Destroy(gameObj);
+		} else {
+			Destroy(gameObj);
+		}
+	}
+	
 	private void attachHealingAnimationTo(GameObject gameObj) {
-		GameObject newHealingAnimation = (GameObject) GameObject.Instantiate(healingAnimation, transform.position, Quaternion.identity);
+		GameObject newHealingAnimation;
+		if (Network.isClient || Network.isServer) {
+			newHealingAnimation = (GameObject) Network.Instantiate(healingAnimation, transform.position, Quaternion.identity, 0);
+		} else {
+			newHealingAnimation = (GameObject) GameObject.Instantiate(healingAnimation, transform.position, Quaternion.identity);
+		}
 		newHealingAnimation.name = HEALING_ANIMATION_NAME;
 		newHealingAnimation.transform.parent = gameObj.transform;
 		newHealingAnimation.transform.localScale = new Vector3(1,1,1);
@@ -413,17 +406,6 @@ public class AntUnit : Attackable {
 			-0.08f,
 			-2
 		);
-	}
-	
-	protected void stopHealingSelf() {
-		if (enableDiegeticUnitCount) {
-			if (backLeftAnt && backLeftAnt.Find(HEALING_ANIMATION_NAME)) Destroy(backLeftAnt.Find(HEALING_ANIMATION_NAME).gameObject);
-			if (backRightAnt && backRightAnt.Find(HEALING_ANIMATION_NAME)) Destroy(backRightAnt.Find(HEALING_ANIMATION_NAME).gameObject);
-			if (frontAnt && frontAnt.Find(HEALING_ANIMATION_NAME)) Destroy(frontAnt.Find(HEALING_ANIMATION_NAME).gameObject);
-		} else {
-			if (transform.Find(HEALING_ANIMATION_NAME)) Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
-		}
->>>>>>> bajuwa
 	}
 	
 	protected Anthill getNearbyAnthill(Vector2 position) {

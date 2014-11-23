@@ -36,7 +36,7 @@ public class CreateUnitButton : Button {
 		if (!mapManager) mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
 		if (!playerManager) playerManager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
 		if (!anthillScript) anthillScript = transform.parent.GetComponent<Anthill>();
-		if (!netMan) netMan = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
+		if (!netMan && GameObject.Find("NetworkManager")) netMan = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
 		// If we our parent object is selected, show this button
 		if (parentSelectable.isNeutralOrFriendly() && parentSelectable.isSelected()) {
 			renderer.enabled = true;

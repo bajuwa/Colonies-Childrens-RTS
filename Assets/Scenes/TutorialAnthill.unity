@@ -4368,6 +4368,7 @@ GameObject:
   - 212: {fileID: 345482308}
   - 114: {fileID: 345482307}
   - 58: {fileID: 345482306}
+  - 148: {fileID: 345482309}
   m_Layer: 0
   m_Name: Blueberry
   m_TagString: MapObject
@@ -4440,6 +4441,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &345482309
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 355401606}
+  m_GameObject: {fileID: 345482304}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 345482305}
+  m_ViewID:
+    m_ID: 2
+    m_Type: 1
 --- !u!1 &346754322
 GameObject:
   m_ObjectHideFlags: 0
@@ -4794,6 +4808,7 @@ GameObject:
   - 114: {fileID: 354446334}
   - 58: {fileID: 354446333}
   - 148: {fileID: 354446336}
+  - 148: {fileID: 354446337}
   m_Layer: 10
   m_Name: Anthill
   m_TagString: MapObject
@@ -4883,6 +4898,19 @@ NetworkView:
   m_Observed: {fileID: 354446334}
   m_ViewID:
     m_ID: 13
+    m_Type: 1
+--- !u!148 &354446337
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800002, guid: 935c6047de751c44cb5a54d5eccd4ebe,
+    type: 2}
+  m_PrefabInternal: {fileID: 140742605}
+  m_GameObject: {fileID: 354446331}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 354446332}
+  m_ViewID:
+    m_ID: 4
     m_Type: 1
 --- !u!1001 &355401606
 Prefab:
@@ -5219,7 +5247,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 376357222}
   m_ViewID:
-    m_ID: 3
+    m_ID: 18
     m_Type: 1
 --- !u!1 &377358453
 GameObject:
@@ -5439,7 +5467,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 382201433}
   m_ViewID:
-    m_ID: 14
+    m_ID: 19
     m_Type: 1
 --- !u!148 &382201435
 NetworkView:
@@ -18633,7 +18661,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 14800004, guid: f27d86858339b9b43830ebc763aea85d, type: 2}
       propertyPath: m_ViewID.m_ID
-      value: 3
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 14800004, guid: f27d86858339b9b43830ebc763aea85d, type: 2}
       propertyPath: m_ViewID.m_Type
@@ -18934,6 +18962,7 @@ GameObject:
   - 212: {fileID: 1464407079}
   - 114: {fileID: 1464407078}
   - 58: {fileID: 1464407077}
+  - 148: {fileID: 1464407080}
   m_Layer: 0
   m_Name: Blueberry
   m_TagString: MapObject
@@ -19006,6 +19035,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &1464407080
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 663637975}
+  m_GameObject: {fileID: 1464407075}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1464407076}
+  m_ViewID:
+    m_ID: 1
+    m_Type: 1
 --- !u!1 &1485134015
 GameObject:
   m_ObjectHideFlags: 0
@@ -20706,7 +20748,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 1595575001}
   m_ViewID:
-    m_ID: 15
+    m_ID: 20
     m_Type: 1
 --- !u!1 &1607463937
 GameObject:
@@ -22980,7 +23022,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 1769045230}
   m_ViewID:
-    m_ID: 16
+    m_ID: 21
     m_Type: 1
 --- !u!1 &1773016416
 GameObject:
@@ -27474,6 +27516,7 @@ GameObject:
   - 114: {fileID: 2143612462}
   - 58: {fileID: 2143612461}
   - 148: {fileID: 2143612464}
+  - 148: {fileID: 2143612465}
   m_Layer: 10
   m_Name: Anthill
   m_TagString: MapObject
@@ -27563,4 +27606,17 @@ NetworkView:
   m_Observed: {fileID: 2143612462}
   m_ViewID:
     m_ID: 12
+    m_Type: 1
+--- !u!148 &2143612465
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800002, guid: 935c6047de751c44cb5a54d5eccd4ebe,
+    type: 2}
+  m_PrefabInternal: {fileID: 295174028}
+  m_GameObject: {fileID: 2143612459}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 2143612460}
+  m_ViewID:
+    m_ID: 3
     m_Type: 1
