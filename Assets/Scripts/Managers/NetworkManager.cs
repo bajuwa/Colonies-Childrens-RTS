@@ -51,7 +51,7 @@ public class NetworkManager : MonoBehaviour {
 		anthillObject.transform.localPosition = new Vector3(
 				anthillObject.transform.localPosition.x,
 				anthillObject.transform.localPosition.y,
-					-2);
+					-3);
 		
 		Anthill antHill = anthillObject.GetComponent<Anthill>();
 		antHill.addFoodPoints(20);
@@ -62,14 +62,14 @@ public class NetworkManager : MonoBehaviour {
 	//and then sends an RPC call the the server to get them to change the blue anthill to blue for the server player.
 	void OnConnectedToServer()
 	{
-		Camera.mainCamera.transform.position = new Vector3(17, 12, -10); //set camera for player 2
+		Camera.mainCamera.transform.position = new Vector3(17, 12, -15); //set camera for player 2
 		GameObject antHillObject = (GameObject) Network.Instantiate(anthill, blueAnthillSpawn.transform.position, Quaternion.identity,0);
 		NetworkView anthillNetwork = antHillObject.networkView;
 		antHillObject.transform.parent = antHillParent.transform;
 				antHillObject.transform.localPosition = new Vector3(
 					antHillObject.transform.localPosition.x,
 					antHillObject.transform.localPosition.y,
-					-2);
+					-3);
 		networkView.RPC("changePlayerId", RPCMode.All, anthillNetwork.viewID, 2);
 		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetwork.viewID, "Object");
 		Anthill antHill = antHillObject.GetComponent<Anthill>();
@@ -110,7 +110,7 @@ public class NetworkManager : MonoBehaviour {
 			antHillParent.transform.localPosition = new Vector3(
 				antHillParent.transform.localPosition.x,
 				antHillParent.transform.localPosition.y,
-				-2);
+				-3);
 		}
 		if (type == "Unit") {
 			gameObject.transform.parent = antUnitParent.transform;
@@ -119,7 +119,7 @@ public class NetworkManager : MonoBehaviour {
 				antUnitParent.transform.localPosition = new Vector3(
 					antUnitParent.transform.localPosition.x,
 					antUnitParent.transform.localPosition.y,
-					-2);
+					-5);
 		}
 	
 	}

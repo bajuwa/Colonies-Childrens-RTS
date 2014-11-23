@@ -102,6 +102,7 @@ public class WarriorUnit : AntUnit {
 				cloud = Network.Instantiate(combatCloud,
 											new Vector3(pos.x, pos.y, transform.position.z - 1),
 											Quaternion.identity, 0) as GameObject;
+				networkView.RPC("fixCombatCloud", RPCMode.All, cloud.networkView.viewID);
 			}
 			else {
 				cloud = GameObject.Instantiate(combatCloud, 
@@ -171,7 +172,11 @@ public class WarriorUnit : AntUnit {
 		// Note: if this unit dies, make sure to delete it at the end!
 		if (this.currentHp <= 0) this.kill();
 	}
-	
+	[RPC] public void fixCombatCloud(NetworkViewID combatCloudNetViewID) {
+		NetworkView combatCloudNetView = NetworkView.Find(combatCloudNetViewID);
+		GameObject combatCloud = combatCloudNetView.gameObject;
+		combatCloud.transform.parent = GameObject.Find("Objects").transform;
+	}
 	public override Sprite getFightSprite() {
 		return getSpriteFromPlayer("warriorSprite");
 	}
