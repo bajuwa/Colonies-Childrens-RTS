@@ -8,6 +8,8 @@ public class CameraManager : MonoBehaviour {
 	private Camera mainCam;
 	private GameObject mapImage;
 	
+	public float percentOfScreenToTriggerPan = 0.05f;
+	
 	public float cameraSpeed = 0.3f;
 	private float camMinX;
 	private float camMaxX;
@@ -66,13 +68,10 @@ public class CameraManager : MonoBehaviour {
 		
 		// If the mouse is in the outer 10% of the screen, camera should pan
 		// Note: Apparently unity still detects the mouse outside the webapp space, so keep it bounded by the screen dimensions as well
-		if ((mousePos.x > (Screen.width * 0.9f) || 
-			 mousePos.x < (Screen.width * 0.1f) ||
-			 mousePos.y > (Screen.height * 0.9f) ||
-			 mousePos.y < (Screen.height * 0.1f))
-			&&
-			mousePos.x < Screen.width && mousePos.x > 0 &&
-			mousePos.y < Screen.height && mousePos.y > 0) {
+		if  (mousePos.x > (Screen.width * (1f - percentOfScreenToTriggerPan)) || 
+			 mousePos.x < (Screen.width * percentOfScreenToTriggerPan) ||
+			 mousePos.y > (Screen.height * (1f - percentOfScreenToTriggerPan)) ||
+			 mousePos.y < (Screen.height * percentOfScreenToTriggerPan)) {
 				return true;
 		}
 		

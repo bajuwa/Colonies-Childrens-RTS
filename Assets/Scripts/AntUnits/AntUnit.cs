@@ -133,6 +133,7 @@ public class AntUnit : Attackable {
 		
 		// Continue to check and expand the first Path in the queue until we reach our target
 		Path path;
+		float startingTime = Time.time;
 		while (true) {
 			// If we have no paths left in the queue, then a solution is impossible
 			if (priorityQueue.getCount() == 0) {
@@ -166,8 +167,11 @@ public class AntUnit : Attackable {
 				priorityQueue.add(copiedPath);
 			}
 			
-			// Yield the coroutine to let the rest of unity work for a bit (until the next frame)
-			yield return null;
+			// If 100 milliseconds have passed Yield the coroutine to let the rest of unity work for a bit (until the next frame)
+			if (Time.time - startingTime > 0.1f) {
+				yield return null;
+				startingTime = Time.time;
+			}
 		}
 		//Debug.Log("Found optimal path");
 		setPath(path);
@@ -346,13 +350,17 @@ public class AntUnit : Attackable {
 		Debug.Log("Network view healing");
 		networkView.RPC("NetworkHealSelf", RPCMode.Others,(int) currentHp);
 		// Ensure we show a healing animation
-		if (!transform.Find(HEALING_ANIMATION_NAME)) spawnHealingAnimation();
+		if ((!enableDiegeticUnitCount && !transform.Find(HEALING_ANIMATION_NAME)) || 
+			(enableDiegeticUnitCount && !frontAnt.transform.Find(HEALING_ANIMATION_NAME))) {
+				spawnHealingAnimation();
+		}
 		
 	}
 	[RPC] void NetworkHealSelf (int hp) {
 		currentHp = hp;
 	}
 	protected void spawnHealingAnimation() {
+<<<<<<< HEAD
 		if (Network.isClient || Network.isServer) {
 			GameObject newHealingAnimation = (GameObject) Network.Instantiate(healingAnimation, transform.position, Quaternion.identity, 0);
 			newHealingAnimation.transform.position = new Vector3(
@@ -384,6 +392,38 @@ public class AntUnit : Attackable {
 			} else {
 				Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
 				}
+=======
+		Debug.Log("Spawning Healing Animation");
+		if (enableDiegeticUnitCount) {
+			if (backLeftAnt) attachHealingAnimationTo(backLeftAnt.gameObject);
+			if (backRightAnt) attachHealingAnimationTo(backRightAnt.gameObject);
+			if (frontAnt) attachHealingAnimationTo(frontAnt.gameObject);
+		} else {
+			attachHealingAnimationTo(this.gameObject);
+		}
+	}
+	
+	private void attachHealingAnimationTo(GameObject gameObj) {
+		GameObject newHealingAnimation = (GameObject) GameObject.Instantiate(healingAnimation, transform.position, Quaternion.identity);
+		newHealingAnimation.name = HEALING_ANIMATION_NAME;
+		newHealingAnimation.transform.parent = gameObj.transform;
+		newHealingAnimation.transform.localScale = new Vector3(1,1,1);
+		newHealingAnimation.transform.localPosition = new Vector3(
+			0,
+			-0.08f,
+			-2
+		);
+	}
+	
+	protected void stopHealingSelf() {
+		if (enableDiegeticUnitCount) {
+			if (backLeftAnt && backLeftAnt.Find(HEALING_ANIMATION_NAME)) Destroy(backLeftAnt.Find(HEALING_ANIMATION_NAME).gameObject);
+			if (backRightAnt && backRightAnt.Find(HEALING_ANIMATION_NAME)) Destroy(backRightAnt.Find(HEALING_ANIMATION_NAME).gameObject);
+			if (frontAnt && frontAnt.Find(HEALING_ANIMATION_NAME)) Destroy(frontAnt.Find(HEALING_ANIMATION_NAME).gameObject);
+		} else {
+			if (transform.Find(HEALING_ANIMATION_NAME)) Destroy(transform.Find(HEALING_ANIMATION_NAME).gameObject);
+		}
+>>>>>>> bajuwa
 	}
 	
 	protected Anthill getNearbyAnthill(Vector2 position) {

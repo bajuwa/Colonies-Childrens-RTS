@@ -71,7 +71,13 @@ public class GathererUnit : AntUnit {
 	}
 	
 	protected override void loadDisplayImage() {
-		displayImage = getTextureFromPlayer("gathererDisplay");
+		if (currentHp/maxHp <= .33f) {
+			displayImage = getTextureFromPlayer("gathererDisplayDying");
+		} else if (currentHp/maxHp <= .66f) {
+			displayImage = getTextureFromPlayer("gathererDisplayDamaged");
+		} else {
+			displayImage = getTextureFromPlayer("gathererDisplayHealthy");
+		}
 	}
 	
 	public override Sprite getFightSprite() {
@@ -105,6 +111,7 @@ public class GathererUnit : AntUnit {
 		tempPos.y += 0.8f; 
 		tempPos.z = -1f; 
 		gameObj.transform.localPosition = tempPos;
+		gameObj.transform.localScale = new Vector3(1,1,1);
 		
 		// Re-enable the selectable script so that we can select it again
 		gameObj.GetComponent<Selectable>().enabled = false;
@@ -117,6 +124,9 @@ public class GathererUnit : AntUnit {
 		// To avoid automatically picking the food back up again, set a flag
 		droppedFood = true;
 		dropOffAtAnthill = null;
+		
+		// When gatherers are carrying food, they move at half their original speed, so when they drop food, fix the speed stat
+		speed *= 2f;
 		
 		// Reassign the food back to the 'Objects' sprite in the map
 		Transform foodTransform = this.gameObject.GetComponentInChildren<Food>().gameObject.transform;
@@ -141,9 +151,6 @@ public class GathererUnit : AntUnit {
 		// Disable the selectable script so that it doesn't interfere with selecting the underlying unit
 		foodTransform.gameObject.GetComponent<Selectable>().enabled = true;
 		foodTransform.gameObject.GetComponent<Collider2D>().enabled = true;
-		
-		// When gatherers are carrying food, they move at half their original speed, so when they drop food, fix the speed stat
-		speed *= 2f;
 	}
 	
 	// Gatherers can walk on tiles and food items (but only if they aren't already carrying food themselves)

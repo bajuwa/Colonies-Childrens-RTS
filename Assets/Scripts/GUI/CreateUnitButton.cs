@@ -6,20 +6,22 @@ public class CreateUnitButton : Button {
 	private Selectable parentSelectable;
 	private GameObject antUnitParent;
 	private MapManager mapManager;
+	private PlayerManager playerManager;
 	private Anthill anthillScript;
 	private NetworkManager netMan;
+	
+	private Color originalColor;
 	
 	public GameObject unitToCreate;
 	public int foodCost = 0;
 	
-	public Sprite enabledImage;
-	public Sprite disabledImage;
 	private bool buttonEnabled;
 
 	// Use this for initialization
 	protected override void Start() {
 		base.Start();
 		loadParentSelectable();
+		originalColor = renderer.material.color;
 	}
 	
 	private void loadParentSelectable() {
@@ -32,18 +34,19 @@ public class CreateUnitButton : Button {
 		loadParentSelectable();
 		if (!antUnitParent) antUnitParent = GameObject.Find("Units");
 		if (!mapManager) mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
+		if (!playerManager) playerManager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
 		if (!anthillScript) anthillScript = transform.parent.GetComponent<Anthill>();
 		if (!netMan) netMan = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
 		// If we our parent object is selected, show this button
 		if (parentSelectable.isNeutralOrFriendly() && parentSelectable.isSelected()) {
 			renderer.enabled = true;
 			// If we can't afford to make this unit, disable the button
-			if (anthillScript.getStoredFoodPoints() < foodCost) {
+			if (anthillScript.getStoredFoodPoints() < foodCost || hasReachedUnitCap()) {
 				buttonEnabled = false;
-				GetComponent<SpriteRenderer>().sprite = disabledImage;
+				renderer.material.color = Color.grey;
 			} else {
 				buttonEnabled = true;
-				GetComponent<SpriteRenderer>().sprite = enabledImage;
+				renderer.material.color = Color.white;
 			}
 		} else {
 			renderer.enabled = false;
@@ -65,6 +68,7 @@ public class CreateUnitButton : Button {
 			Tile nearestTile = anthillScript.getNearestUnoccupiedTile(transform.parent.position);
 			
 			Debug.Log("Creating unit: " + unitToCreate.ToString());
+			playerManager.modifyUnitCount(1);
 			//Note: Everything in the "if" statement is network based.
 			//It checks if the game is networked (if the network is a server or client)
 			//and then network instantiates that object.
@@ -101,5 +105,12 @@ public class CreateUnitButton : Button {
 				instance.GetComponent<Ownable>().setAsMine(anthillScript.getPlayerId());
 			}
 		}
+	}
+	
+	private bool hasReachedUnitCap() {
+		int maxUnitCount = 5 + (playerManager.getTotalAnthillCount() * 5);
+		int currentUnitCount = playerManager.getTotalUnitCount();
+		if (currentUnitCount >= maxUnitCount) return true;
+		return false;
 	}
 }

@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Ownable : MonoBehaviour {
 	
-	private PlayerManager playerManager;
+	protected PlayerManager playerManager;
 	
 	// Sets ownership to determine allied vs enemy vs neutral objects
 	// 0 is neutral, 1 and 2 are their respective player ids

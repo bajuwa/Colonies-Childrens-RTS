@@ -22,7 +22,13 @@ public class QueenUnit : AntUnit {
 	}
 	
 	protected override void loadDisplayImage() {
-		displayImage = getTextureFromPlayer("queenDisplay");
+		if (currentHp/maxHp <= .33f) {
+			displayImage = getTextureFromPlayer("queenDisplayDying");
+		} else if (currentHp/maxHp <= .66f) {
+			displayImage = getTextureFromPlayer("queenDisplayDamaged");
+		} else {
+			displayImage = getTextureFromPlayer("queenDisplayHealthy");
+		}
 	}
 	
 	public override Sprite getFightSprite() {

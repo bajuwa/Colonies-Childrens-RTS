@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 53f2786a0f1835d4a8a8f3b874568df5
+guid: 133b185e5399c074f84d8d50fbafd032
 TextureImporter:
   fileIDToRecycleName:
     21300000: R_scent_path_0
@@ -8,12 +8,6 @@ TextureImporter:
     21300006: R_scent_path_3
     21300008: R_scent_path_4
     21300010: R_scent_path_5
-    21300012: R_scent_path_6
-    21300014: R_scent_path_7
-    21300016: R_scent_path_8
-    21300018: R_scent_path_9
-    21300020: R_scent_path_10
-    21300022: R_scent_path_11
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -62,120 +56,60 @@ TextureImporter:
     - name: R_scent_path_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 195
-        width: 1
-        height: 1
+        x: 0
+        y: 0
+        width: 152
+        height: 152
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: R_scent_path_1
       rect:
         serializedVersion: 2
-        x: 0
+        x: 152
         y: 0
-        width: 201
-        height: 200
+        width: 145
+        height: 152
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: R_scent_path_2
       rect:
         serializedVersion: 2
-        x: 201
+        x: 297
         y: 0
-        width: 187
-        height: 200
+        width: 152
+        height: 152
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: R_scent_path_3
       rect:
         serializedVersion: 2
-        x: 390
+        x: 450
         y: 0
-        width: 201
-        height: 200
+        width: 142
+        height: 152
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: R_scent_path_4
       rect:
         serializedVersion: 2
-        x: 586
-        y: 171
-        width: 20
-        height: 19
+        x: 592
+        y: 0
+        width: 154
+        height: 152
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: R_scent_path_5
       rect:
         serializedVersion: 2
-        x: 592
-        y: 180
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: R_scent_path_6
-      rect:
-        serializedVersion: 2
-        x: 782
+        x: 746
         y: 0
-        width: 202
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: R_scent_path_7
-      rect:
-        serializedVersion: 2
-        x: 912
-        y: 173
-        width: 19
-        height: 20
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: R_scent_path_8
-      rect:
-        serializedVersion: 2
-        x: 988
-        y: 0
-        width: 190
-        height: 200
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: R_scent_path_9
-      rect:
-        serializedVersion: 2
-        x: 15
-        y: 4
-        width: 1
-        height: 1
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: R_scent_path_10
-      rect:
-        serializedVersion: 2
-        x: 407
-        y: 5
-        width: 1
-        height: 1
-      alignment: 9
-      pivot: {x: 34.0029297, y: 5.52544785}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: R_scent_path_11
-      rect:
-        serializedVersion: 2
-        x: 594
-        y: 0
-        width: 188
-        height: 200
+        width: 154
+        height: 152
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

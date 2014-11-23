@@ -32,7 +32,13 @@ public class WarriorUnit : AntUnit {
 	}
 	
 	protected override void loadDisplayImage() {
-		displayImage = getTextureFromPlayer("warriorDisplay");
+		if (currentHp/maxHp <= .33f) {
+			displayImage = getTextureFromPlayer("warriorDisplayDying");
+		} else if (currentHp/maxHp <= .66f) {
+			displayImage = getTextureFromPlayer("warriorDisplayDamaged");
+		} else {
+			displayImage = getTextureFromPlayer("warriorDisplayHealthy");
+		}
 	}
 	
 	protected override string getAnimationName() {

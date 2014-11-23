@@ -18,6 +18,9 @@ public class UnitCount : Ownable {
 	private List<GameObject> queens;
 	private int queenIndex = 0;
 	
+	private int totalCount = 0;
+	private int unitCap = 0;
+	
 	public void centerOnNext(string name) {
 		switch (name) {
 			case "gatherer":
@@ -86,6 +89,8 @@ public class UnitCount : Ownable {
 			if (ant.GetComponent<ScoutUnit>()) scouts.Add(ant);
 			if (ant.GetComponent<QueenUnit>()) queens.Add(ant);
 		}
+		totalCount = gatherers.Count + warriors.Count + scouts.Count + queens.Count;
+		unitCap = 5 + (playerManager.getTotalAnthillCount() * 5);
 	}
 	
 	private void updateCounts() {
@@ -93,6 +98,7 @@ public class UnitCount : Ownable {
 		transform.Find("warriorHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + warriors.Count.ToString();
 		transform.Find("scoutHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + scouts.Count.ToString();
 		transform.Find("queenHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + queens.Count.ToString();
+		transform.Find("TotalUnitCount").gameObject.GetComponent<PlaceTextFromCorner>().text = "Total: " + totalCount + "/" + unitCap;
 	}
 	
 	private void centerOn(GameObject obj) {

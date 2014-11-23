@@ -1844,16 +1844,30 @@ MonoBehaviour:
   gathererAnimator: {fileID: 9100000, guid: c509e5bd5478ecb4abae6b0d2ca9a602, type: 2}
   warriorAnimator: {fileID: 9100000, guid: 8d610639bcb7e274da0aec6f9ad9b106, type: 2}
   scoutAnimator: {fileID: 9100000, guid: 71165b4acfa93be429d465ea64513cbb, type: 2}
-  queenAnimator: {fileID: 9100000, guid: 71165b4acfa93be429d465ea64513cbb, type: 2}
+  queenAnimator: {fileID: 9100000, guid: cd308f399b86d7b42ae5fc0e93c0aaad, type: 2}
+  anthillAnimator: {fileID: 9100000, guid: f59f1a3bbeafe9949938f93532169543, type: 2}
   gathererSprite: {fileID: 21300000, guid: 5bb565751224cd6468c4ccdbf12a58e0, type: 3}
   warriorSprite: {fileID: 21300000, guid: 45aae1dbadc1f74469e40d6f3a16ac40, type: 3}
   scoutSprite: {fileID: 21300000, guid: 7745173eddb08b64ca456c0ef554934f, type: 3}
-  queenSprite: {fileID: 21300000, guid: 90c2afdefd076ae4289e537ff93fd598, type: 3}
+  queenSprite: {fileID: 21300000, guid: 044b13b751a98654fa24a5eb6791dd1d, type: 3}
   anthillSprite: {fileID: 21300000, guid: ab4b2f74bed6aab4586e515b66b728fa, type: 3}
-  gathererDisplay: {fileID: 2800000, guid: 5bb565751224cd6468c4ccdbf12a58e0, type: 3}
-  warriorDisplay: {fileID: 2800000, guid: 45aae1dbadc1f74469e40d6f3a16ac40, type: 3}
-  scoutDisplay: {fileID: 2800000, guid: 7745173eddb08b64ca456c0ef554934f, type: 3}
-  queenDisplay: {fileID: 2800000, guid: 90c2afdefd076ae4289e537ff93fd598, type: 3}
+  gathererDisplayHealthy: {fileID: 2800000, guid: 5bb565751224cd6468c4ccdbf12a58e0,
+    type: 3}
+  warriorDisplayHealthy: {fileID: 2800000, guid: 45aae1dbadc1f74469e40d6f3a16ac40,
+    type: 3}
+  scoutDisplayHealthy: {fileID: 2800000, guid: 7745173eddb08b64ca456c0ef554934f, type: 3}
+  queenDisplayHealthy: {fileID: 2800000, guid: 044b13b751a98654fa24a5eb6791dd1d, type: 3}
+  gathererDisplayDamaged: {fileID: 2800000, guid: 7f53c54b6562f704280c683fc3a5a1f1,
+    type: 3}
+  warriorDisplayDamaged: {fileID: 2800000, guid: 9df609d72d3201c478b20ee1705a2b08,
+    type: 3}
+  scoutDisplayDamaged: {fileID: 2800000, guid: e5e16438d1efba246b055f2771d49f87, type: 3}
+  queenDisplayDamaged: {fileID: 2800000, guid: d871715ffe2256f43b873da05979c5ee, type: 3}
+  gathererDisplayDying: {fileID: 2800000, guid: 4414b0cfe7b9875458a76abbb6219f5f,
+    type: 3}
+  warriorDisplayDying: {fileID: 2800000, guid: 9e45cf8e33c413d4e9cceef7611ae4f2, type: 3}
+  scoutDisplayDying: {fileID: 2800000, guid: a150d9825f6773f4ea09bfa2836b2016, type: 3}
+  queenDisplayDying: {fileID: 2800000, guid: 4cfb853163a83f145b440972f7aa5869, type: 3}
   scentpathDisplay: {fileID: 2800000, guid: 40400a12bd8defa4ca9e61e3b3e80b8d, type: 3}
   anthillDisplay: {fileID: 2800000, guid: ab4b2f74bed6aab4586e515b66b728fa, type: 3}
   gathererHead: {fileID: 2800000, guid: ab054b6f10448fa4d8428024f231d0e7, type: 3}
@@ -5035,6 +5049,8 @@ GameObject:
   - 114: {fileID: 376357224}
   - 148: {fileID: 376357226}
   - 148: {fileID: 376357227}
+  - 148: {fileID: 376357229}
+  - 148: {fileID: 376357228}
   - 148: {fileID: 376357223}
   m_Layer: 0
   m_Name: PlayerManager
@@ -5067,7 +5083,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 376357222}
   m_ViewID:
-    m_ID: 3
+    m_ID: 4
     m_Type: 1
 --- !u!114 &376357224
 MonoBehaviour:
@@ -5116,7 +5132,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 376357222}
   m_ViewID:
-    m_ID: 4
+    m_ID: 5
     m_Type: 1
 --- !u!148 &376357227
 NetworkView:
@@ -5129,7 +5145,33 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 376357222}
   m_ViewID:
-    m_ID: 1
+    m_ID: 6
+    m_Type: 1
+--- !u!148 &376357228
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800006, guid: f27d86858339b9b43830ebc763aea85d,
+    type: 2}
+  m_PrefabInternal: {fileID: 325735085}
+  m_GameObject: {fileID: 376357221}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 376357222}
+  m_ViewID:
+    m_ID: 2
+    m_Type: 1
+--- !u!148 &376357229
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800004, guid: f27d86858339b9b43830ebc763aea85d,
+    type: 2}
+  m_PrefabInternal: {fileID: 325735085}
+  m_GameObject: {fileID: 376357221}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 376357222}
+  m_ViewID:
+    m_ID: 3
     m_Type: 1
 --- !u!1 &377358453
 GameObject:
@@ -7832,62 +7874,28 @@ MonoBehaviour:
   instructions:
   - title: Gatherer
     messages:
-    - The Gatherer is undoubtably your most important type of Ant in Colonies.
-    - Using your Gatherers, you can venture out in to the map and collect food, which
-      will help you thrive.
+    - The Gatherer is the most important unit.  They collect food for the anthill
+      so you can build up the defenses and to create new units.
+    - There are different types of food around the map, some of which give more food
+      to the anthill.
   - title: Food
     messages:
-    - While food can come in all shapes and sizes, each piece of food shares a few
-      common properties.
-    - First off, each piece of Food has a Value.  This Food Value will come in to
-      effect when creating new Ant Units.
-    - Basically, the higher the Food Value, the more Ant Units you can make with it.
-    - Next is Rarity, which tells you how often you can expect to see the food.
-    - Naturally, higher valued Food will be more rare, and lower valued Food will
-      be fairly common.
-    - To find out the Value and Rarity of a food, try selecting one with Left-Click.
-  - title: Pick Up Food
+    - Just remember, healthy food gives you more food points while unhealthy food
+      give less.
+    - "However, healthy foods are rarer and unhealthy foods are more common.  It\u2019s
+      up to you to decide what to feed your ants!"
+  - title: Gathering
     messages:
-    - Regardless of how Valuable or Rare a piece of Food is, it means nothing if you
-      can't bring it back to your Anthill.
-    - In order to do so, you will need to select your Gatherer with Left-Click, then
-      Right-Click on some Food.
-    - This triggers a Gatherers Gather Command, which is shown by the Gloved Cursor
-      when you hover over Food.
-    - When your Gatherer reaches the Food, it will automatically pick it up.
-    - Give it a try now;  Go pick up one of the Blueberries in the center of the map.
-  - title: Moving Food
-    messages:
-    - Now that you have picked up some Food, try moving your Gatherer back to your
-      Anthill.
-    - Notice how your Gatherer moves slower while it's holding Food?
-    - So long as your Gatherer is carrying Food, it will move at half its normal speed
-      until you drop the Food again.
+    - Try commanding your Gatherer to pick up the blueberries in the middle of the
+      map. Left Click the ant and right click the blueberry to pick it up.
+    - ' After picking it up, move it back to your Anthill and Right Click the anthill
+      to put the food in it.'
   - title: Drop Food
     messages:
-    - Once you've picked up the Blueberry, you will notice a button hovering overtop
-      of your Gatherer.
-    - If you press this button, your Gatherer will drop the piece of Food it's carrying.
-    - As you play Colonies, you may find many reasons to drop your Food, but the most
-      important reason is to place it in your Anthill.
-  - title: Anthills
-    messages:
-    - Your Anthill is considered your "Home Base", as it is where you store your Food
-      and create new Ant Units.
-    - If you drop food in one of the tiles adjacent to your Anthill, it will automatically
-      be deposited in to your Food Storage.
-    - Your Gatherer is then free to go collect more Food for your Colony!
-  - title: Weak and Vulnerable
-    messages:
-    - Gatherers are very important to your Colony, but you should note they are weak
-      and vulnerable.
-    - Take a look at the stats of your Gatherer by selecting it with Left-Click and
-      looking at the Display Box in the bottom left.
-    - See how low its Attack and Defense stats are?
-    - This means that if it were to be attacked out in the map, it could die fairly
-      easily, preventing you from gatherering the vital Food!
-    - In order to protect your Gatherers, you should invest in some Warriors, which
-      we will cover in our next Lesson.
+    - You can drop the food on the ground at anytime by clicking on the little button
+      on top of the Gatherer holding the food.
+    - "Also, ants move slower when they\u2019re carrying food so be careful when collecting
+      food!"
 --- !u!212 &568763121
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -10561,7 +10569,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 849635573}
   m_ViewID:
-    m_ID: 5
+    m_ID: 7
     m_Type: 1
 --- !u!148 &849635579
 NetworkView:
@@ -10574,7 +10582,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 849635574}
   m_ViewID:
-    m_ID: 6
+    m_ID: 8
     m_Type: 1
 --- !u!1 &852697765
 GameObject:
@@ -10587,6 +10595,7 @@ GameObject:
   - 212: {fileID: 852697769}
   - 114: {fileID: 852697768}
   - 58: {fileID: 852697767}
+  - 148: {fileID: 852697770}
   m_Layer: 10
   m_Name: Anthill
   m_TagString: MapObject
@@ -10664,6 +10673,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &852697770
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 935c6047de751c44cb5a54d5eccd4ebe,
+    type: 2}
+  m_PrefabInternal: {fileID: 2025196279}
+  m_GameObject: {fileID: 852697765}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 852697768}
+  m_ViewID:
+    m_ID: 1
+    m_Type: 1
 --- !u!1 &862463178
 GameObject:
   m_ObjectHideFlags: 0
@@ -13076,6 +13098,8 @@ GameObject:
   - 4: {fileID: 1060369901}
   - 131: {fileID: 1060369903}
   - 114: {fileID: 1060369902}
+  - 114: {fileID: 1060369905}
+  - 61: {fileID: 1060369904}
   m_Layer: 0
   m_Name: warriorHead
   m_TagString: Untagged
@@ -13134,6 +13158,31 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!61 &1060369904
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100002, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1127993452}
+  m_GameObject: {fileID: 1060369900}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!114 &1060369905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400024, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1127993452}
+  m_GameObject: {fileID: 1060369900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: warrior
 --- !u!1 &1061506373
 GameObject:
   m_ObjectHideFlags: 0
@@ -13443,6 +13492,8 @@ GameObject:
   - 4: {fileID: 1101092640}
   - 131: {fileID: 1101092642}
   - 114: {fileID: 1101092641}
+  - 114: {fileID: 1101092644}
+  - 61: {fileID: 1101092643}
   m_Layer: 0
   m_Name: queenHead
   m_TagString: Untagged
@@ -13501,6 +13552,31 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!61 &1101092643
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100006, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1127993452}
+  m_GameObject: {fileID: 1101092639}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!114 &1101092644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400028, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1127993452}
+  m_GameObject: {fileID: 1101092639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: queen
 --- !u!1 &1109878125
 GameObject:
   m_ObjectHideFlags: 0
@@ -21169,6 +21245,8 @@ GameObject:
   - 4: {fileID: 1687093044}
   - 131: {fileID: 1687093046}
   - 114: {fileID: 1687093045}
+  - 114: {fileID: 1687093048}
+  - 61: {fileID: 1687093047}
   m_Layer: 0
   m_Name: gathererHead
   m_TagString: Untagged
@@ -21227,6 +21305,31 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!61 &1687093047
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100000, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1127993452}
+  m_GameObject: {fileID: 1687093043}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!114 &1687093048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400022, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1127993452}
+  m_GameObject: {fileID: 1687093043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: gatherer
 --- !u!1 &1688595761
 GameObject:
   m_ObjectHideFlags: 0
@@ -24229,6 +24332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minOrthoSize: 7
   maxOrthoSize: 12
+  percentOfScreenToTriggerPan: .0199999996
   cameraSpeed: .5
 --- !u!212 &1914749639
 SpriteRenderer:
@@ -25172,6 +25276,8 @@ GameObject:
   - 4: {fileID: 2032925567}
   - 131: {fileID: 2032925569}
   - 114: {fileID: 2032925568}
+  - 114: {fileID: 2032925571}
+  - 61: {fileID: 2032925570}
   m_Layer: 0
   m_Name: scoutHead
   m_TagString: Untagged
@@ -25230,6 +25336,31 @@ GUITexture:
   m_RightBorder: 0
   m_TopBorder: 0
   m_BottomBorder: 0
+--- !u!61 &2032925570
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6100004, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1127993452}
+  m_GameObject: {fileID: 2032925566}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 1, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!114 &2032925571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11400026, guid: 4a41d734c15ae974b880906ce6e20ddd,
+    type: 2}
+  m_PrefabInternal: {fileID: 1127993452}
+  m_GameObject: {fileID: 2032925566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d17983ae018b80e459f1d70d1d9fc7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameToCycle: scout
 --- !u!1 &2041708234
 GameObject:
   m_ObjectHideFlags: 0
@@ -26127,22 +26258,36 @@ MonoBehaviour:
   gathererAnimator: {fileID: 9100000, guid: f00d31eae9380024ba184eb471cb0e9c, type: 2}
   warriorAnimator: {fileID: 9100000, guid: 74f41bbd92d798649b80cb014ef3e0e7, type: 2}
   scoutAnimator: {fileID: 9100000, guid: 10b530862e220ec4f97ffef17c3f0aeb, type: 2}
-  queenAnimator: {fileID: 9100000, guid: 10b530862e220ec4f97ffef17c3f0aeb, type: 2}
+  queenAnimator: {fileID: 9100000, guid: 023217b652a37644f90b1495d0d5b16c, type: 2}
+  anthillAnimator: {fileID: 9100000, guid: 26fba35d4ed167a4a84597e4a5f25ad5, type: 2}
   gathererSprite: {fileID: 21300000, guid: dc075d287bdefde47bb8713314441bfe, type: 3}
   warriorSprite: {fileID: 21300000, guid: 79a74a66b5894fc4288a8d100ab8f6d0, type: 3}
   scoutSprite: {fileID: 21300000, guid: 4cd4497cbda1d7647a0af67697f9f55e, type: 3}
   queenSprite: {fileID: 21300000, guid: 90c2afdefd076ae4289e537ff93fd598, type: 3}
   anthillSprite: {fileID: 21300000, guid: 470088b5fd6ff4546892dcfb8d93cd57, type: 3}
-  gathererDisplay: {fileID: 2800000, guid: dc075d287bdefde47bb8713314441bfe, type: 3}
-  warriorDisplay: {fileID: 2800000, guid: 79a74a66b5894fc4288a8d100ab8f6d0, type: 3}
-  scoutDisplay: {fileID: 2800000, guid: 4cd4497cbda1d7647a0af67697f9f55e, type: 3}
-  queenDisplay: {fileID: 2800000, guid: 90c2afdefd076ae4289e537ff93fd598, type: 3}
+  gathererDisplayHealthy: {fileID: 2800000, guid: dc075d287bdefde47bb8713314441bfe,
+    type: 3}
+  warriorDisplayHealthy: {fileID: 2800000, guid: 79a74a66b5894fc4288a8d100ab8f6d0,
+    type: 3}
+  scoutDisplayHealthy: {fileID: 2800000, guid: 4cd4497cbda1d7647a0af67697f9f55e, type: 3}
+  queenDisplayHealthy: {fileID: 2800000, guid: 90c2afdefd076ae4289e537ff93fd598, type: 3}
+  gathererDisplayDamaged: {fileID: 2800000, guid: eead7e6967af0b0478cc2bc5b65d5405,
+    type: 3}
+  warriorDisplayDamaged: {fileID: 2800000, guid: 7c6a8f4c1094b4a429e039527abf330b,
+    type: 3}
+  scoutDisplayDamaged: {fileID: 2800000, guid: 8336698f5269e434ca0511687795ce07, type: 3}
+  queenDisplayDamaged: {fileID: 2800000, guid: 88c8054987e1d7243ad37c257ea3d2a5, type: 3}
+  gathererDisplayDying: {fileID: 2800000, guid: 173270f9f498f0e409fddd6695d3968f,
+    type: 3}
+  warriorDisplayDying: {fileID: 2800000, guid: 082fd0361e0ef4f4dac1c2fff285b69c, type: 3}
+  scoutDisplayDying: {fileID: 2800000, guid: a68e78cef05e6c544a6593c9a8dd7e9b, type: 3}
+  queenDisplayDying: {fileID: 2800000, guid: 1fcb782d9b8e15a4481f89c12e55580e, type: 3}
   scentpathDisplay: {fileID: 2800000, guid: 40400a12bd8defa4ca9e61e3b3e80b8d, type: 3}
   anthillDisplay: {fileID: 2800000, guid: 470088b5fd6ff4546892dcfb8d93cd57, type: 3}
-  gathererHead: {fileID: 2800000, guid: ab054b6f10448fa4d8428024f231d0e7, type: 3}
-  warriorHead: {fileID: 2800000, guid: b399fa389eac97a4daa0edf4b761644a, type: 3}
-  scoutHead: {fileID: 2800000, guid: 8ba118d6adacf93428bb5e6c9181fd5e, type: 3}
-  queenHead: {fileID: 2800000, guid: 100d8393b5c2974468f5faace210941b, type: 3}
+  gathererHead: {fileID: 2800000, guid: 96b986f2def34e64f82239e2671cedd0, type: 3}
+  warriorHead: {fileID: 2800000, guid: 65fc05c14040ab6439341f0de7246c08, type: 3}
+  scoutHead: {fileID: 2800000, guid: 8ee288252102af04bacadf298acbaae5, type: 3}
+  queenHead: {fileID: 2800000, guid: 32afd8bcd20da4e44b8d26ecc6172d1d, type: 3}
   scentpathGameObject: {fileID: 100000, guid: 0ea4ee24e8caf4d49af7a93c2c9799ec, type: 2}
 --- !u!212 &2095073239
 SpriteRenderer:
