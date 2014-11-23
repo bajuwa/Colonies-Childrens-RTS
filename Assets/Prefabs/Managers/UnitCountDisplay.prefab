@@ -150,7 +150,7 @@ GameObject:
   - 4: {fileID: 400016}
   - 114: {fileID: 11400018}
   m_Layer: 0
-  m_Name: Title
+  m_Name: TotalUnitCount
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -169,6 +169,22 @@ GameObject:
   - 114: {fileID: 11400000}
   m_Layer: 0
   m_Name: UnitCountDisplay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &100020
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400020}
+  - 114: {fileID: 11400030}
+  m_Layer: 0
+  m_Name: Title
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -285,7 +301,7 @@ Transform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 400018}
-  m_RootOrder: 0
+  m_RootOrder: 5
 --- !u!4 &400018
 Transform:
   m_ObjectHideFlags: 1
@@ -296,12 +312,25 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 400016}
+  - {fileID: 400020}
   - {fileID: 400014}
   - {fileID: 400012}
   - {fileID: 400010}
   - {fileID: 400008}
+  - {fileID: 400016}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+--- !u!4 &400020
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 400018}
   m_RootOrder: 0
 --- !u!61 &6100000
 BoxCollider2D:
@@ -374,7 +403,7 @@ MonoBehaviour:
   text: x0
   snapToBottom: 1
   snapToLeft: 0
-  fromBottom: 55
+  fromBottom: 70
   fromTop: 0
   fromLeft: 0
   fromRight: 22
@@ -453,7 +482,7 @@ MonoBehaviour:
   text: x0
   snapToBottom: 1
   snapToLeft: 0
-  fromBottom: 55
+  fromBottom: 70
   fromTop: 0
   fromLeft: 0
   fromRight: 82
@@ -532,7 +561,7 @@ MonoBehaviour:
   text: x0
   snapToBottom: 1
   snapToLeft: 0
-  fromBottom: 55
+  fromBottom: 70
   fromTop: 0
   fromLeft: 0
   fromRight: 142
@@ -611,7 +640,7 @@ MonoBehaviour:
   text: x0
   snapToBottom: 1
   snapToLeft: 0
-  fromBottom: 55
+  fromBottom: 70
   fromTop: 0
   fromLeft: 0
   fromRight: 202
@@ -689,7 +718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapToBottom: 1
   snapToLeft: 0
-  fromBottom: 70
+  fromBottom: 80
   fromTop: 0
   fromLeft: 0
   fromRight: 0
@@ -706,7 +735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapToBottom: 1
   snapToLeft: 0
-  fromBottom: 70
+  fromBottom: 80
   fromTop: 0
   fromLeft: 0
   fromRight: 60
@@ -723,7 +752,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapToBottom: 1
   snapToLeft: 0
-  fromBottom: 70
+  fromBottom: 80
   fromTop: 0
   fromLeft: 0
   fromRight: 120
@@ -740,7 +769,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   snapToBottom: 1
   snapToLeft: 0
-  fromBottom: 70
+  fromBottom: 80
   fromTop: 0
   fromLeft: 0
   fromRight: 180
@@ -755,20 +784,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f78dc8953d54e04ea26f00ebc17ea21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: Units
+  text: 'Total: 0/0'
   snapToBottom: 1
   snapToLeft: 0
-  fromBottom: 150
+  fromBottom: 48
   fromTop: 0
   fromLeft: 0
-  fromRight: 125
+  fromRight: 62
   width: 0
   height: 0
   textStyle:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -810,9 +839,9 @@ MonoBehaviour:
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 0}
-    m_FontSize: 16
-    m_FontStyle: 1
+    m_Font: {fileID: 12800000, guid: 3bf419e83da916642a1fc1f6478e4511, type: 3}
+    m_FontSize: 18
+    m_FontStyle: 0
     m_Alignment: 4
     m_WordWrap: 0
     m_RichText: 1
@@ -888,6 +917,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameToCycle: queen
+--- !u!114 &11400030
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f78dc8953d54e04ea26f00ebc17ea21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Units
+  snapToBottom: 1
+  snapToLeft: 0
+  fromBottom: 150
+  fromTop: 0
+  fromLeft: 0
+  fromRight: 125
+  width: 0
+  height: 0
+  textStyle:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 16
+    m_FontStyle: 1
+    m_Alignment: 4
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
 --- !u!131 &13100000
 GUITexture:
   m_ObjectHideFlags: 1
