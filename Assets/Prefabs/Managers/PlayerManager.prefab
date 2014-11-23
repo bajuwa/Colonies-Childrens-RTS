@@ -11,12 +11,9 @@ GameObject:
   - 212: {fileID: 21200000}
   - 114: {fileID: 11400000}
   - 148: {fileID: 14800000}
-<<<<<<< HEAD
-=======
   - 148: {fileID: 14800002}
   - 148: {fileID: 14800004}
   - 148: {fileID: 14800006}
->>>>>>> bajuwa
   m_Layer: 0
   m_Name: PlayerManager
   m_TagString: Untagged
@@ -212,8 +209,6 @@ NetworkView:
   m_ViewID:
     m_ID: 0
     m_Type: 0
-<<<<<<< HEAD
-=======
 --- !u!148 &14800002
 NetworkView:
   m_ObjectHideFlags: 1
@@ -250,7 +245,6 @@ NetworkView:
   m_ViewID:
     m_ID: 0
     m_Type: 0
->>>>>>> bajuwa
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
