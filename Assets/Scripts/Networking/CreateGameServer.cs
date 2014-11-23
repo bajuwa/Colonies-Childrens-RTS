@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class CreateGameServer : MonoBehaviour {
-	public static string gameName = "Enter GameName"; //text to initially appear in the box
+	public static string gameName = "Enter a Game Name"; //text to initially appear in the box
 	// Use this for initialization
 	void Start () {
 	
@@ -10,6 +10,6 @@ public class CreateGameServer : MonoBehaviour {
 
 	// Update is called once per frame
 	void OnGUI () {
-		gameName = GUI.TextField(new Rect (Screen.width/2,Screen.height/2,200,50), gameName, 10);
+		gameName = GUI.TextField(new Rect (Screen.width/2-100,Screen.height-40,200,25), gameName, 50);
 	}
 }

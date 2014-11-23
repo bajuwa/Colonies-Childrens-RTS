@@ -5,6 +5,8 @@ public class JoinGame : MonoBehaviour {
 	private bool refreshing;
 	private HostData[] hostData;
 	public static HostData hostGame;
+	public int buttonWidth = 400;
+	public int buttonHeight = 50;
 	// Use this for initialization
 	void Start () {
 		refreshHostList();
@@ -31,7 +33,7 @@ public class JoinGame : MonoBehaviour {
 	void OnGUI(){
 		if(hostData != null){
 			for (int i = 0; i<hostData.Length; i++) {
-				if(GUI.Button(new Rect(Screen.width/2 - 150, 100*i, Screen.width/4, 50), hostData[i].gameName)){
+				if(GUI.Button(new Rect(Screen.width/2 - buttonWidth/2, 100+(buttonHeight*i), buttonWidth, buttonHeight), hostData[i].gameName)){
 					hostGame = hostData[i];
 					Application.LoadLevel("MultiPlayerGame");
 					//Network.Connect(hostData[i]);
