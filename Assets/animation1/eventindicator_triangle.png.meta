@@ -1,8 +1,7 @@
 fileFormatVersion: 2
 guid: 30660d1f5b481274b8528c4d5a91c0a2
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: eventindicator_triangle
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
