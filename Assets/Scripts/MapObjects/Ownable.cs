@@ -31,7 +31,12 @@ public class Ownable : MonoBehaviour {
 	}
 	
 	public int getPlayerId() {
-		return player.id;
+		if (player.id == null)
+		{
+			if (Network.isServer) return 1;
+			else if (Network.isClient) return 2;
+		}
+		else return player.id;
 	}
 	
 	public void setAsMine(int playerId) {

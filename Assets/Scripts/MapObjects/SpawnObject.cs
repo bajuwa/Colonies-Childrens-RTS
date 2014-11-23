@@ -84,7 +84,7 @@ public class SpawnObject : Selectable {
 						newFood.transform.localPosition = new Vector3(
 						newFood.transform.localPosition.x,
 						newFood.transform.localPosition.y,
-						0
+						-3
 						);
 						Debug.Log(newFood + " is newFood");
 						netMan.changeInstant(newFood, "Object");
