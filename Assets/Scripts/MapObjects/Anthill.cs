@@ -40,18 +40,14 @@ public class Anthill : Attackable {
 
 		currentHp += points;
 		maxHp = currentHp;
-		networkView.RPC("networkUpdateFoodPoints", RPCMode.Others, points, "add");
+		
 	}
 	
 	public void spendStoredFoodPoints(int points) {
 		currentHp -= points;
 		maxHp = currentHp;
-		networkView.RPC("networkUpdateFoodPoints", RPCMode.Others, points, "minus");
 	}
-	[RPC] private void networkUpdateFoodPoints(int points, string math) {
-		if (math == "add") currentHp += points;
-		if (math == "minus") currentHp -= points;
-	}
+	
 	private void loadAnimator() {
 		Animator singleAnimator = this.gameObject.GetComponent("Animator") as Animator;
 		if (!singleAnimator) singleAnimator = this.gameObject.AddComponent("Animator") as Animator;
