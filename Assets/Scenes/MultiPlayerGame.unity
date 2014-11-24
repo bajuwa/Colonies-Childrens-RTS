@@ -8040,6 +8040,7 @@ GameObject:
   - 212: {fileID: 790411852}
   - 58: {fileID: 790411851}
   - 114: {fileID: 790411850}
+  - 148: {fileID: 790411853}
   m_Layer: 0
   m_Name: DeadAnthill
   m_TagString: MapObject
@@ -8108,6 +8109,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb91a9c11497f3c428dc01467c2fd8a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &790411853
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: ceb552aca4cfa5e42bdfb375f9caf00c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1398949008}
+  m_GameObject: {fileID: 790411848}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 790411850}
+  m_ViewID:
+    m_ID: 3
+    m_Type: 1
 --- !u!1 &792304267
 GameObject:
   m_ObjectHideFlags: 0
@@ -10789,6 +10803,7 @@ GameObject:
   - 212: {fileID: 981943626}
   - 114: {fileID: 981943625}
   - 58: {fileID: 981943624}
+  - 148: {fileID: 981943627}
   m_Layer: 0
   m_Name: Blueberry
   m_TagString: MapObject
@@ -10861,6 +10876,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &981943627
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 1991005027}
+  m_GameObject: {fileID: 981943622}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 981943623}
+  m_ViewID:
+    m_ID: 2
+    m_Type: 1
 --- !u!1 &982681417
 GameObject:
   m_ObjectHideFlags: 0
@@ -13781,6 +13809,7 @@ GameObject:
   - 212: {fileID: 1232399071}
   - 58: {fileID: 1232399070}
   - 114: {fileID: 1232399069}
+  - 148: {fileID: 1232399072}
   m_Layer: 0
   m_Name: DeadAnthill
   m_TagString: MapObject
@@ -13849,6 +13878,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb91a9c11497f3c428dc01467c2fd8a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &1232399072
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: ceb552aca4cfa5e42bdfb375f9caf00c,
+    type: 2}
+  m_PrefabInternal: {fileID: 2056487851}
+  m_GameObject: {fileID: 1232399067}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1232399069}
+  m_ViewID:
+    m_ID: 1
+    m_Type: 1
 --- !u!1 &1238104673
 GameObject:
   m_ObjectHideFlags: 0
@@ -16469,6 +16511,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
+      propertyPath: m_Observed
+      value: 
+      objectReference: {fileID: 790411850}
+    - target: {fileID: 14800000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
+      propertyPath: m_ViewID.m_ID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
+      propertyPath: m_ViewID.m_Type
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
   m_RootGameObject: {fileID: 790411848}
@@ -16570,6 +16624,7 @@ GameObject:
   - 212: {fileID: 1425466073}
   - 114: {fileID: 1425466072}
   - 58: {fileID: 1425466071}
+  - 148: {fileID: 1425466074}
   m_Layer: 0
   m_Name: Blueberry
   m_TagString: MapObject
@@ -16642,6 +16697,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &1425466074
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 992321729}
+  m_GameObject: {fileID: 1425466069}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1425466070}
+  m_ViewID:
+    m_ID: 4
+    m_Type: 1
 --- !u!1 &1425824636
 GameObject:
   m_ObjectHideFlags: 0
@@ -23903,6 +23971,18 @@ Prefab:
     - target: {fileID: 400000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
+      propertyPath: m_Observed
+      value: 
+      objectReference: {fileID: 1232399069}
+    - target: {fileID: 14800000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
+      propertyPath: m_ViewID.m_ID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 14800000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
+      propertyPath: m_ViewID.m_Type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
