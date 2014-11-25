@@ -89,6 +89,7 @@ public class CreateUnitButton : Button {
 				);
 				netMan.changeInstant(instance, "Unit");
 				if (Network.isClient) netMan.changeID(instance); //have to change ID of Player 2's stuff
+				Debug.Log("I, player 1, built something!");
 			}
 			else {
 				GameObject instance = (GameObject) Object.Instantiate(
