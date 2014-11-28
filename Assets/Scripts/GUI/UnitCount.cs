@@ -21,6 +21,8 @@ public class UnitCount : Ownable {
 	private int totalCount = 0;
 	private int unitCap = 0;
 	
+	private int totalFood = 0;
+	
 	public void centerOnNext(string name) {
 		switch (name) {
 			case "gatherer":
@@ -64,6 +66,7 @@ public class UnitCount : Ownable {
 		base.Update();
 		if (!setupSuccess) setup();
 		countUnits();
+		countFood();
 		updateCounts();
 	}
 	
@@ -93,12 +96,23 @@ public class UnitCount : Ownable {
 		unitCap = 5 + (playerManager.getTotalAnthillCount() * 5);
 	}
 	
+	private void countFood() {
+		totalFood = 0;
+		// Get all the anthills on the map
+		Object[] anthillObjects = GameObject.FindObjectsOfType(typeof(Anthill));
+		// Iterate over them and look for one that belongs to this player
+		foreach (Anthill obj in anthillObjects) {
+			if (obj.isNeutralOrFriendly()) totalFood += obj.getStoredFoodPoints();
+		}
+	}
+	
 	private void updateCounts() {
 		transform.Find("gathererHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + gatherers.Count.ToString();
 		transform.Find("warriorHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + warriors.Count.ToString();
 		transform.Find("scoutHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + scouts.Count.ToString();
 		transform.Find("queenHead").Find("count").gameObject.GetComponent<PlaceTextFromCorner>().text = "x" + queens.Count.ToString();
 		transform.Find("TotalUnitCount").gameObject.GetComponent<PlaceTextFromCorner>().text = "Total: " + totalCount + "/" + unitCap;
+		transform.Find("TotalFoodCount").gameObject.GetComponent<PlaceTextFromCorner>().text = "Food: " + totalFood;
 	}
 	
 	private void centerOn(GameObject obj) {
