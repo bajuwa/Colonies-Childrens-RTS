@@ -533,11 +533,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
-  gathererAnimator: {fileID: 9100000, guid: f00d31eae9380024ba184eb471cb0e9c, type: 2}
-  warriorAnimator: {fileID: 9100000, guid: 74f41bbd92d798649b80cb014ef3e0e7, type: 2}
-  scoutAnimator: {fileID: 9100000, guid: 10b530862e220ec4f97ffef17c3f0aeb, type: 2}
-  queenAnimator: {fileID: 9100000, guid: 023217b652a37644f90b1495d0d5b16c, type: 2}
-  anthillAnimator: {fileID: 9100000, guid: 26fba35d4ed167a4a84597e4a5f25ad5, type: 2}
+  gathererAnimator: {fileID: 9100000, guid: 04c254529bf23ad438c6bb913e92d8cb, type: 2}
+  warriorAnimator: {fileID: 9100000, guid: 2384a217f5e5fe0409586c2bb5548721, type: 2}
+  scoutAnimator: {fileID: 9100000, guid: b0a2e22720ae55c44879c36ffeb98954, type: 2}
+  queenAnimator: {fileID: 9100000, guid: 8a0013ec88887cb41942e92fd9939ec7, type: 2}
+  anthillAnimator: {fileID: 9100000, guid: d45bbdb16d66aa44082a74bff8c6ef17, type: 2}
   gathererSprite: {fileID: 21300000, guid: dc075d287bdefde47bb8713314441bfe, type: 3}
   warriorSprite: {fileID: 21300000, guid: 79a74a66b5894fc4288a8d100ab8f6d0, type: 3}
   scoutSprite: {fileID: 21300000, guid: 4cd4497cbda1d7647a0af67697f9f55e, type: 3}
@@ -32751,7 +32751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8951532f26493c04d931642455f77c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraPosForPlayerTwo: {x: 19, y: 15, z: 0}
+  cameraPosForPlayerTwo: {x: 19, y: 15, z: -10}
   anthill: {fileID: 100000, guid: 935c6047de751c44cb5a54d5eccd4ebe, type: 2}
   gatherer: {fileID: 100000, guid: f22c79121e6eaf649994687cc01cad69, type: 2}
   gathererRedSpawn: {fileID: 1701379992}
@@ -38759,11 +38759,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 2
-  gathererAnimator: {fileID: 9100000, guid: c509e5bd5478ecb4abae6b0d2ca9a602, type: 2}
-  warriorAnimator: {fileID: 9100000, guid: 8d610639bcb7e274da0aec6f9ad9b106, type: 2}
-  scoutAnimator: {fileID: 9100000, guid: 71165b4acfa93be429d465ea64513cbb, type: 2}
-  queenAnimator: {fileID: 9100000, guid: cd308f399b86d7b42ae5fc0e93c0aaad, type: 2}
-  anthillAnimator: {fileID: 9100000, guid: f59f1a3bbeafe9949938f93532169543, type: 2}
+  gathererAnimator: {fileID: 9100000, guid: 495aa3cf2a8b997418438c74a7229e21, type: 2}
+  warriorAnimator: {fileID: 9100000, guid: 91a27bdeb4e448a428c7f67fb9f38577, type: 2}
+  scoutAnimator: {fileID: 9100000, guid: 090096b58843a4a4d8e31b47f333bb9f, type: 2}
+  queenAnimator: {fileID: 9100000, guid: 38b83aaabee0aef4f8c0fc0fdeaaf227, type: 2}
+  anthillAnimator: {fileID: 9100000, guid: a2953f4efc0b1af4a8ba300652c5fa39, type: 2}
   gathererSprite: {fileID: 21300000, guid: 5bb565751224cd6468c4ccdbf12a58e0, type: 3}
   warriorSprite: {fileID: 21300000, guid: 45aae1dbadc1f74469e40d6f3a16ac40, type: 3}
   scoutSprite: {fileID: 21300000, guid: 7745173eddb08b64ca456c0ef554934f, type: 3}
@@ -43655,6 +43655,7 @@ GameObject:
   - 212: {fileID: 1500889729}
   - 58: {fileID: 1500889728}
   - 114: {fileID: 1500889727}
+  - 148: {fileID: 1500889730}
   m_Layer: 0
   m_Name: DeadAnthill
   m_TagString: MapObject
@@ -43723,6 +43724,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb91a9c11497f3c428dc01467c2fd8a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &1500889730
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1500889725}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1500889726}
+  m_ViewID:
+    m_ID: 65
+    m_Type: 1
 --- !u!1001 &1513884945
 Prefab:
   m_ObjectHideFlags: 0
@@ -52469,6 +52482,7 @@ GameObject:
   - 212: {fileID: 1780766531}
   - 58: {fileID: 1780766530}
   - 114: {fileID: 1780766529}
+  - 148: {fileID: 1780766532}
   m_Layer: 0
   m_Name: DeadAnthill
   m_TagString: MapObject
@@ -52537,6 +52551,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb91a9c11497f3c428dc01467c2fd8a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &1780766532
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1780766527}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1780766528}
+  m_ViewID:
+    m_ID: 64
+    m_Type: 1
 --- !u!1 &1782346913
 GameObject:
   m_ObjectHideFlags: 0
@@ -60550,6 +60576,9 @@ GameObject:
   - 148: {fileID: 2092846067}
   - 148: {fileID: 2092846069}
   - 148: {fileID: 2092846068}
+  - 148: {fileID: 2092846072}
+  - 148: {fileID: 2092846071}
+  - 148: {fileID: 2092846070}
   - 148: {fileID: 2092846066}
   m_Layer: 0
   m_Name: PlayerManager
@@ -60658,6 +60687,45 @@ NetworkView:
   m_Observed: {fileID: 2092846065}
   m_ViewID:
     m_ID: 63
+    m_Type: 1
+--- !u!148 &2092846070
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800012, guid: f27d86858339b9b43830ebc763aea85d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1766150997}
+  m_GameObject: {fileID: 2092846062}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 2092846065}
+  m_ViewID:
+    m_ID: 3
+    m_Type: 1
+--- !u!148 &2092846071
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800010, guid: f27d86858339b9b43830ebc763aea85d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1766150997}
+  m_GameObject: {fileID: 2092846062}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 2092846065}
+  m_ViewID:
+    m_ID: 2
+    m_Type: 1
+--- !u!148 &2092846072
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800008, guid: f27d86858339b9b43830ebc763aea85d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1766150997}
+  m_GameObject: {fileID: 2092846062}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 2092846065}
+  m_ViewID:
+    m_ID: 1
     m_Type: 1
 --- !u!1001 &2092979969
 Prefab:

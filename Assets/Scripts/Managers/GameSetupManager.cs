@@ -9,7 +9,7 @@ public class GameSetupManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		updateMapSettings();
 	}
 	
 	// Update is called once per frame
