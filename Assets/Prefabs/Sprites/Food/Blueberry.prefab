@@ -55,8 +55,8 @@ MonoBehaviour:
   ownedBy: 0
   displayImage: {fileID: 2800000, guid: 05e05e03ea7de97408030c1dbc3c4c11, type: 3}
   foodValue: 10
-  specificDescription: A rare and valuable piece of food that can help build new units
-    if you bring it back to your Anthill!
+  specificDescription: 'A rare and valuable piece of food that can help build new
+    units if you bring it back to your Anthill!  (Value: 10)'
   specificName: Blueberry
 --- !u!212 &21200000
 SpriteRenderer:

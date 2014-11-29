@@ -55,8 +55,8 @@ MonoBehaviour:
   ownedBy: 0
   displayImage: {fileID: 2800000, guid: 2797906bd693c934a982124a810acba2, type: 3}
   foodValue: 2
-  specificDescription: While gummy bears certainly aren't nutritious, there are plenty
-    to spare
+  specificDescription: 'While gummy bears certainly aren''t nutritious, there are
+    plenty to spare  (Value: 2)'
   specificName: Gummy Bear
 --- !u!212 &21200000
 SpriteRenderer:
