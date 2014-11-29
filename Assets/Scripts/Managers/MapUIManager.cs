@@ -132,10 +132,8 @@ public class MapUIManager : MonoBehaviour {
 				// If a Tile is the topMostSelectable then we should display a 'move' type cursor
 				if (hoveredObject.GetComponent<Tile>() != null) {
 					if (hoveredObject.gameObject.layer != LayerMask.NameToLayer("Tile")) {
-						Debug.Log("MOVE SELECTED");
 						Cursor.SetCursor(moveToDisabledCursor, Vector2.zero, CursorMode.Auto);
 					} else {
-						Debug.Log("MOVE2 SELECTED");
 						Cursor.SetCursor(moveToCursor, Vector2.zero, CursorMode.Auto);
 					}
 					return;
@@ -155,7 +153,6 @@ public class MapUIManager : MonoBehaviour {
 				// If an AntUnit is the topMostSelectable and we currently have a Warrior selected, display an 'attack' type cursor
 				if (selectedObject.GetComponent<WarriorUnit>() != null && hoveredObject.GetComponent<Attackable>() != null && !hoveredObject.isNeutralOrFriendly()) {
 					Cursor.SetCursor(attackCursor, Vector2.zero, CursorMode.Auto);
-					Debug.Log("ATTACK ANT SELECTED");
 					return;
 				}
 				

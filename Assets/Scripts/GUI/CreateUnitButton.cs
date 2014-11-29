@@ -85,10 +85,11 @@ public class CreateUnitButton : Button {
 				instance.transform.localPosition = new Vector3(
 					instance.transform.localPosition.x,
 					instance.transform.localPosition.y,
-					-5
+					0
 				);
 				netMan.changeInstant(instance, "Unit");
 				if (Network.isClient) netMan.changeID(instance); //have to change ID of Player 2's stuff
+				Debug.Log("I, player 1, built something!");
 			}
 			else {
 				GameObject instance = (GameObject) Object.Instantiate(

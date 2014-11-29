@@ -4562,6 +4562,7 @@ Transform:
   - {fileID: 790411849}
   - {fileID: 119516018}
   - {fileID: 1070398688}
+  - {fileID: 759314448}
   m_Father: {fileID: 965986473}
   m_RootOrder: 1
 --- !u!212 &472971647
@@ -8029,6 +8030,33 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_Radius: 1.5
   m_Center: {x: 0, y: 0}
+--- !u!1 &759314447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 759314448}
+  m_Layer: 0
+  m_Name: deadAnthillSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &759314448
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 759314447}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.7428398, y: -12.2443504, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 472971646}
+  m_RootOrder: 10
 --- !u!1 &790411848
 GameObject:
   m_ObjectHideFlags: 0
@@ -8040,6 +8068,7 @@ GameObject:
   - 212: {fileID: 790411852}
   - 58: {fileID: 790411851}
   - 114: {fileID: 790411850}
+  - 148: {fileID: 790411853}
   m_Layer: 0
   m_Name: DeadAnthill
   m_TagString: MapObject
@@ -8108,6 +8137,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb91a9c11497f3c428dc01467c2fd8a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &790411853
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 790411848}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 790411849}
+  m_ViewID:
+    m_ID: 41
+    m_Type: 1
 --- !u!1 &792304267
 GameObject:
   m_ObjectHideFlags: 0
@@ -10789,6 +10830,7 @@ GameObject:
   - 212: {fileID: 981943626}
   - 114: {fileID: 981943625}
   - 58: {fileID: 981943624}
+  - 148: {fileID: 981943627}
   m_Layer: 0
   m_Name: Blueberry
   m_TagString: MapObject
@@ -10861,6 +10903,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &981943627
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 1991005027}
+  m_GameObject: {fileID: 981943622}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 981943623}
+  m_ViewID:
+    m_ID: 17
+    m_Type: 1
 --- !u!1 &982681417
 GameObject:
   m_ObjectHideFlags: 0
@@ -13781,6 +13836,7 @@ GameObject:
   - 212: {fileID: 1232399071}
   - 58: {fileID: 1232399070}
   - 114: {fileID: 1232399069}
+  - 148: {fileID: 1232399072}
   m_Layer: 0
   m_Name: DeadAnthill
   m_TagString: MapObject
@@ -13795,7 +13851,7 @@ Transform:
   m_PrefabInternal: {fileID: 2056487851}
   m_GameObject: {fileID: 1232399067}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.7428417, y: -12.2443457, z: 0}
+  m_LocalPosition: {x: 18.7428398, y: -12.2443457, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 472971646}
@@ -13849,6 +13905,18 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb91a9c11497f3c428dc01467c2fd8a0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &1232399072
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1232399067}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1232399068}
+  m_ViewID:
+    m_ID: 40
+    m_Type: 1
 --- !u!1 &1238104673
 GameObject:
   m_ObjectHideFlags: 0
@@ -16467,7 +16535,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_ViewID.m_ID
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_ViewID.m_Type
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
@@ -16570,6 +16646,7 @@ GameObject:
   - 212: {fileID: 1425466073}
   - 114: {fileID: 1425466072}
   - 58: {fileID: 1425466071}
+  - 148: {fileID: 1425466074}
   m_Layer: 0
   m_Name: Blueberry
   m_TagString: MapObject
@@ -16642,6 +16719,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0a8f57c1bc200d4479fc862ab395b0e9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!148 &1425466074
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 14800000, guid: 1c69d789655d3324dbc5bd79bd7633ce,
+    type: 2}
+  m_PrefabInternal: {fileID: 992321729}
+  m_GameObject: {fileID: 1425466069}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1425466070}
+  m_ViewID:
+    m_ID: 26
+    m_Type: 1
 --- !u!1 &1425824636
 GameObject:
   m_ObjectHideFlags: 0
@@ -23874,7 +23964,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 18.7428417
+      value: 18.7428398
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -23902,7 +23992,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ceb552aca4cfa5e42bdfb375f9caf00c, type: 2}

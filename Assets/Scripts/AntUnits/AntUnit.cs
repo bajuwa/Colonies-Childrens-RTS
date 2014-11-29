@@ -111,7 +111,7 @@ public class AntUnit : Attackable {
 	 */
 	public virtual IEnumerator moveTo(Tile tileToMoveTo, bool activelySetNewTarget = false) {
 		// Avoid multiple calls to move the unit while the path is still being calculated
-		if (isCalculatingPath || isInBattle || tileToMoveTo == null) yield break;
+		if ((isCalculatingPath && !activelySetNewTarget) || isInBattle || tileToMoveTo == null) yield break;
 		isCalculatingPath = true;
 		Debug.Log("Calculating path to new tile");
 	

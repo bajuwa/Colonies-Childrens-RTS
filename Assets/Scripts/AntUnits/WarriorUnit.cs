@@ -60,8 +60,10 @@ public class WarriorUnit : AntUnit {
 				Debug.Log("Found target!");
 				StartCoroutine(commenceBattle(attackTarget));
 				clearAttackTarget();
-			} else if (targetPath.getTilePath().Count == 0 || attackTargetLastKnowTileLocation != attackTargetCurrentLocation) {
+			} else if (attackTargetLastKnowTileLocation != attackTargetCurrentLocation) {
 				Debug.Log("Calculating route to target!");
+				attackTargetLastKnowTileLocation = attackTargetCurrentLocation;
+				StopCoroutine("moveToTarget");
 				StartCoroutine(moveToTarget(attackTargetCurrentLocation, true));
 			}
 			
@@ -178,11 +180,13 @@ public class WarriorUnit : AntUnit {
 		// Note: if this unit dies, make sure to delete it at the end!
 		if (this.currentHp <= 0) this.kill();
 	}
+	
 	[RPC] public void fixCombatCloud(NetworkViewID combatCloudNetViewID) {
 		NetworkView combatCloudNetView = NetworkView.Find(combatCloudNetViewID);
 		GameObject combatCloud = combatCloudNetView.gameObject;
 		combatCloud.transform.parent = GameObject.Find("Objects").transform;
 	}
+	
 	public override Sprite getFightSprite() {
 		return getSpriteFromPlayer("warriorSprite");
 	}
@@ -206,6 +210,7 @@ public class WarriorUnit : AntUnit {
 		antTwo.currentHp -= hpTwo;
 		}
 	}
+	
 	[RPC] private void setHPNetwork(float hpOne, float hpTwo, NetworkViewID antOne, NetworkViewID antTwo) {
 		NetworkView networkAntOne = NetworkView.Find(antOne);
 		NetworkView networkAntTwo = NetworkView.Find(antTwo);
@@ -255,19 +260,16 @@ public class WarriorUnit : AntUnit {
 	
 	// Warriors can walk on tiles and food items (but only if they aren't already carrying food themselves)
 	protected override bool canWalkOn(GameObject gameObj) {
-		Debug.Log("GameObj: " + gameObj);
 		if (gameObj.GetComponent<Scentpath>() != null) {
-		Debug.Log("GameObj is a Scentpath:" + gameObj);
-		return true;}
+			return true;
+		}
 		
 		if (gameObj.GetComponent<Tile>() != null) {
-			Debug.Log("GameObj is a Tile:" + gameObj);
 			if (gameObj.GetComponent<Tile>().occupiedBy != null && gameObj.GetComponent<Tile>().occupiedBy != attackTarget.gameObject) return false;
 			return true;
 		}
 		
 		if (attackTarget) {
-			Debug.Log("Attack target sfldjkslfkj" + gameObj);
 			if (gameObj == attackTarget.gameObject) return true;
 		
 			// Since food can be carried by units, check for that too

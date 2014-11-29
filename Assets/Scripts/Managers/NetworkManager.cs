@@ -9,6 +9,8 @@ public class NetworkManager : MonoBehaviour {
 	public GameObject gathererBlueSpawn;
 	public GameObject redAnthillSpawn;
 	public GameObject blueAnthillSpawn;
+	//public GameObject deadAntHill;
+	//public GameObject deadAntHillSpawn;
 	private const string typeName = "ColoniesAntBattle";
 	private string gameName = CreateGameServer.gameName;
 	private HostData hostGame = JoinGame.hostGame;
@@ -57,6 +59,9 @@ public class NetworkManager : MonoBehaviour {
 		antHill.addFoodPoints(20);
 		NetworkView anthillNetworkView = anthillObject.networkView;
 		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetworkView.viewID, "Object");
+		Debug.Log("I am player 1");
+		//Network.Instantiate(deadAntHill, deadAntHillSpawn.transform.position, Quaternion.identity, 0);
+		
 	}
 	//called when a player connects for the client player. Instantiates the blue anthill on the network
 	//and then sends an RPC call the the server to get them to change the blue anthill to blue for the server player.
@@ -74,6 +79,7 @@ public class NetworkManager : MonoBehaviour {
 		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetwork.viewID, "Object");
 		Anthill antHill = antHillObject.GetComponent<Anthill>();
 		antHill.addFoodPoints(20);
+		Debug.Log("I am player 2!");
 	}
 	public void changeID(GameObject instance)
 	{
