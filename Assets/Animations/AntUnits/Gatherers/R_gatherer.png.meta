@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 735089caf3224e749b02854e0757d83c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: R_gatherer_0
+    21300002: R_gatherer_1
+    21300004: R_gatherer_2
+    21300006: R_gatherer_3
+    21300008: R_gatherer_4
+    21300010: R_gatherer_5
+    21300012: R_gatherer_6
+    21300014: R_gatherer_7
+    21300016: R_gatherer_8
+    21300018: R_gatherer_9
+    21300020: R_gatherer_10
+    21300022: R_gatherer_11
+    21300024: R_gatherer_12
+    21300026: R_gatherer_13
+    21300028: R_gatherer_14
+    21300030: R_gatherer_15
+    21300032: R_gatherer_16
+    21300034: R_gatherer_17
+    21300036: R_gatherer_18
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: R_gatherer_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1
+        width: 84
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_1
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 1
+        width: 87
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 1
+        width: 84
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_3
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 3
+        width: 80
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_4
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 3
+        width: 84
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_5
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 1
+        width: 87
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_6
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1
+        width: 93
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_7
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 1
+        width: 102
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_8
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 1
+        width: 97
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_9
+      rect:
+        serializedVersion: 2
+        x: 897
+        y: 3
+        width: 91
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_10
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 31
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_11
+      rect:
+        serializedVersion: 2
+        x: 1013
+        y: 3
+        width: 96
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_12
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 3
+        width: 100
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_13
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 1
+        width: 84
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_14
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1
+        width: 88
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_15
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 1
+        width: 83
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_16
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 1
+        width: 82
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_17
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 1
+        width: 83
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_gatherer_18
+      rect:
+        serializedVersion: 2
+        x: 1784
+        y: 1
+        width: 87
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

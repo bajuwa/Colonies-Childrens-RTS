@@ -1,0 +1,256 @@
+fileFormatVersion: 2
+guid: 14bb0559624bd32408fcc4efe1598379
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: B_scout_0
+    21300002: B_scout_1
+    21300004: B_scout_2
+    21300006: B_scout_3
+    21300008: B_scout_4
+    21300010: B_scout_5
+    21300012: B_scout_6
+    21300014: B_scout_7
+    21300016: B_scout_8
+    21300018: B_scout_9
+    21300020: B_scout_10
+    21300022: B_scout_11
+    21300024: B_scout_12
+    21300026: B_scout_13
+    21300028: B_scout_14
+    21300030: B_scout_15
+    21300032: B_scout_16
+    21300034: B_scout_17
+    21300036: B_scout_18
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: B_scout_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 3
+        width: 77
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_1
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 3
+        width: 79
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_2
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 3
+        width: 76
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 3
+        width: 75
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_4
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 3
+        width: 76
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_5
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 3
+        width: 79
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_6
+      rect:
+        serializedVersion: 2
+        x: 711
+        y: 3
+        width: 79
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_7
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 3
+        width: 76
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_8
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 3
+        width: 73
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_9
+      rect:
+        serializedVersion: 2
+        x: 1043
+        y: 27
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_10
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 3
+        width: 77
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_11
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 3
+        width: 75
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_12
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 3
+        width: 79
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_13
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 3
+        width: 76
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_14
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 3
+        width: 73
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_15
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 3
+        width: 76
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_16
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 3
+        width: 77
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_17
+      rect:
+        serializedVersion: 2
+        x: 1938
+        y: 3
+        width: 77
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: B_scout_18
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 2
+        width: 84
+        height: 133
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

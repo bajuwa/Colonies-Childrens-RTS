@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: 943563c53bd268e44a287ea2b29dd16a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: R_anthill_0
+    21300002: R_anthill_1
+    21300004: R_anthill_2
+    21300006: R_anthill_3
+    21300008: R_anthill_4
+    21300010: R_anthill_5
+    21300012: R_anthill_6
+    21300014: R_anthill_7
+    21300016: R_anthill_8
+    21300018: R_anthill_9
+    21300020: R_anthill_10
+    21300022: R_anthill_11
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: R_anthill_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 131
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_anthill_1
+      rect:
+        serializedVersion: 2
+        x: 143
+        y: 0
+        width: 134
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_anthill_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 134
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_anthill_3
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 0
+        width: 134
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_anthill_4
+      rect:
+        serializedVersion: 2
+        x: 667
+        y: 0
+        width: 148
+        height: 136
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_anthill_5
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 0
+        width: 134
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_anthill_6
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 0
+        width: 135
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_anthill_7
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 0
+        width: 134
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_anthill_8
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 0
+        width: 134
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_anthill_9
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 0
+        width: 132
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_anthill_10
+      rect:
+        serializedVersion: 2
+        x: 1604
+        y: 0
+        width: 132
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: R_anthill_11
+      rect:
+        serializedVersion: 2
+        x: 1747
+        y: 0
+        width: 134
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

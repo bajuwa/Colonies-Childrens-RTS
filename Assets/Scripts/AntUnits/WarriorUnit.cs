@@ -265,7 +265,7 @@ public class WarriorUnit : AntUnit {
 		}
 		
 		if (gameObj.GetComponent<Tile>() != null) {
-			if (gameObj.GetComponent<Tile>().occupiedBy != null && gameObj.GetComponent<Tile>().occupiedBy != attackTarget.gameObject) return false;
+			if (attackTarget && gameObj.GetComponent<Tile>().occupiedBy != null && gameObj.GetComponent<Tile>().occupiedBy != attackTarget.gameObject) return false;
 			return true;
 		}
 		
