@@ -31,7 +31,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: c3a2673f76b946b4dafd692eb4a90369, type: 2}
   m_ParentStateMachine: {fileID: 110700000}
-  m_Position: {x: 50, y: 50, z: 0}
+  m_Position: {x: 36, y: 72, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
