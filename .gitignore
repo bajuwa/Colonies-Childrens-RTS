@@ -7,3 +7,5 @@ Temp
 *.sln
 *.userprefs
 Colonies-WebPlayer
+*_Data
+*.exe
