@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class NetworkManager : MonoBehaviour {
+	public Vector3 cameraPosForPlayerTwo;
 	//Name MUST be unique on master server
 	public GameObject anthill;
 	public GameObject gatherer;
@@ -67,7 +68,7 @@ public class NetworkManager : MonoBehaviour {
 	//and then sends an RPC call the the server to get them to change the blue anthill to blue for the server player.
 	void OnConnectedToServer()
 	{
-		Camera.mainCamera.transform.position = new Vector3(17, 12, -15); //set camera for player 2
+		Camera.mainCamera.transform.position = cameraPosForPlayerTwo; //set camera for player 2
 		GameObject antHillObject = (GameObject) Network.Instantiate(anthill, blueAnthillSpawn.transform.position, Quaternion.identity,0);
 		NetworkView anthillNetwork = antHillObject.networkView;
 		antHillObject.transform.parent = antHillParent.transform;

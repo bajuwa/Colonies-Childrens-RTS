@@ -12736,6 +12736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8951532f26493c04d931642455f77c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cameraPosForPlayerTwo: {x: 17, y: 12, z: -15}
   anthill: {fileID: 100000, guid: 935c6047de751c44cb5a54d5eccd4ebe, type: 2}
   gatherer: {fileID: 100000, guid: f22c79121e6eaf649994687cc01cad69, type: 2}
   gathererRedSpawn: {fileID: 1701379992}
