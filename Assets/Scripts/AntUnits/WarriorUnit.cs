@@ -60,7 +60,8 @@ public class WarriorUnit : AntUnit {
 				Debug.Log("Found target!");
 				StartCoroutine(commenceBattle(attackTarget));
 				clearAttackTarget();
-			} else if (attackTargetLastKnowTileLocation != attackTargetCurrentLocation) {
+			} else if (attackTargetLastKnowTileLocation != attackTargetCurrentLocation || 
+					   (attackTargetLastKnowTileLocation == attackTargetCurrentLocation && targetPath.getTilePath().Count == 0)) {
 				Debug.Log("Calculating route to target!");
 				attackTargetLastKnowTileLocation = attackTargetCurrentLocation;
 				StopCoroutine("moveToTarget");
