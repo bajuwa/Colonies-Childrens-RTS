@@ -28,6 +28,7 @@ public class GameSetupManager : MonoBehaviour {
 		transform.Find("MapName").GetComponent<GUIText>().text = maps[mapIndex].name;
 		transform.Find("MapSelection").GetComponent<SpriteRenderer>().sprite = maps[mapIndex].scenePreview;
 		GameObject.Find("HostGame").GetComponent<ClickToLoadNextScene>().nextScene = (ClickToLoadNextScene.sceneName) maps[mapIndex].sceneId;
+		GameObject.Find("MapSelectionNetworking").GetComponent<MapSelectionScene>().sceneIndex = maps[mapIndex].sceneId;
 	}
 	
 	[System.Serializable]

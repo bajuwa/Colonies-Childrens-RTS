@@ -35,7 +35,7 @@ public class JoinGame : MonoBehaviour {
 			for (int i = 0; i<hostData.Length; i++) {
 				if(GUI.Button(new Rect(Screen.width/2 - buttonWidth/2, 100+(buttonHeight*i), buttonWidth, buttonHeight), hostData[i].gameName)){
 					hostGame = hostData[i];
-					Application.LoadLevel("MultiPlayerGame");
+					Application.LoadLevel(int.Parse(hostGame.comment));
 					//Network.Connect(hostData[i]);
 				}
 			} 

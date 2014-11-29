@@ -6,7 +6,6 @@ public class CreateUnitButton : Button {
 	private Selectable parentSelectable;
 	private GameObject antUnitParent;
 	private MapManager mapManager;
-	private PlayerManager playerManager;
 	private Anthill anthillScript;
 	private NetworkManager netMan;
 	
@@ -34,7 +33,6 @@ public class CreateUnitButton : Button {
 		loadParentSelectable();
 		if (!antUnitParent) antUnitParent = GameObject.Find("Units");
 		if (!mapManager) mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
-		if (!playerManager) playerManager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
 		if (!anthillScript) anthillScript = transform.parent.GetComponent<Anthill>();
 		if (!netMan && GameObject.Find("NetworkManager")) netMan = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
 		// If we our parent object is selected, show this button

@@ -29,14 +29,17 @@ public class NetworkManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (!antUnitParent) antUnitParent = GameObject.Find("Units");
-		Debug.Log(antUnitParent + " is Set");
 		if (!antHillParent) antHillParent = GameObject.Find("Objects");
 		if (!mapManager) mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
 	}
 	// initialize the server
 	void StartServer () {
 		Network.InitializeServer(2, 25000, !Network.HavePublicAddress());
-		MasterServer.RegisterHost(typeName, gameName);
+		MasterServer.RegisterHost(
+			typeName, 
+			gameName, 
+			GameObject.Find("MapSelectionNetworking").GetComponent<MapSelectionScene>().sceneIndex.ToString()
+		);
 	}
 	//Messages
 	//When the server is created, log the registration
@@ -52,12 +55,12 @@ public class NetworkManager : MonoBehaviour {
 		GameObject anthillObject = (GameObject) Network.Instantiate(anthill, redAnthillSpawn.transform.position, Quaternion.identity, 0); //initial anthill
 		anthillObject.transform.parent = antHillParent.transform;
 		anthillObject.transform.localPosition = new Vector3(
-				anthillObject.transform.localPosition.x,
-				anthillObject.transform.localPosition.y,
-					-3);
+			anthillObject.transform.localPosition.x,
+			anthillObject.transform.localPosition.y,
+			0
+		);
 		
 		Anthill antHill = anthillObject.GetComponent<Anthill>();
-		antHill.addFoodPoints(20);
 		NetworkView anthillNetworkView = anthillObject.networkView;
 		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetworkView.viewID, "Object");
 		Debug.Log("I am player 1");
@@ -72,14 +75,14 @@ public class NetworkManager : MonoBehaviour {
 		GameObject antHillObject = (GameObject) Network.Instantiate(anthill, blueAnthillSpawn.transform.position, Quaternion.identity,0);
 		NetworkView anthillNetwork = antHillObject.networkView;
 		antHillObject.transform.parent = antHillParent.transform;
-				antHillObject.transform.localPosition = new Vector3(
-					antHillObject.transform.localPosition.x,
-					antHillObject.transform.localPosition.y,
-					-3);
+		antHillObject.transform.localPosition = new Vector3(
+			antHillObject.transform.localPosition.x,
+			antHillObject.transform.localPosition.y,
+			0
+		);
 		networkView.RPC("changePlayerId", RPCMode.All, anthillNetwork.viewID, 2);
 		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetwork.viewID, "Object");
 		Anthill antHill = antHillObject.GetComponent<Anthill>();
-		antHill.addFoodPoints(20);
 		Debug.Log("I am player 2!");
 	}
 	public void changeID(GameObject instance)
@@ -114,19 +117,19 @@ public class NetworkManager : MonoBehaviour {
 		if (type == "Object"){
 			Debug.Log("GameObject is anthill: " + gameObject);
 			gameObject.transform.parent = antHillParent.transform;
-			antHillParent.transform.localPosition = new Vector3(
-				antHillParent.transform.localPosition.x,
-				antHillParent.transform.localPosition.y,
-				-3);
+			gameObject.transform.localPosition = new Vector3(
+				gameObject.transform.localPosition.x,
+				gameObject.transform.localPosition.y,
+				0
+			);
 		}
 		if (type == "Unit") {
 			gameObject.transform.parent = antUnitParent.transform;
-			Debug.Log("GameObject is antunit: " + gameObject);
-			Debug.Log(antUnitParent + " is here!!!!!!");
-				antUnitParent.transform.localPosition = new Vector3(
-					antUnitParent.transform.localPosition.x,
-					antUnitParent.transform.localPosition.y,
-					-5);
+			gameObject.transform.localPosition = new Vector3(
+				gameObject.transform.localPosition.x,
+				gameObject.transform.localPosition.y,
+				0
+			);
 		}
 	
 	}
