@@ -8895,11 +8895,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 916046275ffe3244a8748b60bbddcb2f, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.42644405
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 916046275ffe3244a8748b60bbddcb2f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.80296326
+      value: .800000012
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 916046275ffe3244a8748b60bbddcb2f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10877,8 +10877,8 @@ MonoBehaviour:
   ownedBy: 0
   displayImage: {fileID: 2800000, guid: 05e05e03ea7de97408030c1dbc3c4c11, type: 3}
   foodValue: 10
-  specificDescription: A rare and valuable piece of food that can help build new units
-    if you bring it back to your Anthill!
+  specificDescription: 'A rare and valuable piece of food that can help build new
+    units if you bring it back to your Anthill!  (Value: 10)'
   specificName: Blueberry
 --- !u!212 &981943626
 SpriteRenderer:
@@ -10914,7 +10914,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 981943623}
   m_ViewID:
-    m_ID: 17
+    m_ID: 42
     m_Type: 1
 --- !u!1 &982681417
 GameObject:
@@ -13737,7 +13737,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 1226893929}
   m_ViewID:
-    m_ID: 25
+    m_ID: 43
     m_Type: 1
 --- !u!1 &1229508626
 GameObject:
@@ -16693,8 +16693,8 @@ MonoBehaviour:
   ownedBy: 0
   displayImage: {fileID: 2800000, guid: 05e05e03ea7de97408030c1dbc3c4c11, type: 3}
   foodValue: 10
-  specificDescription: A rare and valuable piece of food that can help build new units
-    if you bring it back to your Anthill!
+  specificDescription: 'A rare and valuable piece of food that can help build new
+    units if you bring it back to your Anthill!  (Value: 10)'
   specificName: Blueberry
 --- !u!212 &1425466073
 SpriteRenderer:
@@ -16730,7 +16730,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 1425466070}
   m_ViewID:
-    m_ID: 26
+    m_ID: 44
     m_Type: 1
 --- !u!1 &1425824636
 GameObject:
@@ -21447,7 +21447,7 @@ Transform:
   m_PrefabInternal: {fileID: 804498149}
   m_GameObject: {fileID: 1850606397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.42644405, y: 2.80296326, z: -8}
+  m_LocalPosition: {x: .5, y: .800000012, z: -8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -24435,7 +24435,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 2092846065}
   m_ViewID:
-    m_ID: 37
+    m_ID: 45
     m_Type: 1
 --- !u!148 &2092846068
 NetworkView:
@@ -24448,7 +24448,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 2092846065}
   m_ViewID:
-    m_ID: 38
+    m_ID: 46
     m_Type: 1
 --- !u!148 &2092846069
 NetworkView:
@@ -24461,7 +24461,7 @@ NetworkView:
   m_StateSynchronization: 1
   m_Observed: {fileID: 2092846065}
   m_ViewID:
-    m_ID: 39
+    m_ID: 47
     m_Type: 1
 --- !u!1 &2099515972
 GameObject:
