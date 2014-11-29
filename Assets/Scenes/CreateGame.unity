@@ -184,6 +184,9 @@ MonoBehaviour:
   - name: Maze Map
     scenePreview: {fileID: 21300000, guid: ca9d44bb3bc1d494d974b584e9c372bd, type: 3}
     sceneId: 12
+  - name: Grass Yard
+    scenePreview: {fileID: 21300000, guid: ca9d44bb3bc1d494d974b584e9c372bd, type: 3}
+    sceneId: 14
 --- !u!212 &226820559
 SpriteRenderer:
   m_ObjectHideFlags: 0
