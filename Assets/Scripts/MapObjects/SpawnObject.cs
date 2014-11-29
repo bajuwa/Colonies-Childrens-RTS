@@ -12,7 +12,7 @@ public class SpawnObject : Selectable {
 	
 	public string specificDescription;
 	public string specificName;
-	
+	private NetworkManager netMan;
 	public override string getDescription() {
 		return specificDescription;
 	}
@@ -79,6 +79,15 @@ public class SpawnObject : Selectable {
 							Quaternion.identity,
 							0
 						);
+						// Configure its settings
+						newFood.transform.parent = objectToSpawnParent.transform;
+						newFood.transform.localPosition = new Vector3(
+						newFood.transform.localPosition.x,
+						newFood.transform.localPosition.y,
+						-3
+						);
+						Debug.Log(newFood + " is newFood");
+						netMan.changeInstant(newFood, "Object");
 					}
 				}
 				

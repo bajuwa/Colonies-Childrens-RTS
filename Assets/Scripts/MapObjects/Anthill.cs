@@ -37,8 +37,10 @@ public class Anthill : Attackable {
 	}
 	
 	public void addFoodPoints(int points) {
+
 		currentHp += points;
 		maxHp = currentHp;
+		
 	}
 	
 	public void spendStoredFoodPoints(int points) {

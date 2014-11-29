@@ -8,6 +8,7 @@ public class CreateUnitButton : Button {
 	private MapManager mapManager;
 	private PlayerManager playerManager;
 	private Anthill anthillScript;
+	private NetworkManager netMan;
 	
 	private Color originalColor;
 	
@@ -35,7 +36,7 @@ public class CreateUnitButton : Button {
 		if (!mapManager) mapManager = GameObject.Find("MapManager").GetComponent<MapManager>();
 		if (!playerManager) playerManager = GameObject.Find("PlayerManager").GetComponent<PlayerManager>();
 		if (!anthillScript) anthillScript = transform.parent.GetComponent<Anthill>();
-		
+		if (!netMan && GameObject.Find("NetworkManager")) netMan = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
 		// If we our parent object is selected, show this button
 		if (parentSelectable.isNeutralOrFriendly() && parentSelectable.isSelected()) {
 			renderer.enabled = true;
@@ -84,14 +85,10 @@ public class CreateUnitButton : Button {
 				instance.transform.localPosition = new Vector3(
 					instance.transform.localPosition.x,
 					instance.transform.localPosition.y,
-					0
+					-5
 				);
-				if (Network.isServer) {
-					instance.GetComponent<Ownable>().setAsMine(1);
-					}
-				else {
-					instance.GetComponent<Ownable>().setAsMine(2);
-				}
+				netMan.changeInstant(instance, "Unit");
+				if (Network.isClient) netMan.changeID(instance); //have to change ID of Player 2's stuff
 			}
 			else {
 				GameObject instance = (GameObject) Object.Instantiate(

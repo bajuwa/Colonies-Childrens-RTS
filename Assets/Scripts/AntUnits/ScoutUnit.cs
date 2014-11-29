@@ -76,7 +76,7 @@ public class ScoutUnit : AntUnit {
 			newScentpath.transform.localPosition = new Vector3(
 				newScentpath.transform.localPosition.x,
 				newScentpath.transform.localPosition.y,
-				0
+				1
 			);
 			newScentpath.GetComponent<Ownable>().setAsMine(getPlayerId());
 		}

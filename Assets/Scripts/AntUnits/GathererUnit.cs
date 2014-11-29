@@ -55,8 +55,8 @@ public class GathererUnit : AntUnit {
 			Collider2D[] itemsOnSameTile = Physics2D.OverlapPointAll(transform.position);
 			foreach (Collider2D col in itemsOnSameTile) {
 				if (col.gameObject.GetComponent<Food>() != null) {
-					Debug.Log("Detected food on current tile, picking up");
-					pickUpFood(col.gameObject);
+						Debug.Log("Detected food on current tile, picking up V.Offline");
+						pickUpFood(col.gameObject);
 				}
 			}
 		}
@@ -120,7 +120,6 @@ public class GathererUnit : AntUnit {
 		// When gatherers are carrying food, they move at half their original speed
 		speed /= 2f;
 	}
-	
 	public void dropFood() {
 		// To avoid automatically picking the food back up again, set a flag
 		droppedFood = true;

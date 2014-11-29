@@ -15,7 +15,12 @@ public class Attackable : Selectable {
 	public void kill() {
 		Debug.Log("I was killed!");
 		this.deselect(GetInstanceID());
+		if (Network.isClient || Network.isServer) {
+			Network.Destroy(this.gameObject);
+		}
+		else {
 		GameObject.Destroy(this.gameObject);
+		}
 	}
 	
 	public virtual void startBattle() {
