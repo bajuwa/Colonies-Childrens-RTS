@@ -199,9 +199,10 @@ public class AntUnit : Attackable {
 	}
 	
 	private void flipIfGoingLeft() {
-		// Until this is fixed using networking, disable it
-		return;
+		// Only apply the changes if we own this object
+		if (!networkView.isMine) return;
 		
+		// Make sure we only 'flip' the image if it is in the wrong state
 		if ((targetTile.transform.position.x < this.transform.position.x && transform.localScale.x > 0) || 
 			(targetTile.transform.position.x > this.transform.position.x && transform.localScale.x < 0)) {
 			transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
