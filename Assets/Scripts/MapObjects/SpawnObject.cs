@@ -35,6 +35,7 @@ public class SpawnObject : Selectable {
 	// Update is called once per frame
 	protected override void Update () {
 		base.Update();
+		if (!netMan && GameObject.Find("NetworkManager")) netMan = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
 		if (!objectToSpawnParent) objectToSpawnParent = GameObject.Find("Objects");
 	}
 	
@@ -72,22 +73,15 @@ public class SpawnObject : Selectable {
 				//alone with the exception of the else clause.
 				if (Network.isServer || Network.isClient) {
 					if (networkView.isMine) {
-						Debug.Log("Spawned an object at: " + Time.time);
 						GameObject newFood = (GameObject) Network.Instantiate(
 							objectToSpawn,
 							openTiles[Random.Range(0, ((int)numOfOpenTiles)-1)].transform.position,
 							Quaternion.identity,
 							0
 						);
-						// Configure its settings
-						newFood.transform.parent = objectToSpawnParent.transform;
-						newFood.transform.localPosition = new Vector3(
-						newFood.transform.localPosition.x,
-						newFood.transform.localPosition.y,
-						-3
-						);
-						Debug.Log(newFood + " is newFood");
 						netMan.changeInstant(newFood, "Object");
+						
+						
 					}
 				}
 				

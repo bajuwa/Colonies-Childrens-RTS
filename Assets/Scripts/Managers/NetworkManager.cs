@@ -51,7 +51,6 @@ public class NetworkManager : MonoBehaviour {
 	//called when a player connects for the server player. Instantiates the red anthill on the network
 	void OnPlayerConnected() 
 	{
-		//GameObject antUnitObject = (GameObject) Network.Instantiate(gatherer, gathererRedSpawn.transform.position, Quaternion.identity, 0); //initial gatherer
 		GameObject anthillObject = (GameObject) Network.Instantiate(anthill, redAnthillSpawn.transform.position, Quaternion.identity, 0); //initial anthill
 		anthillObject.transform.parent = antHillParent.transform;
 		anthillObject.transform.localPosition = new Vector3(
@@ -64,7 +63,6 @@ public class NetworkManager : MonoBehaviour {
 		NetworkView anthillNetworkView = anthillObject.networkView;
 		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetworkView.viewID, "Object");
 		Debug.Log("I am player 1");
-		//Network.Instantiate(deadAntHill, deadAntHillSpawn.transform.position, Quaternion.identity, 0);
 		
 	}
 	//called when a player connects for the client player. Instantiates the blue anthill on the network
@@ -80,7 +78,7 @@ public class NetworkManager : MonoBehaviour {
 			antHillObject.transform.localPosition.y,
 			0
 		);
-		networkView.RPC("changePlayerId", RPCMode.All, anthillNetwork.viewID, 2);
+		networkView.RPC("changePlayerId", RPCMode.All, anthillNetwork.viewID);
 		networkView.RPC("fixInstantiation", RPCMode.Others, anthillNetwork.viewID, "Object");
 		Anthill antHill = antHillObject.GetComponent<Anthill>();
 		Debug.Log("I am player 2!");
@@ -88,7 +86,10 @@ public class NetworkManager : MonoBehaviour {
 	public void changeID(GameObject instance)
 	{
 		NetworkView unitNetwork = instance.networkView;
-		networkView.RPC("changePlayerId", RPCMode.All, unitNetwork.viewID, 2);
+		if (Network.isServer) {
+			Debug.Log("Changing player ID");
+		}
+		networkView.RPC("changePlayerId", RPCMode.All, unitNetwork.viewID);
 	}
 	public void changeInstant(GameObject instance, string type)
 	{
@@ -96,14 +97,16 @@ public class NetworkManager : MonoBehaviour {
 		networkView.RPC("fixInstantiation", RPCMode.All, unitNetwork.viewID, type);
 	}
 	//RPC call for changing the anthill and units to player 2
-	[RPC] void changePlayerId(NetworkViewID anthillID, int player)
+	[RPC] void changePlayerId(NetworkViewID anthillID)
 	{
 	
-		Debug.Log("Change player ID");
+		if (Network.isServer) {
+			Debug.Log("Changing player ID");
+		}
 		NetworkView anthillNetwork = NetworkView.Find(anthillID);
 		GameObject anthillObject = anthillNetwork.gameObject;
-		anthillObject.GetComponent<Ownable>().setAsMine(player);
-		Debug.Log("Changed");
+		anthillObject.GetComponent<Ownable>().setAsMine(2);
+		Debug.Log("Changed: " + anthillObject);
 	}
 
 	//Not working yet but when a player creates a unit from their anthill, it is no clickable by the enemy
