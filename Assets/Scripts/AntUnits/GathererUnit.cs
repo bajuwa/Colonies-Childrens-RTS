@@ -103,54 +103,106 @@ public class GathererUnit : AntUnit {
 	}
 	
 	public void pickUpFood(GameObject gameObj) {
-		// Set the parent to our unit so that it is 'carried' when the unit is moving
-		gameObj.transform.parent = this.gameObject.transform;
+		if (Network.isServer || Network.isClient) networkView.RPC("networkPickUpFood", RPCMode.All, gameObj.networkView.viewID);
 		
-		// Also set the local position's z value to -1 to ensure it is visible above the unit
+		else {
+			// Set the parent to our unit so that it is 'carried' when the unit is moving
+			gameObj.transform.parent = this.gameObject.transform;
+		
+			// Also set the local position's z value to -1 to ensure it is visible above the unit
+			Vector3 tempPos = gameObj.transform.localPosition;
+			tempPos.y += 0.8f; 
+			tempPos.z = -1f; 
+			gameObj.transform.localPosition = tempPos;
+			gameObj.transform.localScale = new Vector3(1,1,1);
+		
+			// Re-enable the selectable script so that we can select it again
+			gameObj.GetComponent<Selectable>().enabled = false;
+			gameObj.GetComponent<CircleCollider2D>().enabled = false;
+		
+			// When gatherers are carrying food, they move at half their original speed
+			speed /= 2f;
+		}
+	}
+	[RPC] void networkPickUpFood(NetworkViewID netViewIDGameObj) {
+		GameObject gameObj = NetworkView.Find(netViewIDGameObj).gameObject;
+		gameObj.transform.parent = this.gameObject.transform;
 		Vector3 tempPos = gameObj.transform.localPosition;
-		tempPos.y += 0.8f; 
-		tempPos.z = -1f; 
+		tempPos.y += 0.8f;
+		tempPos.z = -1f;
 		gameObj.transform.localPosition = tempPos;
 		gameObj.transform.localScale = new Vector3(1,1,1);
 		
-		// Re-enable the selectable script so that we can select it again
 		gameObj.GetComponent<Selectable>().enabled = false;
 		gameObj.GetComponent<CircleCollider2D>().enabled = false;
-		
-		// When gatherers are carrying food, they move at half their original speed
 		speed /= 2f;
 	}
 	public void dropFood() {
-		// To avoid automatically picking the food back up again, set a flag
-		droppedFood = true;
-		dropOffAtAnthill = null;
+		if (Network.isServer || Network.isClient) networkView.RPC("networkDropFood", RPCMode.All);
+		else {
+			// To avoid automatically picking the food back up again, set a flag
+			droppedFood = true;
+			dropOffAtAnthill = null;
 		
-		// When gatherers are carrying food, they move at half their original speed, so when they drop food, fix the speed stat
-		speed *= 2f;
+			// When gatherers are carrying food, they move at half their original speed, so when they drop food, fix the speed stat
+			speed *= 2f;
 		
-		// Reassign the food back to the 'Objects' sprite in the map
-		Transform foodTransform = this.gameObject.GetComponentInChildren<Food>().gameObject.transform;
-		foodTransform.parent = GameObject.Find("Objects").transform;
+			// Reassign the food back to the 'Objects' sprite in the map
+			Transform foodTransform = this.gameObject.GetComponentInChildren<Food>().gameObject.transform;
+			foodTransform.parent = GameObject.Find("Objects").transform;
 		
-		// Make sure when dropped it snaps to the appropriate tile
-		foodTransform.position = mapManager.getTileAtPosition(foodTransform.position).transform.position;
+			// Make sure when dropped it snaps to the appropriate tile
+			foodTransform.position = mapManager.getTileAtPosition(foodTransform.position).transform.position;
 		
-		// Check to see if the new position would be in range of a friendly anthill
-		Anthill anthill = getNearbyAnthill(foodTransform.position);
-		if (anthill) {
-			anthill.addFoodPoints(foodTransform.gameObject.GetComponent<Food>().getFoodValue());
-			Destroy(foodTransform.gameObject);
-			return;
+			// Check to see if the new position would be in range of a friendly anthill
+			Anthill anthill = getNearbyAnthill(foodTransform.position);
+			if (anthill) {
+				anthill.addFoodPoints(foodTransform.gameObject.GetComponent<Food>().getFoodValue());
+				Destroy(foodTransform.gameObject);
+				return;
+			}
+		
+			// Reset the z back to 0 to force the food back underneath the unit
+			Vector3 tempPos = foodTransform.localPosition;
+			tempPos.z = 0;
+			foodTransform.localPosition = tempPos;
+		
+			// Disable the selectable script so that it doesn't interfere with selecting the underlying unit
+			foodTransform.gameObject.GetComponent<Selectable>().enabled = true;
+			foodTransform.gameObject.GetComponent<Collider2D>().enabled = true;
 		}
+	}
+	[RPC] void networkDropFood() {
+		// To avoid automatically picking the food back up again, set a flag
+			droppedFood = true;
+			dropOffAtAnthill = null;
 		
-		// Reset the z back to 0 to force the food back underneath the unit
-		Vector3 tempPos = foodTransform.localPosition;
-		tempPos.z = 0;
-		foodTransform.localPosition = tempPos;
+			// When gatherers are carrying food, they move at half their original speed, so when they drop food, fix the speed stat
+			speed *= 2f;
 		
-		// Disable the selectable script so that it doesn't interfere with selecting the underlying unit
-		foodTransform.gameObject.GetComponent<Selectable>().enabled = true;
-		foodTransform.gameObject.GetComponent<Collider2D>().enabled = true;
+			// Reassign the food back to the 'Objects' sprite in the map
+			Transform foodTransform = this.gameObject.GetComponentInChildren<Food>().gameObject.transform;
+			foodTransform.parent = GameObject.Find("Objects").transform;
+		
+			// Make sure when dropped it snaps to the appropriate tile
+			foodTransform.position = mapManager.getTileAtPosition(foodTransform.position).transform.position;
+		
+			// Check to see if the new position would be in range of a friendly anthill
+			Anthill anthill = getNearbyAnthill(foodTransform.position);
+			if (anthill) {
+				anthill.addFoodPoints(foodTransform.gameObject.GetComponent<Food>().getFoodValue());
+				Network.Destroy(foodTransform.gameObject);
+				return;
+			}
+		
+			// Reset the z back to 0 to force the food back underneath the unit
+			Vector3 tempPos = foodTransform.localPosition;
+			tempPos.z = 0;
+			foodTransform.localPosition = tempPos;
+		
+			// Disable the selectable script so that it doesn't interfere with selecting the underlying unit
+			foodTransform.gameObject.GetComponent<Selectable>().enabled = true;
+			foodTransform.gameObject.GetComponent<Collider2D>().enabled = true;
 	}
 	
 	// Gatherers can walk on tiles and food items (but only if they aren't already carrying food themselves)
