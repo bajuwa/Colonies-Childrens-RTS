@@ -10,6 +10,6 @@ public class CreateGameServer : MonoBehaviour {
 
 	// Update is called once per frame
 	void OnGUI () {
-		gameName = GUI.TextField(new Rect (Screen.width/2-100,Screen.height-200,200,25), gameName, 50);
+		gameName = GUI.TextField(new Rect (Screen.width/2-100,Screen.height-180,200,25), gameName, 50);
 	}
 }
