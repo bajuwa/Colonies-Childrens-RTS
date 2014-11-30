@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class Player : MonoBehaviour {
 
-	public int id = 1;
+	public int id;
 
 	// List of sprites/textures/objects that can change depending on who they are owned by
 	private Dictionary<string, RuntimeAnimatorController> animators = new Dictionary<string, RuntimeAnimatorController>();
@@ -91,7 +91,6 @@ public class Player : MonoBehaviour {
 	void Update () {
 	
 	}
-	
 	public int getId() {
 		return id;
 	}

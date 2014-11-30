@@ -103,7 +103,7 @@ public class AntUnit : Attackable {
 		if (currentTile != null) currentTile.deselect(GetInstanceID());
 		if (targetTile != null) targetTile.deselect(GetInstanceID());
 	}
-	
+
 	/**
 	 * A coroutine that uses A* pathfinding to find an optimal path between the unit's
 	 * 'targetTile' to the given tileToMoveTo

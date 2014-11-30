@@ -44,17 +44,12 @@ public class QueenUnit : AntUnit {
 	// Update is called once per frame
 	protected override void Update() {
 		base.Update();
-		Debug.Log("Update1");
 		if (!netMan && GameObject.Find("NetworkManager")) netMan = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
 		// If our queen lands on a DeadAnthill, create a new Anthill
 		if (getCurrentTile() == getTargetTile() && targetPath != null && targetPath.getTilePath().Count == 0) {
-			if (networkView.isMine) Debug.Log("Update2");
 			Collider2D[] itemsOnSameTile = Physics2D.OverlapPointAll(transform.position);
-			Debug.Log("Update3");
 			foreach (Collider2D col in itemsOnSameTile) {
-				Debug.Log("Update4");
 				if (col.gameObject.GetComponent<DeadAnthill>() != null) {
-					Debug.Log("Update5");
 					Debug.Log("Detected dead anthill on current tile, creating new anthill");
 					if (Network.isServer || Network.isClient) {
 						if (networkView.isMine) createNewAnthill(col.gameObject);
