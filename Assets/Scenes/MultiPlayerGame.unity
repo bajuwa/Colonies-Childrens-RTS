@@ -128,6 +128,7 @@ GameObject:
   - 4: {fileID: 19868233}
   - 212: {fileID: 19868232}
   - 114: {fileID: 19868231}
+  - 148: {fileID: 19868234}
   m_Layer: 0
   m_Name: RedPlayer
   m_TagString: Player
@@ -217,6 +218,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2092846065}
   m_RootOrder: 0
+--- !u!148 &19868234
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 19868230}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 19868231}
+  m_ViewID:
+    m_ID: 49
+    m_Type: 1
 --- !u!1 &30583258
 GameObject:
   m_ObjectHideFlags: 0
@@ -15585,6 +15598,7 @@ GameObject:
   - 4: {fileID: 1320180141}
   - 212: {fileID: 1320180140}
   - 114: {fileID: 1320180139}
+  - 148: {fileID: 1320180142}
   m_Layer: 0
   m_Name: BluePlayer
   m_TagString: Player
@@ -15674,6 +15688,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2092846065}
   m_RootOrder: 1
+--- !u!148 &1320180142
+NetworkView:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1320180138}
+  m_Enabled: 1
+  m_StateSynchronization: 1
+  m_Observed: {fileID: 1320180139}
+  m_ViewID:
+    m_ID: 50
+    m_Type: 1
 --- !u!1 &1347701003
 GameObject:
   m_ObjectHideFlags: 0
