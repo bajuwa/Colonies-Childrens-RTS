@@ -7,7 +7,7 @@ public class WarriorUnit : AntUnit {
 	public GameObject combatCloud;
 	
 	private EventManager eventManager;
-	
+	private NetworkManager netMan;
 	//To be displayed on the GUI
 	public override string getDescription() {
 		if (isNeutralOrFriendly()) 
@@ -50,7 +50,7 @@ public class WarriorUnit : AntUnit {
 		base.Update();
 		
 		if (!eventManager) eventManager = GameObject.Find("EventManager").GetComponent<EventManager>() as EventManager;
-		
+		if (!netMan && GameObject.Find("NetworkManager")) netMan = GameObject.Find("NetworkManager").GetComponent<NetworkManager>();
 		// Base our movement/pathfinding off of our attack target (if any)
 		if (attackTarget != null) {
 			Tile attackTargetCurrentLocation = mapManager.getTileAtPosition(attackTarget.transform.position);
@@ -103,17 +103,17 @@ public class WarriorUnit : AntUnit {
 		
 		// Set both units to be in 'attack mode' and generate a 'combat cloud'
 		GameObject cloud = null;
-		opponent.startBattle();
 		if (!anthill) {
 			isInBattle = true;
 			Vector3 pos = mapManager.getTileAtPosition(transform.position).transform.position;
-			if (Network.isClient || Network.isServer) {
-				cloud = Network.Instantiate(combatCloud,
+			if (Network.isServer || Network.isClient) {
+					cloud = Network.Instantiate(combatCloud,
 											new Vector3(pos.x, pos.y, transform.position.z - 1),
 											Quaternion.identity, 0) as GameObject;
-				networkView.RPC("fixCombatCloud", RPCMode.All, cloud.networkView.viewID);
+					//networkView.RPC("fixCombatCloud", RPCMode.All, cloud.networkView.viewID);
+					netMan.changeInstant(cloud, "Cloud");
 			}
-			else {
+			else{
 				cloud = GameObject.Instantiate(combatCloud, 
 										   new Vector3(pos.x, pos.y, transform.position.z - 1), 
 										   Quaternion.identity) as GameObject;
@@ -165,24 +165,41 @@ public class WarriorUnit : AntUnit {
 		
 		// After the battle, 'cleanup' the unit(s) and the combat cloud
 		if (cloud) {
-			if (Network.isClient || Network.isServer) {
-				Network.Destroy(cloud);
+			if (Network.isServer || Network.isClient) {
+				if (cloud != null) Network.Destroy(cloud);
+				Debug.Log("Destroying Cloud: + " + cloud.networkView.viewID);
 			}
-			else {
+			else if (!Network.isClient){
 				GameObject.Destroy(cloud);
 			}
 		}
-		if (transform.localScale.x < 0) transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
-		gameObject.renderer.enabled = true;
-		opponent.gameObject.renderer.enabled = true;
-		this.removeFromBattle();
-		opponent.removeFromBattle();
-		if (opponent.currentHp <= 0) opponent.kill();
-		// Note: if this unit dies, make sure to delete it at the end!
-		if (this.currentHp <= 0) this.kill();
+		else {
+			Debug.Log("No Cloud");
+		}
+		if (gameObject != null) {
+			if (transform.localScale.x < 0) transform.localScale = new Vector2(transform.localScale.x * -1, transform.localScale.y);
+			gameObject.renderer.enabled = true;
+			opponent.gameObject.renderer.enabled = true;
+			
+			Debug.Log("Before remove from battle");
+			this.removeFromBattle();
+			opponent.removeFromBattle();
+			if (opponent.currentHp <= 0) {
+				Debug.Log("Their ant is at: " + opponent.currentHp);
+				opponent.kill();
+				}
+			// Note: if this unit dies, make sure to delete it at the end!
+			if (this.currentHp <= 0) {
+				Debug.Log("My Ant is at: " + this.currentHp);
+				this.kill();
+			}
+		}
+		Debug.Log("After killing units");
+		
 	}
 	
 	[RPC] public void fixCombatCloud(NetworkViewID combatCloudNetViewID) {
+		Debug.Log("Fixing Cloud");
 		NetworkView combatCloudNetView = NetworkView.Find(combatCloudNetViewID);
 		GameObject combatCloud = combatCloudNetView.gameObject;
 		combatCloud.transform.parent = GameObject.Find("Objects").transform;

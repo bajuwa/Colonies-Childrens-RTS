@@ -77,9 +77,13 @@ public class AntUnit : Attackable {
 	public override void startBattle() {
 		base.startBattle();
 		isInBattle = true;
+		networkView.RPC("networkIsInBattle", RPCMode.Others);
 		targetPath.setNewTileQueue(new Queue<Tile>());
 	}
-	
+	[RPC] void networkIsInBattle() {
+		Debug.Log("I'm already fighting!");
+		this.isInBattle = true;
+	}	
 	public override void removeFromBattle() {
 		base.removeFromBattle();
 		isInBattle = false;
@@ -280,6 +284,7 @@ public class AntUnit : Attackable {
 	public override void interrupt() {
 		base.interrupt();
 		targetPath.setNewTileQueue(new Queue<Tile>());
+			
 	}
 	
 	protected void setMapManager() {

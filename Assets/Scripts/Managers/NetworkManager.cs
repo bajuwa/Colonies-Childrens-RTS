@@ -134,6 +134,13 @@ public class NetworkManager : MonoBehaviour {
 				0
 			);
 		}
+		if (type == "Cloud") {
+			gameObject.transform.parent = antHillParent.transform;
+			gameObject.transform.localPosition = new Vector3(
+				gameObject.transform.localPosition.x,
+				gameObject.transform.localPosition.y,
+				0);
+			}
 	
 	}
 

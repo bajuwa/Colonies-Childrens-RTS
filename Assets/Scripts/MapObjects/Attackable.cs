@@ -16,7 +16,7 @@ public class Attackable : Selectable {
 		Debug.Log("I was killed!");
 		this.deselect(GetInstanceID());
 		if (Network.isClient || Network.isServer) {
-			Network.Destroy(this.gameObject);
+			if (this.currentHp <= 0) Network.Destroy(this.gameObject);
 		}
 		else {
 		GameObject.Destroy(this.gameObject);
@@ -38,5 +38,7 @@ public class Attackable : Selectable {
 	public virtual Sprite getFightSprite() {
 		return null;
 	}
-
+	public bool getInBattleStatus() {
+		return isInBattle;
+	}
 }
