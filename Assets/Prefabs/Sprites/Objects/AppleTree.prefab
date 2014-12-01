@@ -54,7 +54,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ownedBy: 0
-  displayImage: {fileID: 2800000, guid: 5c173f4eeaef0244ebd58b4ec89c65f6, type: 3}
+  displayImage: {fileID: 2800000, guid: c58967d89f84ed34d89aeedfde0eab47, type: 3}
   objectToSpawn: {fileID: 100000, guid: dc7a5558ca8648d4ca637ab6ce627d27, type: 2}
   objectRarity: 1
   specificDescription: A lucious tree, ripe for the picking
