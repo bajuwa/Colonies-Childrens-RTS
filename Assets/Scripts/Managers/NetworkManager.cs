@@ -70,6 +70,7 @@ public class NetworkManager : MonoBehaviour {
 	void OnConnectedToServer()
 	{
 		Camera.mainCamera.transform.position = cameraPosForPlayerTwo; //set camera for player 2
+		GameObject.Find("UnitCountDisplay").GetComponent<Ownable>().setAsMine(2);
 		GameObject antHillObject = (GameObject) Network.Instantiate(anthill, blueAnthillSpawn.transform.position, Quaternion.identity,0);
 		NetworkView anthillNetwork = antHillObject.networkView;
 		antHillObject.transform.parent = antHillParent.transform;
